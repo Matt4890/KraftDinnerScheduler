@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Parser",
+            "request": "launch",
+            "mainClass": "parser.Parser",
+            "projectName": "CourseSchedulerAI"
+        }
+    ]
+}
