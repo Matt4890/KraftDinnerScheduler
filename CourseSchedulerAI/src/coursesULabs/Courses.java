@@ -2,7 +2,7 @@ package coursesULabs;
 
 import java.util.ArrayList;
 
-public class Courses extends Unit{
+public class Course extends Unit{
 
     private ArrayList<Labs> labs = new ArrayList<Labs>();
 
@@ -21,14 +21,14 @@ public class Courses extends Unit{
 
 
 
-    public Courses(int lectureNum, String courseType, int courseNum, Object slot) {
+    public (int lectureNum, String courseType, int courseNum, Object slot) {
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
         this.slot = slot;
     }
 
-    public Courses(int lectureNum, String courseType, int courseNum){
+    public Course(int lectureNum, String courseType, int courseNum){
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
