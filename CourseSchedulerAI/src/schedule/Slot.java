@@ -23,8 +23,6 @@ public class Slot{
 
     }
 
-
-
     public int getID(){
         return this.id;
 
