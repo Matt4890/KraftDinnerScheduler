@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import coursesULabs.Course;
+import schedule.CourseSlot;
+
 class Parser {
 
     public static void main(String[] args) {
@@ -15,7 +18,7 @@ class Parser {
         // Setup file params
         String filename = "./inputs/shortExample.txt";
         ArrayList<String> fileLines = new ArrayList<String>();
-        int slotCount = 0;
+        int count;
 
         // Read in the file
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
@@ -40,15 +43,33 @@ class Parser {
 
         // Get sections from input file
         String fileStr = String.join("\n", fileLines).toUpperCase();
-        String[] courseSlots    = getSection("COURSE SLOTS", fileStr);
-        String[] labSlots       = getSection("LAB SLOTS", fileStr);
-        String[] courses        = getSection("COURSES", fileStr);
-        String[] labs           = getSection("LABS", fileStr);
-        String[] notCompat      = getSection("NOT COMPATIBLE", fileStr);
-        String[] unwanted       = getSection("UNWANTED", fileStr);
-        String[] preferences    = getSection("PREFERENCES", fileStr);
-        String[] pairs          = getSection("PAIR", fileStr);
-        String[] partialAssign  = getSection("PARTIAL ASSIGNMENTS", fileStr);
+        String[] courseSlots_s      = getSection("COURSE SLOTS", fileStr);
+        String[] labSlots_s         = getSection("LAB SLOTS", fileStr);
+        String[] courses_s          = getSection("COURSES", fileStr);
+        String[] labs_s             = getSection("LABS", fileStr);
+        String[] notCompat_s        = getSection("NOT COMPATIBLE", fileStr);
+        String[] unwanted_s         = getSection("UNWANTED", fileStr);
+        String[] preferences_s      = getSection("PREFERENCES", fileStr);
+        String[] pairs_s            = getSection("PAIR", fileStr);
+        String[] partialAssign_s    = getSection("PARTIAL ASSIGNMENTS", fileStr);
+
+        // Parse slots
+        ArrayList<CourseSlot> courseSlots = new ArrayList<CourseSlot>();
+        count = 0;
+        for (String slotStr : courseSlots_s) {
+            Matcher m = slotRegex.matcher(slotStr);
+            if (m.find()) {
+                courseSlots.add(
+                    new CourseSlot(
+                        count++,
+                        Integer.parseInt(m.group(2).replace(":", "")),
+                        m.group(1),
+                        Integer.parseInt(m.group(3)),
+                        Integer.parseInt(m.group(4))
+                    )
+                );
+            }
+        }
 
     }
 
