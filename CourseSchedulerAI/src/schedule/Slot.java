@@ -57,16 +57,6 @@ public abstract class Slot {
 
     }
 
-    public int getEval() {
-        int total = 0;
-        for (int i = 0; i < classAssignment.size(); i++) {
-            if (!getPreference().containsKey(classAssignment.get(i))) {
-                total += (Integer)getPreference().get(classAssignment.get(i));
-            }
-        }
-        return total;
-    }
-
     public void assignUnitToSlot(Unit unit) {
         classAssignment.add(unit);
 
