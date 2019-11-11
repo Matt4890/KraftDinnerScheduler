@@ -39,6 +39,13 @@ public class CourseSlot extends Slot{
 
     }
 
+    public boolean isString(String parserInput){
+        String formatString = toString();
+        return parserInput.equals(formatString);
+    }
 
+    public String toString(){
+        return day + time;
+    }
     
 }
