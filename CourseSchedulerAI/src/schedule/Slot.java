@@ -13,7 +13,7 @@ public abstract class Slot{
         this.time = time;
         this.id = id;
         //new
-        this.hashMap  hashMap;  
+        this.prefMap = hashMap;  
 
     }
     protected void setID(int id){
