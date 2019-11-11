@@ -1,23 +1,26 @@
 package schedule;
+
 import java.util.ArrayList;
 import coursesULabs.*;
+import enums.LabDays;
+import enums.SlotType;
 public class LabSlot extends Slot{
 
     private ArrayList<Lab> labs = new ArrayList<Lab>();
     private int labMax;
     private int labMin;
     private int labCount;
-    private String day;
+    private LabDays day;
 
-    public LabSlot (int id, int time, String day, int labMax, int labMin ){
-        super(id, time, "Lab");
+    public LabSlot (int id, int time, LabDays day, int labMax, int labMin ){
+        super(id, time, SlotType.LAB);
         this.labMax = labMax;
         this.labMin = labMin;
         this.day = day;
         this.labCount = 0;
     }
 
-    public String getDay(){
+    public LabDays getDay(){
         return this.day;
     }
     public int getLabMax(){
@@ -55,7 +58,7 @@ public class LabSlot extends Slot{
     }
 
     public String toString(){
-        return day + time;
+        return day.toString() + time;
     }
 
 

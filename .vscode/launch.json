@@ -2,9 +2,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - App",
+            "name": "CodeLens (Launch) - Parser",
             "request": "launch",
-            "mainClass": "app.App",
+            "mainClass": "parser.Parser",
             "projectName": "CourseSchedulerAI"
         }
     ]
