@@ -9,7 +9,12 @@ public class Unit {
     protected String courseType;
     protected int courseNum;
     protected int id;
-
+    protected void setId(int i){
+        this.id = i;
+    }
+    public int getID(){
+        return this.id;
+    }
     public int getCourseNum() {
         return courseNum;
     }

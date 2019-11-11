@@ -9,7 +9,7 @@ public class Lab extends Unit{
     public int getTutNum() {
         return tutNum;
     }
-    
+
     public void setTutNum(int tutNum) {
         this.tutNum = tutNum;
     }
@@ -23,8 +23,8 @@ public class Lab extends Unit{
     public String toString(){
         //CPSC433TUT01
         //CPSC433LEC01TUT01
-        return (lectureNum == 0) ? 
-            courseType + courseNum + "TUT" + tutNum: 
+        return (lectureNum == 0) ?
+            courseType + courseNum + "TUT" + tutNum:
             courseType + courseNum + "LEC" + lectureNum + "TUT" + tutNum;
 
     }
@@ -35,6 +35,7 @@ public class Lab extends Unit{
         super.courseType = courseType;
         super.courseNum = courseNum;
         this.tutNum = tutNum;
+        super.id = id;
     }
 
     public Lab (int id, String courseType, int courseNum, int tutNum ){
