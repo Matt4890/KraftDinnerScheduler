@@ -11,8 +11,8 @@ public class LabSlot extends Slot{
     private int labCount;
     private LabDays day;
 
-    public LabSlot (int id, int time, String day, int labMax, int labMin, HashMap<Unit, Integer> map ){
-        super(id, time, "Lab", map);
+    public LabSlot (int id, int time, LabDays day, int labMax, int labMin, HashMap<Unit, Integer> map ){
+        super(id, time, SlotType.LAB, map);
         this.labMax = labMax;
         this.labMin = labMin;
         this.day = day;

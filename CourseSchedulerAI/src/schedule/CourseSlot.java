@@ -11,8 +11,8 @@ public class CourseSlot extends Slot{
     private int courseCount;
     private CourseDays day;
 
-    public CourseSlot (int id, int time, String day, int courseMax, int courseMin, HashMap<Unit, Integer> map ){
-        super(id, time, "Course", map);
+    public CourseSlot (int id, int time, CourseDays day, int courseMax, int courseMin, HashMap<Unit, Integer> map ){
+        super(id, time, SlotType.COURSE, map);
         this.courseMax = courseMax;
         this.courseMin = courseMin;
         this.day = day;

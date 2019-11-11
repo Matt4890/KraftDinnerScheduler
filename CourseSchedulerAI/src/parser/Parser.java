@@ -44,7 +44,7 @@ class Parser {
         Pattern labLecRegex = Pattern.compile("([A-Z]{4})\\s*(\\d{3})\\s*LEC\\s*(\\d{2})\\s*(?:LAB|TUT)\\s*(\\d{2})");
 
         // Get sections from input file
-        String fileStr = String.join("\n", fileLines).toUpperCase();
+        String fileStr = String.join("\n", fileLines).toUpperCase().replaceAll(" |\t", "");
         String[] courseSlots_s      = getSection("COURSE SLOTS", fileStr);
         String[] labSlots_s         = getSection("LAB SLOTS", fileStr);
         String[] courses_s          = getSection("COURSES", fileStr);

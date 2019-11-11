@@ -10,7 +10,7 @@ public abstract class Slot {
     private ArrayList<Unit> classAssignment = new ArrayList<Unit>();
     protected HashMap<Unit, Integer> prefMap = new HashMap<Unit, Integer>();
 
-    public Slot(int id, int time, String type, HashMap<Unit, Integer> hashMap) {
+    public Slot(int id, int time, SlotType type, HashMap<Unit, Integer> hashMap) {
         this.type = type;
         this.time = time;
         this.id = id;
