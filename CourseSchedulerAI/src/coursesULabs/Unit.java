@@ -1,9 +1,11 @@
 package coursesULabs;
 
+import schedule.Slot;
+
 public class Unit {
 
     //TODO change Object to Slots
-    protected Object slot;
+    protected Slot slot;
     protected int lectureNum;
     protected String courseType;
     protected int courseNum;
@@ -38,7 +40,7 @@ public class Unit {
         return slot;
     }
 
-    public void setSlot(Object slot) {
+    public void setSlot(Slot slot) {
         this.slot = slot;
     }
 
