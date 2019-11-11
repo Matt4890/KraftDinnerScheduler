@@ -1,5 +1,5 @@
 package schedule;
-public class Slot{
+public abstract class Slot{
     protected String type;
     protected int time;
     protected int id; 
@@ -35,7 +35,8 @@ public class Slot{
         return this.type;
 
     }
-
-
+    
+    public abstract void addCourse(Object o);
+    
     
 }

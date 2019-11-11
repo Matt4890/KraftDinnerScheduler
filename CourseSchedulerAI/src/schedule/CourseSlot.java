@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import coursesULabs.*;
 public class CourseSlot extends Slot{
 
-    private ArrayList<Courses> courses = new ArrayList<Courses>();
+    private ArrayList<Course> courses = new ArrayList<Course>();
     private int courseMax;
     private int courseMin;
     private int courseCount;
@@ -26,7 +26,7 @@ public class CourseSlot extends Slot{
     public int getCourseMin(){
         return this.courseMin;
     }
-    public void addCourse(Courses c){
+    public void addCourse(Course c){
         if (this.courseCount < this.courseMax){
             courses.add(c);
         } else {

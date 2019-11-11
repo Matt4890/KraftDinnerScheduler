@@ -31,5 +31,4 @@ public class Course extends Unit{
         this.courseNum = courseNum;
     }
 
-
 }
