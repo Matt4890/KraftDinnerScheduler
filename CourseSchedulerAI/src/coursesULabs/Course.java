@@ -22,6 +22,17 @@ public class Course extends Unit{
         return labs.contains(lab);
     }
 
+    public boolean isString(String parserInput){
+        //CPSC433LEC01
+        String formatCourse = courseType + courseNum + "LEC" + lectureNum;
+
+        return formatCourse.equals(parserInput);
+    }
+
+    public String toString(){
+        return courseType + courseNum + "LEC" + lectureNum;
+    }
+
     public Course (int id, int lectureNum, String courseType, int courseNum, Slot slot) {
         this.lectureNum = lectureNum;
         this.courseType = courseType;
