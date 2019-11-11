@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -38,10 +40,10 @@ class Parser {
         }
 
         // Setup regular expressions
-        Pattern slotRegex   = Pattern.compile("(MO|TU|FR),\\s*(\\d{1,2}:\\d{2}),\\s*(\\d+),\\s*(\\d+)");
-        Pattern courseRegex = Pattern.compile("([A-Z]{4})\\s*(\\d{3})\\s*LEC\\s*(\\d{2})");
-        Pattern labRegex    = Pattern.compile("([A-Z]{4})\\s*(\\d{3})\\s*(?:LAB|TUT)\\s*(\\d{2})");
-        Pattern labLecRegex = Pattern.compile("([A-Z]{4})\\s*(\\d{3})\\s*LEC\\s*(\\d{2})\\s*(?:LAB|TUT)\\s*(\\d{2})");
+        Pattern slotRegex   = Pattern.compile("(MO|TU|FR),(\\d{1,2}:\\d{2}),(\\d+),(\\d+)");
+        Pattern courseRegex = Pattern.compile("([A-Z]{4})(\\d{3})LEC(\\d{2})");
+        Pattern labRegex    = Pattern.compile("([A-Z]{4})(\\d{3})(?:LAB|TUT)(\\d{2})");
+        Pattern labLecRegex = Pattern.compile("([A-Z]{4})(\\d{3})LEC(\\d{2})(?:LAB|TUT)(\\d{2})");
 
         // Get sections from input file
         String fileStr = String.join("\n", fileLines).toUpperCase().replaceAll(" |\t", "");
@@ -67,7 +69,8 @@ class Parser {
                         Integer.parseInt(m.group(2).replace(":", "")),
                         CourseDays.fromString(m.group(1)),
                         Integer.parseInt(m.group(3)),
-                        Integer.parseInt(m.group(4))
+                        Integer.parseInt(m.group(4)),
+                        new HashMap<Unit, Integer>()
                     )
                 );
             } else {
@@ -89,7 +92,8 @@ class Parser {
                         Integer.parseInt(m.group(2).replace(":", "")),
                         LabDays.fromString(m.group(1)),
                         Integer.parseInt(m.group(3)),
-                        Integer.parseInt(m.group(4))
+                        Integer.parseInt(m.group(4)),
+                        new HashMap<Unit, Integer>()
                     )
                 );
             } else {
