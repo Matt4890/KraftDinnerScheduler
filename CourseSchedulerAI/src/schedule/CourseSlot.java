@@ -58,7 +58,7 @@ public class CourseSlot extends Slot{
     }
 
     public String toString(){
-        return day + time;
+        return day.toString() + time;
     }
     
 }
