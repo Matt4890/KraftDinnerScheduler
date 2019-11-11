@@ -1,7 +1,5 @@
 package coursesULabs;
 
-import java.util.ArrayList;
-
 public class Unit {
 
     //TODO change Object to Slots

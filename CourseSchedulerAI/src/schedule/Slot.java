@@ -1,4 +1,6 @@
 package schedule;
+
+
 public abstract class Slot{
     protected String type;
     protected int time;
@@ -36,7 +38,7 @@ public abstract class Slot{
 
     }
     
-    public abstract void addCourse(Object o);
+    public abstract void addOccupant(Object o);
     
     
 }

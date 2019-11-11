@@ -8,7 +8,7 @@ public class Schedule{
 
     
     public void assignCourseToSlot(int slotID, Course c){
-        theSchedule.get(slotID).addCourse(c);
+        theSchedule.get(slotID).addOccupant(c);
     }
 
     public String toString(){
