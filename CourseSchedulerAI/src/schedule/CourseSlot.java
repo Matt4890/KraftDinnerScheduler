@@ -10,9 +10,7 @@ public class CourseSlot extends Slot{
     private String day;
 
     public CourseSlot (int id, int time, String day, int courseMax, int courseMin ){
-        super.setID(id);
-        super.setTime(time);
-        super.setType(type);
+        super(id, time, "Course");
         this.courseMax = courseMax;
         this.courseMin = courseMin;
         this.day = day;
