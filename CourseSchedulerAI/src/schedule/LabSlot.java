@@ -1,13 +1,15 @@
 package schedule;
 import java.util.*;
 import coursesULabs.*;
+import enums.LabDays;
+import enums.SlotType;
 public class LabSlot extends Slot{
 
     private ArrayList<Lab> labs = new ArrayList<Lab>();
     private int labMax;
     private int labMin;
     private int labCount;
-    private String day;
+    private LabDays day;
 
     public LabSlot (int id, int time, String day, int labMax, int labMin, HashMap<Unit, Integer> map ){
         super(id, time, "Lab", map);
@@ -17,7 +19,7 @@ public class LabSlot extends Slot{
         this.labCount = 0;
     }
 
-    public String getDay(){
+    public LabDays getDay(){
         return this.day;
     }
     public int getLabMax(){
@@ -30,12 +32,12 @@ public class LabSlot extends Slot{
         return this.labCount;
     }
     public ArrayList<Lab> getAssignedLabs(){
-        // THIS SHOULD ONLY BE USED FOR LOOKUP SO ITS NOT GOING TO BE THE SAME REFERENCES 
+        // THIS SHOULD ONLY BE USED FOR LOOKUP SO ITS NOT GOING TO BE THE SAME REFERENCES
         ArrayList<Lab> displaylabs  = new ArrayList<Lab>();
         for (int i = 0; i< labs.size(); i++){
             displaylabs.add(labs.get(i));
         }
-        return displaylabs; 
+        return displaylabs;
 
     }
 
@@ -55,9 +57,9 @@ public class LabSlot extends Slot{
     }
 
     public String toString(){
-        return day + time;
+        return day.toString() + time;
     }
 
 
-    
+
 }

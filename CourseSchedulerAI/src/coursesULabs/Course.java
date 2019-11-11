@@ -41,10 +41,11 @@ public class Course extends Unit{
         super.id = id;
     }
 
-    public Course(int lectureNum, String courseType, int courseNum){
+    public Course(int id, int lectureNum, String courseType, int courseNum){
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
+        super.id = id;
     }
 
 }
