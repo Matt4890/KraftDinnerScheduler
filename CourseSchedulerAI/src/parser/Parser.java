@@ -68,6 +68,10 @@ class Parser {
                         Integer.parseInt(m.group(4))
                     )
                 );
+            } else {
+                System.out.println("Failed to parse string '" + slotStr + "' as a CourseSlot!");
+                System.out.println("Exiting...");
+                System.exit(1);
             }
         }
 
@@ -86,6 +90,10 @@ class Parser {
                         Integer.parseInt(m.group(4))
                     )
                 );
+            } else {
+                System.out.println("Failed to parse string '" + slotStr + "' as a LabSlot!");
+                System.out.println("Exiting...");
+                System.exit(1);
             }
         }
 
@@ -103,6 +111,10 @@ class Parser {
                         Integer.parseInt(m.group(2))
                     )
                 );
+            } else {
+                System.out.println("Failed to parse string '" + courseStr + "' as a Course!");
+                System.out.println("Exiting...");
+                System.exit(1);
             }
         }
 
@@ -131,6 +143,10 @@ class Parser {
                         Integer.parseInt(m2.group(3))
                     )
                 );
+            } else {
+                System.out.println("Failed to parse string '" + labStr + "' as a Lab!");
+                System.out.println("Exiting...");
+                System.exit(1);
             }
         }
 
