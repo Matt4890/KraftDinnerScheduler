@@ -9,7 +9,12 @@ public class Unit {
     protected int courseNum;
     protected Object partialAssignment;
     protected int id;
-
+    protected void setId(int i){
+        this.id = i;
+    }
+    public int getID(){
+        return this.id;
+    }
     public int getCourseNum() {
         return courseNum;
     }
