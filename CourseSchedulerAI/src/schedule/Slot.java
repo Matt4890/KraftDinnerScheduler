@@ -1,72 +1,79 @@
 package schedule;
 
+import java.util.*;
+import coursesULabs.*;
 
-public abstract class Slot{
+public abstract class Slot {
     protected String type;
     protected int time;
     protected int id;
-	private ArrayList<Unit> classAssignment = new ArrayList<Unit>();
-    protected Map<Unit, int> prefMap = new Map<>();
+    private ArrayList<Unit> classAssignment = new ArrayList<Unit>();
+    protected HashMap<Unit, Integer> prefMap = new HashMap<Unit, Integer>();
 
-    public Slot (int id, int time, String type, Map hashMap){
+    public Slot(int id, int time, String type, HashMap<Unit, Integer> hashMap) {
         this.type = type;
         this.time = time;
         this.id = id;
-        //new
-        this.prefMap = hashMap;  
+        // new
+        this.prefMap = hashMap;
 
     }
-    protected void setID(int id){
+
+    protected void setID(int id) {
         this.id = id;
 
     }
-    protected void setTime(int time){
+
+    protected void setTime(int time) {
         this.time = time;
 
     }
-    protected void setType(String type){
+
+    protected void setType(String type) {
         this.type = type;
 
     }
-    
-    public void setPreference(Unit unit, int score){
-		this.prefMap.put(unit, score);
-	
-	}
 
-    public int getID(){
+    public void setPreference(Unit unit, int score) {
+        this.prefMap.put(unit, score);
+
+    }
+
+    public int getID() {
         return this.id;
 
     }
-    public int getTime(){
+
+    public int getTime() {
         return this.time;
 
     }
-    public String getType(){
+
+    public String getType() {
         return this.type;
 
     }
-	public Map getPreference(){
-		return this.prefMap;
-		
-	}
-	public int getEval(){
-		if(!getPreference.containsKey(unit)){
-			return getPreference.get(unit);
-		}
-		return 0;
-	}
-	
-	public void assignUnitToSlot(Unit unit){
-		classAssignment.add(unit);
-		
-	}
-	
-	
-    
+
+    public HashMap<Unit, Integer> getPreference() {
+        return this.prefMap;
+
+    }
+
+    public int getEval() {
+        int total = 0;
+        for (int i = 0; i < classAssignment.size(); i++) {
+            if (!getPreference().containsKey(classAssignment.get(i))) {
+                total += (Integer)getPreference().get(classAssignment.get(i));
+            }
+        }
+        return total;
+    }
+
+    public void assignUnitToSlot(Unit unit) {
+        classAssignment.add(unit);
+
+    }
+
     public abstract void addOccupant(Object o);
-    
-	
-    
-    
+
 }

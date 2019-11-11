@@ -1,5 +1,5 @@
 package schedule;
-import java.util.ArrayList;
+import java.util.*;
 import coursesULabs.*;
 public class LabSlot extends Slot{
 
@@ -9,8 +9,8 @@ public class LabSlot extends Slot{
     private int labCount;
     private String day;
 
-    public LabSlot (int id, int time, String day, int labMax, int labMin ){
-        super(id, time, "Lab");
+    public LabSlot (int id, int time, String day, int labMax, int labMin, HashMap<Unit, Integer> map ){
+        super(id, time, "Lab", map);
         this.labMax = labMax;
         this.labMin = labMin;
         this.day = day;
