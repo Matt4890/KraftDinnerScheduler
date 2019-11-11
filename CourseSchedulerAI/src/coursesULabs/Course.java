@@ -23,13 +23,13 @@ public class Course extends Unit{
     }
 
     public boolean isString(String parserInput){
-        //CPSC433LEC01
-        String formatCourse = courseType + courseNum + "LEC" + lectureNum;
+        String formatCourse = toString();
 
         return formatCourse.equals(parserInput);
     }
 
     public String toString(){
+        //CPSC433LEC01
         return courseType + courseNum + "LEC" + lectureNum;
     }
 

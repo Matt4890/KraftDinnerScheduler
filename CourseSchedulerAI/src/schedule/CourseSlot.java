@@ -32,6 +32,16 @@ public class CourseSlot extends Slot{
     public int getCourseCount(){
         return this.courseCount;
     }
+    public ArrayList<Course> getAssignedCourses(){
+        // THIS SHOULD ONLY BE USED FOR LOOKUP SO ITS NOT GOING TO BE THE SAME REFERENCES 
+        ArrayList<Course> displayCourses  = new ArrayList<Course>();
+        for (int i = 0; i< courses.size(); i++){
+            displayCourses.add(courses.get(i));
+        }
+        return displayCourses; 
+
+
+    }
     public void addOccupant(Object co){
         Course c = (Course) co;
         if (this.courseCount < this.courseMax){
@@ -42,6 +52,13 @@ public class CourseSlot extends Slot{
 
     }
 
+    public boolean isString(String parserInput){
+        String formatString = toString();
+        return parserInput.equals(formatString);
+    }
 
+    public String toString(){
+        return day + time;
+    }
     
 }
