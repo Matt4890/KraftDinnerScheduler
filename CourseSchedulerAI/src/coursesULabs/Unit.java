@@ -4,12 +4,10 @@ import schedule.Slot;
 
 public class Unit {
 
-    //TODO change Object to Slots
     protected Slot slot;
     protected int lectureNum;
     protected String courseType;
     protected int courseNum;
-    protected Object partialAssignment;
     protected int id;
 
     public int getCourseNum() {

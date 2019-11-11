@@ -14,6 +14,23 @@ public class Lab extends Unit{
         this.tutNum = tutNum;
     }
 
+    public boolean isString(String parserInput){
+        //CPSC433TUT01
+        //CPSC433LEC01TUT01
+        String formatLab = (lectureNum == 0) ? 
+            courseType + courseNum + "TUT" + tutNum: 
+            courseType + courseNum + "LEC" + lectureNum + "TUT" + tutNum;
+
+        return formatLab.equals(parserInput);
+    }
+
+    public String toString(){
+        return (lectureNum == 0) ? 
+            courseType + courseNum + "TUT" + tutNum: 
+            courseType + courseNum + "LEC" + lectureNum + "TUT" + tutNum;
+
+    }
+
     public Lab (int id, int lectureNum, String courseType, int courseNum, int tutNum ){
         super.id = id;
         super.lectureNum = lectureNum;
