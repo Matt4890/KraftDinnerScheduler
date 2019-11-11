@@ -1,12 +1,13 @@
 package schedule;
 
+import enums.SlotType;
 
-public abstract class Slot{
-    protected String type;
+public abstract class Slot {
+    protected SlotType type;
     protected int time;
     protected int id; 
 
-    public Slot (int id, int time, String type){
+    public Slot (int id, int time, SlotType type){
         this.type = type;
         this.time = time;
         this.id = id;
@@ -20,7 +21,7 @@ public abstract class Slot{
         this.time = time;
 
     }
-    protected void setType(String type){
+    protected void setType(SlotType type){
         this.type = type;
 
     }
@@ -33,7 +34,7 @@ public abstract class Slot{
         return this.time;
 
     }
-    public String getType(){
+    public SlotType getType(){
         return this.type;
 
     }

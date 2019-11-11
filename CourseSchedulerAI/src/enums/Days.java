@@ -1,6 +1,6 @@
 package enums;
 
-interface Days {
+public interface Days {
 
     public String toString();
 

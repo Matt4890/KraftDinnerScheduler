@@ -1,6 +1,7 @@
 package enums;
 
-enum LabDays {
+public enum LabDays {
+
     MONWED("MO"),
     TUETHR("TU"),
     FRI("FR");
@@ -13,6 +14,15 @@ enum LabDays {
 
     public String toString() {
         return this.STRING_REPR;
+    }
+
+    public static LabDays fromString(String str) {
+        for (LabDays ld : LabDays.values()) {
+            if (ld.toString().equalsIgnoreCase(str)) {
+                return ld;
+            }
+        }
+        return null;
     }
 
 }

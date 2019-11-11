@@ -1,6 +1,6 @@
 package enums;
 
-enum CourseDays {
+public enum CourseDays {
 
     MONWEDFRI("MO"),
     TUETHR("TU");
@@ -13,6 +13,15 @@ enum CourseDays {
 
     public String toString() {
         return this.STRING_REPR;
+    }
+
+    public static CourseDays fromString(String str) {
+        for (CourseDays ld : CourseDays.values()) {
+            if (ld.toString().equalsIgnoreCase(str)) {
+                return ld;
+            }
+        }
+        return null;
     }
 
 }

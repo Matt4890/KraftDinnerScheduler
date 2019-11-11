@@ -9,6 +9,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import coursesULabs.*;
+import enums.CourseDays;
+import enums.LabDays;
 import schedule.*;
 
 class Parser {
@@ -63,7 +65,7 @@ class Parser {
                     new CourseSlot(
                         count++,
                         Integer.parseInt(m.group(2).replace(":", "")),
-                        m.group(1),
+                        CourseDays.fromString(m.group(1)),
                         Integer.parseInt(m.group(3)),
                         Integer.parseInt(m.group(4))
                     )
@@ -85,7 +87,7 @@ class Parser {
                     new LabSlot(
                         count++,
                         Integer.parseInt(m.group(2).replace(":", "")),
-                        m.group(1),
+                        LabDays.fromString(m.group(1)),
                         Integer.parseInt(m.group(3)),
                         Integer.parseInt(m.group(4))
                     )
