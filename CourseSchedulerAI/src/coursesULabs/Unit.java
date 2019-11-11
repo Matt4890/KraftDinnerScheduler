@@ -15,10 +15,6 @@ public class Unit {
     protected ArrayList<Unit> pair = new ArrayList<Unit>();
     protected Object partialAssignment;
 
-
-    /**
-     * 
-     */
     public int getCourseNum() {
         return courseNum;
     }
@@ -64,7 +60,6 @@ public class Unit {
         pair.add(unit);
     }
 
-
     public boolean findUnwanted(Object slot){
         return unwanted.contains(slot);
     }
@@ -82,8 +77,4 @@ public class Unit {
     public Unit() {
 
     }
-
-
-
-
 }

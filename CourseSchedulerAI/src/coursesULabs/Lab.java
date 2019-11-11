@@ -1,6 +1,6 @@
 package coursesULabs;
 
-public class Labs extends Unit{
+public class Lab extends Unit{
 
     private int tutNum;
 
@@ -12,14 +12,14 @@ public class Labs extends Unit{
         this.tutNum = tutNum;
     }
 
-    public Labs(int lectureNum, String courseType, int courseNum, int tutNum ){
+    public Lab (int lectureNum, String courseType, int courseNum, int tutNum ){
         super.lectureNum = lectureNum;
         super.courseType = courseType;
         super.courseNum = courseNum;
         this.tutNum = tutNum;
     }
 
-    public Labs(int lectureNum, String courseType, int courseNum, Object slot, int tutNum) {
+    public Lab (int lectureNum, String courseType, int courseNum, Object slot, int tutNum) {
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;

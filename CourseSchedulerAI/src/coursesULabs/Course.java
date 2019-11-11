@@ -4,24 +4,21 @@ import java.util.ArrayList;
 
 public class Course extends Unit{
 
-    private ArrayList<Labs> labs = new ArrayList<Labs>();
+    private ArrayList<Lab> labs = new ArrayList<Lab>();
 
-
-    public void addLab(Labs lab){
+    public void addLab(Lab lab){
         labs.add(lab);
     }
 
-    public ArrayList<Labs> getLabs(){
+    public ArrayList<Lab> getLabs(){
         return labs;
     }
 
-    public boolean findLab(Labs lab){
+    public boolean findLab(Lab lab){
         return labs.contains(lab);
     }
 
-
-
-    public (int lectureNum, String courseType, int courseNum, Object slot) {
+    public Course (int lectureNum, String courseType, int courseNum, Object slot) {
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
