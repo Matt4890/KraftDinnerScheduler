@@ -19,6 +19,12 @@ public class Lab extends Unit{
         this.tutNum = tutNum;
     }
 
+    public Lab (String courseType, int courseNum, int tutNum ){
+        super.courseType = courseType;
+        super.courseNum = courseNum;
+        this.tutNum = tutNum;
+    }
+
     public Lab (int lectureNum, String courseType, int courseNum, Object slot, int tutNum) {
         this.lectureNum = lectureNum;
         this.courseType = courseType;
