@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import coursesULabs.Course;
-import schedule.CourseSlot;
+import coursesULabs.*;
+import schedule.*;
 
 class Parser {
 
@@ -53,7 +53,7 @@ class Parser {
         String[] pairs_s            = getSection("PAIR", fileStr);
         String[] partialAssign_s    = getSection("PARTIAL ASSIGNMENTS", fileStr);
 
-        // Parse slots
+        // Parse course slots
         ArrayList<CourseSlot> courseSlots = new ArrayList<CourseSlot>();
         count = 0;
         for (String slotStr : courseSlots_s) {
@@ -70,6 +70,71 @@ class Parser {
                 );
             }
         }
+
+        // Parse lab slots
+        ArrayList<LabSlot> labSlots = new ArrayList<LabSlot>();
+        count = 0;
+        for (String slotStr : labSlots_s) {
+            Matcher m = slotRegex.matcher(slotStr);
+            if (m.find()) {
+                labSlots.add(
+                    new LabSlot(
+                        count++,
+                        Integer.parseInt(m.group(2).replace(":", "")),
+                        m.group(1),
+                        Integer.parseInt(m.group(3)),
+                        Integer.parseInt(m.group(4))
+                    )
+                );
+            }
+        }
+
+        // Parse courses
+        ArrayList<Course> courses = new ArrayList<Course>();
+        count = 0;
+        for (String courseStr : courses_s) {
+            Matcher m = courseRegex.matcher(courseStr);
+            if (m.find()) {
+                courses.add(
+                    new Course(
+                        count++,
+                        Integer.parseInt(m.group(3)),
+                        m.group(1),
+                        Integer.parseInt(m.group(2))
+                    )
+                );
+            }
+        }
+
+        // Parse courses
+        ArrayList<Lab> labs = new ArrayList<Lab>();
+        count = 0;
+        for (String labStr : labs_s) {
+            Matcher m1 = labLecRegex.matcher(labStr);
+            Matcher m2 = labRegex.matcher(labStr);
+            if (m1.find()) {
+                labs.add(
+                    new Lab(
+                        count++,
+                        Integer.parseInt(m1.group(3)),
+                        m1.group(1),
+                        Integer.parseInt(m1.group(2)),
+                        Integer.parseInt(m1.group(4))
+                    )
+                );
+            } else if (m2.find()) {
+                labs.add(
+                    new Lab(
+                        count++,
+                        m2.group(1),
+                        Integer.parseInt(m2.group(2)),
+                        Integer.parseInt(m2.group(3))
+                    )
+                );
+            }
+        }
+
+        System.out.println("Done!");
 
     }
 
