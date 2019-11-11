@@ -15,16 +15,14 @@ public class Lab extends Unit{
     }
 
     public boolean isString(String parserInput){
-        //CPSC433TUT01
-        //CPSC433LEC01TUT01
-        String formatLab = (lectureNum == 0) ? 
-            courseType + courseNum + "TUT" + tutNum: 
-            courseType + courseNum + "LEC" + lectureNum + "TUT" + tutNum;
+        String formatLab = toString();
 
         return formatLab.equals(parserInput);
     }
 
     public String toString(){
+        //CPSC433TUT01
+        //CPSC433LEC01TUT01
         return (lectureNum == 0) ? 
             courseType + courseNum + "TUT" + tutNum: 
             courseType + courseNum + "LEC" + lectureNum + "TUT" + tutNum;
