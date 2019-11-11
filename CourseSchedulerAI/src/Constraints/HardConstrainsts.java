@@ -13,7 +13,8 @@ public class HardConstrainsts {
         return checkCourseMax(course, slot) && 
         checkDuplicateCourse(course, slot) && 
         checkEveningClasses(course, slot) && 
-        checkConflict500Levels(course, slot); 
+        checkConflict500Levels(course, slot) && 
+        checkLabConflicts(course, slot);
     }
     public static boolean checkCourseMax(Course c, CourseSlot s){
        return (s.getCourseCount() +1 < s.getCourseMax());
@@ -64,7 +65,7 @@ public class HardConstrainsts {
         return false; 
     }
     public static boolean checkLabMax(Lab c, LabSlot s){
-        return (s.getLabCount() +1< s.getLabMax());
+        return (s.getLabCount() +1 < s.getLabMax());
     }
     public static boolean checkDuplicateLab(Lab c, LabSlot s){
         //Go through courses in slot to see if theres a duplicate
@@ -81,6 +82,7 @@ public class HardConstrainsts {
     }
     public static boolean checkConflictingCourses(Lab c, LabSlot s){
         //TODO: once hash maps are implemented 
+        return true;
     }
 
 
