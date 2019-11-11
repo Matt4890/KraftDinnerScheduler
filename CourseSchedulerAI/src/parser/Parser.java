@@ -13,8 +13,9 @@ class Parser {
     public static void main(String[] args) {
 
         // Setup file params
-        String filename = "./CourseSchedulerAI/inputs/shortExample.txt";
+        String filename = "./inputs/shortExample.txt";
         ArrayList<String> fileLines = new ArrayList<String>();
+        int slotCount = 0;
 
         // Read in the file
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
@@ -37,7 +38,29 @@ class Parser {
         Pattern labRegex    = Pattern.compile("([A-Z]{4})\\s*(\\d{3})\\s*(?:LAB|TUT)\\s*(\\d{2})");
         Pattern labLecRegex = Pattern.compile("([A-Z]{4})\\s*(\\d{3})\\s*LEC\\s*(\\d{2})\\s*(?:LAB|TUT)\\s*(\\d{2})");
 
-        // Iterate through file lines
+        // Get sections from input file
+        String fileStr = String.join("\n", fileLines).toUpperCase();
+        String[] courseSlots    = getSection("COURSE SLOTS", fileStr);
+        String[] labSlots       = getSection("LAB SLOTS", fileStr);
+        String[] courses        = getSection("COURSES", fileStr);
+        String[] labs           = getSection("LABS", fileStr);
+        String[] notCompat      = getSection("NOT COMPATIBLE", fileStr);
+        String[] unwanted       = getSection("UNWANTED", fileStr);
+        String[] preferences    = getSection("PREFERENCES", fileStr);
+        String[] pairs          = getSection("PAIR", fileStr);
+        String[] partialAssign  = getSection("PARTIAL ASSIGNMENTS", fileStr);
+
+    }
+
+    private static String[] getSection(String label, String fileStr) {
+
+        Pattern regex = Pattern.compile(label + "\\s*:\\s*((?:.|\n)*?)(?:\n\n|$)");
+        Matcher matcher = regex.matcher(fileStr);
+        if (matcher.find()) {
+            return matcher.group(1).split("\n");
+        } else {
+            return new String[0];
+        }
 
     }
 
