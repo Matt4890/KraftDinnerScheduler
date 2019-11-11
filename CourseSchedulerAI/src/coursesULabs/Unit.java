@@ -9,7 +9,6 @@ public class Unit {
     protected int lectureNum;
     protected String courseType;
     protected int courseNum;
-    protected Object partialAssignment;
     protected int id;
 
     public int getCourseNum() {
