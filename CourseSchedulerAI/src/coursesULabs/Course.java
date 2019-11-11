@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Course extends Unit{
 
     private ArrayList<Lab> labs = new ArrayList<Lab>();
+    
 
     public void addLab(Lab lab){
         labs.add(lab);
@@ -18,11 +19,12 @@ public class Course extends Unit{
         return labs.contains(lab);
     }
 
-    public Course (int lectureNum, String courseType, int courseNum, Object slot) {
+    public Course (int id, int lectureNum, String courseType, int courseNum, Object slot) {
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
         this.slot = slot;
+        super.id = id;
     }
 
     public Course(int lectureNum, String courseType, int courseNum){

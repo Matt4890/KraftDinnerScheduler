@@ -26,6 +26,10 @@ public class LabSlot extends Slot{
     public int getLabMin(){
         return this.labMin;
     }
+    public int getLabCount(){
+        return this.labCount;
+    }
+
     public void addOccupant(Object lo){
         Lab l = (Lab) lo;
         if (this.labCount < this.labMax){

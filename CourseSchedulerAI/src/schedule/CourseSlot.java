@@ -26,6 +26,9 @@ public class CourseSlot extends Slot{
     public int getCourseMin(){
         return this.courseMin;
     }
+    public int getCourseCount(){
+        return this.courseCount;
+    }
     public void addOccupant(Object co){
         Course c = (Course) co;
         if (this.courseCount < this.courseMax){

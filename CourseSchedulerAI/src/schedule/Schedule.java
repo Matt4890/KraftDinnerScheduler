@@ -12,10 +12,7 @@ public class Schedule{
     }
 
     public String toString(){
-        for (int i = 0; i< theSchedule.size(); i++){
-            
-
-        }
+        return "";
     }
 
 }
