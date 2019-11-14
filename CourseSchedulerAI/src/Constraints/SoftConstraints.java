@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import coursesULabs.*;
 
-public class SoftConstrainsts {
+public class SoftConstraints {
 
   public int checkCourseMin(CourseSlot s, int pen_course_min){
     if(s.getCourseMin()> s.getCourseCount()){
@@ -24,9 +24,9 @@ public class SoftConstrainsts {
 
   public int preferenceEval(Slot slot) {
       int total = 0;
-      for (int i = 0; i < slot.classAssignment.size(); i++) {
-          if (!slot.getPreference().containsKey(slot.classAssignment.get(i))) {
-              total += (Integer)slot.getPreference().get(slot.classAssignment.get(i));
+      for (int i = 0; i < slot.getClassAssignment().size(); i++) {
+          if (!slot.getPreference().containsKey(slot.getClassAssignment().get(i))) {
+              total += (Integer)slot.getPreference().get(slot.getClassAssignment().get(i));
           }
       }
       return total;

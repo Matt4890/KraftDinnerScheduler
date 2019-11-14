@@ -32,6 +32,10 @@ public abstract class Slot {
         this.type = type;
 
     }
+    public ArrayList<Unit> getClassAssignment(){
+        return this.classAssignment;
+
+    }
 
     public void setPreference(Unit unit, int score) {
         this.prefMap.put(unit, score);
