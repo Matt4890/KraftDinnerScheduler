@@ -45,8 +45,6 @@ public class Node {
         this.parent = parent;
     }
 
-    
-
     public int getPenaltyValueOfNode(){
         return this.penaltyValue;
     }
@@ -64,6 +62,7 @@ public class Node {
     public ArrayList<Node> getChildren(){
         return this.children;
     }
+    
     public Node getChildWithPenaltyValue(int n){
        
         for (int i = 0; i< this.children.size(); i++){
