@@ -25,15 +25,15 @@ public class Course extends Unit{
     }
 
     public void addBrother(Course course){
-        labs.add(Course);
+        brothers.add(Course);
     }
 
-    public ArrayList<Lab> getBrothers(){
+    public ArrayList<Course> getBrothers(){
         return brothers;
     }
 
     public boolean findBrother(Course course){
-        return labs.contains(course);
+        return brothers.contains(course);
     }
 
     public boolean isString(String parserInput){
