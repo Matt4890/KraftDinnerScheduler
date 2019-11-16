@@ -9,34 +9,72 @@ public class Generator {
     private Tree tree;
     private Schedule starter;
     private int initialPenalty;
-    private int bound; 
-    public Generator (Schedule starter, int penalty){
+    private int bound;
+
+    public Generator(Schedule starter, int penalty) {
         this.tree = new Tree();
+        this.tree.addRoot(new Node(this.starter, this.initialPenalty));
         this.starter = starter;
         this.initialPenalty = penalty;
         this.bound = Integer.MAX_VALUE;
 
     }
-    public void createFBound( ArrayList<Unit> toBeAdded) {
-        
+
+    public void generateFBound(ArrayList<Unit> toBeAdded){ 
+        Node lastNode = this.tree.getRoot();
+        for (int i = 0; i< toBeAdded.size(); i++){
+            Unit current = toBeAdded.get(i);
+            // Run through each possible course slot pair and create children 
+            if (current instanceof Course) {
+                for (Map.Entry<Integer, Slot> entry : this.starter.getMWFLec().entrySet()) {
+                    // Calculate the penalty of the course slot pairing
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    if (HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
+                            (CourseSlot) entry.getValue(), this.starter.getMWFLec(),
+                            this.starter.getTuThLec(), this.starter.getMWLab(),
+                            this.starter.getTuThLab(), this.starter.getFLab())) {
+                        // Run a hard constraint check
+                        Node n = new Node(this.starter, calc + lastNode.getPenaltyValueOfNode(), lastNode);
+                        lastNode.addChild(n);
+                        //Create a node as a child of the last node 
+                    }
+                }
+                for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLec().entrySet()) {
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    // Check if we pass the hard constraints and its a new minimal
+                    if (HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
+                            (CourseSlot) entry.getValue(), this.starter.getMWFLec(),
+                            this.starter.getTuThLec(), this.starter.getMWLab(),
+                            this.starter.getTuThLab(), this.starter.getFLab())) {
+
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+    public void createFBound(ArrayList<Unit> toBeAdded) {
+
         this.tree.addRoot(new Node(this.starter, this.initialPenalty));
         Node lastNode = this.tree.getRoot();
-    
+
         for (int i = 0; i < toBeAdded.size(); i++) {
             // Check what type of unit it is and then create the nodes accordingly
             Unit current = toBeAdded.get(i);
             int minimum = Integer.MAX_VALUE;
             if (current instanceof Course) {
-            
+
                 int idx = Integer.MAX_VALUE;
                 int day = -1;
                 for (Map.Entry<Integer, Slot> entry : this.starter.getMWFLec().entrySet()) {
                     // Calculate the penalty of the course slot pairing
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
-                    if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
-                            (CourseSlot) entry.getValue(), this.starter.getMWFLec(),
-                            this.starter.getTuThLec(), this.starter.getMWLab(),
-                            this.starter.getTuThLab(), this.starter.getFLab())) {
+                    if (HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
+                            (CourseSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
+                            this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
                         // Run a hard constraint check
 
                         calc = minimum;
@@ -48,9 +86,8 @@ public class Generator {
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
                     // Check if we pass the hard constraints and its a new minimal
                     if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
-                            (CourseSlot) entry.getValue(), this.starter.getMWFLec(),
-                            this.starter.getTuThLec(), this.starter.getMWLab(),
-                            this.starter.getTuThLab(), this.starter.getFLab())) {
+                            (CourseSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
+                            this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
                         calc = minimum;
                         idx = entry.getKey();
                         day = 1;
@@ -63,7 +100,7 @@ public class Generator {
                     this.starter.getTuThLec().get(idx).assignUnitToSlot(current);
                 }
                 // Not Sure if this should be a deep copy or a shallow reference is okay.
-                Node newCreatedNode =new Node(this.starter, minimum + lastNode.getPenaltyValueOfNode(), lastNode);
+                Node newCreatedNode = new Node(this.starter, minimum + lastNode.getPenaltyValueOfNode(), lastNode);
                 lastNode.addChild(newCreatedNode);
                 lastNode = newCreatedNode;
 
@@ -74,9 +111,8 @@ public class Generator {
                 for (Map.Entry<Integer, Slot> entry : this.starter.getMWLab().entrySet()) {
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
                     if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
-                            (LabSlot) entry.getValue(), this.starter.getMWFLec(),
-                            this.starter.getTuThLec(), this.starter.getMWLab(),
-                            this.starter.getTuThLab(), this.starter.getFLab())) {
+                            (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
+                            this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
 
                         calc = minimum;
                         idx = entry.getKey();
@@ -87,9 +123,8 @@ public class Generator {
                 for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLab().entrySet()) {
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
                     if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
-                            (LabSlot) entry.getValue(), this.starter.getMWFLec(),
-                            this.starter.getTuThLec(), this.starter.getMWLab(),
-                            this.starter.getTuThLab(), this.starter.getFLab())) {
+                            (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
+                            this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
 
                         calc = minimum;
                         idx = entry.getKey();
@@ -100,9 +135,8 @@ public class Generator {
                 for (Map.Entry<Integer, Slot> entry : this.starter.getFLab().entrySet()) {
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
                     if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
-                            (LabSlot) entry.getValue(), this.starter.getMWFLec(),
-                            this.starter.getTuThLec(), this.starter.getMWLab(),
-                            this.starter.getTuThLab(), this.starter.getFLab())) {
+                            (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
+                            this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
 
                         calc = minimum;
                         idx = entry.getKey();
@@ -113,26 +147,27 @@ public class Generator {
                     this.starter.getMWLab().get(idx).assignUnitToSlot(current);
                 } else if (day == 1) { // TuesdayThursday
                     this.starter.getTuThLab().get(idx).assignUnitToSlot(current);
-                } else { //Friday
+                } else { // Friday
                     this.starter.getFLab().get(idx).assignUnitToSlot(current);
                 }
-                Node newCreatedNode =new Node(this.starter, minimum + lastNode.getPenaltyValueOfNode(), lastNode);
+                Node newCreatedNode = new Node(this.starter, minimum + lastNode.getPenaltyValueOfNode(), lastNode);
                 lastNode.addChild(newCreatedNode);
                 lastNode = newCreatedNode;
 
             }
-            this.bound +=minimum;
+            this.bound += minimum;
             System.out.println(bound);
         }
     }
 
-    public Node branchAndBound (){
-        //TODO: Implement branch and Bound using a control to evaluate 
+    public Node branchAndBound() {
+        // TODO: Implement branch and Bound using a control to evaluate
 
-        // Basic methodology same as the dfs except we store all of them as children and make a choice based on the KONTROL 
+        // Basic methodology same as the dfs except we store all of them as children and
+        // make a choice based on the KONTROL
         // the Bound basically acts as another hard constraint?
-        //or no that would just be brute force
-        // we have to find the 
+        // or no that would just be brute force
+        // we have to find the
 
         return this.tree.getRoot();
 
