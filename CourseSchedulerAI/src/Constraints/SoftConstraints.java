@@ -7,6 +7,11 @@ import java.util.ArrayList;
 import coursesULabs.*;
 
 public class SoftConstraints {
+  public static int calculatePenalty(Slot s, Unit u){
+    //TODO: Implement this pls
+    return 0;
+
+  }
 
   public int checkCourseMin(CourseSlot s, int pen_course_min){
     if(s.getCourseMin()> s.getCourseCount()){

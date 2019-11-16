@@ -8,7 +8,21 @@ public class Schedule{
     private HashMap<Integer, Slot> TuThLab = new HashMap<Integer, Slot>();
     private HashMap<Integer, Slot> FLab = new HashMap<Integer, Slot>();
     //Do we want these to have any particular ordering at the beginning 
-
+    public  HashMap<Integer, Slot> getMWFLec(){
+        return this.MWFLec;
+    }
+    public  HashMap<Integer, Slot> getTuThLec(){
+        return this.TuThLec;
+    }
+    public  HashMap<Integer, Slot> getMWLab(){
+        return this.MWLab;
+    }
+    public  HashMap<Integer, Slot> getTuThLab(){
+        return this.TuThLab;
+    }
+    public  HashMap<Integer, Slot> getFLab(){
+        return this.FLab;
+    }
     
     public void assignMWFLecTimeToSlot(Slot slot){
         MWFLec.put(slot.getTime(), slot);

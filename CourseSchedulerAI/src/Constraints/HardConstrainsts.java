@@ -111,7 +111,9 @@ public class HardConstrainsts {
         return toReturn;
     }
 
-    public static boolean checkAssignmentHardConstriantsLab(Lab lab, LabSlot slot) {
+    public static boolean checkAssignmentHardConstriantsLab(Lab lab, LabSlot slot, HashMap<Integer, Slot> MWFLec,
+    HashMap<Integer, Slot> TuThLec, HashMap<Integer, Slot> MWLab, HashMap<Integer, Slot> TuThLab,
+    HashMap<Integer, Slot> FLab) {
         return false;
     }
 

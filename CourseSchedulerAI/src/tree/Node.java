@@ -25,7 +25,7 @@ public class Node {
         this.penaltyValue = penaltyValue;
         this.schedule = schedule;
         for (int i = 0; i<children.size(); i++){
-
+            this.children.add(children.get(i));
         }
         this.parent = null;
     }
@@ -40,7 +40,7 @@ public class Node {
         this.penaltyValue = penaltyValue;
         this.schedule = schedule;
         for (int i = 0; i<children.size(); i++){
-
+            this.children.add(children.get(i));
         }
         this.parent = parent;
     }
