@@ -34,9 +34,9 @@ public class Generator {
                             this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
                         // Add the course to the slot in the schedule
                         entry.getValue().addOccupant(current);
+                        // Create a node as a child of the last node
                         Node n = new Node(this.starter, calc + lastNode.getPenaltyValueOfNode(), lastNode);
                         lastNode.addChild(n);
-                        // Create a node as a child of the last node
                     }
                 }
                 for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLec().entrySet()) {
@@ -45,12 +45,41 @@ public class Generator {
                     if (HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
                             this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
+                        //Add Course 
                         entry.getValue().addOccupant(current);
+                        // Create a node as a child of the last node
                         Node n = new Node(this.starter, calc + lastNode.getPenaltyValueOfNode(), lastNode);
                         lastNode.addChild(n);
                     }
                 }
 
+            } else {
+                for (Map.Entry<Integer, Slot> entry : this.starter.getMWFLec().entrySet()) {
+                    // Calculate the penalty of the course slot pairing
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    if (HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
+                            (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
+                            this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
+                        // Add the course to the slot in the schedule
+                        entry.getValue().addOccupant(current);
+                        // Create a node as a child of the last node
+                        Node n = new Node(this.starter, calc + lastNode.getPenaltyValueOfNode(), lastNode);
+                        lastNode.addChild(n);
+                    }
+                }
+                for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLec().entrySet()) {
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    // Check if we pass the hard constraints and its a new minimal
+                    if (HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
+                            (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
+                            this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
+                        //Add Course 
+                        entry.getValue().addOccupant(current);
+                        // Create a node as a child of the last node
+                        Node n = new Node(this.starter, calc + lastNode.getPenaltyValueOfNode(), lastNode);
+                        lastNode.addChild(n);
+                    }
+                }
             }
         }
 
