@@ -8,7 +8,9 @@ import schedule.Slot;
 public class Course extends Unit{
 
     private ArrayList<Lab> labs = new ArrayList<Lab>();
-    
+
+    private ArrayList<Course> brothers = ArrayList<Course>();
+
 
     public void addLab(Lab lab){
         labs.add(lab);
@@ -20,6 +22,18 @@ public class Course extends Unit{
 
     public boolean findLab(Lab lab){
         return labs.contains(lab);
+    }
+
+    public void addBrother(Course course){
+        labs.add(Course);
+    }
+
+    public ArrayList<Lab> getBrothers(){
+        return brothers;
+    }
+
+    public boolean findBrother(Course course){
+        return labs.contains(course);
     }
 
     public boolean isString(String parserInput){
