@@ -114,7 +114,7 @@ public class HardConstrainsts {
     public static boolean checkAssignmentHardConstriantsLab(Lab lab, LabSlot slot, HashMap<Integer, Slot> MWFLec,
     HashMap<Integer, Slot> TuThLec, HashMap<Integer, Slot> MWLab, HashMap<Integer, Slot> TuThLab,
     HashMap<Integer, Slot> FLab) {
-        return false;
+        return checkLabMax(lab, slot) && checkDuplicateLab(lab, slot) && checkCourseConflicts(lab, slot, MWFLec, TuThLec, MWLab, TuThLab, FLab);
     }
 
     public static boolean checkLabMax(Lab c, LabSlot s) {

@@ -126,4 +126,13 @@ public class Generator {
         }
     }
 
+    public Node branchAndBound (){
+        //TODO: Implement branch and Bound using a control to evaluate 
+
+        // Basic methodology same as the dfs except we store all of them as children and make a choice based on the KONTROL 
+
+
+        return this.tree.getRoot();
+
+    }
 }
