@@ -130,7 +130,9 @@ public class Generator {
         //TODO: Implement branch and Bound using a control to evaluate 
 
         // Basic methodology same as the dfs except we store all of them as children and make a choice based on the KONTROL 
-
+        // the Bound basically acts as another hard constraint?
+        //or no that would just be brute force
+        // we have to find the 
 
         return this.tree.getRoot();
 
