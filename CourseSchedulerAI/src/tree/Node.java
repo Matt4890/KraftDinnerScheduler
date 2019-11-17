@@ -10,6 +10,7 @@ public class Node {
     private int penaltyValue; 
     private Schedule schedule;
     private ArrayList<Node> children; //This could be a heap so the one with the lowest pen value is always on top
+    private int desirability;
 
 
 
@@ -19,6 +20,7 @@ public class Node {
         this.schedule = schedule;
         this.children = new ArrayList<Node>();
         this.parent = null;
+        this.desirability = Integer.MAX_VALUE;
     }
     
     public Node (Schedule schedule, int penaltyValue, ArrayList<Node> children){
@@ -28,6 +30,7 @@ public class Node {
             this.children.add(children.get(i));
         }
         this.parent = null;
+        this.desirability = Integer.MAX_VALUE;
     }
     public Node (Schedule schedule, int penaltyValue, Node parent){
 
@@ -35,6 +38,7 @@ public class Node {
         this.schedule = schedule;
         this.children = new ArrayList<Node>();
         this.parent = parent;
+        this.desirability = Integer.MAX_VALUE;
     }
     public Node (Schedule schedule, int penaltyValue, ArrayList<Node> children, Node parent){
         this.penaltyValue = penaltyValue;
@@ -43,6 +47,7 @@ public class Node {
             this.children.add(children.get(i));
         }
         this.parent = parent;
+        this.desirability = Integer.MAX_VALUE;
     }
 
     public int getPenaltyValueOfNode(){
@@ -72,5 +77,11 @@ public class Node {
         }
         return null;
     }
+
+    public void calculateDesireablility(){
+        //This is the F_leaf function that we want to calculate whether its a good assignment pair or not.
+
+    }
+
 
 }
