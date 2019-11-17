@@ -9,7 +9,7 @@ public class Course extends Unit{
 
     private ArrayList<Lab> labs = new ArrayList<Lab>();
 
-    private ArrayList<Course> brothers = ArrayList<Course>();
+    private ArrayList<Course> brothers = new ArrayList<Course>();
 
 
     public void addLab(Lab lab){
@@ -25,7 +25,7 @@ public class Course extends Unit{
     }
 
     public void addBrother(Course course){
-        brothers.add(Course);
+        brothers.add(course);
     }
 
     public ArrayList<Course> getBrothers(){

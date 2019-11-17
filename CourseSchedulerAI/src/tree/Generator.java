@@ -28,7 +28,7 @@ public class Generator {
             if (current instanceof Course) {
                 for (Map.Entry<Integer, Slot> entry : this.starter.getMWFLec().entrySet()) {
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
                     if (HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
                             this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
@@ -40,7 +40,7 @@ public class Generator {
                     }
                 }
                 for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLec().entrySet()) {
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
                     // Check if we pass the hard constraints and its a new minimal
                     if (HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
@@ -56,7 +56,7 @@ public class Generator {
             } else {
                 for (Map.Entry<Integer, Slot> entry : this.starter.getMWFLec().entrySet()) {
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
                     if (HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
                             this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
@@ -68,7 +68,7 @@ public class Generator {
                     }
                 }
                 for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLec().entrySet()) {
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
                     // Check if we pass the hard constraints and its a new minimal
                     if (HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
@@ -106,7 +106,7 @@ public class Generator {
                 int day = -1;
                 for (Map.Entry<Integer, Slot> entry : this.starter.getMWFLec().entrySet()) {
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
                     if (HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
                             this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
@@ -118,7 +118,7 @@ public class Generator {
                     }
                 }
                 for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLec().entrySet()) {
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
                     // Check if we pass the hard constraints and its a new minimal
                     if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
@@ -144,7 +144,7 @@ public class Generator {
                 int day = -1;
                 // Check all the lab slot assignments that would be best
                 for (Map.Entry<Integer, Slot> entry : this.starter.getMWLab().entrySet()) {
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
                     if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
                             this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
@@ -156,7 +156,7 @@ public class Generator {
 
                 }
                 for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLab().entrySet()) {
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
                     if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
                             this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
@@ -168,7 +168,7 @@ public class Generator {
 
                 }
                 for (Map.Entry<Integer, Slot> entry : this.starter.getFLab().entrySet()) {
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
                     if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
                             this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
