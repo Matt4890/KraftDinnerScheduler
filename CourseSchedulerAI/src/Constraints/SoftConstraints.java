@@ -55,7 +55,7 @@ public class SoftConstraints {
 }
 
 
-public int notPairedLab(Lab b, CourseSlot s, int not_paired){
+public int notPairedLab(Lab b, LabSlot s, int not_paired){
   ArrayList<Lab> lookup = s.getAssignedLabs();
   boolean matched = false;
 
