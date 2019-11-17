@@ -55,7 +55,7 @@ public class SoftConstraints {
 }
 
 
-public int notPairedLab(Lab b, CourseSlot s, int not_paired){
+public int notPairedLab(Lab b, LabSlot s, int not_paired){
   ArrayList<Lab> lookup = s.getAssignedLabs();
   boolean matched = false;
 
@@ -71,3 +71,18 @@ public int notPairedLab(Lab b, CourseSlot s, int not_paired){
   }
 
 }
+
+  //Ask if 2 sections already in the slot would accumulate the penalty
+  public int checkSections(Course course, CourseSlot s, int pen){
+    int curr_pen = 0;
+    ArrayList<Course> lookup = s.getAssignedCourses();
+    boolean anotherSection = false;
+    for(int i = 0; i < lookup.size(); i++){
+      if(lookup.get(i).courseNum == course.courseNum){
+        anotherSection = true;
+        curr_pen = curr_pen + pen;
+        //Here we will have \continue if we need to acumulate penalty, else \break
+      }
+    }
+    return curr_pen;
+  }
