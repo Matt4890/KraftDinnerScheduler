@@ -37,13 +37,37 @@ public class SoftConstraints {
       return total;
   }
 
-  //public int notPaired(ArrayList<Unit> list, CourseSlot s, int not_paired){
-    //ArrayList<Lab> lookup = s.getAssignedLabs();
-    //for(int i=0; i<list.size(); i++){
-      //for(int j=0; j<list.size();j++){
-      //  if(list.get(i))
-      //}
-    //}
-  //}
+  public int notPairedCourse(Course b, CourseSlot s, int not_paired){
+    ArrayList<Course> lookup = s.getAssignedCourses();
+    boolean matched = false;
+
+    for(int i = 0; i < lookup.size(); i++){
+        if(lookup.get(i) == b){
+            matched = true;
+            break;
+        }
+    }
+    if(matched) return 0;
+    else{
+      return not_paired;
+    }
+
+}
+
+
+public int notPairedLab(Lab b, CourseSlot s, int not_paired){
+  ArrayList<Lab> lookup = s.getAssignedLabs();
+  boolean matched = false;
+
+  for(int i = 0; i < lookup.size(); i++){
+      if(lookup.get(i) == b){
+          matched = true;
+          break;
+      }
+  }
+  if(matched) return 0;
+  else{
+    return not_paired;
+  }
 
 }
