@@ -20,7 +20,8 @@ class Parser {
     public static void main(String[] args) {
 
         // Setup file params
-        String filename = "./inputs/shortExample.txt";
+        // String filename = "./inputs/shortExample.txt";
+        String filename = "./inputs/departmentExample2.txt";
         ArrayList<String> fileLines = new ArrayList<String>();
         int count;
 
@@ -47,15 +48,15 @@ class Parser {
 
         // Get sections from input file
         String fileStr = String.join("\n", fileLines).toUpperCase().replaceAll(" |\t", "");
-        String[] courseSlots_s      = getSection("COURSE SLOTS", fileStr);
-        String[] labSlots_s         = getSection("LAB SLOTS", fileStr);
+        String[] courseSlots_s      = getSection("COURSESLOTS", fileStr);
+        String[] labSlots_s         = getSection("LABSLOTS", fileStr);
         String[] courses_s          = getSection("COURSES", fileStr);
         String[] labs_s             = getSection("LABS", fileStr);
-        String[] notCompat_s        = getSection("NOT COMPATIBLE", fileStr);
+        String[] notCompat_s        = getSection("NOTCOMPATIBLE", fileStr);
         String[] unwanted_s         = getSection("UNWANTED", fileStr);
         String[] preferences_s      = getSection("PREFERENCES", fileStr);
         String[] pairs_s            = getSection("PAIR", fileStr);
-        String[] partialAssign_s    = getSection("PARTIAL ASSIGNMENTS", fileStr);
+        String[] partialAssign_s    = getSection("PARTIALASSIGNMENTS", fileStr);
 
         // Parse course slots
         ArrayList<CourseSlot> courseSlots = new ArrayList<CourseSlot>();
@@ -162,9 +163,9 @@ class Parser {
 
     private static String[] getSection(String label, String fileStr) {
 
-        Pattern regex = Pattern.compile(label + "\\s*:\\s*((?:.|\n)*?)(?:\n\n|$)");
+        Pattern regex = Pattern.compile(label + "\\s*:\\s*(.*?)(?:\n\n|$)", Pattern.DOTALL);
         Matcher matcher = regex.matcher(fileStr);
-        if (matcher.find()) {
+        if (matcher.find() && !matcher.group(1).equals("")) {
             return matcher.group(1).split("\n");
         } else {
             return new String[0];
