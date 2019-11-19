@@ -11,6 +11,9 @@ public class Unit {
     protected int id;
     protected String key;
     protected int constrained;
+    protected int partAssignIncrease = 100;
+    protected int unwantedIncrease = 3;
+    protected int nonCompatibleIncrease = 5;
 
     
     protected void setId(int i){
@@ -61,5 +64,19 @@ public class Unit {
 
     public void setKey(String key) {
         this.key = key;
+    }
+
+    public int getConstrained() {
+        return constrained;
+    }
+
+    public void incrementPartAssign() {
+        this.constrained += partAssignIncrease;
+    }
+    public void incrementUnwanted() {
+        this.constrained += unwantedIncrease;
+    }
+    public void incrementNonCompatible() {
+        this.constrained += nonCompatibleIncrease;
     }
 }
