@@ -6,7 +6,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -64,16 +63,15 @@ class Parser {
         for (String slotStr : courseSlots_s) {
             Matcher m = slotRegex.matcher(slotStr);
             if (m.find()) {
-                courseSlots.add(
-                    new CourseSlot(
-                        count++,
-                        Integer.parseInt(m.group(2).replace(":", "")),
-                        CourseDays.fromString(m.group(1)),
-                        Integer.parseInt(m.group(3)),
-                        Integer.parseInt(m.group(4)),
-                        new HashMap<Unit, Integer>()
-                    )
+                CourseSlot cs = new CourseSlot(
+                    count++,
+                    Integer.parseInt(m.group(2).replace(":", "")),
+                    CourseDays.fromString(m.group(1)),
+                    Integer.parseInt(m.group(3)),
+                    Integer.parseInt(m.group(4)),
+                    new HashMap<Unit, Integer>()
                 );
+                courseSlots.add(cs);
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a CourseSlot!");
                 System.out.println("Exiting...");
@@ -87,16 +85,15 @@ class Parser {
         for (String slotStr : labSlots_s) {
             Matcher m = slotRegex.matcher(slotStr);
             if (m.find()) {
-                labSlots.add(
-                    new LabSlot(
-                        count++,
-                        Integer.parseInt(m.group(2).replace(":", "")),
-                        LabDays.fromString(m.group(1)),
-                        Integer.parseInt(m.group(3)),
-                        Integer.parseInt(m.group(4)),
-                        new HashMap<Unit, Integer>()
-                    )
+                LabSlot ls = new LabSlot(
+                    count++,
+                    Integer.parseInt(m.group(2).replace(":", "")),
+                    LabDays.fromString(m.group(1)),
+                    Integer.parseInt(m.group(3)),
+                    Integer.parseInt(m.group(4)),
+                    new HashMap<Unit, Integer>()
                 );
+                labSlots.add(ls);
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a LabSlot!");
                 System.out.println("Exiting...");
@@ -110,14 +107,13 @@ class Parser {
         for (String courseStr : courses_s) {
             Matcher m = courseRegex.matcher(courseStr);
             if (m.find()) {
-                courses.add(
-                    new Course(
-                        count++,
-                        Integer.parseInt(m.group(3)),
-                        m.group(1),
-                        Integer.parseInt(m.group(2))
-                    )
+                Course c = new Course(
+                    count++,
+                    Integer.parseInt(m.group(3)),
+                    m.group(1),
+                    Integer.parseInt(m.group(2))
                 );
+                courses.add(c);
             } else {
                 System.out.println("Failed to parse string '" + courseStr + "' as a Course!");
                 System.out.println("Exiting...");
@@ -132,24 +128,22 @@ class Parser {
             Matcher m1 = labLecRegex.matcher(labStr);
             Matcher m2 = labRegex.matcher(labStr);
             if (m1.find()) {
-                labs.add(
-                    new Lab(
-                        count++,
-                        Integer.parseInt(m1.group(3)),
-                        m1.group(1),
-                        Integer.parseInt(m1.group(2)),
-                        Integer.parseInt(m1.group(4))
-                    )
+                Lab l = new Lab(
+                    count++,
+                    Integer.parseInt(m1.group(3)),
+                    m1.group(1),
+                    Integer.parseInt(m1.group(2)),
+                    Integer.parseInt(m1.group(4))
                 );
+                labs.add(l);
             } else if (m2.find()) {
-                labs.add(
-                    new Lab(
-                        count++,
-                        m2.group(1),
-                        Integer.parseInt(m2.group(2)),
-                        Integer.parseInt(m2.group(3))
-                    )
+                Lab l = new Lab(
+                    count++,
+                    m2.group(1),
+                    Integer.parseInt(m2.group(2)),
+                    Integer.parseInt(m2.group(3))
                 );
+                labs.add(l);
             } else {
                 System.out.println("Failed to parse string '" + labStr + "' as a Lab!");
                 System.out.println("Exiting...");
