@@ -105,17 +105,26 @@ class Parser {
         }
 
         // Parse courses
+        HashMap<String, Unit> unitMap = new HashMap<String, Unit>(); 
         ArrayList<Course> courses = new ArrayList<Course>();
         count = 0;
         for (String courseStr : courses_s) {
             Matcher m = courseRegex.matcher(courseStr);
             if (m.find()) {
+                unitMap.put(courseStr, new Course(
+                    count++,
+                    Integer.parseInt(m.group(3)),
+                    m.group(1),
+                    Integer.parseInt(m.group(2)),
+                    courseStr
+                ));
                 courses.add(
                     new Course(
                         count++,
                         Integer.parseInt(m.group(3)),
                         m.group(1),
-                        Integer.parseInt(m.group(2))
+                        Integer.parseInt(m.group(2)),
+                        courseStr
                     )
                 );
             } else {
@@ -132,13 +141,22 @@ class Parser {
             Matcher m1 = labLecRegex.matcher(labStr);
             Matcher m2 = labRegex.matcher(labStr);
             if (m1.find()) {
+                unitMap.put(labStr, new Lab(
+                    count++,
+                    Integer.parseInt(m1.group(3)),
+                    m1.group(1),
+                    Integer.parseInt(m1.group(2)),
+                    Integer.parseInt(m1.group(4)),
+                    labStr
+                ));
                 labs.add(
                     new Lab(
                         count++,
                         Integer.parseInt(m1.group(3)),
                         m1.group(1),
                         Integer.parseInt(m1.group(2)),
-                        Integer.parseInt(m1.group(4))
+                        Integer.parseInt(m1.group(4)),
+                        labStr
                     )
                 );
             } else if (m2.find()) {

@@ -9,6 +9,10 @@ public class Unit {
     protected String courseType;
     protected int courseNum;
     protected int id;
+    protected String key;
+    protected int constrained;
+
+    
     protected void setId(int i){
         this.id = i;
     }
@@ -49,5 +53,13 @@ public class Unit {
 
     public Unit() {
 
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 }

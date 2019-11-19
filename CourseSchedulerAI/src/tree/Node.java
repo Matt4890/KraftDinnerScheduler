@@ -14,6 +14,7 @@ public class Node implements Comparable<Node>{
     private PriorityQueue<Node> orderedChildren;
 
     private int desirability;
+    private boolean still_considered;
 
 
 

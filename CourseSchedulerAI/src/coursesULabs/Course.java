@@ -47,19 +47,21 @@ public class Course extends Unit{
         return courseType + courseNum + "LEC" + lectureNum;
     }
 
-    public Course (int id, int lectureNum, String courseType, int courseNum, Slot slot) {
+    public Course (int id, int lectureNum, String courseType, int courseNum, Slot slot, String key) {
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
         this.slot = slot;
         super.id = id;
+        super.key = key;
     }
 
-    public Course(int id, int lectureNum, String courseType, int courseNum){
+    public Course(int id, int lectureNum, String courseType, int courseNum, String key){
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
         super.id = id;
+        super.key = key;
     }
 
 }
