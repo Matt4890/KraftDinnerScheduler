@@ -4,12 +4,15 @@ import schedule.*;
 import java.util.*;
 
 
-public class Node {
+
+public class Node implements Comparable<Node>{
 
     private Node parent;
     private int penaltyValue; 
     private Schedule schedule;
     private ArrayList<Node> children; //This could be a heap so the one with the lowest pen value is always on top
+    private PriorityQueue<Node> orderedChildren;
+
     private int desirability;
 
 
@@ -21,6 +24,8 @@ public class Node {
         this.children = new ArrayList<Node>();
         this.parent = null;
         this.desirability = Integer.MAX_VALUE;
+        this.orderedChildren = new PriorityQueue<Node>();
+
     }
     
     public Node (Schedule schedule, int penaltyValue, ArrayList<Node> children){
@@ -28,6 +33,7 @@ public class Node {
         this.schedule = schedule;
         for (int i = 0; i<children.size(); i++){
             this.children.add(children.get(i));
+            this.orderedChildren.add(children.get(i));
         }
         this.parent = null;
         this.desirability = Integer.MAX_VALUE;
@@ -45,6 +51,7 @@ public class Node {
         this.schedule = schedule;
         for (int i = 0; i<children.size(); i++){
             this.children.add(children.get(i));
+            this.orderedChildren.add(children.get(i));
         }
         this.parent = parent;
         this.desirability = Integer.MAX_VALUE;
@@ -55,6 +62,7 @@ public class Node {
     }
     public void addChild(Node n){
         this.children.add(n);
+        this.orderedChildren.add(n);
     }
     public Node getParent(){
         return this.parent;
@@ -66,6 +74,9 @@ public class Node {
 
     public ArrayList<Node> getChildren(){
         return this.children;
+    }
+    public Node getLowestPenaltyChild(){
+        return this.orderedChildren.peek();
     }
     
     public Node getChildWithPenaltyValue(int n){
@@ -82,6 +93,11 @@ public class Node {
         //This is the F_leaf function that we want to calculate whether its a good assignment pair or not.
         
 
+    }
+
+    @Override
+    public int compareTo(Node o) {
+        return ((Integer)(this.getPenaltyValueOfNode())).compareTo(((Integer)o.getPenaltyValueOfNode()));
     }
 
 
