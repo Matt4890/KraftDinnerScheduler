@@ -32,6 +32,10 @@ public abstract class Slot {
         this.type = type;
 
     }
+    public ArrayList<Unit> getClassAssignment(){
+        return this.classAssignment;
+
+    }
 
     public void setPreference(Unit unit, int score) {
         this.prefMap.put(unit, score);
@@ -55,16 +59,6 @@ public abstract class Slot {
     public HashMap<Unit, Integer> getPreference() {
         return this.prefMap;
 
-    }
-
-    public int getEval() {
-        int total = 0;
-        for (int i = 0; i < classAssignment.size(); i++) {
-            if (!getPreference().containsKey(classAssignment.get(i))) {
-                total += (Integer)getPreference().get(classAssignment.get(i));
-            }
-        }
-        return total;
     }
 
     public void assignUnitToSlot(Unit unit) {
