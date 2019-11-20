@@ -165,7 +165,8 @@ class Parser {
                         count++,
                         m2.group(1),
                         Integer.parseInt(m2.group(2)),
-                        Integer.parseInt(m2.group(3))
+                        Integer.parseInt(m2.group(3)),
+                        labStr
                     )
                 );
             } else {

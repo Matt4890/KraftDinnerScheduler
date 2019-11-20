@@ -75,12 +75,17 @@ public class HardConstrainsts {
         // Go through the labslots with the same time
         if (s.getDay().toString().equals(CourseDays.MONWEDFRI.toString())) {
             // Check the Lab slots at the same time on Monday Wednesday
+            /*
             final LabSlot s1 = (LabSlot) MWLab.get(s.getTime());
             final ArrayList<Lab> correspondingLabsInSlot = s1.getAssignedLabs();
             for (int i = 0; i < correspondingLabsInSlot.size(); i++) {
                 if (correspondingLabsInSlot.get(i).getCourseNum() == c.getCourseNum() && correspondingLabsInSlot.get(i).getCourseType().equals(c.getCourseType())) {
                     return false;
                 }
+            }
+            */
+            if(!doesOverlapAddingCourse(MWLab, c, 0, s)){
+                return false;
             }
             // Check at match point or -1
             int time = s.getTime();
@@ -216,6 +221,7 @@ public class HardConstrainsts {
             final int time = s.getTime();
             //check time and hour ahead of it
             if (time != 2000) {
+                /*
                 final CourseSlot s1 = (CourseSlot) TuThLec.get(s.getTime() + 100);
                 final ArrayList<Course> correspondingCoursesInSlot = s1.getAssignedCourses();
                 for (int i = 0; i < correspondingCoursesInSlot.size(); i++) {
@@ -223,6 +229,11 @@ public class HardConstrainsts {
                         return false;
                     }
                 }
+                */
+                if(!doesOverlapAddingLab(TuThLec, c, 100, s)){
+                    return false;
+                }
+
                 final CourseSlot s2 = (CourseSlot) TuThLec.get(s.getTime());
                 final ArrayList<Course> correspondingCoursesInSlot1 = s2.getAssignedCourses();
                 for (int i = 0; i < correspondingCoursesInSlot1.size(); i++) {
@@ -248,5 +259,30 @@ public class HardConstrainsts {
     public static boolean checkUnwanted(){
         return true;
     }
+
+    private static boolean doesOverlapAddingLab(HashMap<Integer,Slot> courseSlots, Lab labToAdd , int timeToAdd, Slot slotToCheck ){
+        CourseSlot s1 = (CourseSlot) courseSlots.get(slotToCheck.getTime() + timeToAdd);
+        ArrayList<Course> correspondingCoursesInSlot = s1.getAssignedCourses();
+        for (int i = 0; i < correspondingCoursesInSlot.size(); i++) {
+            if (correspondingCoursesInSlot.get(i).getCourseNum() == labToAdd.getCourseNum() && correspondingCoursesInSlot.get(i).getCourseType().equals(labToAdd.getCourseType())){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean doesOverlapAddingCourse(HashMap<Integer,Slot> courseSlots, Course courseToAdd , int timeToAdd, Slot slotToCheck){
+        LabSlot s1 = (LabSlot) courseSlots.get(slotToCheck.getTime() + timeToAdd);
+        ArrayList<Lab> correspondingCoursesInSlot = s1.getAssignedLabs();
+        for (int i = 0; i < correspondingCoursesInSlot.size(); i++) {
+            if (correspondingCoursesInSlot.get(i).getCourseNum() == courseToAdd.getCourseNum() && correspondingCoursesInSlot.get(i).getCourseType().equals(courseToAdd.getCourseType())){
+                return false;
+            }
+        }
+        
+        return true;
+    }
+
+
 
 }
