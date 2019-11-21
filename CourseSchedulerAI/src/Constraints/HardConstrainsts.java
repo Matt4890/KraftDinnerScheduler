@@ -24,7 +24,7 @@ public class HardConstrainsts {
     }
 
     /**
-     * 
+     *
      * @param c
      * @param s
      * @return true if no hard constraint broken
@@ -41,6 +41,7 @@ public class HardConstrainsts {
                 result = false;
             }
         }
+
         return result;
 
     }
@@ -62,6 +63,7 @@ public class HardConstrainsts {
             for (int i = 0; i < lookup.size(); i++) {
                 if (lookup.get(i).getCourseNum() >= 500) {
                     result = false;
+                    break;
                 }
             }
         }
@@ -146,11 +148,11 @@ public class HardConstrainsts {
                         if(doesOverlapAddingLab(TuThLec, c, -70, s)){
                             return false;
                         }
-                    //checking same time 
+                    //checking same time
                     } else if (time == 1100 || time == 1400 || time == 1700) {
                         return !doesOverlapAddingLab(TuThLec, c, 0, s);
-                        
-                            //check hour before and half an hour after 
+
+                            //check hour before and half an hour after
                     } else if (time == 900 || time == 1200 || time == 1500 || time == 1800) {
                         // Check -100 and +30
                         if(doesOverlapAddingLab(TuThLec, c, 30, s)){
@@ -181,7 +183,7 @@ public class HardConstrainsts {
 
 
         //TODO UNWANTED
-        //Not Compatible 
+        //Not Compatible
 
 
     public static boolean checkUnwanted(){
@@ -207,7 +209,7 @@ public class HardConstrainsts {
                 return true;
             }
         }
-        
+
         return false;
     }
 
