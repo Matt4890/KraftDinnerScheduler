@@ -249,6 +249,32 @@ class Parser {
 
         // Parse Pairs
         for (String line : pairs_s.split("\n")) {
+            Matcher cm = cIdRegex.matcher(line);
+            Matcher lm = lIdRegex.matcher(line);
+            Unit u1 = null;
+            Unit u2 = null;
+            while (cm.find()) {
+                if (u1 == null) {
+                    u1 = courses.get(Integer.parseInt(cm.group(1)));
+                } else {
+                    u2 = courses.get(Integer.parseInt(cm.group(1)));
+                }
+            }
+            while (lm.find()) {
+                if (u1 == null) {
+                    u1 = labs.get(Integer.parseInt(lm.group(1)));
+                } else {
+                    u2 = labs.get(Integer.parseInt(lm.group(1)));
+                }
+            }
+            if (u1 == null || u2 == null) {
+                System.out.println("Failed to parse IDs on line '" + line + "'!");
+                System.out.println("Exiting...");
+                System.exit(1);
+            } else {
+                u1.addToPairs(u2);
+                u2.addToPairs(u1);
+            }
         }
 
         // Parse Partial Assignments
