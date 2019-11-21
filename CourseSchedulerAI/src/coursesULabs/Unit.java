@@ -15,7 +15,7 @@ public class Unit {
     protected int unwantedIncrease = 3;
     protected int nonCompatibleIncrease = 5;
 
-    protected ArrayList<Unit> unwanted = new ArrayList<Unit>();
+    protected ArrayList<Slot> unwanted = new ArrayList<Slot>();
     protected ArrayList<Unit> notCompatible =  new ArrayList<Unit>();
     protected ArrayList<Unit> preferences  = new ArrayList<Unit>();
     protected ArrayList<Unit> pairs = new ArrayList<Unit>(); 
@@ -84,11 +84,11 @@ public class Unit {
         this.constrained += nonCompatibleIncrease;
     }
 
-    public ArrayList<Unit> getUnwanted() {
+    public ArrayList<Slot> getUnwanted() {
         return unwanted;
     }
-    public void addToUnwanted(Unit u){
-        this.unwanted.add(u);
+    public void addToUnwanted(Slot s){
+        this.unwanted.add(s);
     }
 
     public ArrayList<Unit> getNotCompatible() {

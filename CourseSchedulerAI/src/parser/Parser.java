@@ -207,7 +207,7 @@ class Parser {
                 }
             }
             if (u1 == null || u2 == null) {
-                System.out.println("Failed to parse IDs on line '" + line + "' as units!");
+                System.out.println("Failed to parse IDs on line '" + line + "'!");
                 System.out.println("Exiting...");
                 System.exit(1);
             } else {
@@ -218,20 +218,37 @@ class Parser {
 
         // Parse Unwanted
         for (String line : unwanted_s.split("\n")) {
-            String[] params = line.split(",");
-
+            Matcher cm = cIdRegex.matcher(line);
+            Matcher lm = lIdRegex.matcher(line);
+            Matcher csm = csIdRegex.matcher(line);
+            Matcher lsm = lsIdRegex.matcher(line);
+            Unit u = null;
+            Slot s = null;
+            if (cm.find()) {
+                u = courses.get(Integer.parseInt(cm.group(1)));
+            } else if (lm.find()) {
+                u = labs.get(Integer.parseInt(lm.group(1)));
+            }
+            if (csm.find()) {
+                s = courseSlots.get(Integer.parseInt(csm.group(1)));
+            } else if (lsm.find()) {
+                s = labSlots.get(Integer.parseInt(lsm.group(1)));
+            }
+            if (u == null || s == null) {
+                System.out.println("Failed to parse IDs on line '" + line + "'!");
+                System.out.println("Exiting...");
+                System.exit(1);
+            } else {
+                u.addToUnwanted(s);
+            }
         }
 
         // Parse Preferences
         for (String line : preferences_s.split("\n")) {
-            String[] params = line.split(",");
-
         }
 
         // Parse Pairs
         for (String line : pairs_s.split("\n")) {
-            String[] params = line.split(",");
-
         }
 
         // Parse Partial Assignments
