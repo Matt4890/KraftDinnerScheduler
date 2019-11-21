@@ -1,5 +1,6 @@
 package coursesULabs;
 import java.util.ArrayList;
+import java.util.HashMap;
 import schedule.Slot;
 
 public class Unit {
@@ -17,7 +18,7 @@ public class Unit {
 
     protected ArrayList<Slot> unwanted = new ArrayList<Slot>();
     protected ArrayList<Unit> notCompatible =  new ArrayList<Unit>();
-    protected ArrayList<Unit> preferences  = new ArrayList<Unit>();
+    protected HashMap<Slot, Integer> preferences  = new HashMap<Slot, Integer>();
     protected ArrayList<Unit> pairs = new ArrayList<Unit>(); 
     
     protected void setId(int i){
@@ -98,11 +99,11 @@ public class Unit {
         this.notCompatible.add(u);
     }
 
-    public ArrayList<Unit> getPreferences() {
+    public HashMap<Slot, Integer> getPreferences() {
         return this.preferences;
     }
-    public void addToPreferences(Unit u){
-        this.preferences.add(u);
+    public void addToPreferences(Slot s, int score){
+        this.preferences.put(s, score);
     }
 
     public ArrayList<Unit> getPairs() {
