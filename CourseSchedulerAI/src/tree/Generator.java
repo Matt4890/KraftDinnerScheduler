@@ -65,9 +65,6 @@ public class Generator {
                 
             }
             //At this point we should have all the potential Pairs stored in lastNode's children now we need to select one using the control
-            //Make this a heap with the value from the control used to generate that heap 
-            //Instead of a a list heap them according to their desirability which is determined in the Node itself thats all within the node class 
-            
             //Pick the best node - i.e. top of the heap and make it the lastNode to expand out
             lastNode = lastNode.getLowestPenaltyChild();
         }
