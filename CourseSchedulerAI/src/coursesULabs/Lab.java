@@ -24,36 +24,33 @@ public class Lab extends Unit{
         //CPSC433TUT01
         //CPSC433LEC01TUT01
         return (lectureNum == 0) ?
-            courseType + courseNum + "TUT" + tutNum:
-            courseType + courseNum + "LEC" + lectureNum + "TUT" + tutNum;
+            courseType + courseNum + "TUT" + String.format("%02d", tutNum) :
+            courseType + courseNum + "LEC" + String.format("%02d", lectureNum) + "TUT" + String.format("%02d", tutNum);
 
     }
 
-    public Lab (int id, int lectureNum, String courseType, int courseNum, int tutNum, String key ){
+    public Lab (int id, int lectureNum, String courseType, int courseNum, int tutNum){
         super.id = id;
         super.lectureNum = lectureNum;
         super.courseType = courseType;
         super.courseNum = courseNum;
         this.tutNum = tutNum;
-        super.key = key;
     }
 
-    public Lab (int id, String courseType, int courseNum, int tutNum, String key ){
+    public Lab (int id, String courseType, int courseNum, int tutNum){
         super.id = id;
         super.courseType = courseType;
         super.courseNum = courseNum;
         this.tutNum = tutNum;
-        super.key = key;
     }
 
-    public Lab (int id, int lectureNum, String courseType, int courseNum, Slot slot, int tutNum, String key) {
+    public Lab (int id, int lectureNum, String courseType, int courseNum, Slot slot, int tutNum) {
         super.id = id;
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
         this.slot = slot;
         this.tutNum = tutNum;
-        super.key = key;
     }
 
 }

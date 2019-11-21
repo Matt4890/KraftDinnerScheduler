@@ -1,6 +1,9 @@
 package schedule;
-import java.util.*;
-import coursesULabs.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import coursesULabs.Course;
+import coursesULabs.Unit;
 import enums.CourseDays;
 import enums.SlotType;
 public class CourseSlot extends Slot{
@@ -57,7 +60,7 @@ public class CourseSlot extends Slot{
     }
 
     public String toString(){
-        return day.toString() + time;
+        return day.toString() + "," + Integer.toString(time).replaceAll("(\\d{2})$", ":$1");
     }
 
 }

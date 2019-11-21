@@ -1,5 +1,7 @@
 package schedule;
 import java.util.*;
+import coursesULabs.*;
+
 public class Schedule{
     
     private HashMap<Integer, Slot> MWFLec = new HashMap<Integer, Slot>();
@@ -8,6 +10,11 @@ public class Schedule{
     private HashMap<Integer, Slot> TuThLab = new HashMap<Integer, Slot>();
     private HashMap<Integer, Slot> FLab = new HashMap<Integer, Slot>();
     //Do we want these to have any particular ordering at the beginning 
+
+    public Schedule (HashMap<Unit, Slot> partialAssignments, ArrayList<CourseSlot> couseSlots, ArrayList<LabSlot> labSlots) {
+
+    }
+
     public  HashMap<Integer, Slot> getMWFLec(){
         return this.MWFLec;
     }

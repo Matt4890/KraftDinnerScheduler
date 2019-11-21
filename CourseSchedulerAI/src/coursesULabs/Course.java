@@ -44,24 +44,22 @@ public class Course extends Unit{
 
     public String toString(){
         //CPSC433LEC01
-        return courseType + courseNum + "LEC" + lectureNum;
+        return courseType + courseNum + "LEC" + String.format("%02d", lectureNum);
     }
 
-    public Course (int id, int lectureNum, String courseType, int courseNum, Slot slot, String key) {
+    public Course (int id, int lectureNum, String courseType, int courseNum, Slot slot) {
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
         this.slot = slot;
         super.id = id;
-        super.key = key;
     }
 
-    public Course(int id, int lectureNum, String courseType, int courseNum, String key){
+    public Course(int id, int lectureNum, String courseType, int courseNum){
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
         super.id = id;
-        super.key = key;
     }
 
 }
