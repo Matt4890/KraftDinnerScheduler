@@ -40,6 +40,6 @@ public class Kontrol {
         return evalAssignment(s,u);
     }
 
-    //Create a method that uses the bound control which will be different than the desirablility which is used in the actual branch and bound 
-    //The bound controls should be good but simplistic
+    //TODO: Create a method that uses the bound control which will be different than the desirablility 
+    // which is used in the actual branch and bound. The bound controls should be good but simplistic
 }
