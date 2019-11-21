@@ -1,5 +1,5 @@
 package coursesULabs;
-
+import java.util.ArrayList;
 import schedule.Slot;
 
 public class Unit {
@@ -15,6 +15,10 @@ public class Unit {
     protected int unwantedIncrease = 3;
     protected int nonCompatibleIncrease = 5;
 
+    protected ArrayList<Unit> unwanted = new ArrayList<Unit>();
+    protected ArrayList<Unit> notCompatible =  new ArrayList<Unit>();
+    protected ArrayList<Unit> preferences  = new ArrayList<Unit>();
+    protected ArrayList<Unit> pairs = new ArrayList<Unit>(); 
     
     protected void setId(int i){
         this.id = i;
@@ -79,4 +83,34 @@ public class Unit {
     public void incrementNonCompatible() {
         this.constrained += nonCompatibleIncrease;
     }
+
+    public ArrayList<Unit> getUnwanted() {
+        return unwanted;
+    }
+    public void addToUnwanted(Unit u){
+        this.unwanted.add(u);
+    }
+
+    public ArrayList<Unit> getNotCompatible() {
+        return this.notCompatible;
+    }
+    public void addToNotCompatible(Unit u){
+        this.notCompatible.add(u);
+    }
+
+    public ArrayList<Unit> getPreferences() {
+        return this.preferences;
+    }
+    public void addToPreferences(Unit u){
+        this.preferences.add(u);
+    }
+
+    public ArrayList<Unit> getPairs() {
+        return this.pairs;
+    }
+    public void addToPairs(Unit u){
+        this.pairs.add(u);
+    }
+
+
 }
