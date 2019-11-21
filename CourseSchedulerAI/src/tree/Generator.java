@@ -71,6 +71,12 @@ public class Generator {
         //Now we get the penaltyValue of lastNode and make that the bound 
         this.bound = lastNode.getPenaltyValueOfNode();
 
+        System.out.println("Bound Generated: " + this.bound);
+        //We can make this better once the KONTROL is implemented We can modify this so that only the nodes that 
+        // are added are the ones that meet the desirablility criteria
+        //This control would have to be seperate for the branch and bound control otherwise we are likely to pick the same thing
+
+
     }
     
 
