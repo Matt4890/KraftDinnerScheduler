@@ -23,16 +23,19 @@ public class HardConstrainsts {
     }
 
     public static boolean checkDuplicateCourse(Course c, CourseSlot s) {
+        //TODO:
         // Go through courses in slot to see if theres a duplicate
         // Right now its a runthrough but ideally once its implemented correctly it
         // should be a lookup??????????????
         boolean result = true;
+
         ArrayList<Course> lookup = s.getAssignedCourses();
         for (int i = 0; i < lookup.size(); i++) {
             if (lookup.get(i).getID() == c.getID()) {
                 result = false;
             }
         }
+        
         return result;
 
     }
@@ -54,6 +57,7 @@ public class HardConstrainsts {
             for (int i = 0; i < lookup.size(); i++) {
                 if (lookup.get(i).getCourseNum() >= 500) {
                     result = false;
+                    break;
                 }
             }
         }
@@ -71,7 +75,8 @@ public class HardConstrainsts {
             ArrayList<Lab> correspondingLabsInSlot = s1.getAssignedLabs();
             for (int i = 0; i < correspondingLabsInSlot.size(); i++) {
                 if (correspondingLabsInSlot.get(i).getCourseNum() == c.getCourseNum()) {
-                    toReturn = false;
+                    //toReturn = false;
+                    return false;
                 }
             }
             // Check at match point or -1
@@ -79,7 +84,8 @@ public class HardConstrainsts {
             ArrayList<Lab> correspondingLabsInSlot1 = s2.getAssignedLabs();
             for (int i = 0; i < correspondingLabsInSlot1.size(); i++) {
                 if (correspondingLabsInSlot1.get(i).getCourseNum() == c.getCourseNum()) {
-                    toReturn = false;
+                    //toReturn = false;
+                    return false;
                 }
             }
 
@@ -87,7 +93,8 @@ public class HardConstrainsts {
             ArrayList<Lab> correspondingLabsInSlot2 = s3.getAssignedLabs();
             for (int i = 0; i < correspondingLabsInSlot2.size(); i++) {
                 if (correspondingLabsInSlot2.get(i).getCourseNum() == c.getCourseNum()) {
-                    toReturn = false;
+                    //toReturn = false;
+                    return false;
                 }
             }
         } else if (s.getDay().toString().equals(CourseDays.TUETHR.toString())) {
@@ -96,14 +103,16 @@ public class HardConstrainsts {
             ArrayList<Lab> correspondingLabsInSlot = s1.getAssignedLabs();
             for (int i = 0; i < correspondingLabsInSlot.size(); i++) {
                 if (correspondingLabsInSlot.get(i).getCourseNum() == c.getCourseNum()) {
-                    toReturn = false;
+                    //toReturn = false;
+                    return false;
                 }
             }
             LabSlot s2 = (LabSlot) MWLab.get(s.getTime() + 70); // Time +1
             ArrayList<Lab> correspondingLabsInSlot1 = s2.getAssignedLabs();
             for (int i = 0; i < correspondingLabsInSlot1.size(); i++) {
                 if (correspondingLabsInSlot1.get(i).getCourseNum() == c.getCourseNum()) {
-                    toReturn = false;
+                    //toReturn = false;
+                    return false;
                 }
             }
 
@@ -148,6 +157,7 @@ public class HardConstrainsts {
             for (int i = 0; i < correspondingCoursesInSlot.size(); i++) {
                 if (correspondingCoursesInSlot.get(i).getCourseNum() == c.getCourseNum()) {
                     toReturn = false;
+                    return false;
                 }
             }
 
@@ -163,6 +173,7 @@ public class HardConstrainsts {
                         for (int i = 0; i < correspondingCoursesInSlot.size(); i++) {
                             if (correspondingCoursesInSlot.get(i).getCourseNum() == c.getCourseNum()) {
                                 toReturn = false;
+                                return false;
                             }
                         }
 
@@ -172,6 +183,7 @@ public class HardConstrainsts {
                         for (int i = 0; i < correspondingCoursesInSlot.size(); i++) {
                             if (correspondingCoursesInSlot.get(i).getCourseNum() == c.getCourseNum()) {
                                 toReturn = false;
+                                return false;
                             }
                         }
                     } else if (time == 900) {
@@ -181,6 +193,7 @@ public class HardConstrainsts {
                         for (int i = 0; i < correspondingCoursesInSlot.size(); i++) {
                             if (correspondingCoursesInSlot.get(i).getCourseNum() == c.getCourseNum()) {
                                 toReturn = false;
+                                return false;
                             }
                         }
                     } else if (time == 1200 || time == 1500 || time == 1800) {
@@ -190,6 +203,7 @@ public class HardConstrainsts {
                         for (int i = 0; i < correspondingCoursesInSlot.size(); i++) {
                             if (correspondingCoursesInSlot.get(i).getCourseNum() == c.getCourseNum()) {
                                 toReturn = false;
+                                return false;
                             }
                         }
                         CourseSlot s2 = (CourseSlot) TuThLec.get(s.getTime() - 100);
@@ -197,6 +211,7 @@ public class HardConstrainsts {
                         for (int i = 0; i < correspondingCoursesInSlot1.size(); i++) {
                             if (correspondingCoursesInSlot1.get(i).getCourseNum() == c.getCourseNum()) {
                                 toReturn = false;
+                                return false;
                             }
                         }
 
@@ -212,6 +227,7 @@ public class HardConstrainsts {
                 for (int i = 0; i < correspondingCoursesInSlot.size(); i++) {
                     if (correspondingCoursesInSlot.get(i).getCourseNum() == c.getCourseNum()) {
                         toReturn = false;
+                        return false;
                     }
                 }
                 CourseSlot s2 = (CourseSlot) TuThLec.get(s.getTime());
@@ -219,6 +235,7 @@ public class HardConstrainsts {
                 for (int i = 0; i < correspondingCoursesInSlot1.size(); i++) {
                     if (correspondingCoursesInSlot1.get(i).getCourseNum() == c.getCourseNum()) {
                         toReturn = false;
+                        return false;
                     }
                 }
             }
