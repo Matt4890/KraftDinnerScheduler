@@ -29,31 +29,28 @@ public class Lab extends Unit{
 
     }
 
-    public Lab (int id, int lectureNum, String courseType, int courseNum, int tutNum, String key ){
+    public Lab (int id, int lectureNum, String courseType, int courseNum, int tutNum){
         super.id = id;
         super.lectureNum = lectureNum;
         super.courseType = courseType;
         super.courseNum = courseNum;
         this.tutNum = tutNum;
-        super.key = key;
     }
 
-    public Lab (int id, String courseType, int courseNum, int tutNum, String key ){
+    public Lab (int id, String courseType, int courseNum, int tutNum){
         super.id = id;
         super.courseType = courseType;
         super.courseNum = courseNum;
         this.tutNum = tutNum;
-        super.key = key;
     }
 
-    public Lab (int id, int lectureNum, String courseType, int courseNum, Slot slot, int tutNum, String key) {
+    public Lab (int id, int lectureNum, String courseType, int courseNum, Slot slot, int tutNum) {
         super.id = id;
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
         this.slot = slot;
         this.tutNum = tutNum;
-        super.key = key;
     }
 
 }

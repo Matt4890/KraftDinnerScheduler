@@ -177,6 +177,12 @@ class Parser {
             }
         }
 
+        HashMap<String, Course> courseMap = new HashMap<String, Course>();
+        HashMap<String, Lab>    labMap    = new HashMap<String, Lab>();
+
+        for (Course c : courses) courseMap.put(c.toString(), c);
+        for (Lab l : labs)       labMap.put(l.toString(), l);
+
         System.out.println("Done!");
 
     }
