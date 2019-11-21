@@ -44,6 +44,10 @@ class Parser {
         Pattern courseRegex = Pattern.compile("([A-Z]{4})(\\d{3})LEC(\\d{2})");
         Pattern labRegex    = Pattern.compile("([A-Z]{4})(\\d{3})TUT(\\d{2})");
         Pattern labLecRegex = Pattern.compile("([A-Z]{4})(\\d{3})LEC(\\d{2})TUT(\\d{2})");
+        Pattern csIdRegex   = Pattern.compile("CS(\\d+)");
+        Pattern lsIdRegex   = Pattern.compile("LS(\\d+)");
+        Pattern cIdRegex    = Pattern.compile("C(\\d+)");
+        Pattern lIdRegex    = Pattern.compile("L(\\d+)");
 
         // Get sections from input file
         String   fileStr            = String.join("\n", fileLines).toUpperCase().replaceAll(" |\t", "").replaceAll("\\bLAB\\b", "TUT");
@@ -183,15 +187,59 @@ class Parser {
         }
 
         // Parse Not Compatible
+        for (String line : notCompat_s.split("\n")) {
+            Matcher cm = cIdRegex.matcher(line);
+            Matcher lm = lIdRegex.matcher(line);
+            Unit u1 = null;
+            Unit u2 = null;
+            while (cm.find()) {
+                if (u1 == null) {
+                    u1 = courses.get(Integer.parseInt(cm.group(1)));
+                } else {
+                    u2 = courses.get(Integer.parseInt(cm.group(1)));
+                }
+            }
+            while (lm.find()) {
+                if (u1 == null) {
+                    u1 = labs.get(Integer.parseInt(lm.group(1)));
+                } else {
+                    u2 = labs.get(Integer.parseInt(lm.group(1)));
+                }
+            }
+            if (u1 == null || u2 == null) {
+                System.out.println("Failed to parse IDs on line '" + line + "' as units!");
+                System.out.println("Exiting...");
+                System.exit(1);
+            } else {
+                u1.addToNotCompatible(u2);
+                u2.addToNotCompatible(u1);
+            }
+        }
 
         // Parse Unwanted
+        for (String line : unwanted_s.split("\n")) {
+            String[] params = line.split(",");
+
+        }
 
         // Parse Preferences
+        for (String line : preferences_s.split("\n")) {
+            String[] params = line.split(",");
+
+        }
 
         // Parse Pairs
+        for (String line : pairs_s.split("\n")) {
+            String[] params = line.split(",");
+
+        }
 
         // Parse Partial Assignments
         HashMap<Slot, Unit> partialAssignments = new HashMap<Slot, Unit>();
+        for (String line : partialAssign_s.split("\n")) {
+            String[] params = line.split(",");
+
+        }
         // TODO: REMOVE ASSIGNED UNITS FROM COURSE/LAB ARRAY LIST BEFORE OUTPUT!
 
         // Output!
@@ -202,7 +250,7 @@ class Parser {
         for (Course c : courses) courseMap.put(c.toString(), c);
         for (Lab l : labs)       labMap.put(l.toString(), l);
 
-        Schedule schedule = new Schedule(partialAssignments, courseSlots, labSlots);
+        Schedule schedule = new Schedule(courseSlots, labSlots);
 
         System.out.println("Done!");
 
