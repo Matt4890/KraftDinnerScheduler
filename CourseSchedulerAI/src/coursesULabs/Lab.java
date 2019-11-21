@@ -24,8 +24,8 @@ public class Lab extends Unit{
         //CPSC433TUT01
         //CPSC433LEC01TUT01
         return (lectureNum == 0) ?
-            courseType + courseNum + "TUT" + tutNum:
-            courseType + courseNum + "LEC" + lectureNum + "TUT" + tutNum;
+            courseType + courseNum + "TUT" + String.format("%02d", tutNum) :
+            courseType + courseNum + "LEC" + String.format("%02d", lectureNum) + "TUT" + String.format("%02d", tutNum);
 
     }
 

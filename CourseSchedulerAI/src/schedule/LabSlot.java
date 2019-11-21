@@ -57,7 +57,7 @@ public class LabSlot extends Slot{
     }
 
     public String toString(){
-        return day.toString() + time;
+        return day.toString() + "," + Integer.toString(time).replaceAll("(\\d{2})$", ":$1");
     }
 
 
