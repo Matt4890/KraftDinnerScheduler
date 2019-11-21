@@ -250,7 +250,7 @@ class Parser {
         for (Course c : courses) courseMap.put(c.toString(), c);
         for (Lab l : labs)       labMap.put(l.toString(), l);
 
-        Schedule schedule = new Schedule(partialAssignments, courseSlots, labSlots);
+        Schedule schedule = new Schedule(courseSlots, labSlots);
 
         System.out.println("Done!");
 
