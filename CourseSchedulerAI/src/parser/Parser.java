@@ -102,6 +102,7 @@ class Parser {
         }
 
         // Parse courses
+        HashMap<String, Unit> unitMap = new HashMap<String, Unit>();
         ArrayList<Course> courses = new ArrayList<Course>();
         count = 0;
         for (String courseStr : courses_s) {
