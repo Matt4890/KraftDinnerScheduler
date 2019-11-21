@@ -73,9 +73,10 @@ class Parser {
                 );
                 courseSlots.add(cs);
                 String replaceStr = cs.toString();
-                unwanted_s = unwanted_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "CS" + count++);
-                preferences_s = preferences_s.replaceAll(replaceStr + "(?!.*(?:TUT|LAB))", "CS" + count++);
-                partialAssign_s = partialAssign_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "CS" + count++);
+                unwanted_s = unwanted_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "CS" + count);
+                preferences_s = preferences_s.replaceAll(replaceStr + "(?!.*(?:TUT|LAB))", "CS" + count);
+                partialAssign_s = partialAssign_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "CS" + count);
+                count++;
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a CourseSlot!");
                 System.out.println("Exiting...");
@@ -90,7 +91,7 @@ class Parser {
             Matcher m = slotRegex.matcher(slotStr);
             if (m.find()) {
                 LabSlot ls = new LabSlot(
-                    count++,
+                    count,
                     Integer.parseInt(m.group(2).replace(":", "")),
                     LabDays.fromString(m.group(1)),
                     Integer.parseInt(m.group(3)),
@@ -99,9 +100,10 @@ class Parser {
                 );
                 labSlots.add(ls);
                 String replaceStr = ls.toString();
-                unwanted_s = unwanted_s.replaceAll(replaceStr, "LS" + count++);
-                preferences_s = preferences_s.replaceAll(replaceStr, "LS" + count++);
-                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "LS" + count++);
+                unwanted_s = unwanted_s.replaceAll(replaceStr, "LS" + count);
+                preferences_s = preferences_s.replaceAll(replaceStr, "LS" + count);
+                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "LS" + count);
+                count++;
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a LabSlot!");
                 System.out.println("Exiting...");
@@ -117,7 +119,7 @@ class Parser {
             Matcher m2 = labRegex.matcher(labStr);
             if (m1.find()) {
                 Lab l = new Lab(
-                    count++,
+                    count,
                     Integer.parseInt(m1.group(3)),
                     m1.group(1),
                     Integer.parseInt(m1.group(2)),
@@ -125,25 +127,27 @@ class Parser {
                 );
                 labs.add(l);
                 String replaceStr = l.toString();
-                notCompat_s = notCompat_s.replaceAll(replaceStr, "L" + count++);
-                unwanted_s = unwanted_s.replaceAll(replaceStr, "L" + count++);
-                preferences_s = preferences_s.replaceAll(replaceStr, "L" + count++);
-                pairs_s = pairs_s.replaceAll(replaceStr, "L" + count++);
-                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "L" + count++);
+                notCompat_s = notCompat_s.replaceAll(replaceStr, "L" + count);
+                unwanted_s = unwanted_s.replaceAll(replaceStr, "L" + count);
+                preferences_s = preferences_s.replaceAll(replaceStr, "L" + count);
+                pairs_s = pairs_s.replaceAll(replaceStr, "L" + count);
+                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "L" + count);
+                count++;
             } else if (m2.find()) {
                 Lab l = new Lab(
-                    count++,
+                    count,
                     m2.group(1),
                     Integer.parseInt(m2.group(2)),
                     Integer.parseInt(m2.group(3))
                 );
                 labs.add(l);
                 String replaceStr = l.toString();
-                notCompat_s = notCompat_s.replaceAll(replaceStr, "L" + count++);
-                unwanted_s = unwanted_s.replaceAll(replaceStr, "L" + count++);
-                preferences_s = preferences_s.replaceAll(replaceStr, "L" + count++);
-                pairs_s = pairs_s.replaceAll(replaceStr, "L" + count++);
-                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "L" + count++);
+                notCompat_s = notCompat_s.replaceAll(replaceStr, "L" + count);
+                unwanted_s = unwanted_s.replaceAll(replaceStr, "L" + count);
+                preferences_s = preferences_s.replaceAll(replaceStr, "L" + count);
+                pairs_s = pairs_s.replaceAll(replaceStr, "L" + count);
+                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "L" + count);
+                count++;
             } else {
                 System.out.println("Failed to parse string '" + labStr + "' as a Lab!");
                 System.out.println("Exiting...");
@@ -158,18 +162,19 @@ class Parser {
             Matcher m = courseRegex.matcher(courseStr);
             if (m.find()) {
                 Course c = new Course(
-                    count++,
+                    count,
                     Integer.parseInt(m.group(3)),
                     m.group(1),
                     Integer.parseInt(m.group(2))
                 );
                 courses.add(c);
                 String replaceStr = c.toString();
-                notCompat_s = notCompat_s.replaceAll(replaceStr, "C" + count++);
-                unwanted_s = unwanted_s.replaceAll(replaceStr, "C" + count++);
-                preferences_s = preferences_s.replaceAll(replaceStr, "C" + count++);
-                pairs_s = pairs_s.replaceAll(replaceStr, "C" + count++);
-                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "C" + count++);
+                notCompat_s = notCompat_s.replaceAll(replaceStr, "C" + count);
+                unwanted_s = unwanted_s.replaceAll(replaceStr, "C" + count);
+                preferences_s = preferences_s.replaceAll(replaceStr, "C" + count);
+                pairs_s = pairs_s.replaceAll(replaceStr, "C" + count);
+                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "C" + count);
+                count++;
             } else {
                 System.out.println("Failed to parse string '" + courseStr + "' as a Course!");
                 System.out.println("Exiting...");
@@ -177,11 +182,27 @@ class Parser {
             }
         }
 
+        // Parse Not Compatible
+
+        // Parse Unwanted
+
+        // Parse Preferences
+
+        // Parse Pairs
+
+        // Parse Partial Assignments
+        HashMap<Slot, Unit> partialAssignments = new HashMap<Slot, Unit>();
+        // TODO: REMOVE ASSIGNED UNITS FROM COURSE/LAB ARRAY LIST BEFORE OUTPUT!
+
+        // Output!
+
         HashMap<String, Course> courseMap = new HashMap<String, Course>();
         HashMap<String, Lab>    labMap    = new HashMap<String, Lab>();
 
         for (Course c : courses) courseMap.put(c.toString(), c);
         for (Lab l : labs)       labMap.put(l.toString(), l);
+
+        Schedule schedule = new Schedule(partialAssignments, courseSlots, labSlots);
 
         System.out.println("Done!");
 

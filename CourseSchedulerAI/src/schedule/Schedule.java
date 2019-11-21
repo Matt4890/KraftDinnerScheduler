@@ -11,7 +11,7 @@ public class Schedule{
     private HashMap<Integer, Slot> FLab = new HashMap<Integer, Slot>();
     //Do we want these to have any particular ordering at the beginning 
 
-    public Schedule (HashMap<Unit, Slot> partialAssignments, ArrayList<CourseSlot> couseSlots, ArrayList<LabSlot> labSlots) {
+    public Schedule (HashMap<Slot, Unit> partialAssignments, ArrayList<CourseSlot> courseSlots, ArrayList<LabSlot> labSlots) {
 
     }
 
