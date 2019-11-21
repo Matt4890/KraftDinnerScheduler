@@ -84,4 +84,17 @@ public class SoftConstraints {
     }
 
   }
+
+  public int checkSections(Course course, CourseSlot s, int pen){
+    int curr_pen = 0;
+    ArrayList<Course> lookup = s.getAssignedCourses();
+    boolean anotherSection = false;
+    for(int i = 0; i < lookup.size(); i++){
+      if(lookup.get(i).courseNum == course.courseNum){
+        anotherSection = true;
+        curr_pen = curr_pen + pen;
+      }
+    }
+    return curr_pen;
+  }
 }
