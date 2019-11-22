@@ -51,7 +51,7 @@ public class Unit {
         this.lectureNum = lectureNum;
     }
 
-    public Object getSlot() {
+    public Slot getSlot() {
         return slot;
     }
 
