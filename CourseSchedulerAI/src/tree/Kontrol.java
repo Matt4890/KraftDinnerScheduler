@@ -32,12 +32,33 @@ public class Kontrol {
         return total;
     }
 
+    /**
+     * the desireability is based on the following
+     * eval assignment of it
+     * the closer to unit min the better
+     * the further from unit max the better
+     * total will then be divided by constrained 
+     * the closer the number is to 0 the higher the desireability
+     * should be noted that partassign assigns a huge constrained value so most likely desireability will be
+     * close or equal to 0 
+     * @param s
+     * @param u
+     * @return desireability of assigning unit u into slot s
+     */
     public static int desireability(Slot s, Unit u) {
-        // Take the eval plus some other factors and
-        // Or we can just go strictly with the eval of that function
-        // Select lowest eval with those weights
+        int total = 0;
+        total += evalAssignment(s,u);
+        if(u instanceof Course){
+            total -= (((CourseSlot)s).getCourseMin() - s.getClassAssignment().size());
+            total += (((CourseSlot)s).getCourseMax() - (((CourseSlot)s).getCourseMax() - s.getClassAssignment().size()));
+        }
+        else{
+            total -= (((LabSlot)s).getLabMin() - s.getClassAssignment().size());
+            total += (((LabSlot)s).getLabMax() - (((LabSlot)s).getLabMax() - s.getClassAssignment().size()));
+        }
+        total = total / u.getConstrained();
 
-        return evalAssignment(s,u);
+        return total;
     }
 
     //TODO: Create a method that uses the bound control which will be different than the desirablility 
