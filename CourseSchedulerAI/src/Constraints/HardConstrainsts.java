@@ -186,8 +186,127 @@ public class HardConstrainsts {
         //Not Compatible
 
 
-    public static boolean checkUnwanted(){
+    public static boolean checkUnwanted(Unit course, Slot slotToAdd){
+
+    }
+
+    /**
+     * given a course and a slot to add it to it will return true if not compatible is not broken
+     * @param course 
+     * @param slotToAddTo
+     * @return
+     */
+    public static boolean checkNotCompatible(Unit course, Slot slotToAddTo){
+        ArrayList<Unit> unwanted = course.getUnwated();
+        for(Unit unit : unwanted){
+            if (doesOverlap(course, slotToAddTo, unit)){
+                return false;
+            }
+        }
         return true;
+    }
+
+
+    /**
+     * given 2 units and a slot to add the first unit in, will return true if they overlap
+     * @param course1
+     * @param slotToCheck
+     * @param course2
+     * @return
+     */
+    private static boolean doesOverlap(Unit course1, Slot slotToCheck, Unit course2){
+        Slot slot2 = course2.getSlot();
+        int timeOfSlotChecked = slotToCheck.getTime();
+        int timeOfSlot2 = slot2.getTime();
+        if(timeOfSlotChecked >= course2.getSlot().getTime() + 200 || timeOfSlotChecked <= course2.getSlot().getTime() - 200 ){
+            return false;
+        }
+        //unit being added is a course
+        if(course1 instanceof Course){
+            // Course with a course
+            if (course2 instanceof Course){
+                //if the same day and same time then they overlap
+                if( slot2 == slotToCheck){
+                    return true;
+                }
+            }
+            //course with a lab
+            else{
+                //course is MWF
+                if(((CourseSlot) slotToCheck).getDay().toString().equals("MO")){
+                    //lab is MW
+                    if(((LabSlot) slot2).getDay().toString().equals("MO") ){
+                        if(timeOfSlotChecked == timeOfSlot2){
+                            return true;
+                        }
+                    }
+                    //lab is Tuesday
+                    if(((LabSlot) slot2).getDay().toString().equals("TU")){
+                        return false;
+                    }
+                    //lab is friday
+                    else{
+                        if(timeOfSlotChecked == timeOfSlot2 || timeOfSlotChecked == timeOfSlot2 + 100){
+                            return true;
+                        }
+                    }
+                }
+                //course is Tuesday
+                else{
+                    if(((LabSlot) slot2).getDay().toString().equals("MO")){
+                        return false;
+                    }
+                    if(((LabSlot) slot2).getDay().toString().equals("TU")){
+                        //course is on the hour
+                        if(timeOfSlotChecked % 100 == 0){
+                            if(timeOfSlotChecked == timeOfSlot2+100 || timeOfSlotChecked == timeOfSlot2){
+                                return true;
+                            }
+                        }
+                        //course is on the half an hour
+                        else{
+                            if(timeOfSlotChecked == timeOfSlot2+30 || timeOfSlotChecked == timeOfSlot2 - 70){
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //unit being added is a lab
+        else{
+            //lab and course 
+            if(course2 instanceof Course){
+                //monday lab
+                if(((LabSlot)slotToCheck).getDay().toString().equals("MO")){
+                    if(timeOfSlotChecked == timeOfSlot2 && ((CourseSlot)slot2).getDay().toString().equals("MO")){
+                        return true;
+                    }
+                }
+                //tuesday labs
+                else if(((LabSlot)slotToCheck).getDay().toString().equals("TU")){
+                    //labs in half hour slots
+                    if((timeOfSlotChecked-30) % 100 == 0 && ((CourseSlot)slot2).getDay().toString().equals("TU")) {
+                        if(timeOfSlotChecked == timeOfSlot2 -30 || timeOfSlotChecked == timeOfSlot2 + 70){
+                            return true;
+                        }
+                    }
+                    //labs in hour slots
+                    else{
+                        if((timeOfSlotChecked == timeOfSlot2 || timeOfSlotChecked == timeOfSlot2 + 100) && ((CourseSlot)slot2).getDay().toString().equals("TU")){
+                            return true;
+                        }
+                    }
+                } 
+            }
+            // lab and a lab
+            else{
+                if(slot2 == slotToCheck){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     private static boolean doesOverlapAddingLab(HashMap<Integer,Slot> courseSlots, Lab labToAdd , int timeToAdd, Slot slotToCheck ){
@@ -212,6 +331,7 @@ public class HardConstrainsts {
 
         return false;
     }
+
 
 
 
