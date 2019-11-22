@@ -182,14 +182,22 @@ public class HardConstrainsts {
     }
 
 
-        //TODO UNWANTED
-        //Not Compatible
 
 
+
+    /**
+     * given a course and a slot to add it to, will return true if unwanted is not broken
+     * @param course
+     * @param slotToAdd
+     * @return
+     */
     public static boolean checkUnwanted(Unit course, Slot slotToAdd){
+        ArrayList<Slot> unwanted = course.getUnwanted();
+        if(unwanted.contains(slotToAdd)){
+            return false;
+        }
 
-
-        return false;
+        return true;
     }
 
     /**
