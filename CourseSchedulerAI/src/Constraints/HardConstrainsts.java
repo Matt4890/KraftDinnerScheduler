@@ -207,9 +207,9 @@ public class HardConstrainsts {
      * @return
      */
     public static boolean checkNotCompatible(Unit course, Slot slotToAddTo){
-        ArrayList<Unit> unwanted = course.getNotCompatible();
-        for(Unit unit : unwanted){
-            if (doesOverlap(course, slotToAddTo, unit)){
+        ArrayList<Unit> notCompatible = course.getNotCompatible();
+        for(Unit unit : notCompatible){
+            if (slotToAddTo.getOverlaps().contains(unit)){
                 return false;
             }
         }
