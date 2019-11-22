@@ -73,32 +73,16 @@ public class HardConstrainsts {
     public static boolean checkLabConflicts(final Course c, final CourseSlot s, final HashMap<Integer, Slot> MWFLec,
             final HashMap<Integer, Slot> TuThLec, final HashMap<Integer, Slot> MWLab,
             final HashMap<Integer, Slot> TuThLab, final HashMap<Integer, Slot> FLab) {
-        boolean toReturn = true;
-        // Go through the labslots with the same time
-        if (s.getDay().toString().equals(CourseDays.MONWEDFRI.toString())) {
-            // Check the Lab slots at the same time on Monday Wednesday
-            if(doesOverlapAddingCourse(MWLab, c, 0, s)){
-                return false;
-            }
-            // Check at match point or -1
-            int time = s.getTime();
-            if ((time / 200) % 2 != 0) {
-                if(doesOverlapAddingCourse(FLab, c, 0, s)){
-                    return false;
-                }
-            } else {
-                if(doesOverlapAddingCourse(FLab, c, -100, s)){
+
+        for(Slot slot : s.getOverlaps()){
+            for(Unit unit : slot.getClassAssignment()){
+                if(unit.getCourseNum() == c.getCourseNum() && unit.getCourseType().equals(c.getCourseType())){
                     return false;
                 }
             }
-        } else if (s.getDay().toString().equals(CourseDays.TUETHR.toString())) {
-            // Check lab at same time and time +1
-            if(doesOverlapAddingCourse(TuThLab, c, -30, s)){
-                return false;
-            }
-            return !doesOverlapAddingCourse(TuThLab, c, 70, s);
         }
-        return toReturn;
+        return true;
+
     }
 
     public static boolean checkAssignmentHardConstriantsLab(final Lab lab, final LabSlot slot,
@@ -131,54 +115,15 @@ public class HardConstrainsts {
     public static boolean checkCourseConflicts(final Lab c, final LabSlot s, final HashMap<Integer, Slot> MWFLec,
             final HashMap<Integer, Slot> TuThLec, final HashMap<Integer, Slot> MWLab,
             final HashMap<Integer, Slot> TuThLab, final HashMap<Integer, Slot> FLab) {
-        boolean toReturn = true;
-        // Go through the labslots with the same time
-        if (s.getDay().toString().equals(LabDays.MONWED.toString())) {
-            // Check the Course Slots at the same time on Monday Wednesday
-            return !doesOverlapAddingLab(MWFLec, c, 0, s);
-
-        } else if (s.getDay().toString().equals(LabDays.TUETHR.toString())) {
-
-            final int time = s.getTime();
-            if (time != 2000) {
-                if (time != 800) {
-
-                    //checking half an hour before
-                    if (time == 1000 || time == 1300 || time == 1600 || time == 1900) {
-                        if(doesOverlapAddingLab(TuThLec, c, -70, s)){
-                            return false;
-                        }
-                    //checking same time
-                    } else if (time == 1100 || time == 1400 || time == 1700) {
-                        return !doesOverlapAddingLab(TuThLec, c, 0, s);
-
-                            //check hour before and half an hour after
-                    } else if (time == 900 || time == 1200 || time == 1500 || time == 1800) {
-                        // Check -100 and +30
-                        if(doesOverlapAddingLab(TuThLec, c, 30, s)){
-                            return false;
-                        }
-                        return !doesOverlapAddingLab(TuThLec, c, -100, s);
-                    }
-
-                }
-            }
-        } else { // FRIDAY
-            final int time = s.getTime();
-            //check time and hour ahead of it
-            if (time != 2000) {
-                if(!doesOverlapAddingLab(TuThLec, c, 100, s)){
+                
+        for(Slot slot : s.getOverlaps()){
+            for(Unit unit : slot.getClassAssignment()){
+                if(unit.getCourseNum() == c.getCourseNum() && unit.getCourseType().equals(c.getCourseType())){
                     return false;
                 }
-                return doesOverlapAddingLab(TuThLec, c, 0, s);
             }
-
         }
-
-
-
-
-        return toReturn;
+        return true;
     }
 
 
@@ -209,8 +154,10 @@ public class HardConstrainsts {
     public static boolean checkNotCompatible(Unit course, Slot slotToAddTo){
         ArrayList<Unit> notCompatible = course.getNotCompatible();
         for(Unit unit : notCompatible){
-            if (slotToAddTo.getOverlaps().contains(unit)){
-                return false;
+            for(Slot overlaps : slotToAddTo.getOverlaps()){
+                if(overlaps.getClassAssignment().contains(unit)){
+                    return false;
+                }
             }
         }
         return true;
