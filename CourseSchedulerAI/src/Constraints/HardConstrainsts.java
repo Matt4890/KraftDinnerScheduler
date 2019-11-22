@@ -188,6 +188,8 @@ public class HardConstrainsts {
 
     public static boolean checkUnwanted(Unit course, Slot slotToAdd){
 
+
+        return false;
     }
 
     /**
@@ -197,7 +199,7 @@ public class HardConstrainsts {
      * @return
      */
     public static boolean checkNotCompatible(Unit course, Slot slotToAddTo){
-        ArrayList<Unit> unwanted = course.getUnwated();
+        ArrayList<Unit> unwanted = course.getNotCompatible();
         for(Unit unit : unwanted){
             if (doesOverlap(course, slotToAddTo, unit)){
                 return false;
@@ -209,6 +211,7 @@ public class HardConstrainsts {
 
     /**
      * given 2 units and a slot to add the first unit in, will return true if they overlap
+     * works with all combinations of lab and courses
      * @param course1
      * @param slotToCheck
      * @param course2
