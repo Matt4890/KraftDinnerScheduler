@@ -75,4 +75,57 @@ public class Schedule{
         return "";
     }
 
+    /**
+     * setups the slots that have overlapping time slots
+     */
+    private void setupOverlaps(){
+        //MWF lectures adds MW automatically with same time lab
+        for(Map.Entry entry : MWFLec.entrySet() ){
+            Slot slot = (Slot) entry.getValue();
+            slot.addOverlaps(slot);
+            slot.addOverlaps(MWLab.get(slot.getTime()));
+            MWLab.get(slot.getTime()).addOverlaps(slot);
+            MWLab.get(slot.getTime()).addOverlaps(MWLab.get(slot.getTime()));
+
+            //adding friday labs
+            for(Map.Entry entry2 : FLab.entrySet()){
+                Slot slot2 = (Slot) entry2.getKey();
+                slot2.addOverlaps(slot2);
+                if(slot.getTime() == slot2.getTime() || slot.getTime()== slot2.getTime() + 100){
+                    slot.addOverlaps(slot2);
+                    slot2.addOverlaps(slot);
+                }
+            }
+        }
+        //Tuesday lectures 
+        for(Map.Entry entry : TuThLec.entrySet() ){
+            Slot slot = (Slot) entry.getValue();
+            slot.addOverlaps(slot);
+            for(Map.Entry entry2 : TuThLab.entrySet()){
+                Slot slot2 = (Slot) entry2.getValue();
+                slot2.addOverlaps(slot2);
+                if(slot.getTime() % 100 == 0){
+                    if(slot2.getTime() == slot.getTime()){
+                        slot.addOverlaps(slot2);
+                        slot2.addOverlaps(slot);
+                    }
+                    else if(slot.getTime() == slot2.getTime()- 100){
+                        slot.addOverlaps(slot2);
+                        slot2.addOverlaps(slot);
+                    }
+                }
+                else{
+                    if(slot.getTime() == slot2.getTime()+30){
+                        slot.addOverlaps(slot2);
+                        slot2.addOverlaps(slot);
+                    }
+                    else if(slot.getTime() == slot2.getTime() - 70){
+                        slot.addOverlaps(slot2);
+                        slot2.addOverlaps(slot); 
+                    }
+                }
+            }
+        }
+    }
+
 }
