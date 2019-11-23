@@ -24,8 +24,7 @@ public class Generator {
                     // Calculate the penalty of the course slot pairing
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
                     if (HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
-                            (CourseSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
-                            this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
+                            (CourseSlot) entry.getValue())) {
                         // Add the course to the slot in the schedule
                         entry.getValue().addOccupant(current);
                         // Create a node as a child of the last node

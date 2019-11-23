@@ -9,6 +9,7 @@ public abstract class Slot {
     protected int id;
     private ArrayList<Unit> classAssignment = new ArrayList<Unit>();
     protected HashMap<Unit, Integer> prefMap = new HashMap<Unit, Integer>();
+    protected ArrayList<Slot> overlaps = new ArrayList<Slot>();
 
     public Slot(int id, int time, SlotType type, HashMap<Unit, Integer> hashMap) {
         this.type = type;
@@ -67,5 +68,13 @@ public abstract class Slot {
     }
 
     public abstract void addOccupant(Object o);
+
+    public ArrayList<Slot> getOverlaps() {
+        return overlaps;
+    }
+
+    public void addOverlaps(Slot slot){
+        overlaps.add(slot);
+    }
 
 }
