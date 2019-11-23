@@ -26,6 +26,7 @@ public class Node implements Comparable<Node>{
         this.parent = null;
         this.desirability = Integer.MAX_VALUE;
         this.orderedChildren = new PriorityQueue<Node>();
+        this.still_considered = true;
 
     }
     
@@ -38,6 +39,7 @@ public class Node implements Comparable<Node>{
         }
         this.parent = null;
         this.desirability = Integer.MAX_VALUE;
+        this.still_considered = true;
     }
     public Node (Schedule schedule, int penaltyValue, Node parent){
 
@@ -46,6 +48,7 @@ public class Node implements Comparable<Node>{
         this.children = new ArrayList<Node>();
         this.parent = parent;
         this.desirability = Integer.MAX_VALUE;
+        this.still_considered = true;
     }
     public Node (Schedule schedule, int penaltyValue, ArrayList<Node> children, Node parent){
         this.penaltyValue = penaltyValue;
@@ -56,8 +59,14 @@ public class Node implements Comparable<Node>{
         }
         this.parent = parent;
         this.desirability = Integer.MAX_VALUE;
+        this.still_considered = true;
     }
-
+    public boolean getConsideration(){
+        return this.still_considered;
+    }
+    public void noLongerConsidered(){
+        this.still_considered = false;
+    }
     public int getPenaltyValueOfNode(){
         return this.penaltyValue;
     }
@@ -89,7 +98,9 @@ public class Node implements Comparable<Node>{
         }
         return null;
     }
-
+    public int getDesireablilty(){
+        return this.desirability;
+    }
     public void calculateDesireablility(){
         //This is the F_leaf function that we want to calculate whether its a good assignment pair or not.
         
