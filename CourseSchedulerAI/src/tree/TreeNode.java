@@ -98,10 +98,11 @@ public class TreeNode implements Comparable<TreeNode>{
         //     System.out.print("TreeNode with Pen: " + this.children.get(i).penaltyValue + ", " );
         // }
         // System.out.println();
-        // System.out.println();
-        //  for (int k = 0; k< this.children.size(); k++){
-        //      System.out.println(this.children.get(k).getSchedule().toString());
-        //  }
+        System.out.println();
+         for (int k = 0; k< this.children.size(); k++){
+             System.out.println(this.children.get(k).getSchedule().toString());
+        }
+        System.out.println();
 
         return this.children;
         

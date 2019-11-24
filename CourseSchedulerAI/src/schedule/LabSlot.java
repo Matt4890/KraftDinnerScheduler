@@ -55,7 +55,16 @@ public class LabSlot extends Slot{
         String formatString = toString();
         return parserInput.equals(formatString);
     }
-
+    public String toStringShowElements(){
+        String toReturn = "Labs Assigned To Slot: ";
+        for (int i = 0; i< this.labs.size()-1; i++){
+            toReturn += this.labs.get(i).toString() + ", ";
+        }
+        if (this.labs.size() != 0) {
+            toReturn += this.labs.get(this.labs.size() - 1) + " ";
+        }
+        return toReturn;
+    }
     public String toString(){
         return day.toString() + "," + Integer.toString(time).replaceAll("(\\d{2})$", ":$1");
     }

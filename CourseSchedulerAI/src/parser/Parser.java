@@ -332,7 +332,7 @@ public class Parser {
                 System.out.println("Exiting...");
                 System.exit(1);
             } else {
-                this.initialPenalty = Kontrol.evalAssignment(s, u);
+                this.initialPenalty += Kontrol.evalAssignment(s, u);
                 s.addOccupant(u);
             }
         }
