@@ -10,7 +10,7 @@
             "request": "launch",
             "mainClass": "Main",
             "projectName": "CourseSchedulerAI",
-            "args": "./inputs/test01.txt 5 3 2",
+            "args": "./inputs/test02.txt 5 3 2",
         },
         {
             "type": "java",
