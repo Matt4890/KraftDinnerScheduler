@@ -52,5 +52,13 @@ public class Lab extends Unit{
         this.slot = slot;
         this.tutNum = tutNum;
     }
+    public Lab(Lab l){
+        super.id = l.id;
+        this.lectureNum= l.lectureNum;
+        this.courseType = new String(l.courseType);
+        this.courseNum = l.courseNum;
+        this.slot = new Slot(l.slot);
+        this.tutNum = l.tutNum;
+    }
 
 }

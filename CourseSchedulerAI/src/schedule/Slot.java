@@ -19,6 +19,14 @@ public abstract class Slot {
         this.prefMap = hashMap;
 
     }
+    public Slot (Slot s){
+        this.type = s.type;
+        this.time = s.time;
+        this.id = s.id;
+        this.prefMap = new HashMap<Unit, Integer>();
+        
+    }
+
 
     protected void setID(int id) {
         this.id = id;

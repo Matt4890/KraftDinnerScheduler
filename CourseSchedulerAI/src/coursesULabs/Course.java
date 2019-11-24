@@ -61,5 +61,11 @@ public class Course extends Unit{
         this.courseNum = courseNum;
         super.id = id;
     }
+    public Course(Course c){
+        this.lectureNum = c.lectureNum;
+        this.courseType = new String(c.courseType);
+        this.courseNum = c.courseNum;
+        super.id = c.id;
+    }
 
 }
