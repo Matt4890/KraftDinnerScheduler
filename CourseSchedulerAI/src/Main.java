@@ -19,6 +19,8 @@ public class Main {
 
     Parser parser = new Parser(filename);
     Schedule initialSchedule = parser.getSchedule();
+    System.out.println("The Schedule:");
+    System.out.println(initialSchedule.toString());
     HashMap<String, Course> allCourses = parser.getCourseMap();
     HashMap<String, Lab> allLabs = parser.getLabMap();
     int initialPenalty = parser.getInitialPenalty();

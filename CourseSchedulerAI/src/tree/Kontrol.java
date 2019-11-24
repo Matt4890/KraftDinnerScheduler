@@ -10,9 +10,9 @@ public class Kontrol {
     private static int weight_pair;
     private static int weight_section_diff;
 
-    private static int pen_course_min;
-    private static int pen_lab_min;
-    private static int pen_not_paired;
+    private static int pen_course_min = 5;
+    private static int pen_lab_min = 3;
+    private static int pen_not_paired = 2;
 
     public static int evalAssignment(Slot s, Unit u) {
         // Take the value of the soft constraint functions of an assignment

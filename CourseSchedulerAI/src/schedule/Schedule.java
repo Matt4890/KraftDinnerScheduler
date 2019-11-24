@@ -78,7 +78,7 @@ public class Schedule{
             
             toReturn += "" + entry.getValue().toString() + "Assigned: \n";
             for (int i = 0; i <entry.getValue().getClassAssignment().size(); i++ ){
-                toReturn += entry.getValue().getClassAssignment().get(i).toString();
+                toReturn += ((Course)(entry.getValue().getClassAssignment().get(i))).toString() + " ";
             }
             toReturn += "\n";
 
@@ -88,7 +88,7 @@ public class Schedule{
             
             toReturn += "" + entry.getValue().toString() + "Assigned: \n";
             for (int i = 0; i <entry.getValue().getClassAssignment().size(); i++ ){
-                toReturn += entry.getValue().getClassAssignment().get(i).toString();
+                toReturn += ((Course)(entry.getValue().getClassAssignment().get(i))).toString() + " ";
             }
             toReturn += "\n";
             
@@ -98,7 +98,7 @@ public class Schedule{
             
             toReturn += "" + entry.getValue().toString() + "Assigned: \n";
             for (int i = 0; i <entry.getValue().getClassAssignment().size(); i++ ){
-                toReturn += entry.getValue().getClassAssignment().get(i).toString();
+                toReturn += ((Lab)(entry.getValue().getClassAssignment().get(i))).toString() + " ";
             }
             toReturn += "\n";
             
@@ -108,7 +108,7 @@ public class Schedule{
             
             toReturn += "" + entry.getValue().toString() + "Assigned: \n";
             for (int i = 0; i <entry.getValue().getClassAssignment().size(); i++ ){
-                toReturn += entry.getValue().getClassAssignment().get(i).toString();
+                toReturn += ((Lab)(entry.getValue().getClassAssignment().get(i))).toString() + " ";
             }
             toReturn += "\n";
             
@@ -118,12 +118,13 @@ public class Schedule{
             
             toReturn += "" + entry.getValue().toString() + "Assigned: \n";
             for (int i = 0; i <entry.getValue().getClassAssignment().size(); i++ ){
-                toReturn += entry.getValue().getClassAssignment().get(i).toString();
+                toReturn += ((Lab)(entry.getValue().getClassAssignment().get(i))).toString() + " ";
             }
             toReturn += "\n";
             
             
         }
+        toReturn += "\n\n\n";
 
         return toReturn;
     }

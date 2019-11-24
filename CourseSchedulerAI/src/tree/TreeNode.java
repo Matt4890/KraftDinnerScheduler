@@ -94,11 +94,14 @@ public class TreeNode implements Comparable<TreeNode>{
     }
 
     public ArrayList<TreeNode> getChildren(){
-        for (int i = 0; i < this.children.size(); i++){
-            System.out.print("TreeNode with Pen: " + this.children.get(i).penaltyValue + ", " );
-        }
-        System.out.println();
-        System.out.println();
+        // for (int i = 0; i < this.children.size(); i++){
+        //     System.out.print("TreeNode with Pen: " + this.children.get(i).penaltyValue + ", " );
+        // }
+        // System.out.println();
+        // System.out.println();
+        //  for (int k = 0; k< this.children.size(); k++){
+        //      System.out.println(this.children.get(k).getSchedule().toString());
+        //  }
 
         return this.children;
         

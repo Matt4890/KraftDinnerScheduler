@@ -48,6 +48,7 @@ public class CourseSlot extends Slot{
         Course c = (Course) co;
         if (this.courseCount < this.courseMax){
             courses.add(c);
+            System.out.println("Course: " +co.toString()+" Successfully Added to: "+ this.toString());
         } else {
             System.out.println("Hard Constraint CourseMax Broken");
         }
