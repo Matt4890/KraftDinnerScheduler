@@ -5,32 +5,40 @@ import java.util.*;
 
 
 
-public class Node implements Comparable<Node>{
+public class TreeNode implements Comparable<TreeNode>{
 
-    private Node parent;
+    private TreeNode parent;
     private int penaltyValue; 
     private Schedule schedule;
-    private ArrayList<Node> children; //This could be a heap so the one with the lowest pen value is always on top
-    private PriorityQueue<Node> orderedChildren;
+    private ArrayList<TreeNode> children; //This could be a heap so the one with the lowest pen value is always on top
+    private PriorityQueue<TreeNode> orderedChildren = new PriorityQueue<TreeNode>();
 
     private int desirability;
     private boolean still_considered;
 
 
 
-    public Node (Schedule schedule, int penaltyValue){
+    public TreeNode (Schedule schedule, int penaltyValue){
 
         this.penaltyValue = penaltyValue;
         this.schedule = schedule;
-        this.children = new ArrayList<Node>();
+        this.children = new ArrayList<TreeNode>();
         this.parent = null;
         this.desirability = Integer.MAX_VALUE;
-        this.orderedChildren = new PriorityQueue<Node>();
+        this.orderedChildren = new PriorityQueue<TreeNode>();
         this.still_considered = true;
 
     }
+    public TreeNode (TreeNode n){
+        this.penaltyValue = n.getPenaltyValueOfTreeNode();
+        this.schedule = n.getSchedule();
+        this.children = n.getChildren();
+        this.desirability = n.getDesireablilty();
+        this.orderedChildren = n.getOrderedChildren();
+        this.still_considered = n.still_considered;
+    }
     
-    public Node (Schedule schedule, int penaltyValue, ArrayList<Node> children){
+    public TreeNode (Schedule schedule, int penaltyValue, ArrayList<TreeNode> children){
         this.penaltyValue = penaltyValue;
         this.schedule = schedule;
         for (int i = 0; i<children.size(); i++){
@@ -41,16 +49,17 @@ public class Node implements Comparable<Node>{
         this.desirability = Integer.MAX_VALUE;
         this.still_considered = true;
     }
-    public Node (Schedule schedule, int penaltyValue, Node parent){
+    public TreeNode (Schedule schedule, int penaltyValue, TreeNode parent){
 
         this.penaltyValue = penaltyValue;
         this.schedule = schedule;
-        this.children = new ArrayList<Node>();
+        this.children = new ArrayList<TreeNode>();
+        this.orderedChildren = new PriorityQueue<TreeNode>();
         this.parent = parent;
         this.desirability = Integer.MAX_VALUE;
         this.still_considered = true;
     }
-    public Node (Schedule schedule, int penaltyValue, ArrayList<Node> children, Node parent){
+    public TreeNode (Schedule schedule, int penaltyValue, ArrayList<TreeNode> children, TreeNode parent){
         this.penaltyValue = penaltyValue;
         this.schedule = schedule;
         for (int i = 0; i<children.size(); i++){
@@ -67,14 +76,16 @@ public class Node implements Comparable<Node>{
     public void noLongerConsidered(){
         this.still_considered = false;
     }
-    public int getPenaltyValueOfNode(){
+    public int getPenaltyValueOfTreeNode(){
         return this.penaltyValue;
     }
-    public void addChild(Node n){
+    public void addChild(TreeNode n){
         this.children.add(n);
+        
         this.orderedChildren.add(n);
+        //System.out.println(Arrays.toString(this.orderedChildren.toArray()));
     }
-    public Node getParent(){
+    public TreeNode getParent(){
         return this.parent;
     }
 
@@ -82,17 +93,24 @@ public class Node implements Comparable<Node>{
         return this.schedule;
     }
 
-    public ArrayList<Node> getChildren(){
+    public ArrayList<TreeNode> getChildren(){
+        for (int i = 0; i < this.children.size(); i++){
+            System.out.print("TreeNode with Pen: " + this.children.get(i).penaltyValue + ", " );
+        }
+        System.out.println();
+        System.out.println();
+
         return this.children;
+        
     }
-    public Node getLowestPenaltyChild(){
+    public TreeNode getLowestPenaltyChild(){
         return this.orderedChildren.peek();
     }
     
-    public Node getChildWithPenaltyValue(int n){
+    public TreeNode getChildWithPenaltyValue(int n){
        
         for (int i = 0; i< this.children.size(); i++){
-            if (n == this.children.get(i).getPenaltyValueOfNode()){
+            if (n == this.children.get(i).getPenaltyValueOfTreeNode()){
                 return this.children.get(i);
             }
         }
@@ -108,9 +126,18 @@ public class Node implements Comparable<Node>{
     }
 
     @Override
-    public int compareTo(Node o) {
-        return ((Integer)(this.getPenaltyValueOfNode())).compareTo(((Integer)o.getPenaltyValueOfNode()));
+    public int compareTo(TreeNode o) {
+        return ((Integer)(this.getPenaltyValueOfTreeNode())).compareTo(((Integer)o.getPenaltyValueOfTreeNode()));
     }
 
+    public String toString(){
+        return "TreeNode: Penalty: " + this.penaltyValue; 
+    }
+
+    public PriorityQueue<TreeNode> getOrderedChildren() {
+        return orderedChildren;
+    }
+
+   
 
 }

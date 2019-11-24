@@ -13,11 +13,13 @@ import coursesULabs.*;
 import enums.CourseDays;
 import enums.LabDays;
 import schedule.*;
+import tree.*;
 
 public class Parser {
     private HashMap<String, Course> courseMap = new HashMap<String, Course>();
     private HashMap<String, Lab>    labMap    = new HashMap<String, Lab>();
     private Schedule schedule; 
+    private int initialPenalty; 
     
     public  Parser (String filename) {
 
@@ -330,6 +332,7 @@ public class Parser {
                 System.out.println("Exiting...");
                 System.exit(1);
             } else {
+                this.initialPenalty = Kontrol.evalAssignment(s, u);
                 s.addOccupant(u);
             }
         }
@@ -346,6 +349,9 @@ public class Parser {
 
         System.out.println("Done!");
 
+    }
+    public int getInitialPenalty(){
+        return this.initialPenalty;
     }
     public Schedule getSchedule(){
         return this.schedule;

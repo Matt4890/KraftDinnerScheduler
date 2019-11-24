@@ -9,8 +9,8 @@
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
             "mainClass": "Main",
-            "projectName": "CourseSchedulerAI"
-            "args": "./inputs/departmentExample2.txt 0 0 0"
+            "projectName": "CourseSchedulerAI",
+            "args": "./inputs/departmentExample2.txt 0 0 0",
         },
         {
             "type": "java",

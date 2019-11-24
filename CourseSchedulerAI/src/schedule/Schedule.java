@@ -71,7 +71,61 @@ public class Schedule{
 
 
     public String toString(){
-        return "";
+        //Iterate through each Map and print the slots with the courses in each of them 
+        String toReturn = "Schedule: \n";
+        toReturn += "MWF Lecture Slots: \n";
+        for(Map.Entry<Integer, Slot> entry : MWFLec.entrySet() ){
+            
+            toReturn += "" + entry.getValue().toString() + "Assigned: \n";
+            for (int i = 0; i <entry.getValue().getClassAssignment().size(); i++ ){
+                toReturn += entry.getValue().getClassAssignment().get(i).toString();
+            }
+            toReturn += "\n";
+
+            
+        }
+        for(Map.Entry<Integer, Slot> entry : TuThLec.entrySet() ){
+            
+            toReturn += "" + entry.getValue().toString() + "Assigned: \n";
+            for (int i = 0; i <entry.getValue().getClassAssignment().size(); i++ ){
+                toReturn += entry.getValue().getClassAssignment().get(i).toString();
+            }
+            toReturn += "\n";
+            
+            
+        }
+        for(Map.Entry<Integer, Slot> entry : MWLab.entrySet() ){
+            
+            toReturn += "" + entry.getValue().toString() + "Assigned: \n";
+            for (int i = 0; i <entry.getValue().getClassAssignment().size(); i++ ){
+                toReturn += entry.getValue().getClassAssignment().get(i).toString();
+            }
+            toReturn += "\n";
+            
+            
+        }
+        for(Map.Entry<Integer, Slot> entry : TuThLab.entrySet() ){
+            
+            toReturn += "" + entry.getValue().toString() + "Assigned: \n";
+            for (int i = 0; i <entry.getValue().getClassAssignment().size(); i++ ){
+                toReturn += entry.getValue().getClassAssignment().get(i).toString();
+            }
+            toReturn += "\n";
+            
+            
+        }
+        for(Map.Entry<Integer, Slot> entry : FLab.entrySet() ){
+            
+            toReturn += "" + entry.getValue().toString() + "Assigned: \n";
+            for (int i = 0; i <entry.getValue().getClassAssignment().size(); i++ ){
+                toReturn += entry.getValue().getClassAssignment().get(i).toString();
+            }
+            toReturn += "\n";
+            
+            
+        }
+
+        return toReturn;
     }
 
     /**
