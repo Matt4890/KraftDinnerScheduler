@@ -3,6 +3,7 @@ department2
 
 Course slots:
 MO,  8:00, 2, 1
+TU,  8:00, 2, 1
 MO,  9:00, 5, 0
 MO, 10:00, 5, 0
 MO, 11:00, 5, 0
@@ -24,6 +25,7 @@ MO, 15:00, 6, 3
 MO, 16:00, 6, 3 
 MO, 17:00, 6, 3 
 MO, 18:00, 2, 0
+FR, 10:00, 2, 0
 
 Courses:
 CPSC 203 LEC 01
@@ -42,6 +44,7 @@ CPSC 321 LEC 01
 CPSC 331 LEC 01
 CPSC 333 LEC 01
 CPSC 335 LEC 01
+CPSC 413 LEC 01
 
 Labs:
 CPSC 203 LEC 01 TUT 01

@@ -6,140 +6,67 @@ The Schedule:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01  
+MO,12:00 Courses Assigned To Slot:  
 MO,16:00 Courses Assigned To Slot:  
 MO,9:00 Courses Assigned To Slot:  
-MO,17:00 Courses Assigned To Slot:  
-MO,10:00 Courses Assigned To Slot:  
-MO,18:00 Courses Assigned To Slot:  
-MO,11:00 Courses Assigned To Slot:  
-MO,19:00 Courses Assigned To Slot:  
-MO,12:00 Courses Assigned To Slot:  
-MO,20:00 Courses Assigned To Slot:  
 MO,13:00 Courses Assigned To Slot:  
+MO,10:00 Courses Assigned To Slot:  
 MO,14:00 Courses Assigned To Slot:  
+MO,11:00 Courses Assigned To Slot:  
 MO,15:00 Courses Assigned To Slot:  
 TU,8:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-TU,17:00 Courses Assigned To Slot:  
-TU,18:30 Courses Assigned To Slot:  
-TU,14:00 Courses Assigned To Slot:  
-TU,15:30 Courses Assigned To Slot:  
-TU,11:00 Courses Assigned To Slot:  
-TU,12:30 Courses Assigned To Slot:  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
 
 Units Made
 Course: CPSC313LEC01 Successfully Added to: MO,8:00
+Course: CPSC313LEC01 Successfully Added to: MO,12:00
 Course: CPSC313LEC01 Successfully Added to: MO,16:00
 Course: CPSC313LEC01 Successfully Added to: MO,9:00
-Course: CPSC313LEC01 Successfully Added to: MO,17:00
-Course: CPSC313LEC01 Successfully Added to: MO,10:00
-Course: CPSC313LEC01 Successfully Added to: MO,18:00
-Course: CPSC313LEC01 Successfully Added to: MO,11:00
-Course: CPSC313LEC01 Successfully Added to: MO,19:00
-Course: CPSC313LEC01 Successfully Added to: MO,12:00
-Course: CPSC313LEC01 Successfully Added to: MO,20:00
 Course: CPSC313LEC01 Successfully Added to: MO,13:00
+Course: CPSC313LEC01 Successfully Added to: MO,10:00
 Course: CPSC313LEC01 Successfully Added to: MO,14:00
+Course: CPSC313LEC01 Successfully Added to: MO,11:00
 Course: CPSC313LEC01 Successfully Added to: MO,15:00
 Course: CPSC313LEC01 Successfully Added to: TU,8:00
-Course: CPSC313LEC01 Successfully Added to: TU,9:30
-Course: CPSC313LEC01 Successfully Added to: TU,17:00
-Course: CPSC313LEC01 Successfully Added to: TU,18:30
-Course: CPSC313LEC01 Successfully Added to: TU,14:00
-Course: CPSC313LEC01 Successfully Added to: TU,15:30
-Course: CPSC313LEC01 Successfully Added to: TU,11:00
-Course: CPSC313LEC01 Successfully Added to: TU,12:30
 
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -147,58 +74,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -206,58 +102,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -265,58 +130,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -324,58 +158,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -383,58 +186,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -442,58 +214,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -501,58 +242,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -560,58 +270,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -619,707 +298,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -1327,78 +326,40 @@ FR,18:00 Labs Assigned To Slot:
 
 
 
+Course: CPSC413LEC01 Successfully Added to: MO,12:00
 Course: CPSC413LEC01 Successfully Added to: MO,16:00
 Course: CPSC413LEC01 Successfully Added to: MO,9:00
-Course: CPSC413LEC01 Successfully Added to: MO,17:00
-Course: CPSC413LEC01 Successfully Added to: MO,10:00
-Course: CPSC413LEC01 Successfully Added to: MO,11:00
-Course: CPSC413LEC01 Successfully Added to: MO,12:00
 Course: CPSC413LEC01 Successfully Added to: MO,13:00
+Course: CPSC413LEC01 Successfully Added to: MO,10:00
 Course: CPSC413LEC01 Successfully Added to: MO,14:00
+Course: CPSC413LEC01 Successfully Added to: MO,11:00
 Course: CPSC413LEC01 Successfully Added to: MO,15:00
 Course: CPSC413LEC01 Successfully Added to: TU,8:00
-Course: CPSC413LEC01 Successfully Added to: TU,9:30
-Course: CPSC413LEC01 Successfully Added to: TU,17:00
-Course: CPSC413LEC01 Successfully Added to: TU,14:00
-Course: CPSC413LEC01 Successfully Added to: TU,15:30
-Course: CPSC413LEC01 Successfully Added to: TU,11:00
-Course: CPSC413LEC01 Successfully Added to: TU,12:30
 
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -1406,58 +367,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -1465,58 +395,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -1524,58 +423,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -1583,58 +451,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -1642,58 +479,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -1701,58 +507,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -1760,58 +535,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -1819,58 +563,67 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
 MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
+
+
+
+
+
+
+
+Course: CPSC265LEC02 Successfully Added to: MO,12:00
+Course: CPSC265LEC02 Successfully Added to: MO,16:00
+Course: CPSC265LEC02 Successfully Added to: MO,9:00
+Course: CPSC265LEC02 Successfully Added to: MO,13:00
+Course: CPSC265LEC02 Successfully Added to: MO,10:00
+Course: CPSC265LEC02 Successfully Added to: MO,14:00
+Course: CPSC265LEC02 Successfully Added to: MO,11:00
+Course: CPSC265LEC02 Successfully Added to: MO,15:00
+
+Schedule: 
+MWF Lecture Slots: 
+MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
+MO,16:00 Labs Assigned To Slot:  
+MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
+MO,17:00 Labs Assigned To Slot:  
+MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
+MO,18:00 Labs Assigned To Slot:  
+MO,11:00 Labs Assigned To Slot:  
+MO,15:00 Labs Assigned To Slot:  
+FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
 
 
 
@@ -1878,58 +631,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -1937,58 +659,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -1996,58 +687,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2055,58 +715,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2114,58 +743,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2173,58 +771,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2232,58 +799,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2291,77 +827,39 @@ FR,18:00 Labs Assigned To Slot:
 
 
 
-Course: CPSC421LEC01 Successfully Added to: MO,16:00
-Course: CPSC421LEC01 Successfully Added to: MO,9:00
-Course: CPSC421LEC01 Successfully Added to: MO,17:00
-Course: CPSC421LEC01 Successfully Added to: MO,10:00
-Course: CPSC421LEC01 Successfully Added to: MO,11:00
-Course: CPSC421LEC01 Successfully Added to: MO,12:00
-Course: CPSC421LEC01 Successfully Added to: MO,13:00
-Course: CPSC421LEC01 Successfully Added to: MO,14:00
-Course: CPSC421LEC01 Successfully Added to: MO,15:00
-Course: CPSC421LEC01 Successfully Added to: TU,9:30
-Course: CPSC421LEC01 Successfully Added to: TU,17:00
-Course: CPSC421LEC01 Successfully Added to: TU,14:00
-Course: CPSC421LEC01 Successfully Added to: TU,15:30
-Course: CPSC421LEC01 Successfully Added to: TU,11:00
-Course: CPSC421LEC01 Successfully Added to: TU,12:30
+Course: CPSC331LEC01 Successfully Added to: MO,12:00
+Course: CPSC331LEC01 Successfully Added to: MO,16:00
+Course: CPSC331LEC01 Successfully Added to: MO,9:00
+Course: CPSC331LEC01 Successfully Added to: MO,13:00
+Course: CPSC331LEC01 Successfully Added to: MO,10:00
+Course: CPSC331LEC01 Successfully Added to: MO,14:00
+Course: CPSC331LEC01 Successfully Added to: MO,11:00
+Course: CPSC331LEC01 Successfully Added to: MO,15:00
 
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2369,58 +867,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2428,58 +895,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2487,58 +923,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2546,58 +951,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2605,58 +979,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2664,58 +1007,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
@@ -2723,1375 +1035,27 @@ FR,18:00 Labs Assigned To Slot:
 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
+MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
+MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC265LEC02, CPSC331LEC01  
 TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
 MO,8:00 Labs Assigned To Slot:  
+MO,12:00 Labs Assigned To Slot:  
 MO,16:00 Labs Assigned To Slot:  
 MO,9:00 Labs Assigned To Slot:  
+MO,13:00 Labs Assigned To Slot:  
 MO,17:00 Labs Assigned To Slot:  
 MO,10:00 Labs Assigned To Slot:  
+MO,14:00 Labs Assigned To Slot:  
 MO,18:00 Labs Assigned To Slot:  
 MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
 MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
 FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-
-
-
-Course: CPSC591LEC01 Successfully Added to: MO,16:00
-Course: CPSC591LEC01 Successfully Added to: MO,9:00
-Course: CPSC591LEC01 Successfully Added to: MO,17:00
-Course: CPSC591LEC01 Successfully Added to: MO,10:00
-Course: CPSC591LEC01 Successfully Added to: MO,11:00
-Course: CPSC591LEC01 Successfully Added to: MO,12:00
-Course: CPSC591LEC01 Successfully Added to: MO,13:00
-Course: CPSC591LEC01 Successfully Added to: MO,14:00
-Course: CPSC591LEC01 Successfully Added to: MO,15:00
-Course: CPSC591LEC01 Successfully Added to: TU,9:30
-Course: CPSC591LEC01 Successfully Added to: TU,17:00
-Course: CPSC591LEC01 Successfully Added to: TU,14:00
-Course: CPSC591LEC01 Successfully Added to: TU,15:30
-Course: CPSC591LEC01 Successfully Added to: TU,11:00
-Course: CPSC591LEC01 Successfully Added to: TU,12:30
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
-
-
-
-
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: CPSC203LEC01, CPSC313LEC01  
-MO,16:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,10:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,18:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,19:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,12:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,20:00 Courses Assigned To Slot: CPSC313LEC01  
-MO,13:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,15:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,8:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,17:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,18:30 Courses Assigned To Slot: CPSC313LEC01  
-TU,14:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,15:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,11:00 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-TU,12:30 Courses Assigned To Slot: CPSC313LEC01, CPSC413LEC01, CPSC421LEC01, CPSC591LEC01  
-MO,8:00 Labs Assigned To Slot:  
-MO,16:00 Labs Assigned To Slot:  
-MO,9:00 Labs Assigned To Slot:  
-MO,17:00 Labs Assigned To Slot:  
-MO,10:00 Labs Assigned To Slot:  
-MO,18:00 Labs Assigned To Slot:  
-MO,11:00 Labs Assigned To Slot:  
-MO,19:00 Labs Assigned To Slot:  
-MO,12:00 Labs Assigned To Slot:  
-MO,20:00 Labs Assigned To Slot:  
-MO,13:00 Labs Assigned To Slot:  
-MO,14:00 Labs Assigned To Slot:  
-MO,15:00 Labs Assigned To Slot:  
-TU,8:00 Labs Assigned To Slot:  
-TU,16:00 Labs Assigned To Slot:  
-TU,9:00 Labs Assigned To Slot:  
-TU,17:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-TU,18:00 Labs Assigned To Slot:  
-TU,11:00 Labs Assigned To Slot:  
-TU,19:00 Labs Assigned To Slot:  
-TU,12:00 Labs Assigned To Slot:  
-TU,20:00 Labs Assigned To Slot:  
-TU,13:00 Labs Assigned To Slot:  
-TU,14:00 Labs Assigned To Slot:  
-TU,15:00 Labs Assigned To Slot:  
-FR,8:00 Labs Assigned To Slot:  
-FR,12:00 Labs Assigned To Slot:  
-FR,16:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: CPSC203LEC01TUT01  
-FR,14:00 Labs Assigned To Slot:  
-FR,18:00 Labs Assigned To Slot:  
 
 
 
