@@ -57,6 +57,32 @@ public class Main {
       //This is where we do the fancy stuff
       toReturn.add(l);
     }
+
+    bubbleSort(toReturn);
+
     return toReturn;
   }
+
+
+
+  /**
+   * takes a arraylist of units and orders them from most constrained to least
+   * @param units
+   */
+  public static void bubbleSort(ArrayList<Unit> units) 
+  { 
+      int n = units.size();
+      for (int i = 0; i < n-1; i++){ 
+          for (int j = 0; j < n-i-1; j++){
+              if (units.get(j).getConstrained() < units.get(j+1).getConstrained()) 
+              { 
+                  Unit temp = units.get(j); 
+                  units.set(j,units.get(j+1)); 
+                  units.set(j+1, temp); 
+              } 
+          }
+      }
+  } 
+
+
 }
