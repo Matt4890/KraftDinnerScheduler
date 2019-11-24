@@ -80,35 +80,35 @@ public class Schedule {
         toReturn += "MWF Lecture Slots: \n";
         for (Map.Entry<Integer, Slot> entry : MWFLec.entrySet()) {
 
-            toReturn += "" + entry.getValue().toString();
+            toReturn += "" + entry.getValue().toString()+" ";
             toReturn += ((CourseSlot) (entry.getValue())).toStringShowElements() + " ";
             toReturn += "\n";
 
         }
         for (Map.Entry<Integer, Slot> entry : TuThLec.entrySet()) {
 
-            toReturn += "" + entry.getValue().toString();
+            toReturn += "" + entry.getValue().toString()+" ";
             toReturn += ((CourseSlot) (entry.getValue())).toStringShowElements() + " ";
             toReturn += "\n";
 
         }
         for (Map.Entry<Integer, Slot> entry : MWLab.entrySet()) {
 
-            toReturn += "" + entry.getValue().toString();
+            toReturn += "" + entry.getValue().toString() + " ";
             toReturn += ((LabSlot) (entry.getValue())).toStringShowElements() + " ";
             toReturn += "\n";
 
         }
         for (Map.Entry<Integer, Slot> entry : TuThLab.entrySet()) {
 
-            toReturn += "" + entry.getValue().toString();
+            toReturn += "" + entry.getValue().toString()+" ";
             toReturn += ((LabSlot) (entry.getValue())).toStringShowElements() + " ";
             toReturn += "\n";
 
         }
         for (Map.Entry<Integer, Slot> entry : FLab.entrySet()) {
 
-            toReturn += "" + entry.getValue().toString();
+            toReturn += "" + entry.getValue().toString()+" ";
             toReturn += ((LabSlot) (entry.getValue())).toStringShowElements() + " ";
             toReturn += "\n";
 
