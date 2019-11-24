@@ -55,9 +55,7 @@ public class Unit {
         return slot;
     }
 
-    public void setSlot(Slot slot) {
-        this.slot = slot;
-    }
+
 
     public Unit() {
 
