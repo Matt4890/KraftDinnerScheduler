@@ -21,7 +21,7 @@ public class TreeNode implements Comparable<TreeNode>{
     public TreeNode (Schedule schedule, int penaltyValue){
 
         this.penaltyValue = penaltyValue;
-        this.schedule = schedule;
+        this.schedule = new Schedule(schedule);
         this.children = new ArrayList<TreeNode>();
         this.parent = null;
         this.desirability = Integer.MAX_VALUE;
@@ -31,7 +31,7 @@ public class TreeNode implements Comparable<TreeNode>{
     }
     public TreeNode (TreeNode n){
         this.penaltyValue = n.getPenaltyValueOfTreeNode();
-        this.schedule = n.getSchedule();
+        this.schedule = new Schedule (n.getSchedule());
         this.children = n.getChildren();
         this.desirability = n.getDesireablilty();
         this.orderedChildren = n.getOrderedChildren();
@@ -40,7 +40,7 @@ public class TreeNode implements Comparable<TreeNode>{
     
     public TreeNode (Schedule schedule, int penaltyValue, ArrayList<TreeNode> children){
         this.penaltyValue = penaltyValue;
-        this.schedule = schedule;
+        this.schedule = new Schedule(schedule);
         for (int i = 0; i<children.size(); i++){
             this.children.add(children.get(i));
             this.orderedChildren.add(children.get(i));
@@ -52,7 +52,7 @@ public class TreeNode implements Comparable<TreeNode>{
     public TreeNode (Schedule schedule, int penaltyValue, TreeNode parent){
 
         this.penaltyValue = penaltyValue;
-        this.schedule = schedule;
+        this.schedule = new Schedule(schedule);
         this.children = new ArrayList<TreeNode>();
         this.orderedChildren = new PriorityQueue<TreeNode>();
         this.parent = parent;
@@ -61,7 +61,7 @@ public class TreeNode implements Comparable<TreeNode>{
     }
     public TreeNode (Schedule schedule, int penaltyValue, ArrayList<TreeNode> children, TreeNode parent){
         this.penaltyValue = penaltyValue;
-        this.schedule = schedule;
+        this.schedule = new Schedule(schedule);
         for (int i = 0; i<children.size(); i++){
             this.children.add(children.get(i));
             this.orderedChildren.add(children.get(i));
@@ -135,7 +135,7 @@ public class TreeNode implements Comparable<TreeNode>{
     }
 
     public String toString(){
-        return "TreeNode: Penalty: " + this.penaltyValue; 
+        return "TreeNode: Penalty: " + this.penaltyValue + " " + this.schedule.toString(); 
     }
 
     public PriorityQueue<TreeNode> getOrderedChildren() {

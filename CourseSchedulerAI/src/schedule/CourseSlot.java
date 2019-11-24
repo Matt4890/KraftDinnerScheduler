@@ -23,6 +23,17 @@ public class CourseSlot extends Slot {
         this.day = day;
         this.courseCount = 0;
     }
+    public CourseSlot(CourseSlot c){
+        super(c);
+        this.day = c.day;
+        this.courseMax = c.courseMax;
+        this.courseMin = c.courseMin;
+        this.courseCount = c.courseCount;
+        for (int i = 0; i< c.courses.size(); i++){
+            this.courses.add(new Course(c.courses.get(i)));
+        }
+
+    }
 
     public CourseDays getDay() {
         return this.day;
@@ -56,7 +67,7 @@ public class CourseSlot extends Slot {
         if (this.courseCount < this.courseMax) {
             courses.add(c);
             this.courseCount ++;
-            System.out.println("Course: " + co.toString() + " Successfully Added to: " + this.toString());
+            //System.out.println("Course: " + co.toString() + " Successfully Added to: " + this.toString());
         } else {
             System.out.println("Hard Constraint CourseMax Broken");
         }

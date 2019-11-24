@@ -11,7 +11,33 @@ public class Schedule {
     private HashMap<Integer, Slot> MWLab = new HashMap<Integer, Slot>();
     private HashMap<Integer, Slot> TuThLab = new HashMap<Integer, Slot>();
     private HashMap<Integer, Slot> FLab = new HashMap<Integer, Slot>();
-    // Do we want these to have any particular ordering at the beginning
+
+    public Schedule(Schedule s) {
+        // Do a Deep Copy of each hash map
+        for (Map.Entry<Integer, Slot> entry : s.MWFLec.entrySet()) {
+
+            this.MWFLec.put(entry.getKey(), new CourseSlot((CourseSlot) entry.getValue()));
+        }
+        for (Map.Entry<Integer, Slot> entry : s.TuThLec.entrySet()) {
+
+            this.TuThLec.put(entry.getKey(), new CourseSlot((CourseSlot) entry.getValue()));
+
+        }
+        for (Map.Entry<Integer, Slot> entry : s.MWLab.entrySet()) {
+            this.MWLab.put(entry.getKey(), new LabSlot((LabSlot) entry.getValue()));
+        }
+        for (Map.Entry<Integer, Slot> entry : s.TuThLab.entrySet()) {
+            this.TuThLab.put(entry.getKey(), new LabSlot((LabSlot) entry.getValue()));
+
+        }
+        for (Map.Entry<Integer, Slot> entry : s.FLab.entrySet()) {
+
+            this.FLab.put(entry.getKey(), new LabSlot((LabSlot) entry.getValue()));
+
+        }
+        setupOverlaps();
+
+    }
 
     public Schedule(ArrayList<CourseSlot> courseSlots, ArrayList<LabSlot> labSlots) {
         // Create all Slots in the correct places
@@ -79,15 +105,15 @@ public class Schedule {
         String toReturn = "Schedule: \n";
         toReturn += "MWF Lecture Slots: \n";
         for (Map.Entry<Integer, Slot> entry : MWFLec.entrySet()) {
-
-            toReturn += "" + entry.getValue().toString()+" ";
+            
+            toReturn += "" + ((CourseSlot)entry.getValue()).toString() + " ";
             toReturn += ((CourseSlot) (entry.getValue())).toStringShowElements() + " ";
             toReturn += "\n";
 
         }
         for (Map.Entry<Integer, Slot> entry : TuThLec.entrySet()) {
 
-            toReturn += "" + entry.getValue().toString()+" ";
+            toReturn += "" + entry.getValue().toString() + " ";
             toReturn += ((CourseSlot) (entry.getValue())).toStringShowElements() + " ";
             toReturn += "\n";
 
@@ -101,14 +127,14 @@ public class Schedule {
         }
         for (Map.Entry<Integer, Slot> entry : TuThLab.entrySet()) {
 
-            toReturn += "" + entry.getValue().toString()+" ";
+            toReturn += "" + entry.getValue().toString() + " ";
             toReturn += ((LabSlot) (entry.getValue())).toStringShowElements() + " ";
             toReturn += "\n";
 
         }
         for (Map.Entry<Integer, Slot> entry : FLab.entrySet()) {
 
-            toReturn += "" + entry.getValue().toString()+" ";
+            toReturn += "" + entry.getValue().toString() + " ";
             toReturn += ((LabSlot) (entry.getValue())).toStringShowElements() + " ";
             toReturn += "\n";
 

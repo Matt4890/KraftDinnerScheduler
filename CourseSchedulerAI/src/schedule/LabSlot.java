@@ -18,6 +18,17 @@ public class LabSlot extends Slot{
         this.day = day;
         this.labCount = 0;
     }
+    public LabSlot(LabSlot l){
+        super(l);
+        this.day = l.day;
+        this.labMax = l.labMax;
+        this.labMin = l.labMin;
+        this.labCount = l.labCount;
+        for (int i = 0; i<l.labs.size(); i++){
+            this.labs.add(new Lab(l.labs.get(i)));
+        }
+
+    }
 
     public LabDays getDay(){
         return this.day;

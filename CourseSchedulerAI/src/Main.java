@@ -8,14 +8,12 @@ import java.io.*;
 public class Main {
   public static void main(String[] args) throws FileNotFoundException{
     //Instantiating the File class
-    File file = new File("output.txt");
-    //Instantiating the PrintStream class
-    PrintStream stream = new PrintStream(file);
-    System.out.println("From now on "+file.getAbsolutePath()+" will be your console");
-    System.setOut(stream);
-    //Printing values to file
-    System.out.println("Hello, how are you");
-    System.out.println("Welcome to Tutorialspoint");
+    // File file = new File("output.txt");
+    // //Instantiating the PrintStream class
+    // PrintStream stream = new PrintStream(file);
+    // System.out.println("From now on "+file.getAbsolutePath()+" will be your console");
+    // System.setOut(stream);
+    // //Printing values to file
 
     String filename;
     int courseMinPen;

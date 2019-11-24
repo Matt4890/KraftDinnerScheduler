@@ -13,7 +13,7 @@ public class Generator {
 
     public Generator(Schedule starter, int penalty) {
         this.tree = new Tree();
-        this.tree.addRoot(new TreeNode(this.starter, this.initialPenalty));
+        //this.tree.addRoot(new TreeNode(this.starter, this.initialPenalty));
         this.starter = starter;
         this.initialPenalty = penalty;
         this.bound = Integer.MAX_VALUE;
@@ -29,8 +29,10 @@ public class Generator {
                 // Add the course to the slot in the schedule
                 entry.getValue().addOccupant(current);
                 // Create a TreeNode as a child of the last TreeNode
-                TreeNode n = new TreeNode(this.starter, calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode);
+                TreeNode n = new TreeNode(lastTreeNode.getSchedule(), calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode);
+                System.out.println("Schedule in Node: " + n.toString());
                 lastTreeNode.addChild(n);
+
             }
         }
 
@@ -41,12 +43,12 @@ public class Generator {
             // Calculate the penalty of the lab slot pairing
             int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
             if (HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current, (LabSlot) entry.getValue(),
-                    this.starter.getMWFLec(), this.starter.getTuThLec(), this.starter.getMWLab(),
-                    this.starter.getTuThLab(), this.starter.getFLab())) {
+            lastTreeNode.getSchedule().getMWFLec(), lastTreeNode.getSchedule().getTuThLec(), lastTreeNode.getSchedule().getMWLab(),
+            lastTreeNode.getSchedule().getTuThLab(), lastTreeNode.getSchedule().getFLab())) {
                 // Add the lab to the slot in the schedule
                 entry.getValue().addOccupant(current);
                 // Create a TreeNode as a child of the last TreeNode
-                TreeNode n = new TreeNode(this.starter, calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode);
+                TreeNode n = new TreeNode(lastTreeNode.getSchedule(), calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode);
                 lastTreeNode.addChild(n);
                 for (int i = 0; i < lastTreeNode.getChildren().size(); i++) {
                     System.out.print(lastTreeNode.getChildren().get(i).toString());
@@ -61,12 +63,12 @@ public class Generator {
             Unit current = toBeAdded.get(i);
             // Run through each possible course slot pair and create children
             if (current instanceof Course) {
-                this.addPotentialsCourseSlot(lastTreeNode, current, this.starter.getMWFLec());
-                this.addPotentialsCourseSlot(lastTreeNode, current, this.starter.getTuThLec());
+                this.addPotentialsCourseSlot(lastTreeNode, current, lastTreeNode.getSchedule().getMWFLec());
+                this.addPotentialsCourseSlot(lastTreeNode, current, lastTreeNode.getSchedule().getTuThLec());
             } else {
-                this.addPotentialsLabSlot(lastTreeNode, current, this.starter.getMWLab());
-                this.addPotentialsLabSlot(lastTreeNode, current, this.starter.getTuThLab());
-                this.addPotentialsLabSlot(lastTreeNode, current, this.starter.getFLab());
+                this.addPotentialsLabSlot(lastTreeNode, current, lastTreeNode.getSchedule().getMWLab());
+                this.addPotentialsLabSlot(lastTreeNode, current, lastTreeNode.getSchedule().getTuThLab());
+                this.addPotentialsLabSlot(lastTreeNode, current, lastTreeNode.getSchedule().getFLab());
 
             }
 
