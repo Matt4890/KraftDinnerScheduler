@@ -57,12 +57,12 @@ public class Generator {
                 entry.getValue().addOccupant(current);
                 // Create a TreeNode as a child of the last TreeNode
                 TreeNode n = new TreeNode(lastTreeNode.getSchedule(), calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode);
+                System.out.println("Schedule in Node: " + n.toString());
                 lastTreeNode.addChild(n);
-                for (int i = 0; i < lastTreeNode.getChildren().size(); i++) {
-                    System.out.print(lastTreeNode.getChildren().get(i).toString());
-                }
+            
             }
         }
+        
     }
 
     public void generateFBound(ArrayList<Unit> toBeAdded) {
