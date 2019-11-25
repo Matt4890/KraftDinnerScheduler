@@ -23,7 +23,8 @@ public class Generator {
     private void addPotentialsCourseSlot(TreeNode lastTreeNode, Unit current, HashMap<Integer, Slot> slotsToAddFrom) {
         for (Map.Entry<Integer, Slot> entry : slotsToAddFrom.entrySet()) {
             // Calculate the penalty of the course slot pairing
-            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
+            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+            System.out.println("Penalty of Pairing: " + calc);
             if (HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                     (CourseSlot) entry.getValue())) {
                 // Add the course to the slot in the schedule
