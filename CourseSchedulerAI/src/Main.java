@@ -67,6 +67,7 @@ public class Main {
     }
     System.out.println(toReturn);
     bubbleSort(toReturn);
+    
     System.out.println(toReturn);
 
     return toReturn;
