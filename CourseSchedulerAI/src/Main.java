@@ -36,7 +36,7 @@ public class Main {
     System.out.println("Units Made");
 
     Generator search = new Generator(initialSchedule, initialPenalty);
-    search.generateFBound(unitsToProcess);
+    search.generateFBoundBIG(unitsToProcess);
     System.out.println("Generator Obj Created");
 
     // Generator gen = new Generator();

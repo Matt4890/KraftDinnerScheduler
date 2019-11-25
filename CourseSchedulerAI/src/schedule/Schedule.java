@@ -63,21 +63,41 @@ public class Schedule {
     public HashMap<Integer, Slot> getMWFLec() {
         return this.MWFLec;
     }
+    public void setMWFLec(HashMap<Integer, Slot> replacement){
+        //TODO: Validation so we don't accidentally set something crazy
+        this.MWFLec = replacement;
+    }
 
     public HashMap<Integer, Slot> getTuThLec() {
         return this.TuThLec;
+    }
+    public void setTuThLec(HashMap<Integer, Slot> replacement){
+        //TODO: Validation so we don't accidentally set something crazy
+        this.TuThLec = replacement;
     }
 
     public HashMap<Integer, Slot> getMWLab() {
         return this.MWLab;
     }
+    public void setMWLab(HashMap<Integer, Slot> replacement){
+        //TODO: Validation so we don't accidentally set something crazy
+        this.MWLab = replacement;
+    }
 
     public HashMap<Integer, Slot> getTuThLab() {
         return this.TuThLab;
     }
+    public void setTuThLab(HashMap<Integer, Slot> replacement){
+        //TODO: Validation so we don't accidentally set something crazy
+        this.TuThLab = replacement;
+    }
 
     public HashMap<Integer, Slot> getFLab() {
         return this.FLab;
+    }
+    public void setFLab(HashMap<Integer, Slot> replacement){
+        //TODO: Validation so we don't accidentally set something crazy
+        this.FLab = replacement;
     }
 
     public void assignMWFLecTimeToSlot(Slot slot) {
