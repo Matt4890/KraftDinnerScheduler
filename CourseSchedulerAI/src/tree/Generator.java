@@ -88,9 +88,9 @@ public class Generator {
             // out
             try{
             lastTreeNode = lastTreeNode.getChildren().get(0);
-            for (int k = 0; k< lastTreeNode.getChildren().size(); k++){
-                System.out.println(lastTreeNode.getChildren().get(k).getSchedule().toString());
-            }
+            // for (int k = 0; k< lastTreeNode.getChildren().size(); k++){
+            //     System.out.println(lastTreeNode.getChildren().get(k).getSchedule().toString());
+            // }
             //System.out.println(lastTreeNode.getSchedule().toString());
             //lastTreeNode = lastTreeNode.getLowestPenaltyChild();
             }
