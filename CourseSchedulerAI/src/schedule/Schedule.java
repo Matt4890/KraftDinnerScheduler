@@ -172,9 +172,12 @@ public class Schedule {
         for (Map.Entry<Integer, Slot> entry : MWFLec.entrySet()) {
             Slot slot = (Slot) entry.getValue();
             slot.addOverlaps(slot);
-            slot.addOverlaps(MWLab.get(slot.getTime()));
-            MWLab.get(slot.getTime()).addOverlaps(slot);
-            MWLab.get(slot.getTime()).addOverlaps(MWLab.get(slot.getTime()));
+            Slot s = MWLab.get(slot.getTime());
+            if (s != null) {
+                slot.addOverlaps(s);
+                s.addOverlaps(slot);
+                s.addOverlaps(s);
+            }
 
             // adding friday labs
             for (Map.Entry<Integer, Slot> entry2 : FLab.entrySet()) {
