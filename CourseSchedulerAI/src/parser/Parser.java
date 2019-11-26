@@ -54,9 +54,9 @@ public class Parser {
         Pattern lIdRegex    = Pattern.compile("L(\\d+)");
 
         // Get sections from input file
-        String   fileStr            = String.join("\n", fileLines).toUpperCase().replaceAll(" |\t", "").replaceAll("\\bLAB\\b", "TUT");
+        String   fileStr            = String.join("\n", fileLines).toUpperCase().replaceAll("\\bLAB\\b", "TUT").replaceAll(" |\t", "");
         String[] courseSlots_s      = getSectionLines("COURSESLOTS", fileStr);
-        String[] labSlots_s         = getSectionLines("LABSLOTS", fileStr);
+        String[] labSlots_s         = getSectionLines("TUTSLOTS", fileStr);
         String[] courses_s          = getSectionLines("COURSES", fileStr);
         String[] labs_s             = getSectionLines("LABS", fileStr);
         String   notCompat_s        = getSection("NOTCOMPATIBLE", fileStr);

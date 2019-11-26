@@ -7,12 +7,20 @@ import java.util.*;
 import coursesULabs.*;
 import enums.*;
 
+/*
+Labcount is never updated.
+Implement the special courses ie 913 813 313 and 413 probably best if we just add them to the not compatible list
+*/
 public class HardConstrainsts {
 
     public static boolean checkAssignmentHardConstriantsCourse(Course course, CourseSlot slot) {
-        return checkCourseMax(course, slot) && checkDuplicateCourse(course, slot) && checkEveningClasses(course, slot)
+        return checkCourseMax(course, slot)  && checkEveningClasses(course, slot)
                 && checkConflict500Levels(course, slot)
-                && checkConflictsWithSameName(course, slot);
+                //&& checkConflictsWithSameName(course, slot)
+                && checkLabNotWithCourseAddingCourse(course, slot)
+                //&& checkDuplicateCourse(course, slot)
+                && checkUnwanted(course, slot)
+                && checkNotCompatible(course, slot);
     }
 
     public static boolean checkCourseMax(Course c, CourseSlot s) {
@@ -22,6 +30,7 @@ public class HardConstrainsts {
     /**
      *Not sure what it does so I won't touch it
      *Make sure 2 lectures of the same course aren't in the same slot?
+     *Should definitly be in soft constraints
      * @param c
      * @param s
      * @return true if no hard constraint broken
@@ -60,6 +69,12 @@ public class HardConstrainsts {
         return true;
     }
 
+    /**
+     * Shouldn't this be in soft constraints
+     * @param c
+     * @param s
+     * @return
+     */
     public static boolean checkConflictsWithSameName(Unit c, Slot s) {
         for(Slot slot : s.getOverlaps()){
             for(Unit unit : slot.getClassAssignment()){
@@ -72,12 +87,34 @@ public class HardConstrainsts {
 
     }
 
+    
+    public static boolean checkLabNotWithCourseAddingCourse(Course c, Slot s){
+        for(Slot slot : s.getOverlaps()){
+            for(Unit unit : slot.getClassAssignment()){
+                if(unit.getCourseNum() == c.getCourseNum()){
+                    if(unit.getCourseType().equals(c.getCourseType())){
+                        if(unit.getLectureNum() == 0){
+                            return false;
+                        }
+                        else if(unit.getLectureNum() == c.getLectureNum()){
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
     public static boolean checkAssignmentHardConstriantsLab(final Lab lab, final LabSlot slot,
             final HashMap<Integer, Slot> MWFLec, final HashMap<Integer, Slot> TuThLec,
             final HashMap<Integer, Slot> MWLab, final HashMap<Integer, Slot> TuThLab,
             final HashMap<Integer, Slot> FLab) {
-        return checkLabMax(lab, slot) && checkDuplicateLab(lab, slot)
-                && checkConflictsWithSameName(lab, slot);
+        return checkLabMax(lab, slot) //&& checkDuplicateLab(lab, slot)
+                //&& checkConflictsWithSameName(lab, slot)
+                && checkUnwanted(lab, slot)
+                && checkNotCompatible(lab, slot)
+                && checkLabNotWithCourseAddingLab(lab, slot);
     }
 
     public static boolean checkLabMax(final Lab c, final LabSlot s) {
@@ -108,8 +145,17 @@ public class HardConstrainsts {
      */
     public static boolean checkUnwanted(Unit course, Slot slotToAdd){
         ArrayList<Slot> unwanted = course.getUnwanted();
-        if(unwanted.contains(slotToAdd)){
-            return false;
+        for(Slot s : unwanted){
+            if(slotToAdd.isSameSlot(s)){
+                return false;
+            }
+        }
+        if(course instanceof Course){
+            if(((CourseSlot)slotToAdd).getDay().equals(CourseDays.TUETHR)){
+                if(slotToAdd.getTime() == 1200){
+                    return false;
+                }
+            }
         }
         return true;
     }
@@ -124,8 +170,46 @@ public class HardConstrainsts {
         ArrayList<Unit> notCompatible = course.getNotCompatible();
         for(Unit unit : notCompatible){
             for(Slot overlaps : slotToAddTo.getOverlaps()){
+                for(Unit unitToCheck : overlaps.getClassAssignment()){
+                    if(unitToCheck.getCourseNum() == unit.getCourseNum()){
+                        if(unitToCheck.getCourseType().equals(unit.getCourseType())){
+                            if(unitToCheck.getLectureNum() == unit.getLectureNum()){
+                                if(unit instanceof Course && unitToCheck instanceof Course){
+                                    return false;
+                                }
+                                else if(unit instanceof Lab && unitToCheck instanceof Lab){
+                                    if(((Lab)unit).getTutNum() == ((Lab)unitToCheck).getTutNum()){
+                                        return false;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                /* once we stop deepcopying the units this should work
                 if(overlaps.getClassAssignment().contains(unit)){
                     return false;
+                }
+                */
+            }
+        }
+        return true;
+    }
+
+    public static boolean checkLabNotWithCourseAddingLab(Lab c, Slot s){
+        for(Slot slot : s.getOverlaps()){
+            for(Unit unit : slot.getClassAssignment()){
+                if(unit.getCourseNum() == c.getCourseNum()){
+                    if(unit.getCourseType().equals(c.getCourseType())){
+                        if(c.getLectureNum() == 0){
+                            return false;
+                        }
+                        else if(unit.getLectureNum() == c.getLectureNum()){
+                            return false;
+                        }
+                    }
                 }
             }
         }

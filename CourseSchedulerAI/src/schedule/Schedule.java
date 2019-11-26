@@ -172,14 +172,15 @@ public class Schedule {
         for (Map.Entry<Integer, Slot> entry : MWFLec.entrySet()) {
             Slot slot = (Slot) entry.getValue();
             slot.addOverlaps(slot);
-            slot.addOverlaps(MWLab.get(slot.getTime()));
-            MWLab.get(slot.getTime()).addOverlaps(slot);
-            MWLab.get(slot.getTime()).addOverlaps(MWLab.get(slot.getTime()));
-
+            Slot s = MWLab.get(slot.getTime());
+            if (s != null){
+                slot.addOverlaps(s);
+                s.addOverlaps(slot);
+                s.addOverlaps(s);
+            }
             // adding friday labs
             for (Map.Entry<Integer, Slot> entry2 : FLab.entrySet()) {
                 Slot slot2 = (Slot) entry2.getValue();
-                slot2.addOverlaps(slot2);
                 if (slot.getTime() == slot2.getTime() || slot.getTime() == slot2.getTime() + 100) {
                     slot.addOverlaps(slot2);
                     slot2.addOverlaps(slot);
@@ -192,7 +193,6 @@ public class Schedule {
             slot.addOverlaps(slot);
             for (Map.Entry<Integer, Slot> entry2 : TuThLab.entrySet()) {
                 Slot slot2 = (Slot) entry2.getValue();
-                slot2.addOverlaps(slot2);
                 if (slot.getTime() % 100 == 0) {
                     if (slot2.getTime() == slot.getTime()) {
                         slot.addOverlaps(slot2);
@@ -212,6 +212,16 @@ public class Schedule {
                 }
             }
         }
+
+        for (Map.Entry<Integer, Slot> entry2 : FLab.entrySet()) {
+            Slot slot2 = (Slot) entry2.getValue();
+            slot2.addOverlaps(slot2);
+        }
+        for (Map.Entry<Integer, Slot> entry2 : TuThLab.entrySet()) {
+            Slot slot2 = (Slot) entry2.getValue();
+            slot2.addOverlaps(slot2);
+        }
+        int x = 5;
     }
 
 }

@@ -93,4 +93,25 @@ public abstract class Slot {
         overlaps.add(slot);
     }
 
+    public boolean isSameSlot(Slot s){
+        if(this.getTime() == s.getTime()){
+            if(this instanceof CourseSlot){
+                if(s instanceof CourseSlot){
+                    if(((CourseSlot)this).getDay().equals(((CourseSlot)s).getDay())){
+                        return true;
+                    }
+                }
+            }
+            else{
+                if(s instanceof LabSlot){
+                    if(((LabSlot)this).getDay().equals(((LabSlot)s).getDay())){
+                        return true;
+                    }                    
+                }
+            }
+        }
+
+        return true;
+    }
+
 }

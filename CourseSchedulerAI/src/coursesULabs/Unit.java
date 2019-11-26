@@ -5,7 +5,6 @@ import schedule.Slot;
 
 public class Unit {
 
-    protected Slot slot;
     protected int lectureNum;
     protected String courseType;
     protected int courseNum;
@@ -21,6 +20,7 @@ public class Unit {
     protected HashMap<Slot, Integer> preferences  = new HashMap<Slot, Integer>();
     protected ArrayList<Unit> pairs = new ArrayList<Unit>(); 
     
+
     protected void setId(int i){
         this.id = i;
     }
@@ -51,9 +51,6 @@ public class Unit {
         this.lectureNum = lectureNum;
     }
 
-    public Slot getSlot() {
-        return slot;
-    }
 
 
 
