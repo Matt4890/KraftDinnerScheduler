@@ -5,7 +5,7 @@ import enums.LabDays;
 import enums.SlotType;
 public class LabSlot extends Slot{
 
-    private ArrayList<Lab> labs = new ArrayList<Lab>();
+    //private ArrayList<Lab> labs = new ArrayList<Lab>();
     private int labMax;
     private int labMin;
     private int labCount;
@@ -24,8 +24,8 @@ public class LabSlot extends Slot{
         this.labMax = l.labMax;
         this.labMin = l.labMin;
         this.labCount = l.labCount;
-        for (int i = 0; i<l.labs.size(); i++){
-            this.labs.add(new Lab(l.labs.get(i)));
+        for (int i = 0; i<l.getClassAssignment().size(); i++){
+            this.getClassAssignment().add((l.getClassAssignment().get(i)));
         }
 
     }
@@ -45,8 +45,8 @@ public class LabSlot extends Slot{
     public ArrayList<Lab> getAssignedLabs(){
         // THIS SHOULD ONLY BE USED FOR LOOKUP SO ITS NOT GOING TO BE THE SAME REFERENCES
         ArrayList<Lab> displaylabs  = new ArrayList<Lab>();
-        for (int i = 0; i< labs.size(); i++){
-            displaylabs.add(labs.get(i));
+        for (int i = 0; i< getClassAssignment().size(); i++){
+            displaylabs.add((Lab)getClassAssignment().get(i));
         }
         return displaylabs;
 
@@ -55,7 +55,7 @@ public class LabSlot extends Slot{
     public void addOccupant(Object lo){
         Lab l = (Lab) lo;
         if (this.labCount < this.labMax){
-            labs.add(l);
+            getClassAssignment().add(l);
             this.labCount++;
         } else {
             System.out.println("Hard Constraint labMax Broken");
@@ -69,11 +69,11 @@ public class LabSlot extends Slot{
     }
     public String toStringShowElements(){
         String toReturn = "Labs Assigned To Slot: ";
-        for (int i = 0; i< this.labs.size()-1; i++){
-            toReturn += this.labs.get(i).toString() + ", ";
+        for (int i = 0; i< this.getClassAssignment().size()-1; i++){
+            toReturn += this.getClassAssignment().get(i).toString() + ", ";
         }
-        if (this.labs.size() != 0) {
-            toReturn += this.labs.get(this.labs.size() - 1) + " ";
+        if (this.getClassAssignment().size() != 0) {
+            toReturn += this.getClassAssignment().get(this.getClassAssignment().size() - 1) + " ";
         }
         return toReturn;
     }

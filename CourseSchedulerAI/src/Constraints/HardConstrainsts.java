@@ -152,7 +152,7 @@ public class HardConstrainsts {
         }
         if(course instanceof Course){
             if(((CourseSlot)slotToAdd).getDay().equals(CourseDays.TUETHR)){
-                if(slotToAdd.getTime() == 1200){
+                if(slotToAdd.getTime() == 1100){
                     return false;
                 }
             }
@@ -170,6 +170,7 @@ public class HardConstrainsts {
         ArrayList<Unit> notCompatible = course.getNotCompatible();
         for(Unit unit : notCompatible){
             for(Slot overlaps : slotToAddTo.getOverlaps()){
+                /*
                 for(Unit unitToCheck : overlaps.getClassAssignment()){
                     if(unitToCheck.getCourseNum() == unit.getCourseNum()){
                         if(unitToCheck.getCourseType().equals(unit.getCourseType())){
@@ -186,13 +187,14 @@ public class HardConstrainsts {
                         }
                     }
                 }
+                */
 
 
-                /* once we stop deepcopying the units this should work
+                //once we stop deepcopying the units this should work
                 if(overlaps.getClassAssignment().contains(unit)){
                     return false;
                 }
-                */
+                
             }
         }
         return true;

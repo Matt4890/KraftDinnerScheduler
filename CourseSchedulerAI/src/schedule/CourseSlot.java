@@ -1,6 +1,7 @@
 package schedule;
 
 import java.util.ArrayList;
+import java.util.*;
 import java.util.HashMap;
 
 import coursesULabs.Course;
@@ -10,7 +11,7 @@ import enums.SlotType;
 
 public class CourseSlot extends Slot {
 
-    private ArrayList<Course> courses = new ArrayList<Course>();
+    // private ArrayList<Course> courses = new ArrayList<Course>();
     private int courseMax;
     private int courseMin;
     private int courseCount;
@@ -23,14 +24,21 @@ public class CourseSlot extends Slot {
         this.day = day;
         this.courseCount = 0;
     }
-    public CourseSlot(CourseSlot c){
+
+    public CourseSlot(CourseSlot c) {
         super(c);
         this.day = c.day;
         this.courseMax = c.courseMax;
         this.courseMin = c.courseMin;
         this.courseCount = c.courseCount;
-        for (int i = 0; i< c.courses.size(); i++){
-            this.courses.add(new Course(c.courses.get(i)));
+        for (Map.Entry<Unit, Integer> entry : c.getPreference().entrySet()) {
+
+            this.prefMap.put(entry.getKey(), entry.getValue());
+
+        }
+
+        for (int i = 0; i < c.getClassAssignment().size(); i++) {
+            this.getClassAssignment().add((c.getClassAssignment().get(i)));
         }
 
     }
@@ -55,8 +63,8 @@ public class CourseSlot extends Slot {
         // THIS SHOULD ONLY BE USED FOR LOOKUP SO ITS NOT GOING TO BE THE SAME
         // REFERENCES
         ArrayList<Course> displayCourses = new ArrayList<Course>();
-        for (int i = 0; i < courses.size(); i++) {
-            displayCourses.add(courses.get(i));
+        for (int i = 0; i < getClassAssignment().size(); i++) {
+            displayCourses.add((Course) getClassAssignment().get(i));
         }
         return displayCourses;
 
@@ -65,9 +73,10 @@ public class CourseSlot extends Slot {
     public void addOccupant(Object co) {
         Course c = (Course) co;
         if (this.courseCount < this.courseMax) {
-            courses.add(c);
-            this.courseCount ++;
-            //System.out.println("Course: " + co.toString() + " Successfully Added to: " + this.toString());
+            getClassAssignment().add(c);
+            this.courseCount++;
+            // System.out.println("Course: " + co.toString() + " Successfully Added to: " +
+            // this.toString());
         } else {
             System.out.println("Hard Constraint CourseMax Broken");
         }
@@ -81,11 +90,11 @@ public class CourseSlot extends Slot {
 
     public String toStringShowElements() {
         String toReturn = "Courses Assigned To Slot: ";
-        for (int i = 0; i < this.courses.size() - 1; i++) {
-            toReturn += this.courses.get(i).toString() + ", ";
+        for (int i = 0; i < this.getClassAssignment().size() - 1; i++) {
+            toReturn += this.getClassAssignment().get(i).toString() + ", ";
         }
-        if (this.courses.size() != 0) {
-            toReturn += this.courses.get(this.courses.size() - 1) + " ";
+        if (this.getClassAssignment().size() != 0) {
+            toReturn += this.getClassAssignment().get(this.getClassAssignment().size() - 1) + " ";
         }
         return toReturn;
     }

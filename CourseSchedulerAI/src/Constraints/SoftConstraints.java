@@ -43,7 +43,9 @@ public class SoftConstraints {
     int total = 0;
     for (int i = 0; i < slot.getClassAssignment().size(); i++) {
       if (!slot.getPreference().containsKey(slot.getClassAssignment().get(i))) {
-        total += (Integer) slot.getPreference().get(slot.getClassAssignment().get(i));
+        System.out.println("the map is " + slot.getPreference());
+        total += (Integer) slot.getPreference().get(
+          slot.getClassAssignment().get(i));
       }
     }
     return total;
@@ -90,7 +92,7 @@ public class SoftConstraints {
     ArrayList<Course> lookup = s.getAssignedCourses();
     boolean anotherSection = false;
     for(int i = 0; i < lookup.size(); i++){
-      if(lookup.get(i).courseNum == course.courseNum){
+      if(lookup.get(i).getCourseNum() == course.getCourseNum()){
         anotherSection = true;
         curr_pen = curr_pen + pen;
       }

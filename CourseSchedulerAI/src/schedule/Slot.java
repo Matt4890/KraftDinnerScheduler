@@ -24,13 +24,6 @@ public abstract class Slot {
         this.time = s.time;
         this.id = s.id;
         this.prefMap = new HashMap<Unit, Integer>();
-        for (Map.Entry<Unit, Integer> entry : s.prefMap.entrySet()) {
-            if (entry.getKey() instanceof Lab){
-                this.prefMap.put(new Lab((Lab)entry.getKey()), entry.getValue());
-            } else {
-                this.prefMap.put(new Course((Course)entry.getKey()), entry.getValue());
-            }
-        }
         
         
     }
@@ -45,6 +38,7 @@ public abstract class Slot {
         this.time = time;
 
     }
+
     protected void setType(SlotType type){
         this.type = type;
 
@@ -111,7 +105,7 @@ public abstract class Slot {
             }
         }
 
-        return true;
+        return false;
     }
 
 }

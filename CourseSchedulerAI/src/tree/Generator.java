@@ -135,8 +135,9 @@ public class Generator {
                     HashMap<Integer, Slot> MWFMapToManipulate = DeepCopyCourseSlotMap(
                             lastTreeNode.getSchedule().getMWFLec());
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
-                    System.out.println("Penalty of Pairing: " + calc);
+                   // int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                   int calc = 0;
+                   System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue());
                     System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
@@ -169,8 +170,9 @@ public class Generator {
                     HashMap<Integer, Slot> TuThMapToManipulate = DeepCopyCourseSlotMap(
                             lastTreeNode.getSchedule().getTuThLec());
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
-                    System.out.println("Penalty of Pairing: " + calc);
+                   // int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                   int calc = 0;
+                   System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue());
                     System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
@@ -204,7 +206,8 @@ public class Generator {
                     HashMap<Integer, Slot> MWLabMapToManipulate = DeepCopyLabSlotMap(
                             lastTreeNode.getSchedule().getMWLab());
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    // int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    int calc = 0;
                     System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
@@ -239,7 +242,8 @@ public class Generator {
                     HashMap<Integer, Slot> TuThLabMapToManipulate = DeepCopyLabSlotMap(
                             lastTreeNode.getSchedule().getTuThLab());
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    //int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    int calc = 0;
                     System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
@@ -275,7 +279,8 @@ public class Generator {
                     HashMap<Integer, Slot> FLabMapToManipulate = DeepCopyLabSlotMap(
                             lastTreeNode.getSchedule().getFLab());
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    //int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    int calc = 0;
                     System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
@@ -312,6 +317,7 @@ public class Generator {
             // Pick the best TreeNode - i.e. top of the heap and make it the lastTreeNode to
             // expand
             // out
+            System.out.println(lastTreeNode.getChildren().size());
             try {
                 // lastTreeNode = lastTreeNode.getChildren().get(0);
                 // for (int k = 0; k< lastTreeNode.getChildren().size(); k++){

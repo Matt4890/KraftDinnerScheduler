@@ -221,7 +221,6 @@ public class Schedule {
             Slot slot2 = (Slot) entry2.getValue();
             slot2.addOverlaps(slot2);
         }
-        int x = 5;
     }
 
 }
