@@ -10,20 +10,26 @@ public class Generator {
     private Schedule starter;
     private int initialPenalty;
     private int bound;
+	private int courseMinPen;
+	private int pairsPen;
+	private int brothersPen;
 
-    public Generator(Schedule starter, int penalty) {
+    public Generator(Schedule starter, int penalty, int i, int j, int k) {
         this.tree = new Tree();
         // this.tree.addRoot(new TreeNode(this.starter, this.initialPenalty));
         this.starter = starter;
         this.initialPenalty = penalty;
         this.bound = Integer.MAX_VALUE;
+		this.courseMinPen = i; 
+		this.pairsPen = j;
+		this.brothersPen = k;
 
     }
 
     private void addPotentialsCourseSlot(TreeNode lastTreeNode, Unit current, HashMap<Integer, Slot> slotsToAddFrom) {
         for (Map.Entry<Integer, Slot> entry : slotsToAddFrom.entrySet()) {
             // Calculate the penalty of the course slot pairing
-            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen, brothersPen);
             System.out.println("Penalty of Pairing: " + calc);
             boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                     (CourseSlot) entry.getValue());
@@ -46,7 +52,7 @@ public class Generator {
     private void addPotentialsLabSlot(TreeNode lastTreeNode, Unit current, HashMap<Integer, Slot> slotsToAddFrom) {
         for (Map.Entry<Integer, Slot> entry : slotsToAddFrom.entrySet()) {
             // Calculate the penalty of the lab slot pairing
-            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
+            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen, brothersPen);
             System.out.println("Penalty of Pairing: " + calc);
 
             boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
