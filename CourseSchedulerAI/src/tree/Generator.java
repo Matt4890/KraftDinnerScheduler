@@ -10,9 +10,9 @@ public class Generator {
     private Schedule starter;
     private int initialPenalty;
     private int bound;
-	private int courseMinPen;
-	private int pairsPen;
-	private int brothersPen;
+    private int courseMinPen;
+    private int pairsPen;
+    private int brothersPen;
 
     public Generator(Schedule starter, int penalty, int i, int j, int k) {
         this.tree = new Tree();
@@ -20,9 +20,9 @@ public class Generator {
         this.starter = starter;
         this.initialPenalty = penalty;
         this.bound = Integer.MAX_VALUE;
-		this.courseMinPen = i; 
-		this.pairsPen = j;
-		this.brothersPen = k;
+        this.courseMinPen = i;
+        this.pairsPen = j;
+        this.brothersPen = k;
 
     }
 
@@ -141,9 +141,9 @@ public class Generator {
                     HashMap<Integer, Slot> MWFMapToManipulate = DeepCopyCourseSlotMap(
                             lastTreeNode.getSchedule().getMWFLec());
                     // Calculate the penalty of the course slot pairing
-                   int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
-                //    int calc = 0;
-                   System.out.println("Penalty of Pairing: " + calc);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    // int calc = 0;
+                    System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue());
                     System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
@@ -176,9 +176,9 @@ public class Generator {
                     HashMap<Integer, Slot> TuThMapToManipulate = DeepCopyCourseSlotMap(
                             lastTreeNode.getSchedule().getTuThLec());
                     // Calculate the penalty of the course slot pairing
-                   // int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
-                   int calc = 0;
-                   System.out.println("Penalty of Pairing: " + calc);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    // int calc = 0;
+                    System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue());
                     System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
@@ -212,8 +212,8 @@ public class Generator {
                     HashMap<Integer, Slot> MWLabMapToManipulate = DeepCopyLabSlotMap(
                             lastTreeNode.getSchedule().getMWLab());
                     // Calculate the penalty of the course slot pairing
-                    // int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
-                    int calc = 0;
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    // int calc = 0;
                     System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
@@ -248,8 +248,8 @@ public class Generator {
                     HashMap<Integer, Slot> TuThLabMapToManipulate = DeepCopyLabSlotMap(
                             lastTreeNode.getSchedule().getTuThLab());
                     // Calculate the penalty of the course slot pairing
-                    //int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
-                    int calc = 0;
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    // int calc = 0;
                     System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
@@ -285,8 +285,8 @@ public class Generator {
                     HashMap<Integer, Slot> FLabMapToManipulate = DeepCopyLabSlotMap(
                             lastTreeNode.getSchedule().getFLab());
                     // Calculate the penalty of the course slot pairing
-                    //int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
-                    int calc = 0;
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    // int calc = 0;
                     System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
@@ -370,171 +370,193 @@ public class Generator {
 
     }
 
-
     // public void createFBound(ArrayList<Unit> toBeAdded) {
 
-    //     this.tree.addRoot(new Node(this.starter, this.initialPenalty));
-    //     Node lastNode = this.tree.getRoot();
+    // this.tree.addRoot(new Node(this.starter, this.initialPenalty));
+    // Node lastNode = this.tree.getRoot();
 
-    //     for (int i = 0; i < toBeAdded.size(); i++) {
-    //         // Check what type of unit it is and then create the nodes accordingly
-    //         Unit current = toBeAdded.get(i);
-    //         int minimum = Integer.MAX_VALUE;
-    //         if (current instanceof Course) {
+    // for (int i = 0; i < toBeAdded.size(); i++) {
+    // // Check what type of unit it is and then create the nodes accordingly
+    // Unit current = toBeAdded.get(i);
+    // int minimum = Integer.MAX_VALUE;
+    // if (current instanceof Course) {
 
-    //             int idx = Integer.MAX_VALUE;
-    //             int day = -1;
-    //             for (Map.Entry<Integer, Slot> entry : this.starter.getMWFLec().entrySet()) {
-    //                 // Calculate the penalty of the course slot pairing
-    //                 int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
-    //                 if (HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
-    //                         (CourseSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
-    //                         this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
-    //                     // Run a hard constraint check
+    // int idx = Integer.MAX_VALUE;
+    // int day = -1;
+    // for (Map.Entry<Integer, Slot> entry : this.starter.getMWFLec().entrySet()) {
+    // // Calculate the penalty of the course slot pairing
+    // int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0,
+    // 0);
+    // if (HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
+    // (CourseSlot) entry.getValue(), this.starter.getMWFLec(),
+    // this.starter.getTuThLec(),
+    // this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab()))
+    // {
+    // // Run a hard constraint check
 
-    //                     calc = minimum;
-    //                     idx = entry.getKey();
-    //                     day = 0;
-    //                 }
-    //             }
-    //             for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLec().entrySet()) {
-    //                 int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
-    //                 // Check if we pass the hard constraints and its a new minimal
-    //                 if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
-    //                         (CourseSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
-    //                         this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
-    //                     calc = minimum;
-    //                     idx = entry.getKey();
-    //                     day = 1;
-    //                 }
-    //             }
-    //             // Assign the course to the slot
-    //             if (day == 0) { // MondayWednesdayFriday
-    //                 this.starter.getMWFLec().get(idx).assignUnitToSlot(current);
-    //             } else { // TuesdayThursday
-    //                 this.starter.getTuThLec().get(idx).assignUnitToSlot(current);
-    //             }
-    //             // Not Sure if this should be a deep copy or a shallow reference is okay.
-    //             Node newCreatedNode = new Node(this.starter, minimum + lastNode.getPenaltyValueOfNode(), lastNode);
-    //             lastNode.addChild(newCreatedNode);
-    //             lastNode = newCreatedNode;
+    // calc = minimum;
+    // idx = entry.getKey();
+    // day = 0;
+    // }
+    // }
+    // for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLec().entrySet()) {
+    // int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0,
+    // 0);
+    // // Check if we pass the hard constraints and its a new minimal
+    // if (calc < minimum &&
+    // HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
+    // (CourseSlot) entry.getValue(), this.starter.getMWFLec(),
+    // this.starter.getTuThLec(),
+    // this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab()))
+    // {
+    // calc = minimum;
+    // idx = entry.getKey();
+    // day = 1;
+    // }
+    // }
+    // // Assign the course to the slot
+    // if (day == 0) { // MondayWednesdayFriday
+    // this.starter.getMWFLec().get(idx).assignUnitToSlot(current);
+    // } else { // TuesdayThursday
+    // this.starter.getTuThLec().get(idx).assignUnitToSlot(current);
+    // }
+    // // Not Sure if this should be a deep copy or a shallow reference is okay.
+    // Node newCreatedNode = new Node(this.starter, minimum +
+    // lastNode.getPenaltyValueOfNode(), lastNode);
+    // lastNode.addChild(newCreatedNode);
+    // lastNode = newCreatedNode;
 
-    //         } else {
-    //             int idx = Integer.MAX_VALUE;
-    //             int day = -1;
-    //             // Check all the lab slot assignments that would be best
-    //             for (Map.Entry<Integer, Slot> entry : this.starter.getMWLab().entrySet()) {
-    //                 int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
-    //                 if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
-    //                         (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
-    //                         this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
+    // } else {
+    // int idx = Integer.MAX_VALUE;
+    // int day = -1;
+    // // Check all the lab slot assignments that would be best
+    // for (Map.Entry<Integer, Slot> entry : this.starter.getMWLab().entrySet()) {
+    // int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0,
+    // 0);
+    // if (calc < minimum &&
+    // HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
+    // (LabSlot) entry.getValue(), this.starter.getMWFLec(),
+    // this.starter.getTuThLec(),
+    // this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab()))
+    // {
 
-    //                     calc = minimum;
-    //                     idx = entry.getKey();
-    //                     day = 0;
-    //                 }
+    // calc = minimum;
+    // idx = entry.getKey();
+    // day = 0;
+    // }
 
-    //             }
-    //             for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLab().entrySet()) {
-    //                 int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
-    //                 if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
-    //                         (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
-    //                         this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
+    // }
+    // for (Map.Entry<Integer, Slot> entry : this.starter.getTuThLab().entrySet()) {
+    // int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0,
+    // 0);
+    // if (calc < minimum &&
+    // HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
+    // (LabSlot) entry.getValue(), this.starter.getMWFLec(),
+    // this.starter.getTuThLec(),
+    // this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab()))
+    // {
 
-    //                     calc = minimum;
-    //                     idx = entry.getKey();
-    //                     day = 1;
-    //                 }
+    // calc = minimum;
+    // idx = entry.getKey();
+    // day = 1;
+    // }
 
-    //             }
-    //             for (Map.Entry<Integer, Slot> entry : this.starter.getFLab().entrySet()) {
-    //                 int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
-    //                 if (calc < minimum && HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
-    //                         (LabSlot) entry.getValue(), this.starter.getMWFLec(), this.starter.getTuThLec(),
-    //                         this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab())) {
+    // }
+    // for (Map.Entry<Integer, Slot> entry : this.starter.getFLab().entrySet()) {
+    // int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0,
+    // 0);
+    // if (calc < minimum &&
+    // HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
+    // (LabSlot) entry.getValue(), this.starter.getMWFLec(),
+    // this.starter.getTuThLec(),
+    // this.starter.getMWLab(), this.starter.getTuThLab(), this.starter.getFLab()))
+    // {
 
-    //                     calc = minimum;
-    //                     idx = entry.getKey();
-    //                     day = 1;
-    //                 }
-    //             }
-    //             if (day == 0) { // MondayWednesday
-    //                 this.starter.getMWLab().get(idx).assignUnitToSlot(current);
-    //             } else if (day == 1) { // TuesdayThursday
-    //                 this.starter.getTuThLab().get(idx).assignUnitToSlot(current);
-    //             } else { // Friday
-    //                 this.starter.getFLab().get(idx).assignUnitToSlot(current);
-    //             }
-    //             Node newCreatedNode = new Node(this.starter, minimum + lastNode.getPenaltyValueOfNode(), lastNode);
-    //             lastNode.addChild(newCreatedNode);
-    //             lastNode = newCreatedNode;
+    // calc = minimum;
+    // idx = entry.getKey();
+    // day = 1;
+    // }
+    // }
+    // if (day == 0) { // MondayWednesday
+    // this.starter.getMWLab().get(idx).assignUnitToSlot(current);
+    // } else if (day == 1) { // TuesdayThursday
+    // this.starter.getTuThLab().get(idx).assignUnitToSlot(current);
+    // } else { // Friday
+    // this.starter.getFLab().get(idx).assignUnitToSlot(current);
+    // }
+    // Node newCreatedNode = new Node(this.starter, minimum +
+    // lastNode.getPenaltyValueOfNode(), lastNode);
+    // lastNode.addChild(newCreatedNode);
+    // lastNode = newCreatedNode;
 
-    //         }
-    //         this.bound += minimum;
-    //         System.out.println(bound);
-    //     }
+    // }
+    // this.bound += minimum;
+    // System.out.println(bound);
+    // }
     // }
     //
 
-    //TODO: Implement branch and Bound using a control to evaluate
+    // TODO: Implement branch and Bound using a control to evaluate
     public TreeNode branchAndBound(TreeNode sol, int penalty, int depthCondition) {
         /*
-        * Need solution, node and the penalty for the solution. This will serve as reference
-        * Next need to define recursive solution that will "backtrack" through the tree checking the Eval with the solution eval
-        *   - Once i find a better note the solution and continue
-        */
+         * Need solution, node and the penalty for the solution. This will serve as
+         * reference Next need to define recursive solution that will "backtrack"
+         * through the tree checking the Eval with the solution eval - Once i find a
+         * better note the solution and continue
+         */
 
         TreeNode foundBetterSol = null;
         TreeNode prevNode = sol;
         int currentBestValue = penalty;
-        for(int i = 0; i < depthCondition; i++){
+        for (int i = 0; i < depthCondition; i++) {
             prevNode.setAlreadyLookedAt(true);
             prevNode = prevNode.getParent();
             foundBetterSol = betterSol(prevNode, currentBestValue);
 
-            if(foundBetterSol != null){
-                //TODO: see if this needs to be changed
-                //I think this needs to be changed because getPenaltyValueOfNode needs to be the current penalty value up to this node not the node itself
+            if (foundBetterSol != null) {
+                // TODO: see if this needs to be changed
+                // I think this needs to be changed because getPenaltyValueOfNode needs to be
+                // the current penalty value up to this node not the node itself
                 currentBestValue = foundBetterSol.getPenaltyValueOfTreeNode();
             }
         }
 
-         return foundBetterSol;
+        return foundBetterSol;
     }
 
-    //TODO THIS IS STILL A WORK IN PROGRESS (WIP)
-    private TreeNode betterSol(TreeNode n, int penaltyValue){
-        //TODO need to set this node as already looked at somewhere
+    // TODO THIS IS STILL A WORK IN PROGRESS (WIP)
+    private TreeNode betterSol(TreeNode n, int penaltyValue) {
+        // TODO need to set this node as already looked at somewhere
 
         ArrayList<TreeNode> childrenList = n.getChildren();
         // if child has no children create them here
-        if(childrenList.isEmpty()){
-            //TODO: need to generate the children if the childrenlist is empty
-            //however if we are not able to generate more children because this node is the last we need to return the val
-            if(n.getPenaltyValueOfTreeNode() < penaltyValue){
+        if (childrenList.isEmpty()) {
+            // TODO: need to generate the children if the childrenlist is empty
+            // however if we are not able to generate more children because this node is the
+            // last we need to return the val
+            if (n.getPenaltyValueOfTreeNode() < penaltyValue) {
                 return n;
-            }
-            else{
+            } else {
                 return null;
             }
         }
 
-        for(int i = 0; i < childrenList.size(); i++){
+        for (int i = 0; i < childrenList.size(); i++) {
             TreeNode considered = childrenList.get(i);
-            if(considered.getPenaltyValueOfTreeNode() >= penaltyValue ){
+            if (considered.getPenaltyValueOfTreeNode() >= penaltyValue) {
                 considered.setAlreadyLookedAt(true);
-            }
-            else{
-                if(!considered.getAlreadyLookedAt()){
-                    //TODO need to find how to recursivly return solution
-                    //TODO also need to find how to update the nValue once we find a better one
+            } else {
+                if (!considered.getAlreadyLookedAt()) {
+                    // TODO need to find how to recursivly return solution
+                    // TODO also need to find how to update the nValue once we find a better one
                     betterSol(considered, penaltyValue);
                 }
             }
         }
 
-        //return null because we didn't find a solution that was better
-        //TODO: see if we still need this, im 90% certain that this will need to go as the
+        // return null because we didn't find a solution that was better
+        // TODO: see if we still need this, im 90% certain that this will need to go as
+        // the
         return null;
     }
 }
