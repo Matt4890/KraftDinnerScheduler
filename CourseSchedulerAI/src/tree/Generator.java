@@ -483,7 +483,7 @@ public class Generator {
             if(foundBetterSol != null){
                 //TODO: see if this needs to be changed
                 //I think this needs to be changed because getPenaltyValueOfNode needs to be the current penalty value up to this node not the node itself
-                currentBestValue = foundBetterSol.getPenaltyValueOfNode();
+                currentBestValue = foundBetterSol.getPenaltyValueOfTreeNode();
             }
         }
 
