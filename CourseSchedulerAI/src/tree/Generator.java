@@ -10,10 +10,16 @@ public class Generator {
     private Schedule starter;
     private int initialPenalty;
     private int bound;
+	private int courseMinPenalty;
+	private int pairsPenatly;
+	private int brothersPenalty;
 
-    public Generator(Schedule starter, int penalty) {
+    public Generator(Schedule starter, int penalty, int courseMin, int pairs, int brothers) {
         this.tree = new Tree();
         // this.tree.addRoot(new TreeNode(this.starter, this.initialPenalty));
+		this.courseMinPenalty = courseMin;
+		this.pairsPenatly = pairs;
+		this.brothersPenalty = brothers;
         this.starter = starter;
         this.initialPenalty = penalty;
         this.bound = Integer.MAX_VALUE;
@@ -23,7 +29,7 @@ public class Generator {
     private void addPotentialsCourseSlot(TreeNode lastTreeNode, Unit current, HashMap<Integer, Slot> slotsToAddFrom) {
         for (Map.Entry<Integer, Slot> entry : slotsToAddFrom.entrySet()) {
             // Calculate the penalty of the course slot pairing
-            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPenalty, pairsPenatly, brothersPenalty);
             System.out.println("Penalty of Pairing: " + calc);
             boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                     (CourseSlot) entry.getValue());
@@ -46,7 +52,7 @@ public class Generator {
     private void addPotentialsLabSlot(TreeNode lastTreeNode, Unit current, HashMap<Integer, Slot> slotsToAddFrom) {
         for (Map.Entry<Integer, Slot> entry : slotsToAddFrom.entrySet()) {
             // Calculate the penalty of the lab slot pairing
-            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 0, 0, 0);
+            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPenalty, pairsPenatly, brothersPenalty);
             System.out.println("Penalty of Pairing: " + calc);
 
             boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
@@ -135,7 +141,7 @@ public class Generator {
                     HashMap<Integer, Slot> MWFMapToManipulate = DeepCopyCourseSlotMap(
                             lastTreeNode.getSchedule().getMWFLec());
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPenalty, pairsPenatly, brothersPenalty);
                     System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue());
@@ -169,7 +175,7 @@ public class Generator {
                     HashMap<Integer, Slot> TuThMapToManipulate = DeepCopyCourseSlotMap(
                             lastTreeNode.getSchedule().getTuThLec());
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPenalty, pairsPenatly, brothersPenalty);
                     System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue());
@@ -204,7 +210,7 @@ public class Generator {
                     HashMap<Integer, Slot> MWLabMapToManipulate = DeepCopyLabSlotMap(
                             lastTreeNode.getSchedule().getMWLab());
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPenalty, pairsPenatly, brothersPenalty);
                     System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
@@ -239,7 +245,7 @@ public class Generator {
                     HashMap<Integer, Slot> TuThLabMapToManipulate = DeepCopyLabSlotMap(
                             lastTreeNode.getSchedule().getTuThLab());
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPenalty, pairsPenatly, brothersPenalty);
                     System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
@@ -275,7 +281,7 @@ public class Generator {
                     HashMap<Integer, Slot> FLabMapToManipulate = DeepCopyLabSlotMap(
                             lastTreeNode.getSchedule().getFLab());
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPenalty, pairsPenatly, brothersPenalty);
                     System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                             (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
@@ -509,7 +515,7 @@ public class Generator {
 
         for(int i = 0; i < childrenList.size(); i++){
             TreeNode considered = childrenList.get(i);
-            if(considered.getPenaltyValueOfTreeNode() >= penaltyValue ){
+            if(considered.getPenaltyValueOfTreeNode() > penaltyValue ){
                 considered.setAlreadyLookedAt(true);
             }
             else{

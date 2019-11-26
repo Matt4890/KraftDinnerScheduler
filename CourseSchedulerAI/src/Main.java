@@ -35,7 +35,7 @@ public class Main {
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     System.out.println("Units Made");
 
-    Generator search = new Generator(initialSchedule, initialPenalty);
+    Generator search = new Generator(initialSchedule, initialPenalty, courseMinPen, pairsPen, brothersPen);
     search.generateFBoundBIG(unitsToProcess);
     System.out.println("Generator Obj Created");
 
