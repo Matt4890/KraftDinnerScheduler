@@ -15,8 +15,7 @@ public class Node implements Comparable<Node>{
 
     private int desirability;
     private boolean still_considered;
-
-
+    private boolean already_looked_at;
 
     public Node (Schedule schedule, int penaltyValue){
 
@@ -27,7 +26,7 @@ public class Node implements Comparable<Node>{
         this.desirability = Integer.MAX_VALUE;
         this.orderedChildren = new PriorityQueue<Node>();
         this.still_considered = true;
-
+        this.already_looked_at = false; 
     }
     
     public Node (Schedule schedule, int penaltyValue, ArrayList<Node> children){
@@ -112,5 +111,12 @@ public class Node implements Comparable<Node>{
         return ((Integer)(this.getPenaltyValueOfNode())).compareTo(((Integer)o.getPenaltyValueOfNode()));
     }
 
+    public boolean getAlreadyLookedAt(){
+        return already_looked_at;
+    }
+
+    public void setAlreadyLookedAt(boolean value){
+        already_looked_at = value;
+    }
 
 }

@@ -183,16 +183,66 @@ public class Generator {
     //     }
     // }
     //
-    // public Node branchAndBound() {
-    //     // TODO: Implement branch and Bound using a control to evaluate
 
-    //     // Basic methodology same as the dfs except we store all of them as children and
-    //     // make a choice based on the KONTROL
-    //     // the Bound basically acts as another hard constraint?
-    //     // or no that would just be brute force
-    //     // we have to find the
+    //TODO: Implement branch and Bound using a control to evaluate
+    public Node branchAndBound(Node sol, int penalty, int depthCondition) {
+        /*
+        * Need solution, node and the penalty for the solution. This will serve as reference
+        * Next need to define recursive solution that will "backtrack" through the tree checking the Eval with the solution eval
+        *   - Once i find a better note the solution and continue 
+        */
 
-    //     return this.tree.getRoot();
+        Node foundBetterSol = null;
+        Node prevNode = sol;
+        int currentBestValue = penalty;
+        for(int i = 0; i < depthCondition; i++){
+            prevNode.setAlreadyLookedAt(true);
+            prevNode = prevNode.getParent();
+            foundBetterSol = betterSol(prevNode, currentBestValue);
 
-    // }
+            if(foundBetterSol != null){
+                //TODO: see if this needs to be changed 
+                //I think this needs to be changed because getPenaltyValueOfNode needs to be the current penalty value up to this node not the node itself
+                currentBestValue = foundBetterSol.getPenaltyValueOfNode();
+            }
+        }
+
+         return foundBetterSol;
+    }
+
+    //TODO THIS IS STILL A WORK IN PROGRESS (WIP)
+    private Node betterSol(Node n, int penaltyValue){
+        //TODO need to set this node as already looked at somewhere 
+
+        ArrayList<Node> childrenList = n.getChildren();
+        // if child has no children create them here 
+        if(childrenList.isEmpty()){
+            //TODO: need to generate the children if the childrenlist is empty 
+            //however if we are not able to generate more children because this node is the last we need to return the val
+            if(n.getPenaltyValueOfNode() < penaltyValue){
+                return n;
+            }
+            else{
+                return null;
+            }
+        }
+
+        for(int i = 0; i < childrenList.size(); i++){
+            Node considered = childrenList.get(i);
+            if(considered.getPenaltyValueOfNode() > penaltyValue ){
+                considered.setAlreadyLookedAt(true);
+            }
+            else{
+                if(!considered.getAlreadyLookedAt()){
+                    //TODO need to find how to recursivly return solution 
+                    //TODO also need to find how to update the nValue once we find a better one 
+                    betterSol(considered, penaltyValue);
+                }
+            }
+        }
+
+        //return null because we didn't find a solution that was better
+        //TODO: see if we still need this, im 90% certain that this will need to go as the 
+        return null;
+    }
 }
