@@ -317,10 +317,15 @@ public class Parser {
             Matcher lsm = lsIdRegex.matcher(line);
             Unit u = null;
             Slot s = null;
+            int i = -1;
+            boolean isCourse = false;
             if (cm.find()) {
-                u = courses.get(Integer.parseInt(cm.group(1)));
+                isCourse = true;
+                i = Integer.parseInt(cm.group(1));
+                u = courses.get(i);
             } else if (lm.find()) {
-                u = labs.get(Integer.parseInt(lm.group(1)));
+                i = Integer.parseInt(lm.group(1));
+                u = labs.get(i);
             }
             if (csm.find()) {
                 s = courseSlots.get(Integer.parseInt(csm.group(1)));
@@ -334,6 +339,11 @@ public class Parser {
             } else {
                 this.initialPenalty += Kontrol.evalAssignment(s, u);
                 s.addOccupant(u);
+                if (isCourse) {
+                    courses.remove(i);
+                } else {
+                    labs.remove(i);
+                }
             }
         }
 
@@ -369,10 +379,12 @@ public class Parser {
 
     private static String getSection(String label, String fileStr) {
 
-        Pattern regex = Pattern.compile(label + "\\s*:\\s*(.*?)(?:\n\n|$)", Pattern.DOTALL);
+        Pattern regex = Pattern.compile(label + "\\s*:(.*?)(?:\n\n|$)", Pattern.DOTALL);
         Matcher matcher = regex.matcher(fileStr);
         if (matcher.find() && !matcher.group(1).equals("")) {
-            return matcher.group(1);
+            return matcher.group(1).charAt(0) == '\n' ?
+                matcher.group(1).substring(1) :
+                matcher.group(1);
         } else {
             return "";
         }

@@ -515,7 +515,7 @@ public class Generator {
 
         for(int i = 0; i < childrenList.size(); i++){
             TreeNode considered = childrenList.get(i);
-            if(considered.getPenaltyValueOfTreeNode() > penaltyValue ){
+            if(considered.getPenaltyValueOfTreeNode() >= penaltyValue ){
                 considered.setAlreadyLookedAt(true);
             }
             else{
