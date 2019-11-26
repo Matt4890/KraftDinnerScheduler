@@ -369,10 +369,10 @@ public class Parser {
 
     private static String getSection(String label, String fileStr) {
 
-        Pattern regex = Pattern.compile(label + "\\s*:\\s*(.*?)(?:\n\n|$)", Pattern.DOTALL);
+        Pattern regex = Pattern.compile(label + "\\s*:(.*?)(?:\n\n|$)", Pattern.DOTALL);
         Matcher matcher = regex.matcher(fileStr);
         if (matcher.find() && !matcher.group(1).equals("")) {
-            return matcher.group(1);
+            return matcher.group(1).substring(1);
         } else {
             return "";
         }
