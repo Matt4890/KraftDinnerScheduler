@@ -49,7 +49,6 @@ public class Lab extends Unit{
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
-        this.slot = slot;
         this.tutNum = tutNum;
     }
     public Lab(Lab l){

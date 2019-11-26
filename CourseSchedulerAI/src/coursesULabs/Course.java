@@ -51,7 +51,7 @@ public class Course extends Unit{
         this.lectureNum = lectureNum;
         this.courseType = courseType;
         this.courseNum = courseNum;
-        this.slot = slot;
+
         super.id = id;
     }
 
