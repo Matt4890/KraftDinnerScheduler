@@ -317,10 +317,15 @@ public class Parser {
             Matcher lsm = lsIdRegex.matcher(line);
             Unit u = null;
             Slot s = null;
+            int i = -1;
+            boolean isCourse = false;
             if (cm.find()) {
-                u = courses.get(Integer.parseInt(cm.group(1)));
+                isCourse = true;
+                i = Integer.parseInt(cm.group(1));
+                u = courses.get(i);
             } else if (lm.find()) {
-                u = labs.get(Integer.parseInt(lm.group(1)));
+                i = Integer.parseInt(lm.group(1));
+                u = labs.get(i);
             }
             if (csm.find()) {
                 s = courseSlots.get(Integer.parseInt(csm.group(1)));
@@ -334,6 +339,11 @@ public class Parser {
             } else {
                 this.initialPenalty += Kontrol.evalAssignment(s, u);
                 s.addOccupant(u);
+                if (isCourse) {
+                    courses.remove(i);
+                } else {
+                    labs.remove(i);
+                }
             }
         }
 
