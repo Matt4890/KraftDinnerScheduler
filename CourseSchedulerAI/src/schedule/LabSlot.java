@@ -56,6 +56,7 @@ public class LabSlot extends Slot{
         Lab l = (Lab) lo;
         if (this.labCount < this.labMax){
             labs.add(l);
+            this.labCount++;
         } else {
             System.out.println("Hard Constraint labMax Broken");
         }
