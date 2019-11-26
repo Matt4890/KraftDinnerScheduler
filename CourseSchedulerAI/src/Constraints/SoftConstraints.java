@@ -90,7 +90,7 @@ public class SoftConstraints {
     ArrayList<Course> lookup = s.getAssignedCourses();
     boolean anotherSection = false;
     for(int i = 0; i < lookup.size(); i++){
-      if(lookup.get(i).courseNum == course.courseNum){
+      if(lookup.get(i).getCourseNum() == course.getCourseNum()) {
         anotherSection = true;
         curr_pen = curr_pen + pen;
       }
