@@ -15,7 +15,7 @@ public class TreeNode implements Comparable<TreeNode>{
 
     private int desirability;
     private boolean still_considered;
-
+    private boolean already_looked_at;
 
 
     public TreeNode (Schedule schedule, int penaltyValue){
@@ -142,6 +142,11 @@ public class TreeNode implements Comparable<TreeNode>{
         return orderedChildren;
     }
 
-   
+   public boolean getAlreadyLookedAt(){
+        return already_looked_at;
+   }
 
+   public void setAlreadyLookedAt(boolean value){
+        already_looked_at = value;
+   }
 }

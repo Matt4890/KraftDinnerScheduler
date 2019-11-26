@@ -465,15 +465,15 @@ public class Generator {
     //
 
     //TODO: Implement branch and Bound using a control to evaluate
-    public Node branchAndBound(Node sol, int penalty, int depthCondition) {
+    public TreeNode branchAndBound(TreeNode sol, int penalty, int depthCondition) {
         /*
         * Need solution, node and the penalty for the solution. This will serve as reference
         * Next need to define recursive solution that will "backtrack" through the tree checking the Eval with the solution eval
         *   - Once i find a better note the solution and continue
         */
 
-        Node foundBetterSol = null;
-        Node prevNode = sol;
+        TreeNode foundBetterSol = null;
+        TreeNode prevNode = sol;
         int currentBestValue = penalty;
         for(int i = 0; i < depthCondition; i++){
             prevNode.setAlreadyLookedAt(true);
@@ -491,15 +491,15 @@ public class Generator {
     }
 
     //TODO THIS IS STILL A WORK IN PROGRESS (WIP)
-    private Node betterSol(Node n, int penaltyValue){
+    private TreeNode betterSol(TreeNode n, int penaltyValue){
         //TODO need to set this node as already looked at somewhere
 
-        ArrayList<Node> childrenList = n.getChildren();
+        ArrayList<TreeNode> childrenList = n.getChildren();
         // if child has no children create them here
         if(childrenList.isEmpty()){
             //TODO: need to generate the children if the childrenlist is empty
             //however if we are not able to generate more children because this node is the last we need to return the val
-            if(n.getPenaltyValueOfNode() < penaltyValue){
+            if(n.getPenaltyValueOfTreeNode() < penaltyValue){
                 return n;
             }
             else{
@@ -508,8 +508,8 @@ public class Generator {
         }
 
         for(int i = 0; i < childrenList.size(); i++){
-            Node considered = childrenList.get(i);
-            if(considered.getPenaltyValueOfNode() > penaltyValue ){
+            TreeNode considered = childrenList.get(i);
+            if(considered.getPenaltyValueOfTreeNode() > penaltyValue ){
                 considered.setAlreadyLookedAt(true);
             }
             else{
