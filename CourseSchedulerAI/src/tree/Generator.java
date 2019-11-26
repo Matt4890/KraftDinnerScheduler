@@ -135,8 +135,8 @@ public class Generator {
                     HashMap<Integer, Slot> MWFMapToManipulate = DeepCopyCourseSlotMap(
                             lastTreeNode.getSchedule().getMWFLec());
                     // Calculate the penalty of the course slot pairing
-                   // int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
-                   int calc = 0;
+                   int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, 5, 3, 2);
+                //    int calc = 0;
                    System.out.println("Penalty of Pairing: " + calc);
                     boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                             (CourseSlot) entry.getValue());
