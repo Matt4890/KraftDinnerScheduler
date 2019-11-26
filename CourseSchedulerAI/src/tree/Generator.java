@@ -465,24 +465,22 @@ public class Generator {
     //
 
     //TODO: Implement branch and Bound using a control to evaluate
-    public TreeNode branchAndBound(TreeNode sol, int penalty, int depthCondition) {
-        /*
-        * Need solution, node and the penalty for the solution. This will serve as reference
-        * Next need to define recursive solution that will "backtrack" through the tree checking the Eval with the solution eval
-        *   - Once i find a better note the solution and continue
-        */
-
+    public TreeNode branchAndBound(TreeNode sol, int depthCondition) {
         TreeNode foundBetterSol = null;
         TreeNode prevNode = sol;
-        int currentBestValue = penalty;
+        int currentBestValue = sol.getPenaltyValueOfTreeNode();
         for(int i = 0; i < depthCondition; i++){
-            prevNode.setAlreadyLookedAt(true);
+            //prevNode.setAlreadyLookedAt(true);
+
+            //conditional check to see if this node is the root, if it is the root we cannot go another depth higher 
+            if(prevNode.equals(tree.getRoot())){
+                break;
+            }
+
             prevNode = prevNode.getParent();
             foundBetterSol = betterSol(prevNode, currentBestValue);
 
             if(foundBetterSol != null){
-                //TODO: see if this needs to be changed
-                //I think this needs to be changed because getPenaltyValueOfNode needs to be the current penalty value up to this node not the node itself
                 currentBestValue = foundBetterSol.getPenaltyValueOfTreeNode();
             }
         }
@@ -490,26 +488,54 @@ public class Generator {
          return foundBetterSol;
     }
 
-    //TODO THIS IS STILL A WORK IN PROGRESS (WIP)
+
+    /*
+     so we have the parent node with all it's children and that child has it's own children 
+          0
+        //|\\
+      / / | \ \
+     o o  o  o o
+              /|\
+             o o o
+     Algorithm: 
+     - look at each child o (for loop)
+         - check that the penality for this node is less or equal than the current solution we have
+         - if it's eval is less or the same
+                - generate it's children and look at that node's children to find it's best node(this is the recursive part)
+         - else if it's eval is bigger 
+                - mark it as closed and continue 
+         - once we have gone thorugh all the children mark this node as looked at (already_looked_at => true)
+     - determine which child has the best penalty value and return that one (this is also a for loop)
+
+     Concerns:
+     - I stated that I want to do a recursive solution thorugh the tree, what do I return, and once I return it how do I compare it. also what do i return
+     - I need a conditional for the root node (done this in the branchandbound method)
+     - need a way to generate the children if they do not exist (this needs work)
+        - in a similar vein i also need to check if i cannot generate anymore children that I have reached the end, do I just return it
+            - can i do this in the loop? 
+    */
     private TreeNode betterSol(TreeNode n, int penaltyValue){
         //TODO need to set this node as already looked at somewhere
 
         ArrayList<TreeNode> childrenList = n.getChildren();
         // if child has no children create them here
         if(childrenList.isEmpty()){
+            return n;
             //TODO: need to generate the children if the childrenlist is empty
             //however if we are not able to generate more children because this node is the last we need to return the val
+            /*
             if(n.getPenaltyValueOfTreeNode() < penaltyValue){
                 return n;
             }
             else{
                 return null;
             }
+            */
         }
 
         for(int i = 0; i < childrenList.size(); i++){
             TreeNode considered = childrenList.get(i);
-            if(considered.getPenaltyValueOfTreeNode() >= penaltyValue ){
+            if(considered.getPenaltyValueOfTreeNode() > penaltyValue ){
                 considered.setAlreadyLookedAt(true);
             }
             else{
@@ -520,6 +546,8 @@ public class Generator {
                 }
             }
         }
+
+        //
 
         //return null because we didn't find a solution that was better
         //TODO: see if we still need this, im 90% certain that this will need to go as the
