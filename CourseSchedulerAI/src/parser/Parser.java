@@ -372,7 +372,9 @@ public class Parser {
         Pattern regex = Pattern.compile(label + "\\s*:(.*?)(?:\n\n|$)", Pattern.DOTALL);
         Matcher matcher = regex.matcher(fileStr);
         if (matcher.find() && !matcher.group(1).equals("")) {
-            return matcher.group(1).substring(1);
+            return matcher.group(1).charAt(0) == '\n' ?
+                matcher.group(1).substring(1) :
+                matcher.group(1);
         } else {
             return "";
         }
