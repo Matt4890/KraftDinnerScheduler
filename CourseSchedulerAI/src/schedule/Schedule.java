@@ -173,7 +173,7 @@ public class Schedule {
             Slot slot = (Slot) entry.getValue();
             slot.addOverlaps(slot);
             Slot s = MWLab.get(slot.getTime());
-            if(s != null){
+            if (s != null){
                 slot.addOverlaps(s);
                 s.addOverlaps(slot);
                 s.addOverlaps(s);
