@@ -7,16 +7,16 @@ import java.util.ArrayList;
 import coursesULabs.*;
 
 public class SoftConstraints {
-  public static int calculatePenalty(Slot s, Unit u, int pen_course_min, int pen_lab_min, int pen_not_paired) {
+  public static int calculatePenalty(Slot s, Unit u, int pen_course_min, int pen_not_paired, int pen_sections) {
 
     int total = 0;
     if (s instanceof CourseSlot) {
       total += SoftConstraints.checkCourseMin((CourseSlot) s, pen_course_min);
       total += SoftConstraints.preferenceEval(s);
       total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, pen_not_paired);
-      // TODO: SectionDif Constraint
+      total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, int pen_sections)
     } else {
-      total += SoftConstraints.checkLabMin((LabSlot) s, pen_lab_min);
+      total += SoftConstraints.checkLabMin((LabSlot) s, pen_course_min);
       total += SoftConstraints.preferenceEval(s);
       total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, pen_not_paired);
 
