@@ -218,6 +218,8 @@ public class Parser {
             } else {
                 u1.addToNotCompatible(u2);
                 u2.addToNotCompatible(u1);
+                u1.incrementNonCompatible();
+                u2.incrementNonCompatible();
             }
         }
 
@@ -246,6 +248,7 @@ public class Parser {
                 System.exit(1);
             } else {
                 u.addToUnwanted(s);
+                u.incrementUnwanted();
             }
         }
 
