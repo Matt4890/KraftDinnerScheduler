@@ -33,6 +33,7 @@ public class Main {
     System.out.println(initialSchedule.toString());
     HashMap<String, Course> allCourses = parser.getCourseMap();
     HashMap<String, Lab> allLabs = parser.getLabMap();
+    addConstraintsForSpecialClasses(allCourses);
     int initialPenalty = parser.getInitialPenalty();
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     System.out.println("Units Made");
@@ -44,6 +45,47 @@ public class Main {
     // Generator gen = new Generator();
     // gen.createFBound(parser.getMap());
 
+  }
+
+  private static void addConstraintsForSpecialClasses(HashMap<String, Course> allCourses) {
+    for(Map.Entry<String, Course> entry : allCourses.entrySet()){
+      if(entry.getValue().getCourseNum() == 813 && entry.getValue().getCourseType().equals("CPSC")){
+        Course cpsc813 = entry.getValue();
+        for(Unit unit : cpsc813.getNotCompatible()){
+          if(unit.getCourseNum()== 313 && unit.getCourseType().equals("CPSC")){
+            Unit cpsc313 = unit; //purely for readability can be a lab or course
+            cpsc813.addToNotCompatible(cpsc313);
+            cpsc313.addToNotCompatible(cpsc813);
+            cpsc313.incrementNonCompatible();
+            cpsc813.incrementNonCompatible();
+            for(Unit notCompatibleToadd : cpsc313.getNotCompatible()){
+              cpsc813.addToNotCompatible(notCompatibleToadd);
+              notCompatibleToadd.addToNotCompatible(cpsc813);
+              notCompatibleToadd.incrementNonCompatible();
+              cpsc813.incrementNonCompatible();
+            }
+          }
+        }
+      }
+      else if(entry.getValue().getCourseNum() == 913 && entry.getValue().getCourseType().equals("CPSC")){
+        Course cpsc913 = entry.getValue();
+        for(Unit unit : cpsc913.getNotCompatible()){
+          if(unit.getCourseNum()== 413 && unit.getCourseType().equals("CPSC")){
+            Unit cpsc413 = unit; //purely for readability can be a lab or course
+            cpsc913.addToNotCompatible(cpsc413);
+            cpsc413.addToNotCompatible(cpsc913);
+            cpsc413.incrementNonCompatible();
+            cpsc913.incrementNonCompatible();
+            for(Unit notCompatibleToadd : cpsc413.getNotCompatible()){
+              cpsc913.addToNotCompatible(notCompatibleToadd);
+              notCompatibleToadd.addToNotCompatible(cpsc913);
+              notCompatibleToadd.incrementNonCompatible();
+              cpsc913.incrementNonCompatible();
+            }
+          }
+        }
+      }
+    }
   }
 
   /*
@@ -94,7 +136,9 @@ public class Main {
               } 
           }
       }
-  } 
+  }
+  
+  
 
 
 }
