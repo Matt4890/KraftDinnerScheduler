@@ -129,6 +129,10 @@ public class Generator {
     public void generateFBoundBIG(ArrayList<Unit> toBeAdded) {
         TreeNode lastTreeNode = new TreeNode(this.starter, this.initialPenalty);
         for (int i = 0; i < toBeAdded.size(); i++) {
+            if(!lastTreeNode.getOrderedChildren().isEmpty()){
+                lastTreeNode = lastTreeNode.getLowestPenaltyChild();
+            }
+            else{ 
 
             // for (int i = toBeAdded.size() -1; i >=0; i--) {
             Unit current = toBeAdded.get(i);
@@ -317,6 +321,7 @@ public class Generator {
                     }
                 }
             }
+        
 
             // At this point we should have all the potential Pairs stored in lastTreeNode's
             // children now we need to select one using the control
@@ -324,21 +329,19 @@ public class Generator {
             // expand
             // out
             System.out.println(lastTreeNode.getChildren().size());
-            try {
                 // lastTreeNode = lastTreeNode.getChildren().get(0);
                 // for (int k = 0; k< lastTreeNode.getChildren().size(); k++){
                 // System.out.println(lastTreeNode.getChildren().get(k).getSchedule().toString());
                 // }
                 // System.out.println(lastTreeNode.getSchedule().toString());
+                if(lastTreeNode.getOrderedChildren().isEmpty()){
+                    i = i- 2;
+                    lastTreeNode=lastTreeNode.getParent();
+                }
                 lastTreeNode = lastTreeNode.getLowestPenaltyChild();
-            } catch (Exception e) {
-
-                System.out.println(
-                        "No more children created, current FBound = " + lastTreeNode.getPenaltyValueOfTreeNode());
-                break;
             }
             // lastTreeNode = lastTreeNode.getChildren().get(0);
-        }
+        
 
         // Now we get the penaltyValue of lastTreeNode and make that the bound
         this.bound = lastTreeNode.getPenaltyValueOfTreeNode();
