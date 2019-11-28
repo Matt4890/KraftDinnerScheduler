@@ -177,7 +177,7 @@ public class Parser {
                     Integer.parseInt(m.group(2))
                 );
                 courses.add(c);
-                String replaceStr = c.toString();
+                String replaceStr = c.toString() + "(?!TUT)";
                 notCompat_s = notCompat_s.replaceAll(replaceStr, "=C" + count + "=");
                 unwanted_s = unwanted_s.replaceAll(replaceStr, "=C" + count + "=");
                 preferences_s = preferences_s.replaceAll(replaceStr, "=C" + count + "=");
