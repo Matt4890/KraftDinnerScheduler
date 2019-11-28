@@ -65,6 +65,7 @@ public class Parser {
         String   pairs_s            = getSection("PAIR", fileStr);
         String   partialAssign_s    = getSection("PARTIALASSIGNMENTS", fileStr);
 
+
         // Parse course slots
         ArrayList<CourseSlot> courseSlots = new ArrayList<CourseSlot>();
         count = 0;
@@ -368,6 +369,26 @@ public class Parser {
 
         //HashMap<String, Course> courseMap = new HashMap<String, Course>();
         //HashMap<String, Lab>    labMap    = new HashMap<String, Lab>();
+        Unit.setUnwantedIncrease((courses.size()+ labs.size()) / (courseSlots.size()+labSlots.size()));
+        Unit.setNonCompatibleIncrease((courses.size()+ labs.size()) / (courseSlots.size()+labSlots.size()));
+        int evening =0;
+        int slotsavailable  = 0;
+        for(CourseSlot slot : courseSlots ){
+            if (slot.getTime() >= 1800){
+                slotsavailable += slot.getCourseMax();
+            }
+        }
+        int eveCourses = 0;
+        for(Course c : courses){
+            if(Integer.toString(c.getLectureNum()).substring(0, 1).equals("9")){
+                eveCourses ++;
+            }
+        }
+        evening = (eveCourses / slotsavailable) / 2;
+        Unit.setEveningIncrease(evening);
+        Unit.setIncrease500((courses.size()+ labs.size()) / (courseSlots.size()+labSlots.size()));
+    
+
 
         for (Course c : courses) this.courseMap.put(c.toString(), c);
         for (Lab l : labs)       this.labMap.put(l.toString(), l);
