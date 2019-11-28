@@ -384,7 +384,13 @@ public class Parser {
                 eveCourses ++;
             }
         }
-        evening = (eveCourses / slotsavailable) / 2;
+        if(slotsavailable != 0){
+            evening = (eveCourses / slotsavailable) / 2;
+        }
+        if(eveCourses > slotsavailable){
+            System.out.println("Evening courses but no evening slots or not enough");
+            System.exit(0);
+        }
         Unit.setEveningIncrease(evening);
         Unit.setIncrease500((courses.size()+ labs.size()) / (courseSlots.size()+labSlots.size()));
     
