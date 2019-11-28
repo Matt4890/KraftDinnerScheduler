@@ -52,6 +52,9 @@ public class HardConstrainsts {
     public static boolean checkEveningClasses(Course c, CourseSlot s) {
         if (Integer.toString(c.getLectureNum()).substring(0, 1).equals("9")) {
             // Check evening class
+            if(s.getTime() >= 1800){
+                
+            }
             return s.getTime() >= 1800;
         }
         return true;
@@ -62,6 +65,7 @@ public class HardConstrainsts {
             final ArrayList<Course> lookup = s.getAssignedCourses();
             for (int i = 0; i < lookup.size(); i++) {
                 if (lookup.get(i).getCourseNum() >= 500) {
+                    System.out.println("Problem is 500 together ");
                     return false;
                 }
             }
@@ -94,9 +98,11 @@ public class HardConstrainsts {
                 if(unit.getCourseNum() == c.getCourseNum()){
                     if(unit.getCourseType().equals(c.getCourseType())){
                         if(unit.getLectureNum() == 0){
+                            System.out.println("Problem is conflicting lab");
                             return false;
                         }
                         else if(unit.getLectureNum() == c.getLectureNum()){
+                            System.out.println("Problem is conflicting lab");
                             return false;
                         }
                     }
@@ -147,12 +153,14 @@ public class HardConstrainsts {
         ArrayList<Slot> unwanted = course.getUnwanted();
         for(Slot s : unwanted){
             if(slotToAdd.isSameSlot(s)){
+                System.out.println("Problem is unwanted");
                 return false;
             }
         }
         if(course instanceof Course){
             if(((CourseSlot)slotToAdd).getDay().equals(CourseDays.TUETHR)){
                 if(slotToAdd.getTime() == 1100){
+                    System.out.println("Problem is 1100");
                     return false;
                 }
             }
@@ -192,6 +200,7 @@ public class HardConstrainsts {
 
                 //once we stop deepcopying the units this should work
                 if(overlaps.getClassAssignment().contains(unit)){
+                    System.out.println("Problem is Notcompatible");
                     return false;
                 }
                 
@@ -206,9 +215,11 @@ public class HardConstrainsts {
                 if(unit.getCourseNum() == c.getCourseNum()){
                     if(unit.getCourseType().equals(c.getCourseType())){
                         if(c.getLectureNum() == 0){
+                            System.out.println("Problem is conflicting lab");
                             return false;
                         }
                         else if(unit.getLectureNum() == c.getLectureNum()){
+                            System.out.println("Problem is conflicting lab");
                             return false;
                         }
                     }

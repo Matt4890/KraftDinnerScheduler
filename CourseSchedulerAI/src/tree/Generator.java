@@ -131,6 +131,8 @@ public class Generator {
         for (int i = 0; i < toBeAdded.size(); i++) {
             if (!lastTreeNode.getOrderedChildren().isEmpty()) {
                 lastTreeNode = lastTreeNode.getLowestPenaltyChild();
+                System.out.println("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n");
+
             } else {
 
                 // for (int i = toBeAdded.size() -1; i >=0; i--) {
@@ -340,8 +342,9 @@ public class Generator {
                 if (lastTreeNode.getOrderedChildren().isEmpty()) {
                     i = i - 2;
                     lastTreeNode = lastTreeNode.getParent();
+                } else {
+                    lastTreeNode = lastTreeNode.getLowestPenaltyChild();
                 }
-                lastTreeNode = lastTreeNode.getLowestPenaltyChild();
             }
             // lastTreeNode = lastTreeNode.getChildren().get(0);
 

@@ -183,6 +183,20 @@ public class Parser {
                 pairs_s = pairs_s.replaceAll(replaceStr, "C" + count);
                 partialAssign_s = partialAssign_s.replaceAll(replaceStr, "C" + count);
                 count++;
+                if(Integer.toString(c.getLectureNum()).substring(0, 1).equals("9")){
+                    c.incrementEvening();
+                }
+                else if(c.getCourseNum() >=500 && c.getCourseNum() < 600){
+                    c.increment500();
+                }
+                else if(c.getCourseNum() == 313){
+                    Lab cpsc813 = new Lab(Integer.MAX_VALUE, 1, "CPSC", 813, 0);
+                    labs.add(cpsc813);
+                }
+                else if(c.getCourseNum() == 413){
+                    Lab cpsc913 = new Lab(Integer.MAX_VALUE, 1, "CPSC", 913, 0);
+                    labs.add(cpsc913);
+                }
             } else {
                 System.out.println("Failed to parse string '" + courseStr + "' as a Course!");
                 System.out.println("Exiting...");

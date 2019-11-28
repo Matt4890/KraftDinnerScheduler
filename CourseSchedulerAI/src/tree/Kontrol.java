@@ -50,11 +50,11 @@ public class Kontrol {
         total += evalAssignment(s,u);
         if(u instanceof Course){
             total -= (((CourseSlot)s).getCourseMin() - s.getClassAssignment().size());
-            total += (((CourseSlot)s).getCourseMax() - (((CourseSlot)s).getCourseMax() - s.getClassAssignment().size()));
+            total += (((CourseSlot)s).getCourseMax() - (((CourseSlot)s).getCourseMax() - s.getClassAssignment().size())) * 5;
         }
         else{
             total -= (((LabSlot)s).getLabMin() - s.getClassAssignment().size());
-            total += (((LabSlot)s).getLabMax() - (((LabSlot)s).getLabMax() - s.getClassAssignment().size()));
+            total += (((LabSlot)s).getLabMax() - (((LabSlot)s).getLabMax() - s.getClassAssignment().size())) * 5;
         }
         total = total / u.getConstrained();
 
