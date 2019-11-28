@@ -14,7 +14,7 @@ public class SoftConstraints {
       total += SoftConstraints.checkCourseMin((CourseSlot) s, pen_course_min);
       total += SoftConstraints.preferenceEval(s);
       total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, pen_not_paired);
-      total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, int pen_sections)
+      total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, pen_sections);
     } else {
       total += SoftConstraints.checkLabMin((LabSlot) s, pen_course_min);
       total += SoftConstraints.preferenceEval(s);
@@ -89,13 +89,17 @@ public class SoftConstraints {
 
   }
   
-    public int checkSections(Course course, CourseSlot s, int pen){
+    public static int checkSections(Course course, CourseSlot s, int pen){
     int curr_pen = 0;
     ArrayList<Course> lookup = s.getAssignedCourses();
-    boolean anotherSection = false;
+    //boolean anotherSection = false;
     for(int i = 0; i < lookup.size(); i++){
-      if(lookup.get(i).getCourseNum() == course.getCourseNum()){
-        anotherSection = true;
+      int lookupNum = lookup.get(i).getCourseNum();
+      int courseNum = course.getCourseNum();
+      String lookupType = lookup.get(i).getCourseType();
+      String courseType = course.getCourseType();
+      if(lookupNum == courseNum && lookupType.equals(courseType)){
+        //anotherSection = true;
         curr_pen = curr_pen + pen;
       }
     }
