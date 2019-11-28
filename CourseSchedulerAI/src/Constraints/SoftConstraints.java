@@ -92,14 +92,13 @@ public class SoftConstraints {
     public static int checkSections(Course course, CourseSlot s, int pen){
     int curr_pen = 0;
     ArrayList<Course> lookup = s.getAssignedCourses();
-    //boolean anotherSection = false;
+
     for(int i = 0; i < lookup.size(); i++){
       int lookupNum = lookup.get(i).getCourseNum();
       int courseNum = course.getCourseNum();
       String lookupType = lookup.get(i).getCourseType();
       String courseType = course.getCourseType();
       if(lookupNum == courseNum && lookupType.equals(courseType)){
-        //anotherSection = true;
         curr_pen = curr_pen + pen;
       }
     }
