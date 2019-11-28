@@ -56,12 +56,13 @@ public class Main {
       if(entry.getValue().getCourseNum() == 813 && entry.getValue().getCourseType().equals("CPSC")){
         Lab cpsc813 = entry.getValue();
         if (schec.getTuThLab().containsKey(1800)){
-          schec.getTuThLab().get(1800).addOccupant(cpsc813);
+          schec.getTuThLab().get(1800).getClassAssignment().add(cpsc813);
           toremove813 = true;
           id813 = cpsc813.toString();
         }
         else{
-          System.out.println("Nice try Denzinger, it's invalid.");
+          System.out.println("Slot Tuesday at 1800 doesn't exist but 813/913 should be there");
+          System.exit(0);
         }
         for(Unit unit : cpsc813.getNotCompatible()){
           if(unit.getCourseNum()== 313 && unit.getCourseType().equals("CPSC")){
@@ -82,9 +83,13 @@ public class Main {
       else if(entry.getValue().getCourseNum() == 913 && entry.getValue().getCourseType().equals("CPSC")){
         Lab cpsc913 = entry.getValue();
         if (schec.getTuThLab().containsKey(1800)){
-          schec.getTuThLab().get(1800).addOccupant(cpsc913);
+          schec.getTuThLab().get(1800).getClassAssignment().add(cpsc913);
           toremove913 = true;
           id913 = cpsc913.toString();
+        }
+        else{
+          System.out.println("Slot Tuesday at 1800 doesn't exist but 813/913 should be there");
+          System.exit(0);
         }
         for(Unit unit : cpsc913.getNotCompatible()){
           if(unit.getCourseNum()== 413 && unit.getCourseType().equals("CPSC")){
