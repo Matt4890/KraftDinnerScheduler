@@ -31,7 +31,7 @@ public class TreeNode implements Comparable<TreeNode> {
         this.penaltyValue = n.getPenaltyValueOfTreeNode();
         this.schedule = new Schedule(n.getSchedule());
         this.children = n.getChildren();
-        this.desirability = n.getDesireablilty();
+        this.desirability = n.getDesirablilty();
         this.orderedChildren = n.getOrderedChildren();
         this.still_considered = n.still_considered;
     }
@@ -48,14 +48,14 @@ public class TreeNode implements Comparable<TreeNode> {
         this.still_considered = true;
     }
 
-    public TreeNode(Schedule schedule, int penaltyValue, TreeNode parent) {
+    public TreeNode(Schedule schedule, int penaltyValue, TreeNode parent, int desirability ) {
 
         this.penaltyValue = penaltyValue;
         this.schedule = new Schedule(schedule);
         this.children = new ArrayList<TreeNode>();
         this.orderedChildren = new PriorityQueue<TreeNode>();
         this.parent = parent;
-        this.desirability = Integer.MAX_VALUE;
+        this.desirability = desirability;
         this.still_considered = true;
     }
 
@@ -128,19 +128,13 @@ public class TreeNode implements Comparable<TreeNode> {
         return null;
     }
 
-    public int getDesireablilty() {
+    public int getDesirablilty() {
         return this.desirability;
-    }
-
-    public void calculateDesireablility() {
-        // This is the F_leaf function that we want to calculate whether its a good
-        // assignment pair or not.
-
     }
 
     @Override
     public int compareTo(TreeNode o) {
-        return ((Integer) (this.getPenaltyValueOfTreeNode())).compareTo(((Integer) o.getPenaltyValueOfTreeNode()));
+        return (((Integer) (this.getDesirablilty())).compareTo((Integer) o.getDesirablilty()));
     }
 
     public String toString() {
@@ -158,4 +152,5 @@ public class TreeNode implements Comparable<TreeNode> {
     public void setAlreadyLookedAt(boolean value) {
         already_looked_at = value;
     }
+
 }
