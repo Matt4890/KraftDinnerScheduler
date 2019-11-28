@@ -10,7 +10,7 @@ public class Unit {
     protected int courseNum;
     protected int id;
     protected String key;
-    protected int constrained;
+    protected int constrained = 1;
     protected static int partAssignIncrease = 100;
     protected static int unwantedIncrease = 3;
     protected static int nonCompatibleIncrease = 5;
