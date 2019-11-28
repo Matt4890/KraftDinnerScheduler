@@ -43,7 +43,6 @@ public class SoftConstraints {
     int total = 0;
     for (int i = 0; i < slot.getClassAssignment().size(); i++) {
       if (!slot.getPreference().containsKey(slot.getClassAssignment().get(i))) {
-        System.out.println("the map is " + slot.getPreference());
         Unit u = slot.getClassAssignment().get(i);
         try {
           total += (Integer) slot.getPreference().get(u);

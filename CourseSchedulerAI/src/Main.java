@@ -33,7 +33,7 @@ public class Main {
     System.out.println(initialSchedule.toString());
     HashMap<String, Course> allCourses = parser.getCourseMap();
     HashMap<String, Lab> allLabs = parser.getLabMap();
-    addConstraintsForSpecialClasses(allCourses);
+    addConstraintsForSpecialClasses(allLabs, initialSchedule);
     int initialPenalty = parser.getInitialPenalty();
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     System.out.println("Units Made");
@@ -47,10 +47,22 @@ public class Main {
 
   }
 
-  private static void addConstraintsForSpecialClasses(HashMap<String, Course> allCourses) {
-    for(Map.Entry<String, Course> entry : allCourses.entrySet()){
+  private static void addConstraintsForSpecialClasses(HashMap<String, Lab> allCourses, Schedule schec) {
+    boolean toremove813 = false;
+    String id813 = "";
+    boolean toremove913 = false;
+    String id913 = "";
+    for(Map.Entry<String, Lab> entry : allCourses.entrySet()){
       if(entry.getValue().getCourseNum() == 813 && entry.getValue().getCourseType().equals("CPSC")){
-        Course cpsc813 = entry.getValue();
+        Lab cpsc813 = entry.getValue();
+        if (schec.getTuThLab().containsKey(1800)){
+          schec.getTuThLab().get(1800).addOccupant(cpsc813);
+          toremove813 = true;
+          id813 = cpsc813.toString();
+        }
+        else{
+          System.out.println("Nice try Denzinger, it's invalid.");
+        }
         for(Unit unit : cpsc813.getNotCompatible()){
           if(unit.getCourseNum()== 313 && unit.getCourseType().equals("CPSC")){
             Unit cpsc313 = unit; //purely for readability can be a lab or course
@@ -68,7 +80,12 @@ public class Main {
         }
       }
       else if(entry.getValue().getCourseNum() == 913 && entry.getValue().getCourseType().equals("CPSC")){
-        Course cpsc913 = entry.getValue();
+        Lab cpsc913 = entry.getValue();
+        if (schec.getTuThLab().containsKey(1800)){
+          schec.getTuThLab().get(1800).addOccupant(cpsc913);
+          toremove913 = true;
+          id913 = cpsc913.toString();
+        }
         for(Unit unit : cpsc913.getNotCompatible()){
           if(unit.getCourseNum()== 413 && unit.getCourseType().equals("CPSC")){
             Unit cpsc413 = unit; //purely for readability can be a lab or course
@@ -86,6 +103,13 @@ public class Main {
         }
       }
     }
+    if (toremove813){
+      allCourses.remove(id813);
+    }
+    if (toremove913){
+      allCourses.remove(id913);
+    }
+
   }
 
   /*

@@ -11,14 +11,16 @@ public class Unit {
     protected int id;
     protected String key;
     protected int constrained;
-    protected int partAssignIncrease = 100;
-    protected int unwantedIncrease = 3;
-    protected int nonCompatibleIncrease = 5;
+    protected static int partAssignIncrease = 100;
+    protected static int unwantedIncrease = 3;
+    protected static int nonCompatibleIncrease = 5;
 
     protected ArrayList<Slot> unwanted = new ArrayList<Slot>();
     protected ArrayList<Unit> notCompatible =  new ArrayList<Unit>();
     protected HashMap<Slot, Integer> preferences  = new HashMap<Slot, Integer>();
-    protected ArrayList<Unit> pairs = new ArrayList<Unit>(); 
+    protected ArrayList<Unit> pairs = new ArrayList<Unit>();
+    protected static int eveningIncrease = 100;
+    protected static int increase500 = 50;
     
 
     protected void setId(int i){
@@ -78,6 +80,13 @@ public class Unit {
         this.constrained += nonCompatibleIncrease;
     }
 
+    public void incrementEvening(){
+        this.constrained += eveningIncrease;
+    }
+    public void increment500(){
+        this.constrained += increase500;
+    }
+
     public ArrayList<Slot> getUnwanted() {
         return unwanted;
     }
@@ -105,6 +114,24 @@ public class Unit {
     public void addToPairs(Unit u){
         this.pairs.add(u);
     }
+	public static void setPartAssignIncrease(int partAssignIncrease) {
+		Unit.partAssignIncrease = partAssignIncrease;
+	}
 
+	public static void setUnwantedIncrease(int unwantedIncrease) {
+		Unit.unwantedIncrease = unwantedIncrease;
+	}
+
+	public static void setNonCompatibleIncrease(int nonCompatibleIncrease) {
+		Unit.nonCompatibleIncrease = nonCompatibleIncrease;
+	}
+
+	public static void setEveningIncrease(int eveningIncrease) {
+		Unit.eveningIncrease = eveningIncrease;
+	}
+
+	public static void setIncrease500(int increase500) {
+		Unit.increase500 = increase500;
+	}
 
 }
