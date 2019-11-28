@@ -18,7 +18,9 @@ public class Unit {
     protected ArrayList<Slot> unwanted = new ArrayList<Slot>();
     protected ArrayList<Unit> notCompatible =  new ArrayList<Unit>();
     protected HashMap<Slot, Integer> preferences  = new HashMap<Slot, Integer>();
-    protected ArrayList<Unit> pairs = new ArrayList<Unit>(); 
+    protected ArrayList<Unit> pairs = new ArrayList<Unit>();
+    protected int eveningIncrease = 100;
+    protected int increase500 = 50;
     
 
     protected void setId(int i){
@@ -76,6 +78,13 @@ public class Unit {
     }
     public void incrementNonCompatible() {
         this.constrained += nonCompatibleIncrease;
+    }
+
+    public void incrementEvening(){
+        this.constrained += eveningIncrease;
+    }
+    public void increment500(){
+        this.constrained += increase500;
     }
 
     public ArrayList<Slot> getUnwanted() {
