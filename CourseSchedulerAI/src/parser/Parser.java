@@ -48,10 +48,10 @@ public class Parser {
         Pattern courseRegex = Pattern.compile("([A-Z]{4})(\\d{3})LEC(\\d{2})");
         Pattern labRegex    = Pattern.compile("([A-Z]{4})(\\d{3})TUT(\\d{2})");
         Pattern labLecRegex = Pattern.compile("([A-Z]{4})(\\d{3})LEC(\\d{2})TUT(\\d{2})");
-        Pattern csIdRegex   = Pattern.compile("CS(\\d+)");
-        Pattern lsIdRegex   = Pattern.compile("LS(\\d+)");
-        Pattern cIdRegex    = Pattern.compile("C(\\d+)");
-        Pattern lIdRegex    = Pattern.compile("L(\\d+)");
+        Pattern csIdRegex   = Pattern.compile("=CS(\\d+)=");
+        Pattern lsIdRegex   = Pattern.compile("=LS(\\d+)=");
+        Pattern cIdRegex    = Pattern.compile("=C(\\d+)=");
+        Pattern lIdRegex    = Pattern.compile("=L(\\d+)=");
 
         // Get sections from input file
         String   fileStr            = String.join("\n", fileLines).toUpperCase().replaceAll("\\bLAB\\b", "TUT").replaceAll(" |\t", "");
@@ -82,9 +82,9 @@ public class Parser {
                 );
                 courseSlots.add(cs);
                 String replaceStr = cs.toString();
-                unwanted_s = unwanted_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "CS" + count);
-                preferences_s = preferences_s.replaceAll(replaceStr + "(?!.*(?:TUT|LAB))", "CS" + count);
-                partialAssign_s = partialAssign_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "CS" + count);
+                unwanted_s = unwanted_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "=CS" + count + "=");
+                preferences_s = preferences_s.replaceAll(replaceStr + "(?!.*(?:TUT|LAB))", "=CS" + count + "=");
+                partialAssign_s = partialAssign_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "=CS" + count + "=");
                 count++;
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a CourseSlot!");
@@ -109,9 +109,9 @@ public class Parser {
                 );
                 labSlots.add(ls);
                 String replaceStr = ls.toString();
-                unwanted_s = unwanted_s.replaceAll(replaceStr, "LS" + count);
-                preferences_s = preferences_s.replaceAll(replaceStr, "LS" + count);
-                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "LS" + count);
+                unwanted_s = unwanted_s.replaceAll(replaceStr, "=LS" + count + "=");
+                preferences_s = preferences_s.replaceAll(replaceStr, "=LS" + count + "=");
+                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "=LS" + count + "=");
                 count++;
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a LabSlot!");
@@ -136,11 +136,11 @@ public class Parser {
                 );
                 labs.add(l);
                 String replaceStr = l.toString();
-                notCompat_s = notCompat_s.replaceAll(replaceStr, "L" + count);
-                unwanted_s = unwanted_s.replaceAll(replaceStr, "L" + count);
-                preferences_s = preferences_s.replaceAll(replaceStr, "L" + count);
-                pairs_s = pairs_s.replaceAll(replaceStr, "L" + count);
-                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "L" + count);
+                notCompat_s = notCompat_s.replaceAll(replaceStr, "=L" + count + "=");
+                unwanted_s = unwanted_s.replaceAll(replaceStr, "=L" + count + "=");
+                preferences_s = preferences_s.replaceAll(replaceStr, "=L" + count + "=");
+                pairs_s = pairs_s.replaceAll(replaceStr, "=L" + count + "=");
+                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "=L" + count + "=");
                 count++;
             } else if (m2.find()) {
                 Lab l = new Lab(
@@ -151,11 +151,11 @@ public class Parser {
                 );
                 labs.add(l);
                 String replaceStr = l.toString();
-                notCompat_s = notCompat_s.replaceAll(replaceStr, "L" + count);
-                unwanted_s = unwanted_s.replaceAll(replaceStr, "L" + count);
-                preferences_s = preferences_s.replaceAll(replaceStr, "L" + count);
-                pairs_s = pairs_s.replaceAll(replaceStr, "L" + count);
-                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "L" + count);
+                notCompat_s = notCompat_s.replaceAll(replaceStr, "=L" + count + "=");
+                unwanted_s = unwanted_s.replaceAll(replaceStr, "=L" + count + "=");
+                preferences_s = preferences_s.replaceAll(replaceStr, "=L" + count + "=");
+                pairs_s = pairs_s.replaceAll(replaceStr, "=L" + count + "=");
+                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "=L" + count + "=");
                 count++;
             } else {
                 System.out.println("Failed to parse string '" + labStr + "' as a Lab!");
@@ -177,12 +177,12 @@ public class Parser {
                     Integer.parseInt(m.group(2))
                 );
                 courses.add(c);
-                String replaceStr = c.toString();
-                notCompat_s = notCompat_s.replaceAll(replaceStr, "C" + count);
-                unwanted_s = unwanted_s.replaceAll(replaceStr, "C" + count);
-                preferences_s = preferences_s.replaceAll(replaceStr, "C" + count);
-                pairs_s = pairs_s.replaceAll(replaceStr, "C" + count);
-                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "C" + count);
+                String replaceStr = c.toString() + "(?!TUT)";
+                notCompat_s = notCompat_s.replaceAll(replaceStr, "=C" + count + "=");
+                unwanted_s = unwanted_s.replaceAll(replaceStr, "=C" + count + "=");
+                preferences_s = preferences_s.replaceAll(replaceStr, "=C" + count + "=");
+                pairs_s = pairs_s.replaceAll(replaceStr, "=C" + count + "=");
+                partialAssign_s = partialAssign_s.replaceAll(replaceStr, "=C" + count + "=");
                 count++;
                 if(Integer.toString(c.getLectureNum()).substring(0, 1).equals("9")){
                     c.incrementEvening();
@@ -228,8 +228,8 @@ public class Parser {
             }
             if (u1 == null || u2 == null) {
                 System.out.println("Failed to parse IDs on line '" + line + "'!");
-                System.out.println("Exiting...");
-                System.exit(1);
+                // System.out.println("Exiting...");
+                // System.exit(1);
             } else {
                 u1.addToNotCompatible(u2);
                 u2.addToNotCompatible(u1);
@@ -259,8 +259,8 @@ public class Parser {
             }
             if (u == null || s == null) {
                 System.out.println("Failed to parse IDs on line '" + line + "'!");
-                System.out.println("Exiting...");
-                System.exit(1);
+                // System.out.println("Exiting...");
+                // System.exit(1);
             } else {
                 u.addToUnwanted(s);
                 u.incrementUnwanted();
@@ -288,8 +288,8 @@ public class Parser {
             }
             if (u == null || s == null) {
                 System.out.println("Failed to parse IDs on line '" + line + "'!");
-                System.out.println("Exiting...");
-                System.exit(1);
+                // System.out.println("Exiting...");
+                // System.exit(1);
             } else {
                 u.addToPreferences(s, Integer.parseInt(line.split(",")[2]));
             }
@@ -318,8 +318,8 @@ public class Parser {
             }
             if (u1 == null || u2 == null) {
                 System.out.println("Failed to parse IDs on line '" + line + "'!");
-                System.out.println("Exiting...");
-                System.exit(1);
+                // System.out.println("Exiting...");
+                // System.exit(1);
             } else {
                 u1.addToPairs(u2);
                 u2.addToPairs(u1);
@@ -352,8 +352,8 @@ public class Parser {
             }
             if (u == null || s == null) {
                 System.out.println("Failed to parse IDs on line '" + line + "'!");
-                System.out.println("Exiting...");
-                System.exit(1);
+                // System.out.println("Exiting...");
+                // System.exit(1);
             } else {
                 this.initialPenalty += Kontrol.evalAssignment(s, u);
                 s.addOccupant(u);

@@ -38,9 +38,10 @@ public class Generator {
             if (HardConstraintOk) {
                 // Add the course to the slot in the schedule
                 entry.getValue().addOccupant(current); // PROBLEM
+                int desire = Kontrol.desireability(entry.getValue(), current);
                 // Create a TreeNode as a child of the last TreeNode
                 TreeNode n = new TreeNode(new Schedule(lastTreeNode.getSchedule()),
-                        calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode);
+                        calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode, desire);
                 System.out.println("Schedule in Node: " + n.toString());
                 lastTreeNode.addChild(n);
 
@@ -65,9 +66,10 @@ public class Generator {
             if (HardConstraintOk) {
                 // Add the lab to the slot in the schedule
                 entry.getValue().addOccupant(current);
+                int desire = Kontrol.desireability(entry.getValue(), current);
                 // Create a TreeNode as a child of the last TreeNode
                 TreeNode n = new TreeNode(new Schedule(lastTreeNode.getSchedule()),
-                        calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode);
+                        calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode, desire);
                 System.out.println("Schedule in Node: " + n.toString());
                 lastTreeNode.addChild(n);
 
@@ -145,17 +147,19 @@ public class Generator {
                         // Create a copy to manipulate
                         HashMap<Integer, Slot> MWFMapToManipulate = DeepCopyCourseSlotMap(
                                 lastTreeNode.getSchedule().getMWFLec());
-                        // Calculate the penalty of the course slot pairing
-                        int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
-                                brothersPen);
+
                         // int calc = 0;
-                        System.out.println("Penalty of Pairing: " + calc);
+
                         boolean HardConstraintOk = HardConstrainsts
                                 .checkAssignmentHardConstriantsCourse((Course) current, (CourseSlot) entry.getValue());
                         System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
                                 + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
                         if (HardConstraintOk) {
 
+                            // Calculate the penalty of the course slot pairing
+                            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
+                            brothersPen);
+                            System.out.println("Penalty of Pairing: " + calc);
                             // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                             // MANIPULATED TABLE
                             // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
@@ -167,10 +171,11 @@ public class Generator {
 
                             // Replace the MWF in the newSchedule with the manipulated one
                             newSchedule.setMWFLec(MWFMapToManipulate);
+                            int desire = Kontrol.desireability(entry.getValue(), current);
 
                             // Create a TreeNode as a child of the last TreeNode
                             TreeNode n = new TreeNode(newSchedule, calc + lastTreeNode.getPenaltyValueOfTreeNode(),
-                                    lastTreeNode); // Note we need to calculate the total penatly differently
+                                    lastTreeNode, desire); // Note we need to calculate the total penatly differently
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
 
@@ -181,17 +186,18 @@ public class Generator {
                         // Create a copy to manipulate
                         HashMap<Integer, Slot> TuThMapToManipulate = DeepCopyCourseSlotMap(
                                 lastTreeNode.getSchedule().getTuThLec());
-                        // Calculate the penalty of the course slot pairing
-                        int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
-                                brothersPen);
                         // int calc = 0;
-                        System.out.println("Penalty of Pairing: " + calc);
+
                         boolean HardConstraintOk = HardConstrainsts
                                 .checkAssignmentHardConstriantsCourse((Course) current, (CourseSlot) entry.getValue());
                         System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
                                 + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
                         if (HardConstraintOk) {
 
+                            // Calculate the penalty of the course slot pairing
+                            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
+                            brothersPen);         
+                            System.out.println("Penalty of Pairing: " + calc);                   
                             // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                             // MANIPULATED TABLE
                             // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
@@ -203,10 +209,11 @@ public class Generator {
 
                             // Replace the TuTh in the newSchedule with the manipulated one
                             newSchedule.setTuThLec(TuThMapToManipulate);
+                            int desire = Kontrol.desireability(entry.getValue(), current);
 
                             // Create a TreeNode as a child of the last TreeNode
                             TreeNode n = new TreeNode(newSchedule, calc + lastTreeNode.getPenaltyValueOfTreeNode(),
-                                    lastTreeNode); // Note we need to calculate the total penatly differently
+                                    lastTreeNode, desire); // Note we need to calculate the total penatly differently
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
 
@@ -218,11 +225,7 @@ public class Generator {
                         // Create a copy to manipulate
                         HashMap<Integer, Slot> MWLabMapToManipulate = DeepCopyLabSlotMap(
                                 lastTreeNode.getSchedule().getMWLab());
-                        // Calculate the penalty of the course slot pairing
-                        int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
-                                brothersPen);
-                        // int calc = 0;
-                        System.out.println("Penalty of Pairing: " + calc);
+
                         boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                                 (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
                                 lastTreeNode.getSchedule().getTuThLec(), lastTreeNode.getSchedule().getMWLab(),
@@ -230,6 +233,11 @@ public class Generator {
                         System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
                                 + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
                         if (HardConstraintOk) {
+
+                            // Calculate the penalty of the course slot pairing
+                            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
+                            brothersPen);   
+                            System.out.println("Penalty of Pairing: " + calc);                         
 
                             // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                             // MANIPULATED TABLE
@@ -243,9 +251,11 @@ public class Generator {
                             // Replace the TuTh in the newSchedule with the manipulated one
                             newSchedule.setMWLab(MWLabMapToManipulate);
 
+                            int desire = Kontrol.desireability(entry.getValue(), current);
+
                             // Create a TreeNode as a child of the last TreeNode
                             TreeNode n = new TreeNode(newSchedule, calc + lastTreeNode.getPenaltyValueOfTreeNode(),
-                                    lastTreeNode); // Note we need to calculate the total penatly differently
+                                    lastTreeNode, desire); // Note we need to calculate the total penatly differently
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
 
@@ -255,11 +265,9 @@ public class Generator {
                         // Create a copy to manipulate
                         HashMap<Integer, Slot> TuThLabMapToManipulate = DeepCopyLabSlotMap(
                                 lastTreeNode.getSchedule().getTuThLab());
-                        // Calculate the penalty of the course slot pairing
-                        int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
-                                brothersPen);
+
                         // int calc = 0;
-                        System.out.println("Penalty of Pairing: " + calc);
+
                         boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                                 (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
                                 lastTreeNode.getSchedule().getTuThLec(), lastTreeNode.getSchedule().getMWLab(),
@@ -268,6 +276,11 @@ public class Generator {
                         System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
                                 + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
                         if (HardConstraintOk) {
+                            
+                            // Calculate the penalty of the course slot pairing
+                            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
+                            brothersPen);
+                            System.out.println("Penalty of Pairing: " + calc);
 
                             // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                             // MANIPULATED TABLE
@@ -281,9 +294,11 @@ public class Generator {
                             // Replace the TuTh in the newSchedule with the manipulated one
                             newSchedule.setTuThLab(TuThLabMapToManipulate);
 
+                            int desire = Kontrol.desireability(entry.getValue(), current);
+
                             // Create a TreeNode as a child of the last TreeNode
                             TreeNode n = new TreeNode(newSchedule, calc + lastTreeNode.getPenaltyValueOfTreeNode(),
-                                    lastTreeNode); // Note we need to calculate the total penatly differently
+                                    lastTreeNode, desire); // Note we need to calculate the total penatly differently
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
 
@@ -294,10 +309,7 @@ public class Generator {
                         HashMap<Integer, Slot> FLabMapToManipulate = DeepCopyLabSlotMap(
                                 lastTreeNode.getSchedule().getFLab());
                         // Calculate the penalty of the course slot pairing
-                        int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
-                                brothersPen);
-                        // int calc = 0;
-                        System.out.println("Penalty of Pairing: " + calc);
+
                         boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
                                 (LabSlot) entry.getValue(), lastTreeNode.getSchedule().getMWFLec(),
                                 lastTreeNode.getSchedule().getTuThLec(), lastTreeNode.getSchedule().getMWLab(),
@@ -306,6 +318,11 @@ public class Generator {
                                 + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
                         if (HardConstraintOk) {
 
+
+                            // Calculate the penalty of the course slot pairing
+                            int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
+                            brothersPen);
+                            System.out.println("Penalty of Pairing: " + calc);                            
                             // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                             // MANIPULATED TABLE
                             // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
@@ -317,10 +334,11 @@ public class Generator {
 
                             // Replace the TuTh in the newSchedule with the manipulated one
                             newSchedule.setFLab(FLabMapToManipulate);
+                            int desire = Kontrol.desireability(entry.getValue(), current);
 
                             // Create a TreeNode as a child of the last TreeNode
                             TreeNode n = new TreeNode(newSchedule, calc + lastTreeNode.getPenaltyValueOfTreeNode(),
-                                    lastTreeNode); // Note we need to calculate the total penatly differently
+                                    lastTreeNode, desire); // Note we need to calculate the total penatly differently
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
 
@@ -341,6 +359,10 @@ public class Generator {
                 // System.out.println(lastTreeNode.getSchedule().toString());
                 if (lastTreeNode.getOrderedChildren().isEmpty()) {
                     i = i - 2;
+                    if(i ==-2){
+                        System.out.println("No valid solution found in depth first search");
+                        System.exit(0);
+                    }
                     lastTreeNode = lastTreeNode.getParent();
                 } else {
                     lastTreeNode = lastTreeNode.getLowestPenaltyChild();
