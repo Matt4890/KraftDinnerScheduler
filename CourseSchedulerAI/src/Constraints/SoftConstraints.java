@@ -95,7 +95,7 @@ public class SoftConstraints {
 
     for(Unit pair : pairs){
       for (int i = 0; i < lookup.size(); i++) {
-        Unit lookupunit = lookup.get(i);
+        Unit lookupunit = lookup.get(i); 
         if (lookupunit.toString().equals(pair.toString())){
           matched = true;
           break;
