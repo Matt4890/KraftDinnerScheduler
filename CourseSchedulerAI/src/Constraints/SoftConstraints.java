@@ -26,14 +26,18 @@ public class SoftConstraints {
   }
 
   public static int checkCourseMin(CourseSlot s, int pen_course_min) {
-    if (s.getCourseMin() > s.getCourseCount()) {
+    //decrement if the course min is met 
+    if (s.getCourseMin() > s.getCourseCount()+1) {
       return pen_course_min;
     }
     return 0;
   }
 
   public static int checkLabMin(LabSlot s, int pen_lab_min) {
-    if (s.getLabMin() > s.getLabCount()) {
+    //int labMin = s.getLabMin();
+    //int labCount = s.getLabCount();
+
+    if (s.getLabMin() > s.getLabCount()+1) {
       return pen_lab_min;
     }
     return 0;
@@ -53,39 +57,57 @@ public class SoftConstraints {
   }
 
   public static int notPairedCourse(Course b, CourseSlot s, int not_paired) {
+    ArrayList<Unit> pairs = b.getPairs();
+
+    if(pairs.size() == 0){
+      return 0;
+    }
+
     ArrayList<Course> lookup = s.getAssignedCourses();
     boolean matched = false;
 
-    for (int i = 0; i < lookup.size(); i++) {
-      if (lookup.get(i) == b) {
-        matched = true;
-        break;
+    for(Unit pair : pairs){
+      for (int i = 0; i < lookup.size(); i++) {
+        Unit lookupunit = lookup.get(i);
+        if (lookupunit.toString().equals(pair.toString())){
+          matched = true;
+          break;
+        }
       }
+    }   
+    if (matched) {
+      return -not_paired;
+    } else {
+      return not_paired*pairs.size();
     }
-    if (matched)
-      return 0;
-    else {
-      return not_paired;
-    }
-
+    
   }
 
   public static int notPairedLab(Lab b, LabSlot s, int not_paired) {
+    ArrayList<Unit> pairs = b.getPairs();
+
+    if(pairs.size() == 0){
+      return 0;
+    }
+
     ArrayList<Lab> lookup = s.getAssignedLabs();
     boolean matched = false;
 
-    for (int i = 0; i < lookup.size(); i++) {
-      if (lookup.get(i) == b) {
-        matched = true;
-        break;
+    for(Unit pair : pairs){
+      for (int i = 0; i < lookup.size(); i++) {
+        Unit lookupunit = lookup.get(i);
+        if (lookupunit.toString().equals(pair.toString())){
+          matched = true;
+          break;
+        }
       }
-    }
+    }   
     if (matched) {
-      return 0;
+      return -not_paired;
     } else {
-      return not_paired;
+      return not_paired*pairs.size();
     }
-
+    
   }
   
     public static int checkSections(Course course, CourseSlot s, int pen){
