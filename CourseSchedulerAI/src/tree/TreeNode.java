@@ -14,6 +14,7 @@ public class TreeNode implements Comparable<TreeNode> {
     private int desirability;
     private boolean still_considered;
     private boolean already_looked_at;
+    private TreeNode best_bottom_tn;
 
     public TreeNode(Schedule schedule, int penaltyValue) {
 
@@ -24,6 +25,7 @@ public class TreeNode implements Comparable<TreeNode> {
         this.desirability = Integer.MAX_VALUE;
         this.orderedChildren = new PriorityQueue<TreeNode>();
         this.still_considered = true;
+        this.best_bottom_tn = null;
 
     }
 
@@ -140,6 +142,14 @@ public class TreeNode implements Comparable<TreeNode> {
 
     public void setAlreadyLookedAt(boolean value) {
         already_looked_at = value;
+    }
+
+    public TreeNode getBestBottomTN() {
+        return best_bottom_tn;
+    }
+
+    public void setgetBestBottomTN(TreeNode n) {
+        best_bottom_tn = n;
     }
 
 }

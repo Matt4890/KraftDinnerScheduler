@@ -381,6 +381,14 @@ public class Generator {
         // This control would have to be seperate for the branch and bound control
         // otherwise we are likely to pick the same thing
 
+        TreeNode x = branchAndBound(lastTreeNode, lastTreeNode.getPenaltyValueOfTreeNode(), toBeAdded.size()-4, toBeAdded);
+        try{
+            System.out.println(x.getPenaltyValueOfTreeNode());  
+        }
+        catch(Exception e){
+            System.out.println("branch and bound was null");  
+        }
+              
     }
 
     private HashMap<Integer, Slot> DeepCopyCourseSlotMap(HashMap<Integer, Slot> toCopy) {
@@ -402,67 +410,82 @@ public class Generator {
     }
 
 
-    // TODO: Implement branch and Bound using a control to evaluate
-    public TreeNode branchAndBound(TreeNode sol, int penalty, int depthCondition) {
-        /*
-         * Need solution, node and the penalty for the solution. This will serve as
-         * reference Next need to define recursive solution that will "backtrack"
-         * through the tree checking the Eval with the solution eval - Once i find a
-         * better note the solution and continue
-         */
+    public TreeNode branchAndBound(TreeNode sol, int penalty, int depthCondition, ArrayList<Unit> ListToBeAdded) {
 
-        TreeNode foundBetterSol = null;
+        TreeNode foundBetterSol = sol;
         TreeNode prevNode = sol;
         int currentBestValue = penalty;
-        for (int i = 0; i < depthCondition; i++) {
+        for (int i = ListToBeAdded.size()-2; i >= depthCondition; i--) {
             prevNode.setAlreadyLookedAt(true);
             prevNode = prevNode.getParent();
-            foundBetterSol = betterSol(prevNode, currentBestValue);
+            TreeNode betterSolNode = betterSol(prevNode, currentBestValue, i, ListToBeAdded);
+            
 
-            if (foundBetterSol != null) {
-                // TODO: see if this needs to be changed
-                // I think this needs to be changed because getPenaltyValueOfNode needs to be
-                // the current penalty value up to this node not the node itself
-                currentBestValue = foundBetterSol.getPenaltyValueOfTreeNode();
-            }
-        }
-
-        return foundBetterSol;
-    }
-
-    // TODO THIS IS STILL A WORK IN PROGRESS (WIP)
-    private TreeNode betterSol(TreeNode n, int penaltyValue) {
-        // TODO need to set this node as already looked at somewhere
-
-        ArrayList<TreeNode> childrenList = n.getChildren();
-        // if child has no children create them here
-        if (childrenList.isEmpty()) {
-            // TODO: need to generate the children if the childrenlist is empty
-            // however if we are not able to generate more children because this node is the
-            // last we need to return the val
-            if (n.getPenaltyValueOfTreeNode() < penaltyValue) {
-                return n;
-            } else {
-                return null;
-            }
-        }
-
-        for (int i = 0; i < childrenList.size(); i++) {
-            TreeNode considered = childrenList.get(i);
-            if (considered.getPenaltyValueOfTreeNode() >= penaltyValue) {
-                considered.setAlreadyLookedAt(true);
-            } else {
-                if (!considered.getAlreadyLookedAt()) {
-                    // TODO need to find how to recursivly return solution
-                    // TODO also need to find how to update the nValue once we find a better one
-                    betterSol(considered, penaltyValue);
+            if (betterSolNode != null){ 
+                if(betterSolNode.getPenaltyValueOfTreeNode() < foundBetterSol.getPenaltyValueOfTreeNode()) {
+                    foundBetterSol = betterSolNode;
+                    currentBestValue = betterSolNode.getPenaltyValueOfTreeNode();
                 }
             }
         }
 
-        // return null because we didn't find a solution that was better
-        // TODO: see if we still need this, im 90% certain that this will need to go as
-        // the
+        if(foundBetterSol.getPenaltyValueOfTreeNode() >= sol.getPenaltyValueOfTreeNode()){
+            return null;
+        }
+        return foundBetterSol;
+    }
+
+    private TreeNode betterSol(TreeNode n, int penaltyValue, int currentDepth, ArrayList<Unit> ListToBeAdded) {
+        //TODO still need a control just spelt with a k instead of a c 
+
+        ArrayList<TreeNode> childrenList = n.getChildren();
+        // if child has no children 
+        //      - check if has no more children
+        //      - if it has more children generate them    
+        if (childrenList.isEmpty()) {
+            if (currentDepth == ListToBeAdded.size()-1) {
+                n.setAlreadyLookedAt(true);
+                n.setgetBestBottomTN(n);
+                return n;
+            } 
+            else if (currentDepth < ListToBeAdded.size()-1){
+                //TODO this node has children that need to be generated since it's not the very last node  
+            }
+           
+        }
+
+        //keep track of all the nodes child nodes
+        ArrayList<TreeNode> keepTrack = new ArrayList<TreeNode>();
+        for (int i = 0; i < childrenList.size(); i++) {
+            TreeNode considered = childrenList.get(i);
+            if (considered.getPenaltyValueOfTreeNode() > penaltyValue) {
+                considered.setAlreadyLookedAt(true);
+            } else {
+                if (!considered.getAlreadyLookedAt()) {
+                    TreeNode temp = betterSol(considered, penaltyValue, currentDepth + 1, ListToBeAdded);
+                    if(temp != null){
+                        keepTrack.add(temp.getBestBottomTN());
+                    }
+                }
+            }
+        }
+        n.setAlreadyLookedAt(true);
+
+        //find the best child node here 
+        int bestPen = Integer.MAX_VALUE;
+        TreeNode bestNode = null;
+        for(TreeNode tn : keepTrack){
+            if(tn != null && tn.getPenaltyValueOfTreeNode() < bestPen){
+                bestNode = tn;
+                bestPen = tn.getPenaltyValueOfTreeNode();
+            }
+        }
+
+        //return the best node if it is not null otherwise return null  
+        if(bestNode != null && bestNode.getPenaltyValueOfTreeNode() < penaltyValue){
+            n.setgetBestBottomTN(bestNode);
+            return bestNode;
+        }
         return null;
     }
 }
