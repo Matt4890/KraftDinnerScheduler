@@ -1,6 +1,7 @@
 import parser.*;
 import schedule.*;
 import tree.Generator;
+import tree.Kontrol;
 import coursesULabs.*;
 import java.util.*;
 import java.io.*;
@@ -32,6 +33,19 @@ public class Main {
     brothersPen = Integer.parseInt(args[4]);
 
     Parser parser = new Parser(filename, pairsPen, prefsPen, courseMinPen);
+    Kontrol.setPen_course_min(courseMinPen);
+    Kontrol.setPen_lab_min(courseMinPen);
+    Kontrol.setPen_not_paired(pairsPen);
+    Kontrol.setPen_section_diff(brothersPen);
+
+    //Set the weights
+    //Hardcoded for now
+    Kontrol.setWeight_min_filled(1);
+    Kontrol.setWeight_pair(1);
+    Kontrol.setWeight_pref(1);
+    Kontrol.setWeight_section_diff(1);
+
+   
 
     int initialMinPenalty = courseMinPen * parser.getMinPenCount();
     int initialPairsPenalty = pairsPen * parser.getPairPenCount();
