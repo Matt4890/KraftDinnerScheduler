@@ -23,7 +23,7 @@ public class Parser {
     private int initialPenalty; 
     private int minWeightCount;
     private int pairWeightCount;
-    private int prefWeight;
+    private int sum_of_pref;
     private int pairWeight;
     private int minWeight;
     private int prefWeight2;
@@ -36,7 +36,7 @@ public class Parser {
         return pairWeightCount;
     }
     public int getprefWeight(){
-        return prefWeight;
+        return sum_of_pref;
     }
 
     
@@ -110,6 +110,7 @@ public class Parser {
                 count++;
                 if(cs.getCourseMin() > 0){
                     minWeightCount++;
+                    System.out.println("CourseSlotsMinWeight:" + minWeightCount);
                     cs.incrementPotential(-minWeight);
                     System.out.println("added " + minWeight + " for slotmin for " + cs.toString()  );
                 }
@@ -144,6 +145,7 @@ public class Parser {
                 count++;
                 if(ls.getLabMin() > 0){
                     minWeightCount++;
+                    System.out.println("LabSlotMinWeight:" + minWeightCount);
                     ls.incrementPotential(-minWeight);
                     System.out.println("added " + minWeight + " for slotmin for " + ls.toString()  );
                 }
@@ -154,7 +156,7 @@ public class Parser {
             }
 
         }
-
+        System.out.println("TotalMinWeight:" + minWeightCount);
         // Parse labs
         ArrayList<Lab> labs = new ArrayList<Lab>();
         count = 0;
@@ -304,6 +306,7 @@ public class Parser {
         }
 
         // Parse Preferences
+        sum_of_pref = 0;
         for (String line : preferences_s.split("\n")) {
             if (line.equals("")) break;
             Matcher cm = cIdRegex.matcher(line);
@@ -328,11 +331,13 @@ public class Parser {
                 // System.exit(1);
             } else {
                 u.addToPreferences(s, Integer.parseInt(line.split(",")[2]));
-                prefWeight += Integer.parseInt(line.split(",")[2]) * prefWeight; 
+                sum_of_pref += Integer.parseInt(line.split(",")[2]); 
+                System.out.println("Sum_of_pref:" + sum_of_pref);
                 u.incrementPotential(- prefWeight2  * Integer.parseInt(line.split(",")[2]) );
                 System.out.println("added pen for pref of " + prefWeight2 + " for " + u.toString() );
             }
         }
+        System.out.println("Totalsum_of_pref:" + sum_of_pref);
 
         // Parse Pairs
         for (String line : pairs_s.split("\n")) {
@@ -366,8 +371,10 @@ public class Parser {
                 u2.incrementPotential(- (((double)pairWeight) / 2));
                 System.out.println("added pen for pair of " + pairWeight + " for " + u1.toString() );
                 pairWeightCount ++;
+                System.out.println("PairsWeightCount:" + pairWeightCount);
             }
         }
+        System.out.println("TotalWeightCount:" + pairWeightCount);
 
         // Parse Partial Assignments
         for (String line : partialAssign_s.split("\n")) {
