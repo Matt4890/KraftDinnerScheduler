@@ -21,12 +21,12 @@ public class Kontrol {
 
         if (s instanceof CourseSlot) {
             total += SoftConstraints.checkCourseMin((CourseSlot) s, pen_course_min) * weight_min_filled;
-            total += SoftConstraints.preferenceEval(s) * weight_pref;
+            total += SoftConstraints.preferenceEval(s,u) * weight_pref;
             total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, pen_not_paired) * weight_pair;
             //TODO: SectionDif Constraint
         } else {
             total += SoftConstraints.checkLabMin((LabSlot) s, pen_lab_min) * weight_min_filled;
-            total += SoftConstraints.preferenceEval(s) * weight_pref;
+            total += SoftConstraints.preferenceEval(s,u) * weight_pref;
             total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, pen_not_paired) * weight_pair;
         }
         return total;
