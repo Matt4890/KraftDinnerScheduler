@@ -43,7 +43,7 @@ public class Generator {
                         .checkAssignmentHardConstriantsCourse((Course) current, (CourseSlot) entry.getValue());
                 System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
                         + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
-                if (HardConstraintOk) {
+                if (HardConstraintOk ) {
 
                     // Calculate the penalty of the course slot pairing
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
@@ -81,7 +81,7 @@ public class Generator {
                         .checkAssignmentHardConstriantsCourse((Course) current, (CourseSlot) entry.getValue());
                 System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
                         + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
-                if (HardConstraintOk) {
+                if (HardConstraintOk ) {
 
                     // Calculate the penalty of the course slot pairing
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
@@ -164,7 +164,7 @@ public class Generator {
 
                 System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
                         + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
-                if (HardConstraintOk) {
+                if (HardConstraintOk ) {
                     
                     // Calculate the penalty of the course slot pairing
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
@@ -205,7 +205,7 @@ public class Generator {
                         parent.getSchedule().getTuThLab(), parent.getSchedule().getFLab());
                 System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
                         + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
-                if (HardConstraintOk) {
+                if (HardConstraintOk ) {
 
 
                     // Calculate the penalty of the course slot pairing
@@ -317,7 +317,7 @@ public class Generator {
 
             TreeNode currentNode = allStackNodes.pop();
 
-            if (false){ //TheScheduleInsideRepresents a Full Solution 
+            if (unitsToBeScheduled.isEmpty()){ //TheScheduleInsideRepresents a Full Solution 
                 if (currentNode.getPenaltyValueOfTreeNode() < this.bound){
                     this.bound = currentNode.getPenaltyValueOfTreeNode();
                     this.bestSchedule = currentNode;
@@ -329,6 +329,13 @@ public class Generator {
                     generateChildren(unitsToBeScheduled.remove(0), currentNode);
                 
                 }
+                //Go through all of the children and add them to the stack if the eval of the 
+                for (TreeNode node : currentNode.getChildren() ){
+                    if (node.getPenaltyValueOfTreeNode() + node.getPotential() < bound){
+                        //Add it to the stack
+                        allStackNodes.add(node);
+                    }
+                }
 
             }
 
@@ -337,7 +344,7 @@ public class Generator {
 
 
     }
-
+    
 
 
     // TODO: Implement branch and Bound using a control to evaluate
