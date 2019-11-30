@@ -47,7 +47,21 @@ public class Kontrol {
      * @param u
      * @return desireability of assigning unit u into slot s
      */
+    public static int desireability(Slot s, Unit u) {
+        int total = 0;
+        total += evalAssignment(s,u);
+        if(u instanceof Course){
+            total -= (((CourseSlot)s).getCourseMin() - s.getClassAssignment().size());
+            total += (((CourseSlot)s).getCourseMax() - (((CourseSlot)s).getCourseMax() - s.getClassAssignment().size())) * 5;
+        }
+        else{
+            total -= (((LabSlot)s).getLabMin() - s.getClassAssignment().size());
+            total += (((LabSlot)s).getLabMax() - (((LabSlot)s).getLabMax() - s.getClassAssignment().size())) * 5;
+        }
+        total = total / u.getConstrained();
 
+        return total;
+    }
 
     public static int getWeight_min_filled() {
         return weight_min_filled;
