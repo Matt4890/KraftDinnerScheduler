@@ -78,10 +78,10 @@ public class Generator {
                     System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialCourse((CourseSlot) MWFMapToManipulate.get(entry.getKey()), current, n);
-                    System.out.println(potentialLost + " <------------------ potential");
+                //    System.out.println(potentialLost + " <------------------ potential");
                     n.incrementPotential(potentialLost + parent.getPotential());
-                    System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
-                    System.out.println("the starting potential of child tree node is " + n.getPotential());
+                //    System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
+                //    System.out.println("the starting potential of child tree node is " + n.getPotential());
                 }
             }
             for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getTuThLec().entrySet()) {
@@ -91,8 +91,8 @@ public class Generator {
 
                 boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                         (CourseSlot) entry.getValue());
-                System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
-                        + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
+                 System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
+                         + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
@@ -125,10 +125,10 @@ public class Generator {
                     System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialCourse((CourseSlot) TuThMapToManipulate.get(entry.getKey()), current, n);
-                    System.out.println(potentialLost + " <------------------ potential");
+                    // System.out.println(potentialLost + " <------------------ potential");
                     n.incrementPotential(potentialLost + parent.getPotential());
-                    System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
-                    System.out.println("the starting potential of child tree node is " + n.getPotential());
+                    // System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
+                    // System.out.println("the starting potential of child tree node is " + n.getPotential());
 
                 }
             }
@@ -142,14 +142,14 @@ public class Generator {
                         (LabSlot) entry.getValue(), parent.getSchedule().getMWFLec(), parent.getSchedule().getTuThLec(),
                         parent.getSchedule().getMWLab(), parent.getSchedule().getTuThLab(),
                         parent.getSchedule().getFLab());
-                System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
-                        + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
+                 System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
+                         + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
                             brothersPen);
-                    System.out.println("Penalty of Pairing: " + calc);
+                     System.out.println("Penalty of Pairing: " + calc);
 
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                     // MANIPULATED TABLE
@@ -175,13 +175,13 @@ public class Generator {
                                                                                                                   // total
                                                                                                                   // penatly
                                                                                                                   // differently
-                    System.out.println("Schedule in Node: " + n.toString());
+                     System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialLab((LabSlot) MWLabMapToManipulate.get(entry.getKey()), current, n);
-                    System.out.println(potentialLost + " <------------------ potential");
+                    // System.out.println(potentialLost + " <------------------ potential");
                     n.incrementPotential(potentialLost + parent.getPotential());
-                    System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
-                    System.out.println("the starting potential of child tree node is " + n.getPotential());
+                    // System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
+                    // System.out.println("the starting potential of child tree node is " + n.getPotential());
 
                 }
             }
@@ -196,14 +196,14 @@ public class Generator {
                         parent.getSchedule().getMWLab(), parent.getSchedule().getTuThLab(),
                         parent.getSchedule().getFLab());
 
-                System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
-                        + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
+                 System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
+                         + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
                             brothersPen);
-                    System.out.println("Penalty of Pairing: " + calc);
+                     System.out.println("Penalty of Pairing: " + calc);
 
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                     // MANIPULATED TABLE
@@ -229,14 +229,14 @@ public class Generator {
                                                                                                                   // total
                                                                                                                   // penatly
                                                                                                                   // differently
-                    System.out.println("Schedule in Node: " + n.toString());
+                     System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialLab((LabSlot) TuThLabMapToManipulate.get(entry.getKey()), current, n);
-                    System.out.println(n.getPotential() + " <------------------ potential of n");
-                    System.out.println(potentialLost + " <------------------ potential");
+                    // System.out.println(n.getPotential() + " <------------------ potential of n");
+                    // System.out.println(potentialLost + " <------------------ potential");
                     n.incrementPotential(potentialLost + parent.getPotential());
-                    System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
-                    System.out.println("the starting potential of child tree node is " + n.getPotential());
+                    // System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
+                    // System.out.println("the starting potential of child tree node is " + n.getPotential());
 
                 }
             }
@@ -249,14 +249,14 @@ public class Generator {
                         (LabSlot) entry.getValue(), parent.getSchedule().getMWFLec(), parent.getSchedule().getTuThLec(),
                         parent.getSchedule().getMWLab(), parent.getSchedule().getTuThLab(),
                         parent.getSchedule().getFLab());
-                System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
-                        + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
+                 System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
+                         + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
                     int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
                             brothersPen);
-                    System.out.println("Penalty of Pairing: " + calc);
+                     System.out.println("Penalty of Pairing: " + calc);
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                     // MANIPULATED TABLE
                     // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
@@ -280,14 +280,14 @@ public class Generator {
                                                                                                                   // total
                                                                                                                   // penatly
                                                                                                                   // differently
-                    System.out.println("Schedule in Node: " + n.toString());
+                     System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialLab((LabSlot) FLabMapToManipulate.get(entry.getKey()), current, n);
-                    System.out.println(n.getPotential() + " <------------------ potential of n");
-                    System.out.println(potentialLost + " <------------------ potential");
+                    // System.out.println(n.getPotential() + " <------------------ potential of n");
+                    // System.out.println(potentialLost + " <------------------ potential");
                     n.incrementPotential(potentialLost + parent.getPotential());
-                    System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
-                    System.out.println("the starting potential of child tree node is " + n.getPotential());
+                    // System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
+                    // System.out.println("the starting potential of child tree node is " + n.getPotential());
 
                 }
             }
@@ -304,15 +304,12 @@ public class Generator {
         this.startNode = parent;
 
         for (int i = 0; i < toBeAdded.size(); i++) {
-            double potentialLost = toBeAdded.get(i).getPotential();
             if (!parent.getOrderedChildren().isEmpty()) {
                 parent = parent.getLowestPenaltyChild();
                 System.out.println("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n");
 
             } else {
                 generateChildren(toBeAdded.get(i), parent);
-
-                // for (int i = toBeAdded.size() -1; i >=0; i--) {
 
             }
 
@@ -335,20 +332,6 @@ public class Generator {
         this.bestSchedule = parent;
 
         System.out.println("Bound Generated: " + this.bound);
-        // We can make this better once the KONTROL is implemented We can modify this so
-        // that only the TreeNodes that
-        // are added are the ones that meet the desirablility criteria
-        // This control would have to be seperate for the branch and bound control
-        // otherwise we are likely to pick the same thing
-
-        // TreeNode x = branchAndBound(parent, parent.getPenaltyValueOfTreeNode(),
-        // toBeAdded.size()-4, toBeAdded);
-        // try{
-        // System.out.println(x.getPenaltyValueOfTreeNode());
-        // }
-        // catch(Exception e){
-        // System.out.println("branch and bound was null");
-        // }
     }
 
     private void updatePotentialLab(LabSlot labSlot, Unit current, TreeNode node) {
@@ -405,7 +388,10 @@ public class Generator {
         while (!allStackNodes.isEmpty()) {
             System.out.println("While looooop ran");
 
+
             TreeNode currentNode = allStackNodes.pop();
+            System.out.println("The Thing that was popped: >>" + currentNode.toString());
+            System.out.println("<<");
 
             if (unitsToBeScheduled.isEmpty()) { // TheScheduleInsideRepresents a Full Solution
                 if (currentNode.getPenaltyValueOfTreeNode() < this.bound) {
@@ -414,21 +400,26 @@ public class Generator {
                 }
 
             } else {
+                //Take the thing to be scheduled outL
+                Unit unitToSchedNext = unitsToBeScheduled.remove(0);
                 // Check to see if doesn't have children made
+                
                 if (currentNode.getChildren().size() == 0) {
-                    generateChildren(unitsToBeScheduled.remove(0), currentNode);
+                    generateChildren(unitToSchedNext, currentNode);
 
-                }
+                } 
                 // Go through all of the children and add them to the stack if the eval of the
                 for (TreeNode node : currentNode.getChildren()) {
                     System.out.println("The value we get is: " + node.getPenaltyValueOfTreeNode() + node.getPotential());
-                    if (node.getPenaltyValueOfTreeNode()+node.getPotential() < bound) {
+                    if (node.getPenaltyValueOfTreeNode()+node.getPotential() < this.bound) {
                         // Add it to the stack
                         allStackNodes.add(node);
                     }
                 }
 
             }
+            System.out.println("THE STACK::::::::::::::::");
+            System.out.println(allStackNodes);
 
         }
         System.out.println("We are out of things to add...");
