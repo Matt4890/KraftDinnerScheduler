@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import Constraints.SoftConstraints;
 import coursesULabs.*;
 import enums.CourseDays;
 import enums.LabDays;
@@ -23,6 +24,10 @@ public class Parser {
     private int minPenCount;
     private int pairPenCount;
     private int prefPen;
+    private int pairPen;
+    private int minPen;
+    private int prefpen2;
+    
 
     public int getMinPenCount(){
         return minPenCount;
@@ -35,8 +40,11 @@ public class Parser {
     }
 
     
-    public  Parser (String filename) {
+    public  Parser (String filename, int prefPen, int pairPen, int minPen) {
 
+        this.prefpen2 = prefPen;
+        this.pairPen = pairPen;
+        this.minPen = minPen;
         // Setup file params
         // String filename = "./inputs/shortExample.txt";
         ArrayList<String> fileLines = new ArrayList<String>();
@@ -102,6 +110,8 @@ public class Parser {
                 count++;
                 if(cs.getCourseMin() > 0){
                     minPenCount++;
+                    cs.incrementPotential(-minPen);
+                    System.out.println("added " + minPen + " for slotmin for " + cs.toString()  );
                 }
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a CourseSlot!");
@@ -134,6 +144,8 @@ public class Parser {
                 count++;
                 if(ls.getLabMin() > 0){
                     minPenCount++;
+                    ls.incrementPotential(-minPen);
+                    System.out.println("added " + minPen + " for slotmin for " + ls.toString()  );
                 }
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a LabSlot!");
@@ -316,7 +328,9 @@ public class Parser {
                 // System.exit(1);
             } else {
                 u.addToPreferences(s, Integer.parseInt(line.split(",")[2]));
-                prefPen = prefPen + Integer.parseInt(line.split(",")[2]);
+                prefPen += Integer.parseInt(line.split(",")[2]); 
+                u.incrementPotential(- prefpen2  * Integer.parseInt(line.split(",")[2]) );
+                System.out.println("added pen for pref of " + prefpen2 + " for " + u.toString() );
             }
         }
 
@@ -348,6 +362,9 @@ public class Parser {
             } else {
                 u1.addToPairs(u2);
                 u2.addToPairs(u1);
+                u1.incrementPotential(- (((double)pairPen) / 2));
+                u2.incrementPotential(- (((double)pairPen) / 2));
+                System.out.println("added pen for pair of " + pairPen + " for " + u1.toString() );
                 pairPenCount ++;
             }
         }

@@ -11,10 +11,12 @@ public class TreeNode implements Comparable<TreeNode> {
     private ArrayList<TreeNode> children; // This could be a heap so the one with the lowest pen value is always on top
     private PriorityQueue<TreeNode> orderedChildren = new PriorityQueue<TreeNode>();
 
+
     private int desirability;
     private boolean still_considered;
     private boolean already_looked_at;
     private TreeNode best_bottom_tn;
+    private double potential = 0;
 
     public TreeNode(Schedule schedule, int penaltyValue) {
 
@@ -161,6 +163,14 @@ public class TreeNode implements Comparable<TreeNode> {
 
     public void setgetBestBottomTN(TreeNode n) {
         best_bottom_tn = n;
+    }
+
+    public double getPotential() {
+        return potential;
+    }
+
+    public void incrementPotential(double potential) {
+        this.potential += potential;
     }
 
 }

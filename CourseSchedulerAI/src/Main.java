@@ -6,6 +6,12 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
+
+  public static String filename;
+  public static int courseMinPen;
+  public static int pairsPen;
+  public static int brothersPen;
+  public static int prefsPen;
   public static void main(String[] args) throws FileNotFoundException{
     //Instantiating the File class
     
@@ -17,34 +23,35 @@ public class Main {
     
     //Printing values to file
 
-    String filename;
-    int courseMinPen;
-    int pairsPen;
-    int brothersPen;
+
 
     filename = args[0];
     courseMinPen = Integer.parseInt(args[1]);
-    pairsPen = Integer.parseInt(args[2]);
-    brothersPen = Integer.parseInt(args[3]); 
+    prefsPen = Integer.parseInt(args[2]);
+    pairsPen = Integer.parseInt(args[3]); 
+    brothersPen = Integer.parseInt(args[4]);
 
-    Parser parser = new Parser(filename);
+    Parser parser = new Parser(filename, pairsPen, prefsPen, courseMinPen);
 
     int initialMinPenalty = courseMinPen * parser.getMinPenCount();
     int initialPairsPenalty = pairsPen * parser.getPairPenCount();
-    int initialPreferencePenalty = parser.getPrefPen();
+    int initialPreferencePenalty =  prefsPen * parser.getPrefPen();
 
     
 
     Schedule initialSchedule = parser.getSchedule();
     System.out.println("The Schedule:");
     System.out.println(initialSchedule.toString());
+
     HashMap<String, Course> allCourses = parser.getCourseMap();
     HashMap<String, Lab> allLabs = parser.getLabMap();
+    makeBrothers(allCourses);
+    makePotentialsBros(allCourses);
     addConstraintsForSpecialClasses(allLabs, initialSchedule);
     int initialPenalty = parser.getInitialPenalty();
-
+    System.out.println("The initial pen is: " + initialPenalty);
     initialPenalty = initialPenalty + initialMinPenalty + initialPairsPenalty + initialPreferencePenalty;
-
+    System.out.println("The initial pen is: " + initialPenalty);
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     System.out.println("Units Made");
 
@@ -175,6 +182,36 @@ public class Main {
               } 
           }
       }
+  }
+
+
+  private static void makePotentialsBros(HashMap<String, Course> courses){
+    System.out.println("The size of courses is " + courses.size());
+    ArrayList<Course> checked = new ArrayList<Course>();
+    for(Map.Entry<String, Course> entry : courses.entrySet()){
+      Course courseToAddPotential = entry.getValue();
+      checked.add(courseToAddPotential);
+      System.out.println("the size of brothers is " + courseToAddPotential.getBrothers().size());
+      for(Course course : courseToAddPotential.getBrothers()){
+        System.out.println("I hate this");
+        if(!checked.contains(course)){
+          courseToAddPotential.incrementPotential( ((double)(brothersPen)) / 2 );
+          course.incrementPotential( ((double) (brothersPen)) / 2 );
+          System.out.println("The pen added is " +  brothersPen + " for brothers pen for " + course.getKey() + " and " + courseToAddPotential.getKey());
+        }
+      }
+    }
+  }
+
+
+  private static void makeBrothers(HashMap<String, Course> courses){
+    for(Map.Entry<String, Course> entry : courses.entrySet()){
+      for(Map.Entry<String, Course> entry2 : courses.entrySet()){
+        if(entry.getValue().isBrother(entry2.getValue())){
+          entry.getValue().addBrother(entry2.getValue());
+        }
+      }
+    }
   }
   
   

@@ -21,6 +21,7 @@ public class Unit {
     protected ArrayList<Unit> pairs = new ArrayList<Unit>();
     protected static int eveningIncrease = 100;
     protected static int increase500 = 50;
+    protected double potential = 0;
     
 
     protected void setId(int i){
@@ -133,5 +134,21 @@ public class Unit {
 	public static void setIncrease500(int increase500) {
 		Unit.increase500 = increase500;
 	}
+
+    public double getPotential() {
+        return potential;
+    }
+
+    public void incrementPotential(double potential) {
+        this.potential += potential;
+    }
+
+    public static double calculatePotential(ArrayList<Unit> units){
+        double total = 0;
+        for (Unit unit : units){
+            total += unit.getPotential();
+        }
+        return total;
+    }
 
 }

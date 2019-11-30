@@ -29,7 +29,7 @@ public class SoftConstraints {
 
   public static int checkCourseMin(CourseSlot s, int pen_course_min) {
     //decrement if the course min is met 
-    if (s.getCourseMin() > s.getCourseCount()+1) {
+    if (s.getCourseMin() == s.getCourseCount()+1) {
       return -pen_course_min;
     }
     return 0;
@@ -39,7 +39,7 @@ public class SoftConstraints {
     //int labMin = s.getLabMin();
     //int labCount = s.getLabCount();
 
-    if (s.getLabMin() > s.getLabCount()+1) {
+    if (s.getLabMin() == s.getLabCount()+1) {
       return -pen_lab_min;
     }
     return 0;
@@ -84,7 +84,7 @@ public class SoftConstraints {
     for(Unit pair : pairs){
       for (int i = 0; i < lookup.size(); i++) {
         Unit lookupunit = lookup.get(i);
-        if (lookupunit.toString().equals(pair.toString())){
+        if (lookupunit == pair){
           matched = true;
           break;
         }
@@ -111,7 +111,7 @@ public class SoftConstraints {
     for(Unit pair : pairs){
       for (int i = 0; i < lookup.size(); i++) {
         Unit lookupunit = lookup.get(i); 
-        if (lookupunit.toString().equals(pair.toString())){
+        if (lookupunit==pair){
           matched = true;
           break;
         }

@@ -10,6 +10,8 @@ public abstract class Slot {
     private ArrayList<Unit> classAssignment = new ArrayList<Unit>();
     protected HashMap<Unit, Integer> prefMap = new HashMap<Unit, Integer>();
     protected ArrayList<Slot> overlaps = new ArrayList<Slot>();
+    protected double potential = 0;
+    public static double totalPotential;
 
     public Slot(int id, int time, SlotType type, HashMap<Unit, Integer> hashMap) {
         this.type = type;
@@ -107,5 +109,16 @@ public abstract class Slot {
 
         return false;
     }
+
+    public double getPotential() {
+        return potential;
+    }
+
+    public void incrementPotential(double potential) {
+        this.potential += potential;
+        totalPotential += potential;
+    }
+
+    
 
 }

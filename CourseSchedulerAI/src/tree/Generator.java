@@ -38,10 +38,10 @@ public class Generator {
             if (HardConstraintOk) {
                 // Add the course to the slot in the schedule
                 entry.getValue().addOccupant(current); // PROBLEM
-                int desire = Kontrol.desireability(entry.getValue(), current);
+                // int 0 = Kontrol.desireability(entry.getValue(), current);
                 // Create a TreeNode as a child of the last TreeNode
                 TreeNode n = new TreeNode(new Schedule(lastTreeNode.getSchedule()),
-                        calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode, desire);
+                        calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode, 0);
                 System.out.println("Schedule in Node: " + n.toString());
                 lastTreeNode.addChild(n);
 
@@ -66,10 +66,10 @@ public class Generator {
             if (HardConstraintOk) {
                 // Add the lab to the slot in the schedule
                 entry.getValue().addOccupant(current);
-                int desire = Kontrol.desireability(entry.getValue(), current);
+                // int 0 = Kontrol.0ability(entry.getValue(), current);
                 // Create a TreeNode as a child of the last TreeNode
                 TreeNode n = new TreeNode(new Schedule(lastTreeNode.getSchedule()),
-                        calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode, desire);
+                        calc + lastTreeNode.getPenaltyValueOfTreeNode(), lastTreeNode, 0);
                 System.out.println("Schedule in Node: " + n.toString());
                 lastTreeNode.addChild(n);
 
@@ -130,7 +130,11 @@ public class Generator {
 
     public void generateFBoundBIG(ArrayList<Unit> toBeAdded) {
         TreeNode lastTreeNode = new TreeNode(this.starter, this.initialPenalty);
+        lastTreeNode.incrementPotential(Unit.calculatePotential(toBeAdded));
+        lastTreeNode.incrementPotential(Slot.totalPotential);
+        System.out.println("the starting potential of last tree node is " + lastTreeNode.getPotential());
         for (int i = 0; i < toBeAdded.size(); i++) {
+            double potentialLost = toBeAdded.get(i).getPotential();
             if (!lastTreeNode.getOrderedChildren().isEmpty()) {
                 lastTreeNode = lastTreeNode.getLowestPenaltyChild();
                 System.out.println("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n");
@@ -171,13 +175,15 @@ public class Generator {
 
                             // Replace the MWF in the newSchedule with the manipulated one
                             newSchedule.setMWFLec(MWFMapToManipulate);
-                            int desire = Kontrol.desireability(entry.getValue(), current);
+                            // int desire = Kontrol.desireability(entry.getValue(), current);
 
                             // Create a TreeNode as a child of the last TreeNode
                             TreeNode n = new TreeNode(newSchedule, calc + lastTreeNode.getPenaltyValueOfTreeNode(),
-                                    lastTreeNode, desire); // Note we need to calculate the total penatly differently
+                                    lastTreeNode, 0); // Note we need to calculate the total penatly differently
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
+                            updatePotentialCourse((CourseSlot)MWFMapToManipulate.get(entry.getKey()), current, n);
+                            n.incrementPotential(potentialLost);
 
                         }
                     }
@@ -209,13 +215,15 @@ public class Generator {
 
                             // Replace the TuTh in the newSchedule with the manipulated one
                             newSchedule.setTuThLec(TuThMapToManipulate);
-                            int desire = Kontrol.desireability(entry.getValue(), current);
+                            // int desire = Kontrol.desireability(entry.getValue(), current);
 
                             // Create a TreeNode as a child of the last TreeNode
                             TreeNode n = new TreeNode(newSchedule, calc + lastTreeNode.getPenaltyValueOfTreeNode(),
-                                    lastTreeNode, desire); // Note we need to calculate the total penatly differently
+                                    lastTreeNode, 0); // Note we need to calculate the total penatly differently
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
+                            updatePotentialCourse((CourseSlot)TuThMapToManipulate.get(entry.getKey()), current, n);
+                            n.incrementPotential(potentialLost);
 
                         }
                     }
@@ -251,13 +259,15 @@ public class Generator {
                             // Replace the TuTh in the newSchedule with the manipulated one
                             newSchedule.setMWLab(MWLabMapToManipulate);
 
-                            int desire = Kontrol.desireability(entry.getValue(), current);
+                            // int desire = Kontrol.desireability(entry.getValue(), current);
 
                             // Create a TreeNode as a child of the last TreeNode
                             TreeNode n = new TreeNode(newSchedule, calc + lastTreeNode.getPenaltyValueOfTreeNode(),
-                                    lastTreeNode, desire); // Note we need to calculate the total penatly differently
+                                    lastTreeNode, 0); // Note we need to calculate the total penatly differently
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
+                            updatePotentialLab((LabSlot)MWLabMapToManipulate.get(entry.getKey()), current, n);
+                            n.incrementPotential(potentialLost);
 
                         }
                     }
@@ -294,13 +304,15 @@ public class Generator {
                             // Replace the TuTh in the newSchedule with the manipulated one
                             newSchedule.setTuThLab(TuThLabMapToManipulate);
 
-                            int desire = Kontrol.desireability(entry.getValue(), current);
+                            // int desire = Kontrol.desireability(entry.getValue(), current);
 
                             // Create a TreeNode as a child of the last TreeNode
                             TreeNode n = new TreeNode(newSchedule, calc + lastTreeNode.getPenaltyValueOfTreeNode(),
-                                    lastTreeNode, desire); // Note we need to calculate the total penatly differently
+                                    lastTreeNode, 0); // Note we need to calculate the total penatly differently
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
+                            updatePotentialLab((LabSlot)TuThLabMapToManipulate.get(entry.getKey()), current, n);
+                            n.incrementPotential(potentialLost);
 
                         }
                     }
@@ -329,18 +341,21 @@ public class Generator {
                             // Add the course to the slot in the schedule
                             FLabMapToManipulate.get(entry.getKey()).addOccupant(current);
 
+
                             // Create a new Schedule to add
                             Schedule newSchedule = new Schedule(lastTreeNode.getSchedule());
 
                             // Replace the TuTh in the newSchedule with the manipulated one
                             newSchedule.setFLab(FLabMapToManipulate);
-                            int desire = Kontrol.desireability(entry.getValue(), current);
+                            // int desire = Kontrol.desireability(entry.getValue(), current);
 
                             // Create a TreeNode as a child of the last TreeNode
                             TreeNode n = new TreeNode(newSchedule, calc + lastTreeNode.getPenaltyValueOfTreeNode(),
-                                    lastTreeNode, desire); // Note we need to calculate the total penatly differently
+                                    lastTreeNode, 0); // Note we need to calculate the total penatly differently
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
+                            updatePotentialLab((LabSlot)FLabMapToManipulate.get(entry.getKey()), current, n);
+                            n.incrementPotential(potentialLost);
 
                         }
                     }
@@ -390,6 +405,19 @@ public class Generator {
         }
               
     }
+
+    private void updatePotentialLab(LabSlot labSlot, Unit current, TreeNode node) {
+        if(labSlot.getLabCount() == labSlot.getLabMin() ){
+            node.incrementPotential(courseMinPen);
+        }
+    }
+
+    private void updatePotentialCourse(CourseSlot courseSlot, Unit current, TreeNode node) {
+        if(courseSlot.getCourseCount() == courseSlot.getCourseMin() ){
+            node.incrementPotential(courseMinPen);
+        }
+    }
+    
 
     private HashMap<Integer, Slot> DeepCopyCourseSlotMap(HashMap<Integer, Slot> toCopy) {
         HashMap<Integer, Slot> toReturn = new HashMap<Integer, Slot>();

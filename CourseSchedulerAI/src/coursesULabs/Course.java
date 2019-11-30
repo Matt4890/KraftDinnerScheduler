@@ -68,4 +68,15 @@ public class Course extends Unit{
         super.id = c.id;
     }
 
+	public boolean isBrother(Course value) {
+        if(this.courseType.equals(value.courseType)){
+            if(this.courseNum == value.getCourseNum()){
+                if(this.lectureNum != value.getLectureNum()){
+                    return true;
+                }
+            }
+        }
+		return false;
+	}
+
 }
