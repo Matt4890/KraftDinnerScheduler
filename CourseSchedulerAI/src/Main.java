@@ -25,9 +25,16 @@ public class Main {
     filename = args[0];
     courseMinPen = Integer.parseInt(args[1]);
     pairsPen = Integer.parseInt(args[2]);
-    brothersPen = Integer.parseInt(args[3]);
+    brothersPen = Integer.parseInt(args[3]); 
 
     Parser parser = new Parser(filename);
+
+    int initialMinPenalty = courseMinPen * parser.getMinPenCount();
+    int initialPairsPenalty = pairsPen * parser.getPairPenCount();
+    int initialPreferencePenalty = parser.getPrefPen();
+
+    
+
     Schedule initialSchedule = parser.getSchedule();
     System.out.println("The Schedule:");
     System.out.println(initialSchedule.toString());
@@ -35,6 +42,9 @@ public class Main {
     HashMap<String, Lab> allLabs = parser.getLabMap();
     addConstraintsForSpecialClasses(allLabs, initialSchedule);
     int initialPenalty = parser.getInitialPenalty();
+
+    initialPenalty = initialPenalty + initialMinPenalty + initialPairsPenalty + initialPreferencePenalty;
+
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     System.out.println("Units Made");
 

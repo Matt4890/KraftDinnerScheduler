@@ -20,6 +20,20 @@ public class Parser {
     private HashMap<String, Lab>    labMap    = new HashMap<String, Lab>();
     private Schedule schedule; 
     private int initialPenalty; 
+    private int minPenCount;
+    private int pairPenCount;
+    private int prefPen;
+
+    public int getMinPenCount(){
+        return minPenCount;
+    }
+    public int getPairPenCount(){
+        return pairPenCount;
+    }
+    public int getPrefPen(){
+        return prefPen;
+    }
+
     
     public  Parser (String filename) {
 
@@ -86,11 +100,15 @@ public class Parser {
                 preferences_s = preferences_s.replaceAll(replaceStr + "(?!.*(?:TUT|LAB))", "=CS" + count + "=");
                 partialAssign_s = partialAssign_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "=CS" + count + "=");
                 count++;
+                if(cs.getCourseMin() > 0){
+                    minPenCount++;
+                }
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a CourseSlot!");
                 System.out.println("Exiting...");
                 System.exit(1);
             }
+            
         }
 
         // Parse lab slots
@@ -107,17 +125,22 @@ public class Parser {
                     Integer.parseInt(m.group(4)),
                     new HashMap<Unit, Integer>()
                 );
+
                 labSlots.add(ls);
                 String replaceStr = ls.toString();
                 unwanted_s = unwanted_s.replaceAll(replaceStr, "=LS" + count + "=");
                 preferences_s = preferences_s.replaceAll(replaceStr, "=LS" + count + "=");
                 partialAssign_s = partialAssign_s.replaceAll(replaceStr, "=LS" + count + "=");
                 count++;
+                if(ls.getLabMin() > 0){
+                    minPenCount++;
+                }
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a LabSlot!");
                 System.out.println("Exiting...");
                 System.exit(1);
             }
+
         }
 
         // Parse labs
@@ -162,6 +185,7 @@ public class Parser {
                 System.out.println("Exiting...");
                 System.exit(1);
             }
+            
         }
 
         // Parse courses
@@ -292,6 +316,7 @@ public class Parser {
                 // System.exit(1);
             } else {
                 u.addToPreferences(s, Integer.parseInt(line.split(",")[2]));
+                prefPen = prefPen + Integer.parseInt(line.split(",")[2]);
             }
         }
 
@@ -323,6 +348,7 @@ public class Parser {
             } else {
                 u1.addToPairs(u2);
                 u2.addToPairs(u1);
+                pairPenCount ++;
             }
         }
 
