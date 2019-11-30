@@ -32,24 +32,19 @@ public class Main {
     pairsPen = Integer.parseInt(args[3]); 
     brothersPen = Integer.parseInt(args[4]);
 
-    Parser parser = new Parser(filename, pairsPen, prefsPen, courseMinPen);
-    Kontrol.setPen_course_min(courseMinPen);
-    Kontrol.setPen_lab_min(courseMinPen);
-    Kontrol.setPen_not_paired(pairsPen);
-    Kontrol.setPen_section_diff(brothersPen);
+    Kontrol.setWeight_min_filled(courseMinPen);
+    Kontrol.setWeight_pair(pairsPen);
+    Kontrol.setWeight_pref(prefsPen);
+    Kontrol.setWeight_section_diff(brothersPen);
 
-    //Set the weights
-    //Hardcoded for now
-    Kontrol.setWeight_min_filled(1);
-    Kontrol.setWeight_pair(1);
-    Kontrol.setWeight_pref(1);
-    Kontrol.setWeight_section_diff(1);
 
-   
+    Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(), Kontrol.getWeight_min_filled());
+ 
 
-    int initialMinPenalty = courseMinPen * parser.getMinPenCount();
-    int initialPairsPenalty = pairsPen * parser.getPairPenCount();
-    int initialPreferencePenalty =  prefsPen * parser.getPrefPen();
+
+    int initialMinPenalty = parser.getminWeightCount();
+    int initialPairsPenalty =  parser.getpairWeightCount();
+    int initialPreferencePenalty =  parser.getprefWeight();
 
     
 
@@ -65,7 +60,7 @@ public class Main {
     int initialPenalty = parser.getInitialPenalty();
     System.out.println("The initial pen is: " + initialPenalty);
     initialPenalty = initialPenalty + initialMinPenalty + initialPairsPenalty + initialPreferencePenalty;
-    System.out.println("The initial pen is: " + initialPenalty);
+    System.out.println("LOOOK HERE!!!!!!!!!!!: " + initialPenalty);
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     System.out.println("Units Made");
 

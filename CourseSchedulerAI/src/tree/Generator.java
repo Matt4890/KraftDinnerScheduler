@@ -10,21 +10,21 @@ public class Generator {
     private Schedule starter;
     private int initialPenalty;
     private int bound;
-    private int courseMinPen;
-    private int pairsPen;
-    private int brothersPen;
+    private int weightMin;
+    private int weightPairs;
+    private int weightBrothersSectionDiff;
     private TreeNode startNode;
     private TreeNode bestSchedule;
 
-    public Generator(Schedule starter, int penalty, int i, int j, int k) {
+    public Generator(Schedule starter, int penalty, int weight_min, int weight_pairs, int wait_section_diff) {
         this.tree = new Tree();
         // this.tree.addRoot(new TreeNode(this.starter, this.initialPenalty));
         this.starter = starter;
         this.initialPenalty = penalty;
         this.bound = Integer.MAX_VALUE;
-        this.courseMinPen = i;
-        this.pairsPen = j;
-        this.brothersPen = k;
+        this.weightMin = weight_min;
+        this.weightPairs = weight_pairs;
+        this.weightBrothersSectionDiff = wait_section_diff;
 
     }
 
@@ -49,8 +49,7 @@ public class Generator {
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
-                            brothersPen);
+                    int calc = Kontrol.evalAssignment(entry.getValue(), current);
                     System.out.println("Penalty of Pairing: " + calc);
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                     // MANIPULATED TABLE
@@ -96,8 +95,7 @@ public class Generator {
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
-                            brothersPen);
+                    int calc = Kontrol.evalAssignment(entry.getValue(), current);
                     System.out.println("Penalty of Pairing: " + calc);
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                     // MANIPULATED TABLE
@@ -147,8 +145,7 @@ public class Generator {
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
-                            brothersPen);
+                    int calc = Kontrol.evalAssignment(entry.getValue(), current);
                     System.out.println("Penalty of Pairing: " + calc);
 
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
@@ -201,8 +198,7 @@ public class Generator {
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
-                            brothersPen);
+                    int calc = Kontrol.evalAssignment(entry.getValue(), current);
                     System.out.println("Penalty of Pairing: " + calc);
 
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
@@ -254,8 +250,7 @@ public class Generator {
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
-                    int calc = SoftConstraints.calculatePenalty(entry.getValue(), current, courseMinPen, pairsPen,
-                            brothersPen);
+                    int calc = Kontrol.evalAssignment(entry.getValue(), current);
                     System.out.println("Penalty of Pairing: " + calc);
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                     // MANIPULATED TABLE
@@ -353,13 +348,13 @@ public class Generator {
 
     private void updatePotentialLab(LabSlot labSlot, Unit current, TreeNode node) {
         if (labSlot.getLabCount() == labSlot.getLabMin()) {
-            node.incrementPotential(courseMinPen);
+            node.incrementPotential(weightMin);
         }
     }
 
     private void updatePotentialCourse(CourseSlot courseSlot, Unit current, TreeNode node) {
         if (courseSlot.getCourseCount() == courseSlot.getCourseMin()) {
-            node.incrementPotential(courseMinPen);
+            node.incrementPotential(weightMin);
         }
     }
 
@@ -399,6 +394,7 @@ public class Generator {
     // solution, and can be discarded.
     // Else, store Ni on the queue.
     public void branchAndBoundSkeleton(ArrayList<Unit> unitsToBeScheduled) {
+        System.out.println("RUNNING BNB");
         Stack<TreeNode> allStackNodes = new Stack<TreeNode>();
         allStackNodes.add(this.startNode);
         System.out.println(allStackNodes);
@@ -415,8 +411,9 @@ public class Generator {
 
             } else {
                 // Check to see if doesn't have children made
+                Unit scheduleMe = unitsToBeScheduled.remove(0);
                 if (currentNode.getChildren().size() == 0) {
-                    generateChildren(unitsToBeScheduled.remove(0), currentNode);
+                    generateChildren(scheduleMe, currentNode);
 
                 }
                 // Go through all of the children and add them to the stack if the eval of the

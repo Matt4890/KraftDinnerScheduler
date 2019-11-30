@@ -1,16 +1,16 @@
-added 5 for slotmin for MO,8:00
-added 5 for slotmin for MO,9:00
-added 5 for slotmin for TU,9:30
-added 5 for slotmin for MO,8:00
-added 5 for slotmin for TU,10:00
-added 5 for slotmin for FR,10:00
-added pen for pref of 2 for CPSC433LEC01
-added pen for pref of 2 for CPSC433LEC01TUT01
-added pen for pref of 2 for CPSC433LEC02
-added pen for pref of 2 for CPSC433LEC01TUT01
-added pen for pref of 2 for CPSC433LEC02TUT02
-added pen for pref of 2 for CPSC433LEC02TUT02
-added pen for pair of 3 for SENG311LEC01
+added 1 for slotmin for MO,8:00
+added 1 for slotmin for MO,9:00
+added 1 for slotmin for TU,9:30
+added 1 for slotmin for MO,8:00
+added 1 for slotmin for TU,10:00
+added 1 for slotmin for FR,10:00
+added pen for pref of 1 for CPSC433LEC01
+added pen for pref of 1 for CPSC433LEC01TUT01
+added pen for pref of 1 for CPSC433LEC02
+added pen for pref of 1 for CPSC433LEC01TUT01
+added pen for pref of 1 for CPSC433LEC02TUT02
+added pen for pref of 1 for CPSC433LEC02TUT02
+added pen for pair of 1 for SENG311LEC01
 Done!
 The Schedule:
 Schedule: 
@@ -28,21 +28,21 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 The size of courses is 3
 the size of brothers is 1
 I hate this
-The pen added is 3 for brothers pen for null and null
+The pen added is 1 for brothers pen for null and null
 the size of brothers is 1
 I hate this
 the size of brothers is 0
-The initial pen is: 0
-The initial pen is: 32
+The initial pen is: -1
+LOOOK HERE!!!!!!!!!!!: 6
 [CPSC433LEC01, CPSC433LEC02, CPSC567LEC01, CPSC567TUT01, CPSC433LEC01TUT01, CPSC433LEC02TUT02]
 [CPSC567LEC01, CPSC433LEC01, CPSC433LEC02, CPSC567TUT01, CPSC433LEC01TUT01, CPSC433LEC02TUT02]
 Units Made
-INTIAL POTENTIAL: -70.5
-AFTER INCREMENT -100.5
-the starting potential of last tree node is -100.5
+INTIAL POTENTIAL: -35.5
+AFTER INCREMENT -41.5
+the starting potential of last tree node is -41.5
 Assignment CPSC567LEC01 and Slot MO,8:00 hard constraint check is: true
-Penalty of Pairing: -7
-Schedule in Node: TreeNode: Penalty: 25 Schedule: 
+Penalty of Pairing: -2
+Schedule in Node: TreeNode: Penalty: 4 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot:  
@@ -54,12 +54,12 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 
-1.5 <------------------ potential
-the starting potential of PARENT tree node is -100.5
-the starting potential of child tree node is -94.0
+0.5 <------------------ potential
+the starting potential of PARENT tree node is -41.5
+the starting potential of child tree node is -40.0
 Assignment CPSC567LEC01 and Slot MO,9:00 hard constraint check is: true
 Penalty of Pairing: 0
-Schedule in Node: TreeNode: Penalty: 32 Schedule: 
+Schedule in Node: TreeNode: Penalty: 6 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
@@ -71,12 +71,12 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 
-1.5 <------------------ potential
-the starting potential of PARENT tree node is -100.5
-the starting potential of child tree node is -99.0
+0.5 <------------------ potential
+the starting potential of PARENT tree node is -41.5
+the starting potential of child tree node is -41.0
 Assignment CPSC567LEC01 and Slot TU,9:30 hard constraint check is: true
-Penalty of Pairing: -5
-Schedule in Node: TreeNode: Penalty: 27 Schedule: 
+Penalty of Pairing: -1
+Schedule in Node: TreeNode: Penalty: 5 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01  
 MO,9:00 Courses Assigned To Slot:  
@@ -88,15 +88,16 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 
-1.5 <------------------ potential
-the starting potential of PARENT tree node is -100.5
-the starting potential of child tree node is -94.0
+0.5 <------------------ potential
+the starting potential of PARENT tree node is -41.5
+the starting potential of child tree node is -40.0
 3
 Problem is unwanted
 Assignment CPSC433LEC01 and Slot MO,8:00 hard constraint check is: false
 Assignment CPSC433LEC01 and Slot MO,9:00 hard constraint check is: true
+The slot: MO,9:00 compared with TU,9:30 checked to be the same is:false
 Penalty of Pairing: 0
-Schedule in Node: TreeNode: Penalty: 25 Schedule: 
+Schedule in Node: TreeNode: Penalty: 4 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
@@ -108,12 +109,13 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 
-18.5 <------------------ potential
-the starting potential of PARENT tree node is -94.0
-the starting potential of child tree node is -75.5
+9.5 <------------------ potential
+the starting potential of PARENT tree node is -40.0
+the starting potential of child tree node is -30.5
 Assignment CPSC433LEC01 and Slot TU,9:30 hard constraint check is: true
-Penalty of Pairing: -15
-Schedule in Node: TreeNode: Penalty: 10 Schedule: 
+The slot: TU,9:30 compared with TU,9:30 checked to be the same is:true
+Penalty of Pairing: -11
+Schedule in Node: TreeNode: Penalty: -7 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot:  
@@ -125,15 +127,16 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 
-18.5 <------------------ potential
-the starting potential of PARENT tree node is -94.0
-the starting potential of child tree node is -70.5
+9.5 <------------------ potential
+the starting potential of PARENT tree node is -40.0
+the starting potential of child tree node is -29.5
 2
 Problem is Notcompatible
 Assignment CPSC433LEC02 and Slot MO,8:00 hard constraint check is: false
 Assignment CPSC433LEC02 and Slot MO,9:00 hard constraint check is: true
-Penalty of Pairing: -2
-Schedule in Node: TreeNode: Penalty: 23 Schedule: 
+The slot: MO,9:00 compared with TU,9:30 checked to be the same is:false
+Penalty of Pairing: 0
+Schedule in Node: TreeNode: Penalty: 4 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
@@ -145,12 +148,13 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 
-18.5 <------------------ potential
-the starting potential of PARENT tree node is -75.5
-the starting potential of child tree node is -52.0
+9.5 <------------------ potential
+the starting potential of PARENT tree node is -30.5
+the starting potential of child tree node is -20.0
 Assignment CPSC433LEC02 and Slot TU,9:30 hard constraint check is: true
-Penalty of Pairing: -15
-Schedule in Node: TreeNode: Penalty: 10 Schedule: 
+The slot: TU,9:30 compared with TU,9:30 checked to be the same is:true
+Penalty of Pairing: -11
+Schedule in Node: TreeNode: Penalty: -7 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
@@ -162,15 +166,15 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 
-18.5 <------------------ potential
-the starting potential of PARENT tree node is -75.5
-the starting potential of child tree node is -52.0
+9.5 <------------------ potential
+the starting potential of PARENT tree node is -30.5
+the starting potential of child tree node is -20.0
 2
 Problem is conflicting lab
 Assignment CPSC567TUT01 and Slot MO,8:00 hard constraint check is: false
 Assignment CPSC567TUT01 and Slot TU,10:00 hard constraint check is: true
-Penalty of Pairing: -5
-Schedule in Node: TreeNode: Penalty: 18 Schedule: 
+Penalty of Pairing: -1
+Schedule in Node: TreeNode: Penalty: 3 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
@@ -182,13 +186,13 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 
-5.0 <------------------ potential of n
+1.0 <------------------ potential of n
 -0.0 <------------------ potential
-the starting potential of PARENT tree node is -52.0
-the starting potential of child tree node is -47.0
+the starting potential of PARENT tree node is -20.0
+the starting potential of child tree node is -19.0
 Assignment CPSC567TUT01 and Slot FR,10:00 hard constraint check is: true
 Penalty of Pairing: 0
-Schedule in Node: TreeNode: Penalty: 23 Schedule: 
+Schedule in Node: TreeNode: Penalty: 4 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
@@ -202,12 +206,13 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01
 
 0.0 <------------------ potential of n
 -0.0 <------------------ potential
-the starting potential of PARENT tree node is -52.0
-the starting potential of child tree node is -52.0
+the starting potential of PARENT tree node is -20.0
+the starting potential of child tree node is -20.0
 2
 Assignment CPSC433LEC01TUT01 and Slot MO,8:00 hard constraint check is: true
+The slot: MO,8:00 compared with MO,8:00 checked to be the same is:true
 Penalty of Pairing: -3
-Schedule in Node: TreeNode: Penalty: 15 Schedule: 
+Schedule in Node: TreeNode: Penalty: 0 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
@@ -219,12 +224,14 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 
-16.0 <------------------ potential
-the starting potential of PARENT tree node is -47.0
-the starting potential of child tree node is -31.0
+8.0 <------------------ potential
+the starting potential of PARENT tree node is -19.0
+the starting potential of child tree node is -11.0
 Assignment CPSC433LEC01TUT01 and Slot TU,10:00 hard constraint check is: true
+The slot: TU,10:00 compared with MO,8:00 checked to be the same is:false
+The slot: TU,10:00 compared with TU,10:00 checked to be the same is:true
 Penalty of Pairing: -5
-Schedule in Node: TreeNode: Penalty: 13 Schedule: 
+Schedule in Node: TreeNode: Penalty: -2 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
@@ -237,12 +244,14 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 0.0 <------------------ potential of n
-16.0 <------------------ potential
-the starting potential of PARENT tree node is -47.0
-the starting potential of child tree node is -31.0
+8.0 <------------------ potential
+the starting potential of PARENT tree node is -19.0
+the starting potential of child tree node is -11.0
 Assignment CPSC433LEC01TUT01 and Slot FR,10:00 hard constraint check is: true
+The slot: FR,10:00 compared with MO,8:00 checked to be the same is:false
+The slot: FR,10:00 compared with TU,10:00 checked to be the same is:false
 Penalty of Pairing: 0
-Schedule in Node: TreeNode: Penalty: 18 Schedule: 
+Schedule in Node: TreeNode: Penalty: 3 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
@@ -255,15 +264,16 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC433LEC01TUT01
 
 
 0.0 <------------------ potential of n
-16.0 <------------------ potential
-the starting potential of PARENT tree node is -47.0
-the starting potential of child tree node is -31.0
+8.0 <------------------ potential
+the starting potential of PARENT tree node is -19.0
+the starting potential of child tree node is -11.0
 3
 Problem is Notcompatible
 Assignment CPSC433LEC02TUT02 and Slot MO,8:00 hard constraint check is: false
 Assignment CPSC433LEC02TUT02 and Slot TU,10:00 hard constraint check is: true
+The slot: TU,10:00 compared with MO,8:00 checked to be the same is:false
 Penalty of Pairing: 0
-Schedule in Node: TreeNode: Penalty: 15 Schedule: 
+Schedule in Node: TreeNode: Penalty: 0 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
@@ -276,12 +286,13 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 0.0 <------------------ potential of n
-16.0 <------------------ potential
-the starting potential of PARENT tree node is -31.0
-the starting potential of child tree node is -15.0
+8.0 <------------------ potential
+the starting potential of PARENT tree node is -11.0
+the starting potential of child tree node is -3.0
 Assignment CPSC433LEC02TUT02 and Slot FR,10:00 hard constraint check is: true
+The slot: FR,10:00 compared with MO,8:00 checked to be the same is:false
 Penalty of Pairing: 0
-Schedule in Node: TreeNode: Penalty: 15 Schedule: 
+Schedule in Node: TreeNode: Penalty: 0 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
 MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
@@ -294,12 +305,13 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC433LEC02TUT02
 
 
 0.0 <------------------ potential of n
-16.0 <------------------ potential
-the starting potential of PARENT tree node is -31.0
-the starting potential of child tree node is -15.0
+8.0 <------------------ potential
+the starting potential of PARENT tree node is -11.0
+the starting potential of child tree node is -3.0
 2
-Bound Generated: 15
-[TreeNode: Penalty: 32 Schedule: 
+Bound Generated: 0
+RUNNING BNB
+[TreeNode: Penalty: 6 Schedule: 
 MWF Lecture Slots: 
 MO,8:00 Courses Assigned To Slot: SENG311LEC01  
 MO,9:00 Courses Assigned To Slot:  
@@ -312,64 +324,19 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 ]
 While looooop ran
-The value we get is: 25-94.0
-The value we get is: 32-99.0
-The value we get is: 27-94.0
-While looooop ran
-Assignment CPSC567LEC01 and Slot MO,8:00 hard constraint check is: true
-Penalty of Pairing: -7
-Schedule in Node: TreeNode: Penalty: 20 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-
-1.5 <------------------ potential
-the starting potential of PARENT tree node is -94.0
-the starting potential of child tree node is -87.5
-Assignment CPSC567LEC01 and Slot MO,9:00 hard constraint check is: true
-Penalty of Pairing: 0
-Schedule in Node: TreeNode: Penalty: 27 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-
-1.5 <------------------ potential
-the starting potential of PARENT tree node is -94.0
-the starting potential of child tree node is -92.5
-Problem is 500 together 
-Assignment CPSC567LEC01 and Slot TU,9:30 hard constraint check is: false
-The value we get is: 20-87.5
-The value we get is: 27-92.5
+The value we get is: 4-40.0
+The value we get is: 6-41.0
+The value we get is: 5-40.0
 While looooop ran
 Problem is unwanted
 Assignment CPSC433LEC01 and Slot MO,8:00 hard constraint check is: false
-Problem is Notcompatible
-Assignment CPSC433LEC01 and Slot MO,9:00 hard constraint check is: false
-Problem is Notcompatible
-Assignment CPSC433LEC01 and Slot TU,9:30 hard constraint check is: false
-While looooop ran
-Problem is Notcompatible
-Assignment CPSC433LEC02 and Slot MO,8:00 hard constraint check is: false
-Assignment CPSC433LEC02 and Slot MO,9:00 hard constraint check is: true
+Assignment CPSC433LEC01 and Slot MO,9:00 hard constraint check is: true
+The slot: MO,9:00 compared with TU,9:30 checked to be the same is:false
 Penalty of Pairing: 0
-Schedule in Node: TreeNode: Penalty: 20 Schedule: 
+Schedule in Node: TreeNode: Penalty: 5 Schedule: 
 MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC02  
+MO,8:00 Courses Assigned To Slot: SENG311LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
 TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
 MO,8:00 Labs Assigned To Slot:  
 TU,10:00 Labs Assigned To Slot:  
@@ -378,23 +345,79 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01
 
 
 
-18.5 <------------------ potential
-the starting potential of PARENT tree node is -87.5
-the starting potential of child tree node is -69.0
+9.5 <------------------ potential
+the starting potential of PARENT tree node is -40.0
+the starting potential of child tree node is -30.5
+Problem is Notcompatible
+Assignment CPSC433LEC01 and Slot TU,9:30 hard constraint check is: false
+The value we get is: 5-30.5
+While looooop ran
+Assignment CPSC433LEC02 and Slot MO,8:00 hard constraint check is: true
+The slot: MO,8:00 compared with TU,9:30 checked to be the same is:false
+Penalty of Pairing: -1
+Schedule in Node: TreeNode: Penalty: 4 Schedule: 
+MWF Lecture Slots: 
+MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
+MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
+TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
+MO,8:00 Labs Assigned To Slot:  
+TU,10:00 Labs Assigned To Slot:  
+FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
+
+
+
+
+9.5 <------------------ potential
+the starting potential of PARENT tree node is -30.5
+the starting potential of child tree node is -20.0
+Assignment CPSC433LEC02 and Slot MO,9:00 hard constraint check is: true
+The slot: MO,9:00 compared with TU,9:30 checked to be the same is:false
+Penalty of Pairing: 0
+Schedule in Node: TreeNode: Penalty: 5 Schedule: 
+MWF Lecture Slots: 
+MO,8:00 Courses Assigned To Slot: SENG311LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
+TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
+MO,8:00 Labs Assigned To Slot:  
+TU,10:00 Labs Assigned To Slot:  
+FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
+
+
+
+
+9.5 <------------------ potential
+the starting potential of PARENT tree node is -30.5
+the starting potential of child tree node is -20.0
 Problem is Notcompatible
 Assignment CPSC433LEC02 and Slot TU,9:30 hard constraint check is: false
-The value we get is: 20-69.0
+The value we get is: 4-20.0
+The value we get is: 5-20.0
 While looooop ran
-Problem is conflicting lab
-Assignment CPSC567TUT01 and Slot MO,8:00 hard constraint check is: false
+Assignment CPSC567TUT01 and Slot MO,8:00 hard constraint check is: true
+Penalty of Pairing: 0
+Schedule in Node: TreeNode: Penalty: 5 Schedule: 
+MWF Lecture Slots: 
+MO,8:00 Courses Assigned To Slot: SENG311LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
+TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
+MO,8:00 Labs Assigned To Slot: CPSC567TUT01  
+TU,10:00 Labs Assigned To Slot:  
+FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
+
+
+
+
+-0.0 <------------------ potential
+the starting potential of PARENT tree node is -20.0
+the starting potential of child tree node is -20.0
 Problem is conflicting lab
 Assignment CPSC567TUT01 and Slot TU,10:00 hard constraint check is: false
 Assignment CPSC567TUT01 and Slot FR,10:00 hard constraint check is: true
 Penalty of Pairing: 0
-Schedule in Node: TreeNode: Penalty: 20 Schedule: 
+Schedule in Node: TreeNode: Penalty: 5 Schedule: 
 MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC02  
+MO,8:00 Courses Assigned To Slot: SENG311LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
 TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
 MO,8:00 Labs Assigned To Slot:  
 TU,10:00 Labs Assigned To Slot:  
@@ -405,16 +428,18 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01
 
 0.0 <------------------ potential of n
 -0.0 <------------------ potential
-the starting potential of PARENT tree node is -69.0
-the starting potential of child tree node is -69.0
-The value we get is: 20-69.0
+the starting potential of PARENT tree node is -20.0
+the starting potential of child tree node is -20.0
+The value we get is: 5-20.0
+The value we get is: 5-20.0
 While looooop ran
 Assignment CPSC433LEC01TUT01 and Slot MO,8:00 hard constraint check is: true
+The slot: MO,8:00 compared with MO,8:00 checked to be the same is:true
 Penalty of Pairing: -3
-Schedule in Node: TreeNode: Penalty: 17 Schedule: 
+Schedule in Node: TreeNode: Penalty: 2 Schedule: 
 MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC02  
+MO,8:00 Courses Assigned To Slot: SENG311LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
 TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
 MO,8:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
 TU,10:00 Labs Assigned To Slot:  
@@ -423,15 +448,17 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01
 
 
 
-16.0 <------------------ potential
-the starting potential of PARENT tree node is -69.0
-the starting potential of child tree node is -53.0
+8.0 <------------------ potential
+the starting potential of PARENT tree node is -20.0
+the starting potential of child tree node is -12.0
 Assignment CPSC433LEC01TUT01 and Slot TU,10:00 hard constraint check is: true
-Penalty of Pairing: -10
-Schedule in Node: TreeNode: Penalty: 10 Schedule: 
+The slot: TU,10:00 compared with MO,8:00 checked to be the same is:false
+The slot: TU,10:00 compared with TU,10:00 checked to be the same is:true
+Penalty of Pairing: -6
+Schedule in Node: TreeNode: Penalty: -1 Schedule: 
 MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC02  
+MO,8:00 Courses Assigned To Slot: SENG311LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
 TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
 MO,8:00 Labs Assigned To Slot:  
 TU,10:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
@@ -440,20 +467,21 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01
 
 
 
-5.0 <------------------ potential of n
-16.0 <------------------ potential
-the starting potential of PARENT tree node is -69.0
-the starting potential of child tree node is -48.0
+1.0 <------------------ potential of n
+8.0 <------------------ potential
+the starting potential of PARENT tree node is -20.0
+the starting potential of child tree node is -11.0
 Assignment CPSC433LEC01TUT01 and Slot FR,10:00 hard constraint check is: false
-The value we get is: 17-53.0
-The value we get is: 10-48.0
+The value we get is: 2-12.0
+The value we get is: -1-11.0
 While looooop ran
 Assignment CPSC433LEC02TUT02 and Slot MO,8:00 hard constraint check is: true
+The slot: MO,8:00 compared with MO,8:00 checked to be the same is:true
 Penalty of Pairing: -7
-Schedule in Node: TreeNode: Penalty: 3 Schedule: 
+Schedule in Node: TreeNode: Penalty: -8 Schedule: 
 MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC02  
+MO,8:00 Courses Assigned To Slot: SENG311LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
 TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
 MO,8:00 Labs Assigned To Slot: CPSC433LEC02TUT02  
 TU,10:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
@@ -462,23 +490,25 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01
 
 
 
-16.0 <------------------ potential
-the starting potential of PARENT tree node is -48.0
-the starting potential of child tree node is -32.0
+8.0 <------------------ potential
+the starting potential of PARENT tree node is -11.0
+the starting potential of child tree node is -3.0
 Problem is Notcompatible
 Assignment CPSC433LEC02TUT02 and Slot TU,10:00 hard constraint check is: false
 Assignment CPSC433LEC02TUT02 and Slot FR,10:00 hard constraint check is: false
-The value we get is: 3-32.0
+The value we get is: -8-3.0
+While looooop ran
+While looooop ran
 While looooop ran
 While looooop ran
 While looooop ran
 While looooop ran
 We are out of things to add...
 The Best:
-TreeNode: Penalty: 3 Schedule: 
+TreeNode: Penalty: -8 Schedule: 
 MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC02  
+MO,8:00 Courses Assigned To Slot: SENG311LEC01  
+MO,9:00 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
 TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
 MO,8:00 Labs Assigned To Slot: CPSC433LEC02TUT02  
 TU,10:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
@@ -487,5 +517,5 @@ FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01
 
 
 
-3
+-8
 Generator Obj Created

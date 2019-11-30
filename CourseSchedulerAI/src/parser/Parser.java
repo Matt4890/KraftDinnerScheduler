@@ -21,30 +21,30 @@ public class Parser {
     private HashMap<String, Lab>    labMap    = new HashMap<String, Lab>();
     private Schedule schedule; 
     private int initialPenalty; 
-    private int minPenCount;
-    private int pairPenCount;
-    private int prefPen;
-    private int pairPen;
-    private int minPen;
-    private int prefpen2;
+    private int minWeightCount;
+    private int pairWeightCount;
+    private int prefWeight;
+    private int pairWeight;
+    private int minWeight;
+    private int prefWeight2;
     
 
-    public int getMinPenCount(){
-        return minPenCount;
+    public int getminWeightCount(){
+        return minWeightCount;
     }
-    public int getPairPenCount(){
-        return pairPenCount;
+    public int getpairWeightCount(){
+        return pairWeightCount;
     }
-    public int getPrefPen(){
-        return prefPen;
+    public int getprefWeight(){
+        return prefWeight;
     }
 
     
-    public  Parser (String filename, int prefPen, int pairPen, int minPen) {
+    public  Parser (String filename, int prefWeight, int pairWeight, int minWeight) {
 
-        this.prefpen2 = prefPen;
-        this.pairPen = pairPen;
-        this.minPen = minPen;
+        this.prefWeight2 = prefWeight;
+        this.pairWeight = pairWeight;
+        this.minWeight = minWeight;
         // Setup file params
         // String filename = "./inputs/shortExample.txt";
         ArrayList<String> fileLines = new ArrayList<String>();
@@ -109,9 +109,9 @@ public class Parser {
                 partialAssign_s = partialAssign_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "=CS" + count + "=");
                 count++;
                 if(cs.getCourseMin() > 0){
-                    minPenCount++;
-                    cs.incrementPotential(-minPen);
-                    System.out.println("added " + minPen + " for slotmin for " + cs.toString()  );
+                    minWeightCount++;
+                    cs.incrementPotential(-minWeight);
+                    System.out.println("added " + minWeight + " for slotmin for " + cs.toString()  );
                 }
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a CourseSlot!");
@@ -143,9 +143,9 @@ public class Parser {
                 partialAssign_s = partialAssign_s.replaceAll(replaceStr, "=LS" + count + "=");
                 count++;
                 if(ls.getLabMin() > 0){
-                    minPenCount++;
-                    ls.incrementPotential(-minPen);
-                    System.out.println("added " + minPen + " for slotmin for " + ls.toString()  );
+                    minWeightCount++;
+                    ls.incrementPotential(-minWeight);
+                    System.out.println("added " + minWeight + " for slotmin for " + ls.toString()  );
                 }
             } else {
                 System.out.println("Failed to parse string '" + slotStr + "' as a LabSlot!");
@@ -328,9 +328,9 @@ public class Parser {
                 // System.exit(1);
             } else {
                 u.addToPreferences(s, Integer.parseInt(line.split(",")[2]));
-                prefPen += Integer.parseInt(line.split(",")[2]); 
-                u.incrementPotential(- prefpen2  * Integer.parseInt(line.split(",")[2]) );
-                System.out.println("added pen for pref of " + prefpen2 + " for " + u.toString() );
+                prefWeight += Integer.parseInt(line.split(",")[2]) * prefWeight; 
+                u.incrementPotential(- prefWeight2  * Integer.parseInt(line.split(",")[2]) );
+                System.out.println("added pen for pref of " + prefWeight2 + " for " + u.toString() );
             }
         }
 
@@ -362,10 +362,10 @@ public class Parser {
             } else {
                 u1.addToPairs(u2);
                 u2.addToPairs(u1);
-                u1.incrementPotential(- (((double)pairPen) / 2));
-                u2.incrementPotential(- (((double)pairPen) / 2));
-                System.out.println("added pen for pair of " + pairPen + " for " + u1.toString() );
-                pairPenCount ++;
+                u1.incrementPotential(- (((double)pairWeight) / 2));
+                u2.incrementPotential(- (((double)pairWeight) / 2));
+                System.out.println("added pen for pair of " + pairWeight + " for " + u1.toString() );
+                pairWeightCount ++;
             }
         }
 

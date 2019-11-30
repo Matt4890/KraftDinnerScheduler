@@ -9,38 +9,38 @@ import java.util.Map;
 import coursesULabs.*;
 
 public class SoftConstraints {
-  public static int calculatePenalty(Slot s, Unit u, int pen_course_min, int pen_not_paired, int pen_sections) {
+  public static int calculatePenalty(Slot s, Unit u) {
 
     int total = 0;
     if (s instanceof CourseSlot) {
-      total += SoftConstraints.checkCourseMin((CourseSlot) s, pen_course_min);
+      total += SoftConstraints.checkCourseMin((CourseSlot) s);
       total += SoftConstraints.preferenceEval(s,u);
-      total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, pen_not_paired);
-      total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, pen_sections);
+      total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s);
+      total += SoftConstraints.checkSections((Course) u, (CourseSlot) s);
     } else {
-      total += SoftConstraints.checkLabMin((LabSlot) s, pen_course_min);
+      total += SoftConstraints.checkLabMin((LabSlot) s);
       total += SoftConstraints.preferenceEval(s,u);
-      total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, pen_not_paired);
+      total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s);
 
     }
     return total;
 
   }
 
-  public static int checkCourseMin(CourseSlot s, int pen_course_min) {
+  public static int checkCourseMin(CourseSlot s) {
     //decrement if the course min is met 
     if (s.getCourseMin() == s.getCourseCount()+1) {
-      return -pen_course_min;
+      return -1;
     }
     return 0;
   }
 
-  public static int checkLabMin(LabSlot s, int pen_lab_min) {
+  public static int checkLabMin(LabSlot s) {
     //int labMin = s.getLabMin();
     //int labCount = s.getLabCount();
 
     if (s.getLabMin() == s.getLabCount()+1) {
-      return -pen_lab_min;
+      return -1;
     }
     return 0;
   }
@@ -51,11 +51,15 @@ public class SoftConstraints {
 
     int total = 0;
     for(Map.Entry<Slot, Integer> entry : pref.entrySet()){
+      System.out.println("The slot: " + slot.toString() + " compared with " + entry.getKey().toString() + " checked to be the same is:" + entry.getKey().isSameSlot(slot));
       if(entry.getKey().isSameSlot(slot)){
+
         total = total - entry.getValue();
         break;
       }
     }
+    //WHERE DO WE EVER ADD THE PREFERENCE IF ITS NOT THERE???
+
     return total;
     /*
     int total = 0;
@@ -71,7 +75,7 @@ public class SoftConstraints {
     */
   }
 
-  public static int notPairedCourse(Course b, CourseSlot s, int not_paired) {
+  public static int notPairedCourse(Course b, CourseSlot s) {
     ArrayList<Unit> pairs = b.getPairs();
 
     if(pairs.size() == 0){
@@ -91,14 +95,14 @@ public class SoftConstraints {
       }
     }   
     if (matched) {
-      return -not_paired;
+      return -1;
     } else {
-      return 0;
+      return 0; // Shouldn't this be adding the penalty??
     }
     
   }
 
-  public static int notPairedLab(Lab b, LabSlot s, int not_paired) {
+  public static int notPairedLab(Lab b, LabSlot s) {
     ArrayList<Unit> pairs = b.getPairs();
 
     if(pairs.size() == 0){
@@ -118,14 +122,14 @@ public class SoftConstraints {
       }
     }   
     if (matched) {
-      return -not_paired;
+      return -1;
     } else {
       return 0;
     }
     
   }
   
-  public static int checkSections(Course course, CourseSlot s, int pen){
+  public static int checkSections(Course course, CourseSlot s){
     int curr_pen = 0;
     ArrayList<Course> lookup = s.getAssignedCourses();
 
@@ -135,7 +139,7 @@ public class SoftConstraints {
       String lookupType = lookup.get(i).getCourseType();
       String courseType = course.getCourseType();
       if(lookupNum == courseNum && lookupType.equals(courseType)){
-        curr_pen = curr_pen + pen;
+        curr_pen = curr_pen + 1;
       }
     }
     return curr_pen;

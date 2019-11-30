@@ -5,15 +5,12 @@ import coursesULabs.*;
 import Constraints.*;
 
 public class Kontrol {
-    private static int weight_min_filled = 1;
-    private static int weight_pref = 1 ;
+    private static int weight_min_filled;
+    private static int weight_pref;
     private static int weight_pair;
     private static int weight_section_diff;
 
-    private static int pen_course_min = 0;
-    private static int pen_lab_min = 0;
-    private static int pen_not_paired = 0;
-    private static int pen_section_diff = 0;
+
 
     public static int evalAssignment(Slot s, Unit u) {
         // Take the value of the soft constraint functions of an assignment
@@ -21,15 +18,15 @@ public class Kontrol {
         int total = 0;
 
         if (s instanceof CourseSlot) {
-            total += SoftConstraints.checkCourseMin((CourseSlot) s, pen_course_min) * weight_min_filled;
+            total += SoftConstraints.checkCourseMin((CourseSlot) s) * weight_min_filled;
             total += SoftConstraints.preferenceEval(s,u) * weight_pref;
-            total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, pen_not_paired) * weight_pair;
-            total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, pen_section_diff);
+            total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s) * weight_pair;
+            total += SoftConstraints.checkSections((Course) u, (CourseSlot) s) * weight_section_diff;
             
         } else {
-            total += SoftConstraints.checkLabMin((LabSlot) s, pen_lab_min) * weight_min_filled;
+            total += SoftConstraints.checkLabMin((LabSlot) s) * weight_min_filled;
             total += SoftConstraints.preferenceEval(s,u) * weight_pref;
-            total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, pen_not_paired) * weight_pair;
+            total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s) * weight_pair;
         }
         return total;
     }
@@ -95,37 +92,6 @@ public class Kontrol {
         Kontrol.weight_section_diff = weight_section_diff;
     }
 
-    public static int getPen_course_min() {
-        return pen_course_min;
-    }
-
-    public static void setPen_course_min(int pen_course_min) {
-        Kontrol.pen_course_min = pen_course_min;
-    }
-
-    public static int getPen_lab_min() {
-        return pen_lab_min;
-    }
-
-    public static void setPen_lab_min(int pen_lab_min) {
-        Kontrol.pen_lab_min = pen_lab_min;
-    }
-
-    public static int getPen_not_paired() {
-        return pen_not_paired;
-    }
-
-    public static void setPen_not_paired(int pen_not_paired) {
-        Kontrol.pen_not_paired = pen_not_paired;
-    }
-
-    public static int getPen_section_diff() {
-        return pen_section_diff;
-    }
-
-    public static void setPen_section_diff(int pen_section_diff) {
-        Kontrol.pen_section_diff = pen_section_diff;
-    }
 
   
 
