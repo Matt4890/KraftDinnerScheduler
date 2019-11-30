@@ -29,7 +29,8 @@ public class Generator {
     }
 
     private void generateChildren(Unit current, TreeNode parent) {
-        double potentialLost = current.getPotential();
+        double potentialLost = -current.getPotential();
+        //System.out.println(current.getPotential() + " <------------- potential");
 
         // Run through each possible course slot pair and create children
         if (current instanceof Course) {
@@ -77,11 +78,12 @@ public class Generator {
                     System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialCourse((CourseSlot) MWFMapToManipulate.get(entry.getKey()), current, n);
-                    n.incrementPotential(potentialLost);
-
+                    System.out.println(potentialLost + " <------------------ potential");
+                    n.incrementPotential(potentialLost + parent.getPotential());
+                    System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
+                    System.out.println("the starting potential of child tree node is " + n.getPotential());
                 }
             }
-
             for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getTuThLec().entrySet()) {
                 // Create a copy to manipulate
                 HashMap<Integer, Slot> TuThMapToManipulate = DeepCopyCourseSlotMap(parent.getSchedule().getTuThLec());
@@ -123,7 +125,10 @@ public class Generator {
                     System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialCourse((CourseSlot) TuThMapToManipulate.get(entry.getKey()), current, n);
-                    n.incrementPotential(potentialLost);
+                    System.out.println(potentialLost + " <------------------ potential");
+                    n.incrementPotential(potentialLost + parent.getPotential());
+                    System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
+                    System.out.println("the starting potential of child tree node is " + n.getPotential());
 
                 }
             }
@@ -173,7 +178,10 @@ public class Generator {
                     System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialLab((LabSlot) MWLabMapToManipulate.get(entry.getKey()), current, n);
-                    n.incrementPotential(potentialLost);
+                    System.out.println(potentialLost + " <------------------ potential");
+                    n.incrementPotential(potentialLost + parent.getPotential());
+                    System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
+                    System.out.println("the starting potential of child tree node is " + n.getPotential());
 
                 }
             }
@@ -224,7 +232,11 @@ public class Generator {
                     System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialLab((LabSlot) TuThLabMapToManipulate.get(entry.getKey()), current, n);
-                    n.incrementPotential(potentialLost);
+                    System.out.println(n.getPotential() + " <------------------ potential of n");
+                    System.out.println(potentialLost + " <------------------ potential");
+                    n.incrementPotential(potentialLost + parent.getPotential());
+                    System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
+                    System.out.println("the starting potential of child tree node is " + n.getPotential());
 
                 }
             }
@@ -271,7 +283,11 @@ public class Generator {
                     System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialLab((LabSlot) FLabMapToManipulate.get(entry.getKey()), current, n);
-                    n.incrementPotential(potentialLost);
+                    System.out.println(n.getPotential() + " <------------------ potential of n");
+                    System.out.println(potentialLost + " <------------------ potential");
+                    n.incrementPotential(potentialLost + parent.getPotential());
+                    System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
+                    System.out.println("the starting potential of child tree node is " + n.getPotential());
 
                 }
             }
@@ -281,7 +297,9 @@ public class Generator {
     public void generateFBoundBIG(ArrayList<Unit> toBeAdded) {
         TreeNode parent = new TreeNode(this.starter, this.initialPenalty);
         parent.incrementPotential(Unit.calculatePotential(toBeAdded));
+        System.out.println("INTIAL POTENTIAL: "+ parent.getPotential());
         parent.incrementPotential(Slot.totalPotential);
+        System.out.println("AFTER INCREMENT "+ parent.getPotential());
         System.out.println("the starting potential of last tree node is " + parent.getPotential());
         this.startNode = parent;
 
@@ -383,7 +401,9 @@ public class Generator {
     public void branchAndBoundSkeleton(ArrayList<Unit> unitsToBeScheduled) {
         Stack<TreeNode> allStackNodes = new Stack<TreeNode>();
         allStackNodes.add(this.startNode);
+        System.out.println(allStackNodes);
         while (!allStackNodes.isEmpty()) {
+            System.out.println("While looooop ran");
 
             TreeNode currentNode = allStackNodes.pop();
 
@@ -401,7 +421,8 @@ public class Generator {
                 }
                 // Go through all of the children and add them to the stack if the eval of the
                 for (TreeNode node : currentNode.getChildren()) {
-                    if (node.getPenaltyValueOfTreeNode() + node.getPotential() < bound) {
+                    System.out.println("The value we get is: " + node.getPenaltyValueOfTreeNode() + node.getPotential());
+                    if (node.getPenaltyValueOfTreeNode()+node.getPotential() < bound) {
                         // Add it to the stack
                         allStackNodes.add(node);
                     }
@@ -410,6 +431,11 @@ public class Generator {
             }
 
         }
+        System.out.println("We are out of things to add...");
+        System.out.println("The Best:");
+        System.out.println(this.bestSchedule.toString());
+        System.out.println(this.bestSchedule.getPenaltyValueOfTreeNode());
+
 
     }
 

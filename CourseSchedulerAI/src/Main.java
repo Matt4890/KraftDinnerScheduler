@@ -71,6 +71,7 @@ public class Main {
 
     Generator search = new Generator(initialSchedule, initialPenalty, courseMinPen, pairsPen, brothersPen);
     search.generateFBoundBIG(unitsToProcess);
+    search.branchAndBoundSkeleton(unitsToProcess);
     System.out.println("Generator Obj Created");
 
     // Generator gen = new Generator();
