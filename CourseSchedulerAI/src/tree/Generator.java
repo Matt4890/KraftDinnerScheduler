@@ -397,10 +397,11 @@ public class Generator {
         System.out.println("RUNNING BNB");
         Stack<TreeNode> allStackNodes = new Stack<TreeNode>();
         allStackNodes.add(this.startNode);
+        
         System.out.println(allStackNodes);
         while (!allStackNodes.isEmpty()) {
             System.out.println("While looooop ran");
-
+            System.out.println(allStackNodes);
             TreeNode currentNode = allStackNodes.pop();
 
             if (unitsToBeScheduled.isEmpty()) { // TheScheduleInsideRepresents a Full Solution
@@ -419,7 +420,7 @@ public class Generator {
                 // Go through all of the children and add them to the stack if the eval of the
                 for (TreeNode node : currentNode.getChildren()) {
                     System.out.println("The value we get is: " + node.getPenaltyValueOfTreeNode() + node.getPotential());
-                    if (node.getPenaltyValueOfTreeNode()+node.getPotential() < bound) {
+                    if (node.getPenaltyValueOfTreeNode() < bound) {
                         // Add it to the stack
                         allStackNodes.add(node);
                     }

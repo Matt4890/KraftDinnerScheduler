@@ -13,6 +13,8 @@ public class Main {
   public static int pairsPen;
   public static int brothersPen;
   public static int prefsPen;
+  public static int total_num_of_units;
+
   public static void main(String[] args) throws FileNotFoundException{
     //Instantiating the File class
     
@@ -62,6 +64,7 @@ public class Main {
     initialPenalty = initialPenalty + initialMinPenalty + initialPairsPenalty + initialPreferencePenalty;
     System.out.println("LOOOK HERE!!!!!!!!!!!: " + initialPenalty);
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
+    total_num_of_units = unitsToProcess.size();
     System.out.println("Units Made");
 
     Generator search = new Generator(initialSchedule, initialPenalty, courseMinPen, pairsPen, brothersPen);
@@ -222,6 +225,10 @@ public class Main {
         }
       }
     }
+  }
+
+  public static int getNumOfUnits(){
+    return total_num_of_units;
   }
   
   
