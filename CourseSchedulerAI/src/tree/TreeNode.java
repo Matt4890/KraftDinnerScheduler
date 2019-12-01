@@ -10,6 +10,7 @@ public class TreeNode implements Comparable<TreeNode> {
     private Schedule schedule;
     private ArrayList<TreeNode> children; // This could be a heap so the one with the lowest pen value is always on top
     private PriorityQueue<TreeNode> orderedChildren = new PriorityQueue<TreeNode>();
+    private int depth;
 
 
     private int desirability;
@@ -17,6 +18,7 @@ public class TreeNode implements Comparable<TreeNode> {
     private boolean already_looked_at;
     private TreeNode best_bottom_tn;
     private double potential = 0;
+
 
     public TreeNode(Schedule schedule, int penaltyValue) {
 
@@ -73,6 +75,29 @@ public class TreeNode implements Comparable<TreeNode> {
         this.parent = parent;
         this.desirability = Integer.MAX_VALUE;
         this.still_considered = true;
+    }
+    public boolean isFullSchedule(int totalUnits){
+        int sum = 0;
+        //Go Through each of the hashmaps in the schedule and count the number of courses in each slot
+        
+        for (Map.Entry<Integer, Slot> entry : this.schedule.getMWFLec().entrySet()) {
+            sum += entry.getValue().getClassAssignment().size();
+        }
+        for (Map.Entry<Integer, Slot> entry : this.schedule.getTuThLec().entrySet()) {
+            sum += entry.getValue().getClassAssignment().size();
+        }
+        for (Map.Entry<Integer, Slot> entry : this.schedule.getMWLab().entrySet()) {
+            sum += entry.getValue().getClassAssignment().size();
+        }
+        for (Map.Entry<Integer, Slot> entry : this.schedule.getTuThLab().entrySet()) {
+            sum += entry.getValue().getClassAssignment().size();
+        }
+        for (Map.Entry<Integer, Slot> entry : this.schedule.getFLab().entrySet()) {
+            sum += entry.getValue().getClassAssignment().size();
+        }
+
+        return sum == totalUnits;
+        
     }
 
     public boolean getConsideration() {
@@ -158,6 +183,14 @@ public class TreeNode implements Comparable<TreeNode> {
 
     public void incrementPotential(double potential) {
         this.potential += potential;
+    }
+
+    public int getDepth() {
+        return depth;
+    }
+
+    public void setDepth(int depth) {
+        this.depth = depth;
     }
 
 }

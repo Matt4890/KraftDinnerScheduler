@@ -20,9 +20,9 @@ public class Main {
     
     File file = new File("output.txt");
     //Instantiating the PrintStream class
-    PrintStream stream = new PrintStream(file);
-    System.out.println("From now on "+file.getAbsolutePath()+" will be your console");
-    System.setOut(stream);
+    // PrintStream stream = new PrintStream(file);
+    // System.out.println("From now on "+file.getAbsolutePath()+" will be your console");
+    // System.setOut(stream);
     
     //Printing values to file
 
@@ -68,7 +68,7 @@ public class Main {
     System.out.println("Units Made");
 
     Generator search = new Generator(initialSchedule, initialPenalty, courseMinPen, pairsPen, brothersPen);
-    search.generateFBoundBIG(unitsToProcess);
+    //search.generateFBoundBIG(unitsToProcess);
     search.branchAndBoundSkeleton(unitsToProcess);
     System.out.println("Generator Obj Created");
 
