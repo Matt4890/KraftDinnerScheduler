@@ -469,6 +469,9 @@ public class Generator {
                 System.out.println(
                         "WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                 System.out.println("Bound is: " + currentNode.getPenaltyValueOfTreeNode());
+                System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                System.out.println(currentNode.toString());
+                System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
                 if (currentNode.getPenaltyValueOfTreeNode() < this.bound) {
                     System.out.println("So Bound got replaced");
                     this.bound = currentNode.getPenaltyValueOfTreeNode();
