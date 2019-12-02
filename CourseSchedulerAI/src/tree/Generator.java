@@ -44,8 +44,10 @@ public class Generator {
 
                 boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                         (CourseSlot) entry.getValue());
-                // System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
-                        // + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
+                // System.out.println("Assignment " + ((Course) current).toString() + " and Slot
+                // "
+                // + entry.getValue().toString() + " hard constraint check is: " +
+                // HardConstraintOk);
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
@@ -75,9 +77,10 @@ public class Generator {
                                                                                                                   // penatly
                                                                                                                   // differently
                     n.setDepth(parent.getDepth() + 1);
-                    if(n.getDepth() == allUnitsTotal -1){
-                        //Calculate the penalty for the remaining slots
-                        //Create a helper method in Generator to calculate all empty slot coursemin and preference s
+                    if (n.getDepth() == allUnitsTotal - 1) {
+                        // Calculate the penalty for the remaining slots
+                        // Create a helper method in Generator to calculate all empty slot coursemin and
+                        // preference s
                         n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
 
                     }
@@ -86,8 +89,10 @@ public class Generator {
                     updatePotentialCourse((CourseSlot) MWFMapToManipulate.get(entry.getKey()), current, n);
                     // System.out.println(potentialLost + " <------------------ potential");
                     n.incrementPotential(potentialLost + parent.getPotential());
-                    // System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
-                    // System.out.println("the starting potential of child tree node is " + n.getPotential());
+                    // System.out.println("the starting potential of PARENT tree node is " +
+                    // parent.getPotential());
+                    // System.out.println("the starting potential of child tree node is " +
+                    // n.getPotential());
                 }
             }
             for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getTuThLec().entrySet()) {
@@ -97,8 +102,10 @@ public class Generator {
 
                 boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                         (CourseSlot) entry.getValue());
-                // System.out.println("Assignment " + ((Course) current).toString() + " and Slot "
-                        // + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
+                // System.out.println("Assignment " + ((Course) current).toString() + " and Slot
+                // "
+                // + entry.getValue().toString() + " hard constraint check is: " +
+                // HardConstraintOk);
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
@@ -129,20 +136,23 @@ public class Generator {
                                                                                                                   // differently
 
                     n.setDepth(parent.getDepth() + 1);
-                    if(n.getDepth() == allUnitsTotal -1){
-                        //Calculate the penalty for the remaining slots
-                        //Create a helper method in Generator to calculate all empty slot coursemin and preference s
+                    if (n.getDepth() == allUnitsTotal - 1) {
+                        // Calculate the penalty for the remaining slots
+                        // Create a helper method in Generator to calculate all empty slot coursemin and
+                        // preference s
                         n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
 
                     }
-                    
+
                     // System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialCourse((CourseSlot) TuThMapToManipulate.get(entry.getKey()), current, n);
                     // System.out.println(potentialLost + " <------------------ potential");
                     n.incrementPotential(potentialLost + parent.getPotential());
-                    // System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
-                    // System.out.println("the starting potential of child tree node is " + n.getPotential());
+                    // System.out.println("the starting potential of PARENT tree node is " +
+                    // parent.getPotential());
+                    // System.out.println("the starting potential of child tree node is " +
+                    // n.getPotential());
 
                 }
             }
@@ -157,7 +167,8 @@ public class Generator {
                         parent.getSchedule().getMWLab(), parent.getSchedule().getTuThLab(),
                         parent.getSchedule().getFLab());
                 // System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
-                        // + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
+                // + entry.getValue().toString() + " hard constraint check is: " +
+                // HardConstraintOk);
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
@@ -189,19 +200,22 @@ public class Generator {
                                                                                                                   // penatly
                                                                                                                   // differently
                     n.setDepth(parent.getDepth() + 1);
-                    if(n.getDepth() == allUnitsTotal -1){
-                        //Calculate the penalty for the remaining slots
-                        //Create a helper method in Generator to calculate all empty slot coursemin and preference s
+                    if (n.getDepth() == allUnitsTotal - 1) {
+                        // Calculate the penalty for the remaining slots
+                        // Create a helper method in Generator to calculate all empty slot coursemin and
+                        // preference s
                         n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
 
                     }
-                    //System.out.println("Schedule in Node: " + n.toString());
+                    // System.out.println("Schedule in Node: " + n.toString());
                     parent.addChild(n);
                     updatePotentialLab((LabSlot) MWLabMapToManipulate.get(entry.getKey()), current, n);
-                    //System.out.println(potentialLost + " <------------------ potential");
+                    // System.out.println(potentialLost + " <------------------ potential");
                     n.incrementPotential(potentialLost + parent.getPotential());
-                   // System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
-                   // System.out.println("the starting potential of child tree node is " + n.getPotential());
+                    // System.out.println("the starting potential of PARENT tree node is " +
+                    // parent.getPotential());
+                    // System.out.println("the starting potential of child tree node is " +
+                    // n.getPotential());
 
                 }
             }
@@ -216,8 +230,9 @@ public class Generator {
                         parent.getSchedule().getMWLab(), parent.getSchedule().getTuThLab(),
                         parent.getSchedule().getFLab());
 
-                //System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
-                 //       + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
+                // System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
+                // + entry.getValue().toString() + " hard constraint check is: " +
+                // HardConstraintOk);
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
@@ -249,9 +264,10 @@ public class Generator {
                                                                                                                   // penatly
                                                                                                                   // differently
                     n.setDepth(parent.getDepth() + 1);
-                    if(n.getDepth() == allUnitsTotal -1){
-                        //Calculate the penalty for the remaining slots
-                        //Create a helper method in Generator to calculate all empty slot coursemin and preference s
+                    if (n.getDepth() == allUnitsTotal - 1) {
+                        // Calculate the penalty for the remaining slots
+                        // Create a helper method in Generator to calculate all empty slot coursemin and
+                        // preference s
                         n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
 
                     }
@@ -261,8 +277,10 @@ public class Generator {
                     // System.out.println(n.getPotential() + " <------------------ potential of n");
                     // System.out.println(potentialLost + " <------------------ potential");
                     n.incrementPotential(potentialLost + parent.getPotential());
-                    // System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
-                    // System.out.println("the starting potential of child tree node is " + n.getPotential());
+                    // System.out.println("the starting potential of PARENT tree node is " +
+                    // parent.getPotential());
+                    // System.out.println("the starting potential of child tree node is " +
+                    // n.getPotential());
 
                 }
             }
@@ -276,7 +294,8 @@ public class Generator {
                         parent.getSchedule().getMWLab(), parent.getSchedule().getTuThLab(),
                         parent.getSchedule().getFLab());
                 // System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
-                        // + entry.getValue().toString() + " hard constraint check is: " + HardConstraintOk);
+                // + entry.getValue().toString() + " hard constraint check is: " +
+                // HardConstraintOk);
                 if (HardConstraintOk) {
 
                     // Calculate the penalty of the course slot pairing
@@ -306,9 +325,10 @@ public class Generator {
                                                                                                                   // penatly
                                                                                                                   // differently
                     n.setDepth(parent.getDepth() + 1);
-                    if(n.getDepth() == allUnitsTotal -1){
-                        //Calculate the penalty for the remaining slots
-                        //Create a helper method in Generator to calculate all empty slot coursemin and preference s
+                    if (n.getDepth() == allUnitsTotal - 1) {
+                        // Calculate the penalty for the remaining slots
+                        // Create a helper method in Generator to calculate all empty slot coursemin and
+                        // preference s
                         n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
 
                     }
@@ -318,36 +338,41 @@ public class Generator {
                     // System.out.println(n.getPotential() + " <------------------ potential of n");
                     // System.out.println(potentialLost + " <------------------ potential");
                     n.incrementPotential(potentialLost + parent.getPotential());
-                    // System.out.println("the starting potential of PARENT tree node is " + parent.getPotential());
-                    // System.out.println("the starting potential of child tree node is " + n.getPotential());
+                    // System.out.println("the starting potential of PARENT tree node is " +
+                    // parent.getPotential());
+                    // System.out.println("the starting potential of child tree node is " +
+                    // n.getPotential());
 
                 }
             }
         }
     }
-    private int baseOfTreePenaltyCalculation(TreeNode baseNode){
+
+    private int baseOfTreePenaltyCalculation(TreeNode baseNode) {
+        System.out.println("RAN THE BASE OF TREE PENALTY CALC");
         Schedule toCheck = baseNode.getSchedule();
         int evalToAdd = 0;
-        calculatePenaltyForEmptySlotsCourses(toCheck.getMWFLec());
-        calculatePenaltyForEmptySlotsCourses(toCheck.getTuThLec());
-        calculatePenaltyForEmptySlotsLabs(toCheck.getMWLab());
-        calculatePenaltyForEmptySlotsLabs(toCheck.getTuThLab());
-        calculatePenaltyForEmptySlotsLabs(toCheck.getFLab());
+        evalToAdd += calculatePenaltyForEmptySlotsCourses(toCheck.getMWFLec());
+        evalToAdd += calculatePenaltyForEmptySlotsCourses(toCheck.getTuThLec());
+        evalToAdd += calculatePenaltyForEmptySlotsLabs(toCheck.getMWLab());
+        evalToAdd += calculatePenaltyForEmptySlotsLabs(toCheck.getTuThLab());
+        evalToAdd += calculatePenaltyForEmptySlotsLabs(toCheck.getFLab());
 
         return evalToAdd;
-        
+
     }
-    private int calculatePenaltyForEmptySlotsCourses(HashMap<Integer, Slot> checkMe){
+
+    private int calculatePenaltyForEmptySlotsCourses(HashMap<Integer, Slot> checkMe) {
         int evalToAdd = 0;
         for (Map.Entry<Integer, Slot> entry : checkMe.entrySet()) {
-            if (entry.getValue().getClassAssignment().size() == 0){
-                //CourseMin Check 
-                 if (((CourseSlot)entry.getValue()).getCourseMin() != 0){
+            if (entry.getValue().getClassAssignment().size() == 0) {
+                // CourseMin Check
+                if (((CourseSlot) entry.getValue()).getCourseMin() != 0) {
                     evalToAdd += (1 * Kontrol.getWeight_min_filled());
                 }
-                //Preferences
-                if(entry.getValue().getPreference().size() !=0){
-                    for (Map.Entry<Unit, Integer> entry1 : entry.getValue().getPreference().entrySet()){
+                // Preferences
+                if (entry.getValue().getPreference().size() != 0) {
+                    for (Map.Entry<Unit, Integer> entry1 : entry.getValue().getPreference().entrySet()) {
                         evalToAdd += entry1.getValue() * Kontrol.getWeight_pref();
                     }
                 }
@@ -355,17 +380,18 @@ public class Generator {
         }
         return evalToAdd;
     }
-    private int calculatePenaltyForEmptySlotsLabs(HashMap<Integer, Slot> checkMe){
+
+    private int calculatePenaltyForEmptySlotsLabs(HashMap<Integer, Slot> checkMe) {
         int evalToAdd = 0;
         for (Map.Entry<Integer, Slot> entry : checkMe.entrySet()) {
-            if (entry.getValue().getClassAssignment().size() == 0){
-                //CourseMin Check 
-                 if (((LabSlot)entry.getValue()).getLabMin() != 0){
+            if (entry.getValue().getClassAssignment().size() == 0) {
+                // CourseMin Check
+                if (((LabSlot) entry.getValue()).getLabMin() != 0) {
                     evalToAdd += (1 * Kontrol.getWeight_min_filled());
                 }
-                //Preferences
-                if(entry.getValue().getPreference().size() !=0){
-                    for (Map.Entry<Unit, Integer> entry1 : entry.getValue().getPreference().entrySet()){
+                // Preferences
+                if (entry.getValue().getPreference().size() != 0) {
+                    for (Map.Entry<Unit, Integer> entry1 : entry.getValue().getPreference().entrySet()) {
                         evalToAdd += entry1.getValue() * Kontrol.getWeight_pref();
                     }
                 }
@@ -438,7 +464,8 @@ public class Generator {
             System.out.println(allStackNodes);
             TreeNode currentNode = allStackNodes.pop();
 
-            if (currentNode.getDepth() == unitsToBeScheduled.size()-1) { // TheScheduleInsideRepresents a Full Solution
+            if (currentNode.getDepth() == unitsToBeScheduled.size() - 1) { // TheScheduleInsideRepresents a Full
+                                                                           // Solution
                 System.out.println(
                         "WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                 System.out.println("Bound is: " + currentNode.getPenaltyValueOfTreeNode());
@@ -453,20 +480,20 @@ public class Generator {
                 // Check to see if doesn't have children made
                 Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth());
                 if (currentNode.getChildren().size() == 0) {
-                    generateChildren(scheduleMe, currentNode,unitsToBeScheduled.size());
+                    generateChildren(scheduleMe, currentNode, unitsToBeScheduled.size());
                     depth++;
                 }
                 // Go through all of the children and add them to the stack if the eval of the
                 // We can change this to the priority queue and order the children by their
                 for (TreeNode node : currentNode.getChildren()) {
-                    System.out
-                            .println("The value we get is: " + node.getPenaltyValueOfTreeNode());
+                    System.out.println("The value we get is: " + node.getPenaltyValueOfTreeNode());
                     if (node.getPenaltyValueOfTreeNode() < bound) {
                         // Add it to the stack
                         allStackNodes.add(node);
                     } else {
-                        //Debug
-                        System.out.println("-------------------------It Broke the bound so I didn't add it --------------------------------");
+                        // Debug
+                        System.out.println(
+                                "-------------------------It Broke the bound so I didn't add it --------------------------------");
                     }
                 }
 
