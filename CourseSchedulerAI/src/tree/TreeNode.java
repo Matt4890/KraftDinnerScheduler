@@ -76,29 +76,6 @@ public class TreeNode implements Comparable<TreeNode> {
         this.desirability = Integer.MAX_VALUE;
         this.still_considered = true;
     }
-    public boolean isFullSchedule(int totalUnits){
-        int sum = 0;
-        //Go Through each of the hashmaps in the schedule and count the number of courses in each slot
-        
-        for (Map.Entry<Integer, Slot> entry : this.schedule.getMWFLec().entrySet()) {
-            sum += entry.getValue().getClassAssignment().size();
-        }
-        for (Map.Entry<Integer, Slot> entry : this.schedule.getTuThLec().entrySet()) {
-            sum += entry.getValue().getClassAssignment().size();
-        }
-        for (Map.Entry<Integer, Slot> entry : this.schedule.getMWLab().entrySet()) {
-            sum += entry.getValue().getClassAssignment().size();
-        }
-        for (Map.Entry<Integer, Slot> entry : this.schedule.getTuThLab().entrySet()) {
-            sum += entry.getValue().getClassAssignment().size();
-        }
-        for (Map.Entry<Integer, Slot> entry : this.schedule.getFLab().entrySet()) {
-            sum += entry.getValue().getClassAssignment().size();
-        }
-
-        return sum == totalUnits;
-        
-    }
 
     public boolean getConsideration() {
         return this.still_considered;
@@ -110,6 +87,9 @@ public class TreeNode implements Comparable<TreeNode> {
 
     public int getPenaltyValueOfTreeNode() {
         return this.penaltyValue;
+    }
+    public void addToPenaltyForBaseNode(int penaltyToAdd){
+        this.penaltyValue += penaltyToAdd;
     }
 
     public void addChild(TreeNode n) {

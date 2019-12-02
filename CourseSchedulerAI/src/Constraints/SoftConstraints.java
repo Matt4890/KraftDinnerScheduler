@@ -32,6 +32,9 @@ public class SoftConstraints {
     if (s.getCourseMin() == s.getCourseCount()+1) {
       return -1;
     }
+    if (s.getCourseMin() > s.getCourseCount()){
+      return 1;
+    }
     return 0;
   }
 
@@ -41,6 +44,9 @@ public class SoftConstraints {
 
     if (s.getLabMin() == s.getLabCount()+1) {
       return -1;
+    }
+    if (s.getLabMin() > s.getLabCount()){
+      return 1;
     }
     return 0;
   }
@@ -97,7 +103,7 @@ public class SoftConstraints {
     if (matched) {
       return -1;
     } else {
-      return 0; // Shouldn't this be adding the penalty??
+      return 1; // Shouldn't this be adding the penalty??
     }
     
   }
@@ -124,7 +130,7 @@ public class SoftConstraints {
     if (matched) {
       return -1;
     } else {
-      return 0;
+      return 1;
     }
     
   }

@@ -61,7 +61,7 @@ public class Main {
     addConstraintsForSpecialClasses(allLabs, initialSchedule);
     int initialPenalty = parser.getInitialPenalty();
     System.out.println("The initial pen is: " + initialPenalty);
-    initialPenalty = initialPenalty + initialMinPenalty + initialPairsPenalty + initialPreferencePenalty;
+    //initialPenalty = initialPenalty + initialMinPenalty + initialPairsPenalty + initialPreferencePenalty;
     System.out.println("LOOOK HERE!!!!!!!!!!!: " + initialPenalty);
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     total_num_of_units = unitsToProcess.size();
@@ -69,8 +69,9 @@ public class Main {
 
     Generator search = new Generator(initialSchedule, initialPenalty, courseMinPen, pairsPen, brothersPen);
     //search.generateFBoundBIG(unitsToProcess);
+
     search.branchAndBoundSkeleton(unitsToProcess);
-    System.out.println("Generator Obj Created");
+    System.out.println("Generator Obj Created!!!!!!!!");
 
     // Generator gen = new Generator();
     // gen.createFBound(parser.getMap());
