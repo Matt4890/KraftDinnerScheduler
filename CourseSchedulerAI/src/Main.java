@@ -37,43 +37,49 @@ public class Main {
     Kontrol.setWeight_pair(pairsPen);
     Kontrol.setWeight_pref(prefsPen);
     Kontrol.setWeight_section_diff(brothersPen);
-
+    TreeNode root = null;
     Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(),
         Kontrol.getWeight_min_filled());
     System.out.println(parser.getPartialAssignments());
-    Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
-        parser.getPartialAssignments().get(0).getUnit());
-    TreeNode root = new TreeNode(assign, 0);
-    System.out.println("Made Root without penalty");
-    System.out.println(root.toString());
-    root.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(0).getSlot(),
-        parser.getPartialAssignments().get(0).getUnit(), root));
+    if (parser.getPartialAssignments().size() != 0) {
+      Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
+          parser.getPartialAssignments().get(0).getUnit());
+      root = new TreeNode(assign, 0);
+      System.out.println("Made Root without penalty");
+      System.out.println(root.toString());
+      root.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(0).getSlot(),
+          parser.getPartialAssignments().get(0).getUnit(), root));
 
-    root.setDepth(0);
-    System.out.println("Root:");
-    System.out.println(root.toString());
-    TreeNode curr = root;
-    System.out.println("The size" + parser.getPartialAssignments().size());
-    int size = parser.getPartialAssignments().size();
-    for (int i = 1; i < size; i++) {
-      System.out.println("Iteration " + i);
-      TreeNode n = new TreeNode(
-          new Pair(parser.getPartialAssignments().get(i).getSlot(), parser.getPartialAssignments().get(i).getUnit()), 0,
-          curr);
-      n.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(i).getSlot(),
-          parser.getPartialAssignments().get(i).getUnit(), n.getParent()) + n.getParent().getPenaltyValueOfTreeNode());
-      n.setDepth(i);
-      n.setDepth(curr.getDepth() + 1);
-      curr.addChild(n);
-      curr = n;
-      System.out.println(curr.toString());
+      root.setDepth(0);
+      System.out.println("Root:");
+      System.out.println(root.toString());
+      TreeNode curr = root;
+      System.out.println("The size" + parser.getPartialAssignments().size());
+      int size = parser.getPartialAssignments().size();
+      for (int i = 1; i < size; i++) {
+        System.out.println("Iteration " + i);
+        TreeNode n = new TreeNode(
+            new Pair(parser.getPartialAssignments().get(i).getSlot(), parser.getPartialAssignments().get(i).getUnit()),
+            0, curr);
+        n.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(i).getSlot(),
+            parser.getPartialAssignments().get(i).getUnit(), n.getParent())
+            + n.getParent().getPenaltyValueOfTreeNode());
+        n.setDepth(i);
+        n.setDepth(curr.getDepth() + 1);
+        curr.addChild(n);
+        curr = n;
+        System.out.println(curr.toString());
 
+      }
+      System.out.println("For Loop ended woo");
     }
-    System.out.println("For Loop ended woo");
 
     int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
     int initialPairsPenalty = parser.getpairWeightCount() * Kontrol.getWeight_pair();
     int initialPreferencePenalty = parser.getprefWeight() * Kontrol.getWeight_pref();
+    if (root  == null){
+      root = new TreeNode(new Pair(null, null), initialMinPenalty);
+    }
 
     HashMap<String, Course> allCourses = parser.getCourseMap();
     System.out.println("All courses are");
@@ -92,8 +98,9 @@ public class Main {
     total_num_of_units = unitsToProcess.size();
     System.out.println("Units Made");
     Generator search = new Generator(root);
+    int numberNodesBefore = parser.getPartialAssignments().size() != 0 ?  parser.getPartialAssignments().size() : 1;
 
-    search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), parser.getPartialAssignments().size());
+    search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), numberNodesBefore);
     System.out.println("Generator Obj Created!!!!!!!!");
 
   }

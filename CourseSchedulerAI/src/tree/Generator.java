@@ -127,6 +127,7 @@ public class Generator {
     // Else, store Ni on the queue.
     public void branchAndBoundSkeleton(TreeNode starter, ArrayList<Unit> unitsToBeScheduled,
             ArrayList<Slot> slotToScheduleIn, int numPartialAssignments) {
+
         System.out.println("RUNNING BNB");
         Stack<TreeNode> allStackNodes = new Stack<TreeNode>();
         this.startNode = starter;
@@ -182,6 +183,7 @@ public class Generator {
                                                                                                     // the bottom - i.e.
                                                                                                     // the last thing is
                                                                                                     // being scheduled
+                        
                         TreeNode check = currentNode;
                         ArrayList<Slot> scheduledSlots = new ArrayList<Slot>();
                         while (check.getParent() != null) {
