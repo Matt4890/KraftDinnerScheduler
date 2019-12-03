@@ -18,7 +18,7 @@ public class SoftConstraints {
       total += SoftConstraints.checkCourseMin((CourseSlot) s, node);
       total += SoftConstraints.preferenceEval(s, u);
       total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node);
-      total += SoftConstraints.checkSections((Course) u, (CourseSlot) s);
+      total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, node);
     } else {
       total += SoftConstraints.checkLabMin((LabSlot) s, node);
       total += SoftConstraints.preferenceEval(s, u);
@@ -108,7 +108,7 @@ public class SoftConstraints {
       for (Slot overlap : s.getOverlaps()) {
         if (ancestorSlot == overlap) {
           if (b.getPairs().contains(current.getAssign().getUnit())) {
-            total--;
+            total = total - 2;
           }
         }
       }
@@ -137,7 +137,7 @@ public class SoftConstraints {
       for (Slot overlap : s.getOverlaps()) {
         if (ancestorSlot == overlap) {
           if (b.getPairs().contains(current.getAssign().getUnit())) {
-            total--;
+            total = total - 2;
           }
         }
       }
