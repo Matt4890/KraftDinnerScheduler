@@ -41,11 +41,11 @@ public class Generator {
             if (calc < currentBound) {
                 nodeToAdd.setPenalty(calc);
                 parent.addChild(nodeToAdd);
-                if (n.getDepth() == allUnitsTotal - 1) {
+                if (nodeToAdd.getDepth() == allUnitsTotal - 1) {
                     // Calculate the penalty for the remaining slots
                     // Create a helper method in Generator to calculate all empty slot coursemin and
                     // preference s
-                    n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
+                    nodeToAdd.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(nodeToAdd)); // THIS IS GOING TO HAVE TO CHANGE
 
                 }
             }
@@ -57,7 +57,6 @@ public class Generator {
             if (current instanceof Course) {
                 if (slot instanceof CourseSlot) {
                     checkAndMaybeAddChild(current, slot, parent, currentBound, allUnitsTotal);
-                    
                 }
 
             } else {
@@ -170,12 +169,10 @@ public class Generator {
     // than the upper bound of the problem, it will never lead to the optimal
     // solution, and can be discarded.
     // Else, store Ni on the queue.
-    public void branchAndBoundSkeleton(ArrayList<Unit> unitsToBeScheduled) {
+    public void branchAndBoundSkeleton(TreeNode starter, ArrayList<Unit> unitsToBeScheduled, ArrayList<Slot> slotToScheduleIn, int numPartialAssignments) {
         System.out.println("RUNNING BNB");
         Stack<TreeNode> allStackNodes = new Stack<TreeNode>();
-        TreeNode parent = new TreeNode(this.starter, this.initialPenalty);
-        parent.setDepth(0);
-        this.startNode = parent;
+        this.startNode = starter;
         allStackNodes.add(this.startNode);
         // this.bound = Integer.MAX_VALUE;
         int numUnitsToSchedule = unitsToBeScheduled.size();
@@ -206,11 +203,11 @@ public class Generator {
 
             else {
                 // Check to see if doesn't have children made
-                Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth());
+                Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth() - numPartialAssignments ); // This will break right now NEEDS TESTING
 
                 if (currentNode.getChildren().size() == 0) {
 
-                    generateChildren(scheduleMe, currentNode, unitsToBeScheduled.size(), this.bound);
+                    generateChildrenPairs(scheduleMe, currentNode, slotToScheduleIn, this.bound, unitsToBeScheduled.size());
                     depth++;
                 }
                 // Go through all of the children and add them to the stack if the eval of the

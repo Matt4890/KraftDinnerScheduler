@@ -27,6 +27,7 @@ public class Parser {
     private int pairWeight;
     private int minWeight;
     private int prefWeight2;
+    private ArrayList<Pair> partialAssignments;
     
 
     public int getminWeightCount(){
@@ -405,13 +406,15 @@ public class Parser {
                 // System.out.println("Exiting...");
                 // System.exit(1);
             } else {
-                this.initialPenalty += Kontrol.evalAssignment(s, u);
-                s.addOccupant(u);
-                if (isCourse) {
-                    courses.remove(i);
-                } else {
-                    labs.remove(i);
-                }
+                this.partialAssignments.add(new Pair(s,u));
+                // this.initialPenalty += Kontrol.evalAssignment(s, u);
+                
+                // s.addOccupant(u);
+                // if (isCourse) {
+                //     courses.remove(i);
+                // } else {
+                //     labs.remove(i);
+                // }
             }
         }
 
@@ -469,6 +472,10 @@ public class Parser {
     
     private static String[] getSectionLines(String label, String fileStr) {
         return getSection(label, fileStr).split("\n");
+    }
+    public ArrayList<Pair> getPartialAssignments(){
+        return this.partialAssignments;
+
     }
 
     private static String getSection(String label, String fileStr) {
