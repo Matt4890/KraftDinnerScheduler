@@ -6,7 +6,7 @@ import coursesULabs.*;
 import java.util.*;
 
 public class Generator {
-    private Tree tree;
+ 
     private Schedule starter;
     private int initialPenalty;
     private int bound;
@@ -16,8 +16,8 @@ public class Generator {
     private TreeNode startNode;
     private TreeNode bestSchedule;
 
-    public Generator(Schedule starter, int penalty, int weight_min, int weight_pairs, int wait_section_diff) {
-        this.tree = new Tree();
+    public Generator(TreeNode starter, int penalty, int weight_min, int weight_pairs, int wait_section_diff) {
+        
         // this.tree.addRoot(new TreeNode(this.starter, this.initialPenalty));
         this.starter = starter;
         this.initialPenalty = penalty;
@@ -26,6 +26,46 @@ public class Generator {
         this.weightPairs = weight_pairs;
         this.weightBrothersSectionDiff = wait_section_diff;
         this.bestSchedule = null;
+
+    }
+    private void generateChildrenPairs(Unit current, TreeNode parent, ArrayList<Slot> slotsToPair, int currentBound){
+        for (Slot slot : slotsToPair){
+            if (current instanceof Course){
+                if (slot instanceof CourseSlot){
+                    TreeNode nodeToAdd = new TreeNode(new Pair(slot, current), 0, parent);
+                    nodeToAdd.setDepth(parent.getDepth() + 1);
+
+
+                    //Check if we break the hard constraint 
+                    boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriants(nodeToAdd);
+                    if (HardConstraintOk){
+                        //Calculate the penalty value here 
+                        int calc = SoftConstraints.calculatePenalty(nodeToAdd);
+                        if (calc < currentBound){
+                            parent.addChild(nodeToAdd);
+                        }
+                    }
+                }
+
+            } else {
+                if (slot instanceof LabSlot){
+                    TreeNode nodeToAdd = new TreeNode(new Pair(slot, current), 0, parent);
+                    nodeToAdd.setDepth(parent.getDepth() + 1);
+
+
+                    //Check if we break the hard constraint 
+                    boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriants(nodeToAdd);
+                    if (HardConstraintOk){
+                        //Calculate the penalty value here 
+                        int calc = SoftConstraints.calculatePenalty(nodeToAdd);
+                        if (calc < currentBound){
+                            parent.addChild(nodeToAdd);
+                        }
+                    }
+                }
+
+            }
+        }
 
     }
 
@@ -546,81 +586,4 @@ public class Generator {
 
     
 
-    public TreeNode branchAndBound(TreeNode sol, int penalty, int depthCondition, ArrayList<Unit> ListToBeAdded) {
-
-        TreeNode foundBetterSol = sol;
-        TreeNode prevNode = sol;
-        int currentBestValue = penalty;
-        for (int i = ListToBeAdded.size() - 2; i >= depthCondition; i--) {
-            prevNode.setAlreadyLookedAt(true);
-            prevNode = prevNode.getParent();
-            TreeNode betterSolNode = betterSol(prevNode, currentBestValue, i, ListToBeAdded);
-
-            if (betterSolNode != null) {
-                if (betterSolNode.getPenaltyValueOfTreeNode() < foundBetterSol.getPenaltyValueOfTreeNode()) {
-                    foundBetterSol = betterSolNode;
-                    currentBestValue = betterSolNode.getPenaltyValueOfTreeNode();
-                }
-            }
-        }
-
-        if (foundBetterSol.getPenaltyValueOfTreeNode() >= sol.getPenaltyValueOfTreeNode()) {
-            return null;
-        }
-        return foundBetterSol;
-    }
-
-    private TreeNode betterSol(TreeNode n, int penaltyValue, int currentDepth, ArrayList<Unit> ListToBeAdded) {
-        // TODO still need a control just spelt with a k instead of a c
-
-        ArrayList<TreeNode> childrenList = n.getChildren();
-        // if child has no children
-        // - check if has no more children
-        // - if it has more children generate them
-        if (childrenList.isEmpty()) {
-            if (currentDepth == ListToBeAdded.size() - 1) {
-                n.setAlreadyLookedAt(true);
-                n.setgetBestBottomTN(n);
-                return n;
-            } else if (currentDepth <= ListToBeAdded.size() - 1) {
-                // TODO this node has children that need to be generated since it's not the very
-                // last node
-            }
-
-        }
-
-        // keep track of all the nodes child nodes
-        ArrayList<TreeNode> keepTrack = new ArrayList<TreeNode>();
-        for (int i = 0; i < childrenList.size(); i++) {
-            TreeNode considered = childrenList.get(i);
-            if (considered.getPenaltyValueOfTreeNode() > penaltyValue) {
-                considered.setAlreadyLookedAt(true);
-            } else {
-                if (!considered.getAlreadyLookedAt()) {
-                    TreeNode temp = betterSol(considered, penaltyValue, currentDepth + 1, ListToBeAdded);
-                    if (temp != null) {
-                        keepTrack.add(temp.getBestBottomTN());
-                    }
-                }
-            }
-        }
-        n.setAlreadyLookedAt(true);
-
-        // find the best child node here
-        int bestPen = Integer.MAX_VALUE;
-        TreeNode bestNode = null;
-        for (TreeNode tn : keepTrack) {
-            if (tn != null && tn.getPenaltyValueOfTreeNode() < bestPen) {
-                bestNode = tn;
-                bestPen = tn.getPenaltyValueOfTreeNode();
-            }
-        }
-
-        // return the best node if it is not null otherwise return null
-        if (bestNode != null && bestNode.getPenaltyValueOfTreeNode() < penaltyValue) {
-            n.setgetBestBottomTN(bestNode);
-            return bestNode;
-        }
-        return null;
-    }
 }

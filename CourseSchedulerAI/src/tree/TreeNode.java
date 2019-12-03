@@ -3,6 +3,7 @@ package tree;
 import schedule.*;
 import java.util.*;
 
+
 import coursesULabs.Unit;
 
 public class TreeNode implements Comparable<TreeNode> {
@@ -10,6 +11,7 @@ public class TreeNode implements Comparable<TreeNode> {
     private TreeNode parent;
     private int penaltyValue;
     private Schedule schedule;
+    private Pair assign;
     private ArrayList<TreeNode> children; // This could be a heap so the one with the lowest pen value is always on top
     private PriorityQueue<TreeNode> orderedChildren = new PriorityQueue<TreeNode>();
     private int depth;
@@ -56,20 +58,18 @@ public class TreeNode implements Comparable<TreeNode> {
         this.still_considered = true;
     }
 
-    public TreeNode(Schedule schedule, int penaltyValue, TreeNode parent, int desirability ) {
+    public TreeNode(Pair assignment, int penaltyValue, TreeNode parent) {
 
         this.penaltyValue = penaltyValue;
-        this.schedule = new Schedule(schedule);
+        this.assign = assignment;
         this.children = new ArrayList<TreeNode>();
         this.orderedChildren = new PriorityQueue<TreeNode>();
         this.parent = parent;
-        this.desirability = desirability;
-        this.still_considered = true;
     }
 
-    public TreeNode(Schedule schedule, int penaltyValue, ArrayList<TreeNode> children, TreeNode parent) {
+    public TreeNode(Pair assign, int penaltyValue, ArrayList<TreeNode> children, TreeNode parent) {
         this.penaltyValue = penaltyValue;
-        this.schedule = new Schedule(schedule);
+        this.assign = assign;
         for (int i = 0; i < children.size(); i++) {
             this.children.add(children.get(i));
             this.orderedChildren.add(children.get(i));
@@ -77,6 +77,9 @@ public class TreeNode implements Comparable<TreeNode> {
         this.parent = parent;
         this.desirability = Integer.MAX_VALUE;
         this.still_considered = true;
+    }
+    public void setPenalty(int pen){
+        this.penaltyValue = pen;
     }
 
     public boolean getConsideration() {
