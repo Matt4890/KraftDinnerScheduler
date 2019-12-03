@@ -25,7 +25,7 @@ public class HardConstrainsts {
 
     public static boolean checkCourseMax(Course c, CourseSlot s, TreeNode node) {
         int count = 0;
-        TreeNode current = node;
+        TreeNode current = node.getParent();
         while (current != null) {
             if (current.getAssign().getSlot() == s) {
                 count++;
@@ -73,7 +73,7 @@ public class HardConstrainsts {
 
     public static boolean checkConflict500Levels(final Course c, final CourseSlot s, TreeNode node) {
         if (c.getCourseNum() >= 500 && c.getCourseNum() < 600) {
-            TreeNode current = node;
+            TreeNode current = node.getParent();
             while (current != null) {
                 if (s == current.getAssign().getSlot() && current.getAssign().getUnit().getCourseNum() >= 500
                         && current.getAssign().getUnit().getCourseNum() < 600) {
@@ -105,7 +105,7 @@ public class HardConstrainsts {
     }
 
     public static boolean checkLabNotWithCourseAddingCourse(Course c, Slot s, TreeNode node) {
-        TreeNode current = node;
+        TreeNode current = node.getParent();
         while (current != null) {
             Slot ancestorSlot = current.getAssign().getSlot();
             for (Slot slot : s.getOverlaps()) {
@@ -139,7 +139,7 @@ public class HardConstrainsts {
 
     public static boolean checkLabMax(final Lab c, final LabSlot s, TreeNode node) {
         int count = 0;
-        TreeNode current = node;
+        TreeNode current = node.getParent();
         while (current != null) {
             if (current.getAssign().getSlot() == s) {
                 count++;
@@ -198,7 +198,7 @@ public class HardConstrainsts {
      * @return
      */
     public static boolean checkNotCompatible(Unit course, Slot slotToAddTo, TreeNode node) {
-        TreeNode current = node;
+        TreeNode current = node.getParent();
         while (current != null) {
             Slot ancestorSlot = current.getAssign().getSlot();
             for (Slot overlap : slotToAddTo.getOverlaps()) {
@@ -214,7 +214,7 @@ public class HardConstrainsts {
     }
 
     public static boolean checkLabNotWithCourseAddingLab(Lab c, Slot s, TreeNode node) {
-        TreeNode current = node;
+        TreeNode current = node.getParent();
         while (current != null) {
             Slot ancestorSlot = current.getAssign().getSlot();
             for (Slot slot : s.getOverlaps()) {
