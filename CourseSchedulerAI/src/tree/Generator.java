@@ -457,6 +457,7 @@ public class Generator {
         this.bound = Integer.MAX_VALUE;
         int numUnitsToSchedule = unitsToBeScheduled.size();
         int depth = 0;
+        this.bestSchedule = null;
 
         System.out.println(allStackNodes);
         while (!allStackNodes.isEmpty()) {
@@ -503,10 +504,15 @@ public class Generator {
             }
 
         }
-        System.out.println("We are out of things to add...");
-        System.out.println("The Best:");
-        System.out.println(this.bestSchedule.toString());
-        System.out.println(this.bestSchedule.getPenaltyValueOfTreeNode());
+        if(bestSchedule == null){
+            System.out.println("-------------------------No Valid Solution--------------------------------");
+        }
+        else{
+            System.out.println("We are out of things to add...");
+            System.out.println("The Best:");
+            System.out.println(this.bestSchedule.toString());
+            System.out.println(this.bestSchedule.getPenaltyValueOfTreeNode());
+        }
 
     }
 
