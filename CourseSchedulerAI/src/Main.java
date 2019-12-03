@@ -55,7 +55,13 @@ public class Main {
     System.out.println(initialSchedule.toString());
 
     HashMap<String, Course> allCourses = parser.getCourseMap();
+    System.out.println("All courses are");
+    System.out.println(allCourses);
+
     HashMap<String, Lab> allLabs = parser.getLabMap();
+    System.out.println("All labs are");
+    System.out.println(allLabs);
+
     makeBrothers(allCourses);
     makePotentialsBros(allCourses);
     addConstraintsForSpecialClasses(allLabs, initialSchedule);

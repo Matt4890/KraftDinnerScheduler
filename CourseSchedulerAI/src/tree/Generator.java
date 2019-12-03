@@ -466,7 +466,7 @@ public class Generator {
             System.out.println(allStackNodes);
             TreeNode currentNode = allStackNodes.pop();
 
-            if (currentNode.getDepth() == unitsToBeScheduled.size() - 1) { // TheScheduleInsideRepresents a Full
+            if (currentNode.getDepth() == unitsToBeScheduled.size()) { // TheScheduleInsideRepresents a Full
                                                                            // Solution
                 System.out.println(
                         "WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
@@ -588,7 +588,7 @@ public class Generator {
                 n.setAlreadyLookedAt(true);
                 n.setgetBestBottomTN(n);
                 return n;
-            } else if (currentDepth < ListToBeAdded.size() - 1) {
+            } else if (currentDepth <= ListToBeAdded.size() - 1) {
                 // TODO this node has children that need to be generated since it's not the very
                 // last node
             }
