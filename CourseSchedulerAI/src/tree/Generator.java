@@ -6,8 +6,8 @@ import coursesULabs.*;
 import java.util.*;
 
 public class Generator {
- 
-    private Schedule starter;
+
+    private TreeNode starter;
     private int initialPenalty;
     private int bound;
     private int weightMin;
@@ -17,7 +17,7 @@ public class Generator {
     private TreeNode bestSchedule;
 
     public Generator(TreeNode starter, int penalty, int weight_min, int weight_pairs, int wait_section_diff) {
-        
+
         // this.tree.addRoot(new TreeNode(this.starter, this.initialPenalty));
         this.starter = starter;
         this.initialPenalty = penalty;
@@ -28,40 +28,33 @@ public class Generator {
         this.bestSchedule = null;
 
     }
-    private void generateChildrenPairs(Unit current, TreeNode parent, ArrayList<Slot> slotsToPair, int currentBound){
-        for (Slot slot : slotsToPair){
-            if (current instanceof Course){
-                if (slot instanceof CourseSlot){
-                    TreeNode nodeToAdd = new TreeNode(new Pair(slot, current), 0, parent);
-                    nodeToAdd.setDepth(parent.getDepth() + 1);
 
+    private void checkAndMaybeAddChild(Unit current, Slot slot, TreeNode parent, int currentBound) {
+        TreeNode nodeToAdd = new TreeNode(new Pair(slot, current), 0, parent);
+        nodeToAdd.setDepth(parent.getDepth() + 1);
 
-                    //Check if we break the hard constraint 
-                    boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriants(nodeToAdd);
-                    if (HardConstraintOk){
-                        //Calculate the penalty value here 
-                        int calc = SoftConstraints.calculatePenalty(nodeToAdd);
-                        if (calc < currentBound){
-                            parent.addChild(nodeToAdd);
-                        }
-                    }
+        // Check if we break the hard constraint
+        boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriants(nodeToAdd);
+        if (HardConstraintOk) {
+            // Calculate the penalty value here
+            int calc = SoftConstraints.calculatePenalty(nodeToAdd);
+            if (calc < currentBound) {
+                nodeToAdd.setPenalty(calc);
+                parent.addChild(nodeToAdd);
+            }
+        }
+    }
+
+    private void generateChildrenPairs(Unit current, TreeNode parent, ArrayList<Slot> slotsToPair, int currentBound) {
+        for (Slot slot : slotsToPair) {
+            if (current instanceof Course) {
+                if (slot instanceof CourseSlot) {
+                    checkAndMaybeAddChild(current, slot, parent, currentBound);
                 }
 
             } else {
-                if (slot instanceof LabSlot){
-                    TreeNode nodeToAdd = new TreeNode(new Pair(slot, current), 0, parent);
-                    nodeToAdd.setDepth(parent.getDepth() + 1);
-
-
-                    //Check if we break the hard constraint 
-                    boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriants(nodeToAdd);
-                    if (HardConstraintOk){
-                        //Calculate the penalty value here 
-                        int calc = SoftConstraints.calculatePenalty(nodeToAdd);
-                        if (calc < currentBound){
-                            parent.addChild(nodeToAdd);
-                        }
-                    }
+                if (slot instanceof LabSlot) {
+                    checkAndMaybeAddChild(current, slot, parent, currentBound);
                 }
 
             }
@@ -76,11 +69,9 @@ public class Generator {
         // Run through each possible course slot pair and create children
         if (current instanceof Course) {
 
-
             // Copy the hashMap to Reference
             for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getMWFLec().entrySet()) {
                 // Create a copy to manipulate
-
 
                 HashMap<Integer, Slot> MWFMapToManipulate = DeepCopyCourseSlotMap(parent.getSchedule().getMWFLec());
 
@@ -93,7 +84,6 @@ public class Generator {
                 // + entry.getValue().toString() + " hard constraint check is: " +
                 // HardConstraintOk);
                 if (HardConstraintOk) {
-
 
                     // Calculate the penalty of the course slot pairing
                     int calc = Kontrol.evalAssignment(entry.getValue(), current);
@@ -143,7 +133,7 @@ public class Generator {
                 }
             }
             for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getTuThLec().entrySet()) {
-        System.out.println("We got to here 4");
+                System.out.println("We got to here 4");
 
                 // Create a copy to manipulate
                 HashMap<Integer, Slot> TuThMapToManipulate = DeepCopyCourseSlotMap(parent.getSchedule().getTuThLec());
@@ -157,64 +147,60 @@ public class Generator {
                 // HardConstraintOk);
                 if (HardConstraintOk) {
 
-
                     // Calculate the penalty of the course slot pairing
                     int calc = Kontrol.evalAssignment(entry.getValue(), current);
 
-                        System.out.println("Penalty of Pairing: " + calc);
-                        if (calc < currBound) {
-                            // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
-                            // MANIPULATED TABLE
-                            // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
-                            // Add the course to the slot in the schedule
-                            TuThMapToManipulate.get(entry.getKey()).addOccupant(current);
+                    System.out.println("Penalty of Pairing: " + calc);
+                    if (calc < currBound) {
+                        // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
+                        // MANIPULATED TABLE
+                        // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
+                        // Add the course to the slot in the schedule
+                        TuThMapToManipulate.get(entry.getKey()).addOccupant(current);
 
-                            // Create a new Schedule to add
-                            Schedule newSchedule = new Schedule(parent.getSchedule());
+                        // Create a new Schedule to add
+                        Schedule newSchedule = new Schedule(parent.getSchedule());
 
-                            // Replace the TuTh in the newSchedule with the manipulated one
-                            newSchedule.setTuThLec(TuThMapToManipulate);
-                            // int desire = Kontrol.desireability(entry.getValue(), current);
+                        // Replace the TuTh in the newSchedule with the manipulated one
+                        newSchedule.setTuThLec(TuThMapToManipulate);
+                        // int desire = Kontrol.desireability(entry.getValue(), current);
 
-                            // Create a TreeNode as a child of the last TreeNode
-                            TreeNode n = new TreeNode(newSchedule, calc + parent.getPenaltyValueOfTreeNode(), parent,
-                                    0); // Note
-                                        // we
-                                        // need
-                                        // to
-                                        // calculate
-                                        // the
-                                        // total
-                                        // penatly
-                                        // differently
+                        // Create a TreeNode as a child of the last TreeNode
+                        TreeNode n = new TreeNode(newSchedule, calc + parent.getPenaltyValueOfTreeNode(), parent, 0); // Note
+                                                                                                                      // we
+                                                                                                                      // need
+                                                                                                                      // to
+                                                                                                                      // calculate
+                                                                                                                      // the
+                                                                                                                      // total
+                                                                                                                      // penatly
+                                                                                                                      // differently
 
-                            n.setDepth(parent.getDepth() + 1);
-                            if (n.getDepth() == allUnitsTotal - 1) {
-                                // Calculate the penalty for the remaining slots
-                                // Create a helper method in Generator to calculate all empty slot coursemin and
-                                // preference s
-                                n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
-
-                            }
-
-                            // System.out.println("Schedule in Node: " + n.toString());
-                            parent.addChild(n);
-                            updatePotentialCourse((CourseSlot) TuThMapToManipulate.get(entry.getKey()), current, n);
-                            // System.out.println(potentialLost + " <------------------ potential");
-                            n.incrementPotential(potentialLost + parent.getPotential());
-                            // System.out.println("the starting potential of PARENT tree node is " +
-                            // parent.getPotential());
-                            // System.out.println("the starting potential of child tree node is " +
-                            // n.getPotential());
+                        n.setDepth(parent.getDepth() + 1);
+                        if (n.getDepth() == allUnitsTotal - 1) {
+                            // Calculate the penalty for the remaining slots
+                            // Create a helper method in Generator to calculate all empty slot coursemin and
+                            // preference s
+                            n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
 
                         }
+
+                        // System.out.println("Schedule in Node: " + n.toString());
+                        parent.addChild(n);
+                        updatePotentialCourse((CourseSlot) TuThMapToManipulate.get(entry.getKey()), current, n);
+                        // System.out.println(potentialLost + " <------------------ potential");
+                        n.incrementPotential(potentialLost + parent.getPotential());
+                        // System.out.println("the starting potential of PARENT tree node is " +
+                        // parent.getPotential());
+                        // System.out.println("the starting potential of child tree node is " +
+                        // n.getPotential());
+
                     }
                 }
-            
+            }
 
         } else {
             for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getMWLab().entrySet()) {
-
 
                 // Create a copy to manipulate
                 HashMap<Integer, Slot> MWLabMapToManipulate = DeepCopyLabSlotMap(parent.getSchedule().getMWLab());
@@ -227,7 +213,6 @@ public class Generator {
                 // + entry.getValue().toString() + " hard constraint check is: " +
                 // HardConstraintOk);
                 if (HardConstraintOk) {
-
 
                     // Calculate the penalty of the course slot pairing
                     int calc = Kontrol.evalAssignment(entry.getValue(), current);
@@ -279,143 +264,142 @@ public class Generator {
                     }
                 }
             }
-        
-        for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getTuThLab().entrySet()) {
 
+            for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getTuThLab().entrySet()) {
 
-            // Create a copy to manipulate
-            HashMap<Integer, Slot> TuThLabMapToManipulate = DeepCopyLabSlotMap(parent.getSchedule().getTuThLab());
+                // Create a copy to manipulate
+                HashMap<Integer, Slot> TuThLabMapToManipulate = DeepCopyLabSlotMap(parent.getSchedule().getTuThLab());
 
-            // int calc = 0;
+                // int calc = 0;
 
-            boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
-                    (LabSlot) entry.getValue(), parent.getSchedule().getMWFLec(), parent.getSchedule().getTuThLec(),
-                    parent.getSchedule().getMWLab(), parent.getSchedule().getTuThLab(), parent.getSchedule().getFLab());
+                boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
+                        (LabSlot) entry.getValue(), parent.getSchedule().getMWFLec(), parent.getSchedule().getTuThLec(),
+                        parent.getSchedule().getMWLab(), parent.getSchedule().getTuThLab(),
+                        parent.getSchedule().getFLab());
 
-            // System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
-            // + entry.getValue().toString() + " hard constraint check is: " +
-            // HardConstraintOk);
-            if (HardConstraintOk) {
+                // System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
+                // + entry.getValue().toString() + " hard constraint check is: " +
+                // HardConstraintOk);
+                if (HardConstraintOk) {
 
+                    // Calculate the penalty of the course slot pairing
+                    int calc = Kontrol.evalAssignment(entry.getValue(), current);
+                    if (calc < currBound) {
+                        System.out.println("Penalty of Pairing: " + calc);
 
-                // Calculate the penalty of the course slot pairing
-                int calc = Kontrol.evalAssignment(entry.getValue(), current);
-                if (calc < currBound) {
-                    System.out.println("Penalty of Pairing: " + calc);
+                        // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
+                        // MANIPULATED TABLE
+                        // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
+                        // Add the course to the slot in the schedule
+                        TuThLabMapToManipulate.get(entry.getKey()).addOccupant(current);
 
-                    // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
-                    // MANIPULATED TABLE
-                    // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
-                    // Add the course to the slot in the schedule
-                    TuThLabMapToManipulate.get(entry.getKey()).addOccupant(current);
+                        // Create a new Schedule to add
+                        Schedule newSchedule = new Schedule(parent.getSchedule());
 
-                    // Create a new Schedule to add
-                    Schedule newSchedule = new Schedule(parent.getSchedule());
+                        // Replace the TuTh in the newSchedule with the manipulated one
+                        newSchedule.setTuThLab(TuThLabMapToManipulate);
 
-                    // Replace the TuTh in the newSchedule with the manipulated one
-                    newSchedule.setTuThLab(TuThLabMapToManipulate);
+                        // int desire = Kontrol.desireability(entry.getValue(), current);
 
-                    // int desire = Kontrol.desireability(entry.getValue(), current);
+                        // Create a TreeNode as a child of the last TreeNode
+                        TreeNode n = new TreeNode(newSchedule, calc + parent.getPenaltyValueOfTreeNode(), parent, 0); // Note
+                                                                                                                      // we
+                                                                                                                      // need
+                                                                                                                      // to
+                                                                                                                      // calculate
+                                                                                                                      // the
+                                                                                                                      // total
+                                                                                                                      // penatly
+                                                                                                                      // differently
+                        n.setDepth(parent.getDepth() + 1);
+                        if (n.getDepth() == allUnitsTotal - 1) {
+                            // Calculate the penalty for the remaining slots
+                            // Create a helper method in Generator to calculate all empty slot coursemin and
+                            // preference s
+                            n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
 
-                    // Create a TreeNode as a child of the last TreeNode
-                    TreeNode n = new TreeNode(newSchedule, calc + parent.getPenaltyValueOfTreeNode(), parent, 0); // Note
-                                                                                                                  // we
-                                                                                                                  // need
-                                                                                                                  // to
-                                                                                                                  // calculate
-                                                                                                                  // the
-                                                                                                                  // total
-                                                                                                                  // penatly
-                                                                                                                  // differently
-                    n.setDepth(parent.getDepth() + 1);
-                    if (n.getDepth() == allUnitsTotal - 1) {
-                        // Calculate the penalty for the remaining slots
-                        // Create a helper method in Generator to calculate all empty slot coursemin and
-                        // preference s
-                        n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
+                        }
+                        // System.out.println("Schedule in Node: " + n.toString());
+                        parent.addChild(n);
+                        updatePotentialLab((LabSlot) TuThLabMapToManipulate.get(entry.getKey()), current, n);
+                        // System.out.println(n.getPotential() + " <------------------ potential of n");
+                        // System.out.println(potentialLost + " <------------------ potential");
+                        n.incrementPotential(potentialLost + parent.getPotential());
+                        // System.out.println("the starting potential of PARENT tree node is " +
+                        // parent.getPotential());
+                        // System.out.println("the starting potential of child tree node is " +
+                        // n.getPotential());
 
                     }
-                    // System.out.println("Schedule in Node: " + n.toString());
-                    parent.addChild(n);
-                    updatePotentialLab((LabSlot) TuThLabMapToManipulate.get(entry.getKey()), current, n);
-                    // System.out.println(n.getPotential() + " <------------------ potential of n");
-                    // System.out.println(potentialLost + " <------------------ potential");
-                    n.incrementPotential(potentialLost + parent.getPotential());
-                    // System.out.println("the starting potential of PARENT tree node is " +
-                    // parent.getPotential());
-                    // System.out.println("the starting potential of child tree node is " +
-                    // n.getPotential());
 
                 }
+            }
+            for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getFLab().entrySet()) {
 
+                // Create a copy to manipulate
+                HashMap<Integer, Slot> FLabMapToManipulate = DeepCopyLabSlotMap(parent.getSchedule().getFLab());
+                // Calculate the penalty of the course slot pairing
+
+                boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
+                        (LabSlot) entry.getValue(), parent.getSchedule().getMWFLec(), parent.getSchedule().getTuThLec(),
+                        parent.getSchedule().getMWLab(), parent.getSchedule().getTuThLab(),
+                        parent.getSchedule().getFLab());
+                // System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
+                // + entry.getValue().toString() + " hard constraint check is: " +
+                // HardConstraintOk);
+                if (HardConstraintOk) {
+
+                    // Calculate the penalty of the course slot pairing
+                    int calc = Kontrol.evalAssignment(entry.getValue(), current);
+                    if (calc < currBound) {
+
+                        System.out.println("Penalty of Pairing: " + calc);
+                        // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
+                        // MANIPULATED TABLE
+                        // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
+                        // Add the course to the slot in the schedule
+                        FLabMapToManipulate.get(entry.getKey()).addOccupant(current);
+
+                        // Create a new Schedule to add
+                        Schedule newSchedule = new Schedule(parent.getSchedule());
+
+                        // Replace the TuTh in the newSchedule with the manipulated one
+                        newSchedule.setFLab(FLabMapToManipulate);
+                        // int desire = Kontrol.desireability(entry.getValue(), current);
+
+                        // Create a TreeNode as a child of the last TreeNode
+                        TreeNode n = new TreeNode(newSchedule, calc + parent.getPenaltyValueOfTreeNode(), parent, 0); // Note
+                                                                                                                      // we
+                                                                                                                      // need
+                                                                                                                      // to
+                                                                                                                      // calculate
+                                                                                                                      // the
+                                                                                                                      // total
+                                                                                                                      // penatly
+                                                                                                                      // differently
+                        n.setDepth(parent.getDepth() + 1);
+                        if (n.getDepth() == allUnitsTotal - 1) {
+                            // Calculate the penalty for the remaining slots
+                            // Create a helper method in Generator to calculate all empty slot coursemin and
+                            // preference s
+                            n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
+
+                        }
+                        // System.out.println("Schedule in Node: " + n.toString());
+                        parent.addChild(n);
+                        updatePotentialLab((LabSlot) FLabMapToManipulate.get(entry.getKey()), current, n);
+                        // System.out.println(n.getPotential() + " <------------------ potential of n");
+                        // System.out.println(potentialLost + " <------------------ potential");
+                        n.incrementPotential(potentialLost + parent.getPotential());
+                        // System.out.println("the starting potential of PARENT tree node is " +
+                        // parent.getPotential());
+                        // System.out.println("the starting potential of child tree node is " +
+                        // n.getPotential());
+
+                    }
+                }
             }
         }
-        for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getFLab().entrySet()) {
-
-            // Create a copy to manipulate
-            HashMap<Integer, Slot> FLabMapToManipulate = DeepCopyLabSlotMap(parent.getSchedule().getFLab());
-            // Calculate the penalty of the course slot pairing
-
-            boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current,
-                    (LabSlot) entry.getValue(), parent.getSchedule().getMWFLec(), parent.getSchedule().getTuThLec(),
-                    parent.getSchedule().getMWLab(), parent.getSchedule().getTuThLab(), parent.getSchedule().getFLab());
-            // System.out.println("Assignment " + ((Lab) current).toString() + " and Slot "
-            // + entry.getValue().toString() + " hard constraint check is: " +
-            // HardConstraintOk);
-            if (HardConstraintOk) {
-
-
-
-                // Calculate the penalty of the course slot pairing
-                int calc = Kontrol.evalAssignment(entry.getValue(), current);
-                if (calc < currBound) {
-
-                    System.out.println("Penalty of Pairing: " + calc);
-                    // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
-                    // MANIPULATED TABLE
-                    // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
-                    // Add the course to the slot in the schedule
-                    FLabMapToManipulate.get(entry.getKey()).addOccupant(current);
-
-                    // Create a new Schedule to add
-                    Schedule newSchedule = new Schedule(parent.getSchedule());
-
-                    // Replace the TuTh in the newSchedule with the manipulated one
-                    newSchedule.setFLab(FLabMapToManipulate);
-                    // int desire = Kontrol.desireability(entry.getValue(), current);
-
-                    // Create a TreeNode as a child of the last TreeNode
-                    TreeNode n = new TreeNode(newSchedule, calc + parent.getPenaltyValueOfTreeNode(), parent, 0); // Note
-                                                                                                                  // we
-                                                                                                                  // need
-                                                                                                                  // to
-                                                                                                                  // calculate
-                                                                                                                  // the
-                                                                                                                  // total
-                                                                                                                  // penatly
-                                                                                                                  // differently
-                    n.setDepth(parent.getDepth() + 1);
-                    if (n.getDepth() == allUnitsTotal - 1) {
-                        // Calculate the penalty for the remaining slots
-                        // Create a helper method in Generator to calculate all empty slot coursemin and
-                        // preference s
-                        n.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(n));
-
-                    }
-                    // System.out.println("Schedule in Node: " + n.toString());
-                    parent.addChild(n);
-                    updatePotentialLab((LabSlot) FLabMapToManipulate.get(entry.getKey()), current, n);
-                    // System.out.println(n.getPotential() + " <------------------ potential of n");
-                    // System.out.println(potentialLost + " <------------------ potential");
-                    n.incrementPotential(potentialLost + parent.getPotential());
-                    // System.out.println("the starting potential of PARENT tree node is " +
-                    // parent.getPotential());
-                    // System.out.println("the starting potential of child tree node is " +
-                    // n.getPotential());
-
-                }
-            }
-        }}
     }
 
     private int baseOfTreePenaltyCalculation(TreeNode baseNode) {
@@ -535,7 +519,6 @@ public class Generator {
             // System.out.println(allStackNodes);
             TreeNode currentNode = allStackNodes.pop();
 
-
             if (currentNode.getDepth() == unitsToBeScheduled.size()) { // TheScheduleInsideRepresents a Full
                                                                        // Solution
                 System.out.println(
@@ -549,41 +532,38 @@ public class Generator {
                     this.bound = currentNode.getPenaltyValueOfTreeNode();
                     this.bestSchedule = currentNode;
 
-                }}
+                }
+            }
 
-                else {
-                    // Check to see if doesn't have children made
-                    Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth());
+            else {
+                // Check to see if doesn't have children made
+                Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth());
 
+                if (currentNode.getChildren().size() == 0) {
 
-                    if (currentNode.getChildren().size() == 0) {
+                    generateChildren(scheduleMe, currentNode, unitsToBeScheduled.size(), this.bound);
+                    depth++;
+                }
+                // Go through all of the children and add them to the stack if the eval of the
+                // We can change this to the priority queue and order the children by their
 
-
-                        generateChildren(scheduleMe, currentNode, unitsToBeScheduled.size(), this.bound);
-                        depth++;
-                    }
-                    // Go through all of the children and add them to the stack if the eval of the
-                    // We can change this to the priority queue and order the children by their
-
-                    // add the est chilren to the stack
-                    for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
-                        //allStackNodes.push(currentNode.getOrderedChildren().remove());
-                        allStackNodes.push(currentNode.getChildren().get(i));
-                    }
-
+                // add the est chilren to the stack
+                for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
+                    // allStackNodes.push(currentNode.getOrderedChildren().remove());
+                    allStackNodes.push(currentNode.getChildren().get(i));
                 }
 
             }
-            if (bestSchedule == null) {
-                System.out.println("No Valid Solution");
-            } else {
-                System.out.println("We are out of things to add...");
-                System.out.println("The Best:");
-                System.out.println(this.bestSchedule.toString());
-                System.out.println(this.bestSchedule.getPenaltyValueOfTreeNode());
-            }
-        }
 
-    
+        }
+        if (bestSchedule == null) {
+            System.out.println("No Valid Solution");
+        } else {
+            System.out.println("We are out of things to add...");
+            System.out.println("The Best:");
+            System.out.println(this.bestSchedule.toString());
+            System.out.println(this.bestSchedule.getPenaltyValueOfTreeNode());
+        }
+    }
 
 }
