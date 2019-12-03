@@ -25,6 +25,7 @@ public class Generator {
         this.weightMin = weight_min;
         this.weightPairs = weight_pairs;
         this.weightBrothersSectionDiff = wait_section_diff;
+        this.bestSchedule = null;
 
     }
 
@@ -454,10 +455,10 @@ public class Generator {
         parent.setDepth(0);
         this.startNode = parent;
         allStackNodes.add(this.startNode);
-        this.bound = Integer.MAX_VALUE;
+        //this.bound = Integer.MAX_VALUE;
         int numUnitsToSchedule = unitsToBeScheduled.size();
         int depth = 0;
-        this.bestSchedule = null;
+        //this.bestSchedule = null;
 
         System.out.println(allStackNodes);
         while (!allStackNodes.isEmpty()) {
@@ -489,15 +490,50 @@ public class Generator {
                 }
                 // Go through all of the children and add them to the stack if the eval of the
                 // We can change this to the priority queue and order the children by their
-                for (TreeNode node : currentNode.getChildren()) {
-                    System.out.println("The value we get is: " + node.getPenaltyValueOfTreeNode());
-                    if (node.getPenaltyValueOfTreeNode() < bound) {
-                        // Add it to the stack
-                        allStackNodes.add(node);
-                    } else {
-                        // Debug
-                        System.out.println(
-                                "-------------------------It Broke the bound so I didn't add it --------------------------------");
+
+                // this gets the 10 best children with the lowest 
+                
+                ArrayList<TreeNode> maxAmount= new ArrayList<TreeNode>();
+                ArrayList<TreeNode> children = new ArrayList<TreeNode>(currentNode.getChildren()) ;
+                int size = children.size();
+                if(size >= 5){
+                    size = 5;
+                }
+                for(int i = 0; i < size ; i++){
+                    TreeNode bestN = null;
+                    int place = -1;
+                    for (int j = 0; j < children.size(); j++) {
+                        TreeNode node = children.get(j);
+                        if(bestN == null){
+                            place = j;
+                            bestN = node;
+                        }
+                        else{
+                            if(node.getPenaltyValueOfTreeNode() < bestN.getPenaltyValueOfTreeNode()){
+                                place = j;
+                                bestN = node;
+                            }
+                        }
+                    }
+                    maxAmount.add(bestN);
+                    children.remove(place);  
+                    
+                }
+
+                // add the best chilren to the stack 
+                for (TreeNode node : maxAmount) {
+                    if(node != null){
+                        System.out.println("The value we get is: " + node.getPenaltyValueOfTreeNode());
+
+                        //THIS IS GOOD I JUST NEED TO TEST SOMETHING
+                        if (node.getPenaltyValueOfTreeNode() < bound) {
+                            // Add it to the stack
+                            allStackNodes.add(node);
+                        } else {
+                            // Debug
+                            System.out.println(
+                                    "-------------------------It Broke the bound so I didn't add it --------------------------------");
+                        }
                     }
                 }
 
