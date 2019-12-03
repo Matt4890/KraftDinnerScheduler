@@ -115,6 +115,7 @@ public class TreeNode implements Comparable<TreeNode> {
     public TreeNode getLowestPenaltyChild() {
         return this.orderedChildren.remove();
     }
+    
 
     public TreeNode getChildWithPenaltyValue(int n) {
 

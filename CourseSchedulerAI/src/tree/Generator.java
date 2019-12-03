@@ -29,7 +29,7 @@ public class Generator {
 
     }
 
-    private void generateChildren(Unit current, TreeNode parent, int allUnitsTotal) {
+    private void generateChildren(Unit current, TreeNode parent, int allUnitsTotal, int currBound) {
         double potentialLost = -current.getPotential();
         // System.out.println(current.getPotential() + " <------------- potential");
 
@@ -54,6 +54,7 @@ public class Generator {
                     // Calculate the penalty of the course slot pairing
                     int calc = Kontrol.evalAssignment(entry.getValue(), current);
                     System.out.println("Penalty of Pairing: " + calc);
+                    if (calc < currBound){
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                     // MANIPULATED TABLE
                     // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
@@ -94,7 +95,7 @@ public class Generator {
                     // parent.getPotential());
                     // System.out.println("the starting potential of child tree node is " +
                     // n.getPotential());
-                }
+                }}
             }
             for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getTuThLec().entrySet()) {
                 // Create a copy to manipulate
@@ -111,7 +112,9 @@ public class Generator {
 
                     // Calculate the penalty of the course slot pairing
                     int calc = Kontrol.evalAssignment(entry.getValue(), current);
+                    if (calc <currBound){
                     System.out.println("Penalty of Pairing: " + calc);
+
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                     // MANIPULATED TABLE
                     // AND ACCESS THE SLOT AT THAT POINT AND ADD THE OCCUPANT
@@ -155,7 +158,7 @@ public class Generator {
                     // System.out.println("the starting potential of child tree node is " +
                     // n.getPotential());
 
-                }
+                }}
             }
 
         } else {
@@ -174,6 +177,8 @@ public class Generator {
 
                     // Calculate the penalty of the course slot pairing
                     int calc = Kontrol.evalAssignment(entry.getValue(), current);
+                    if (calc <currBound){
+
                     System.out.println("Penalty of Pairing: " + calc);
 
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
@@ -218,7 +223,7 @@ public class Generator {
                     // System.out.println("the starting potential of child tree node is " +
                     // n.getPotential());
 
-                }
+                    }}
             }
             for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getTuThLab().entrySet()) {
                 // Create a copy to manipulate
@@ -238,6 +243,8 @@ public class Generator {
 
                     // Calculate the penalty of the course slot pairing
                     int calc = Kontrol.evalAssignment(entry.getValue(), current);
+                    if (calc <currBound){
+
                     System.out.println("Penalty of Pairing: " + calc);
 
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
@@ -283,7 +290,7 @@ public class Generator {
                     // System.out.println("the starting potential of child tree node is " +
                     // n.getPotential());
 
-                }
+                }}
             }
             for (Map.Entry<Integer, Slot> entry : parent.getSchedule().getFLab().entrySet()) {
                 // Create a copy to manipulate
@@ -301,6 +308,8 @@ public class Generator {
 
                     // Calculate the penalty of the course slot pairing
                     int calc = Kontrol.evalAssignment(entry.getValue(), current);
+                                        if (calc <currBound){
+
                     System.out.println("Penalty of Pairing: " + calc);
                     // GET THE KEY OF THE ENTRY WE WANT TO ADD TO THEN GET THE VALUE FROM THE
                     // MANIPULATED TABLE
@@ -347,6 +356,7 @@ public class Generator {
                 }
             }
         }
+    }
     }
 
     private int baseOfTreePenaltyCalculation(TreeNode baseNode) {
@@ -466,7 +476,7 @@ public class Generator {
             System.out.println(allStackNodes);
             TreeNode currentNode = allStackNodes.pop();
 
-            if (currentNode.getDepth() == unitsToBeScheduled.size()) { // TheScheduleInsideRepresents a Full
+                                                                       //heduleInsideRepresents a Full
                                                                            // Solution
                 System.out.println(
                         "WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
@@ -481,69 +491,27 @@ public class Generator {
 
                 }
 
-            } else {
+             else {
                 // Check to see if doesn't have children made
                 Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth());
                 if (currentNode.getChildren().size() == 0) {
-                    generateChildren(scheduleMe, currentNode, unitsToBeScheduled.size());
+                    generateChildren(scheduleMe, currentNode, unitsToBeScheduled.size(),this.bound);
                     depth++;
                 }
                 // Go through all of the children and add them to the stack if the eval of the
                 // We can change this to the priority queue and order the children by their
 
-                // this gets the 10 best children with the lowest 
-                
-                ArrayList<TreeNode> maxAmount= new ArrayList<TreeNode>();
-                ArrayList<TreeNode> children = new ArrayList<TreeNode>(currentNode.getChildren()) ;
-                int size = children.size();
-                if(size >= 5){
-                    size = 5;
-                }
-                for(int i = 0; i < size ; i++){
-                    TreeNode bestN = null;
-                    int place = -1;
-                    for (int j = 0; j < children.size(); j++) {
-                        TreeNode node = children.get(j);
-                        if(bestN == null){
-                            place = j;
-                            bestN = node;
-                        }
-                        else{
-                            if(node.getPenaltyValueOfTreeNode() < bestN.getPenaltyValueOfTreeNode()){
-                                place = j;
-                                bestN = node;
-                            }
-                        }
-                    }
-                    maxAmount.add(bestN);
-                    children.remove(place);  
-                    
-                }
 
-                // add the best chilren to the stack 
-                for (TreeNode node : maxAmount) {
-                    if(node != null){
-                        System.out.println("The value we get is: " + node.getPenaltyValueOfTreeNode());
-
-                        //THIS IS GOOD I JUST NEED TO TEST SOMETHING
-                        if (node.getPenaltyValueOfTreeNode() < bound) {
-                            // Add it to the stack
-                            allStackNodes.add(node);
-                        } else {
-                            // Debug
-                            System.out.println(
-                                    "-------------------------It Broke the bound so I didn't add it --------------------------------");
-                        }
-                    }
+                // add the est chilren to the stack
+                for (int i = 0;  i<  currentNode.getOrderedChildren().size(); i++) {
+                    allStackNodes.push(currentNode.getOrderedChildren().remove());
                 }
 
             }
 
-        }
-        if(bestSchedule == null){
-            System.out.println("-------------------------No Valid Solution--------------------------------");
-        }
-        else{
+        }  
+        if (bestSchedule == null) {
+          } else{
             System.out.println("We are out of things to add...");
             System.out.println("The Best:");
             System.out.println(this.bestSchedule.toString());
