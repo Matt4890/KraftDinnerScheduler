@@ -62,7 +62,7 @@ public class Generator {
 
             } else {
                 if (slot instanceof LabSlot) {
-                    checkAndMaybeAddChild(current, slot, parent, currentBound allUnitsTotal);
+                    checkAndMaybeAddChild(current, slot, parent, currentBound, allUnitsTotal);
                 }
 
             }
