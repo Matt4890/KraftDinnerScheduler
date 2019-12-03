@@ -95,7 +95,7 @@ public class SoftConstraints {
 
   /**
    * might be a problem with this one
-   * 
+   *
    * @param b
    * @param s
    * @param node
@@ -125,7 +125,7 @@ public class SoftConstraints {
 
   /**
    * might be a problem with this one
-   * 
+   *
    * @param b
    * @param s
    * @param node
@@ -153,7 +153,7 @@ public class SoftConstraints {
   }
 
   /**
-   * 
+   *
    * @param course
    * @param s
    * @return
