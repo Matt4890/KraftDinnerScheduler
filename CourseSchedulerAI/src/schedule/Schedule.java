@@ -223,19 +223,19 @@ public class Schedule {
         }
     }
 
-    public CourseSlot[] getAllCourseSlots() {
+    public ArrayList<Slot> getAllCourseSlots() {
         ArrayList<Slot> slots = new ArrayList<Slot>();
         slots.addAll(this.MWFLec.values());
         slots.addAll(this.TuThLec.values());
-        return (CourseSlot[]) slots.toArray();
+        return slots;
     }
 
-    public LabSlot[] getAllLabSlots() {
+    public ArrayList<Slot> getAllLabSlots() {
         ArrayList<Slot> slots = new ArrayList<Slot>();
         slots.addAll(this.MWLab.values());
         slots.addAll(this.TuThLab.values());
         slots.addAll(this.FLab.values());
-        return (LabSlot[]) slots.toArray();
+        return slots;
     }
 
 }

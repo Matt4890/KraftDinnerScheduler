@@ -132,7 +132,11 @@ public class TreeNode implements Comparable<TreeNode> {
 
     @Override
     public int compareTo(TreeNode o) {
-        return (((Integer) (this.getDesirablilty())).compareTo((Integer) o.getDesirablilty()));
+        // return (((Integer) (this.getDesirablilty())).compareTo((Integer) o.getDesirablilty()));
+        return (
+            ((Integer) (this.getConstrainedMeasuremnet()))
+            .compareTo((Integer) o.getConstrainedMeasuremnet())
+        );
     }
 
     public String toString() {
@@ -190,7 +194,7 @@ public class TreeNode implements Comparable<TreeNode> {
         final int LAB_WEIGHT = 1;
 
         // Measure course contraints
-        for (CourseSlot s : this.schedule.getAllCourseSlots()) {
+        for (Slot s : this.schedule.getAllCourseSlots()) {
             int cval = 0;
             for (Unit u : s.getClassAssignment()) {
                 cval += u.getConstrained();
@@ -199,7 +203,7 @@ public class TreeNode implements Comparable<TreeNode> {
         }
 
         // Measure lab contraints
-        for (LabSlot s : this.schedule.getAllLabSlots()) {
+        for (Slot s : this.schedule.getAllLabSlots()) {
             int cval = 0;
             for (Unit u : s.getClassAssignment()) {
                 cval += u.getConstrained();
