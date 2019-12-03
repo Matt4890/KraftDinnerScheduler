@@ -96,7 +96,11 @@ public class Main {
     // addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR
     // PLS
 
-    ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
+    // Get list of units to ignore (partial assignments)
+    ArrayList<Unit> partialAssignedUnits = new ArrayList<Unit>();
+    parser.getPartialAssignments().forEach( p -> partialAssignedUnits.add(p.getUnit()));
+
+    ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs, partialAssignedUnits);
     total_num_of_units = unitsToProcess.size();
     System.out.println("Units Made");
     Generator search = new Generator(root);
@@ -194,7 +198,7 @@ public class Main {
    *
    * @return: ArrayList of units in order to process
    */
-  private static ArrayList<Unit> orderedUnitsForAdding(HashMap<String, Course> courses, HashMap<String, Lab> labs) {
+  private static ArrayList<Unit> orderedUnitsForAdding(HashMap<String, Course> courses, HashMap<String, Lab> labs, ArrayList<Unit> ignored) {
     System.out.println("ORderING");
     ArrayList<Unit> toReturn = new ArrayList<Unit>();
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
@@ -207,6 +211,11 @@ public class Main {
       // This is where we do the fancy stuff
       toReturn.add(l);
     }
+
+    for (Unit u : ignored) {
+      toReturn.remove(u);
+    }
+
     System.out.println(toReturn);
     bubbleSort(toReturn);
 
