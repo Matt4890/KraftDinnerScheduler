@@ -53,8 +53,7 @@ public class Main {
       root = new TreeNode(assign, 0);
       System.out.println("Made Root without penalty");
       System.out.println(root.toString());
-      root.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(0).getSlot(),
-          parser.getPartialAssignments().get(0).getUnit(), root));
+      root.setPenalty(initialPenalty);
 
       root.setDepth(0);
       System.out.println("Root:");
@@ -80,9 +79,6 @@ public class Main {
       System.out.println("For Loop ended woo");
     }
 
-    int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
-    int initialPairsPenalty = parser.getpairWeightCount() * Kontrol.getWeight_pair();
-    int initialPreferencePenalty = parser.getprefWeight() * Kontrol.getWeight_pref();
     if (root  == null){
       root = new TreeNode(new Pair(null, null), initialMinPenalty);
     }
