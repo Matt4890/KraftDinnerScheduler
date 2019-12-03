@@ -40,6 +40,7 @@ public class Main {
     Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(),
         Kontrol.getWeight_min_filled());
     System.out.println(parser.getPartialAssignments());
+    System.out.println(parser.getAllSlots());
     TreeNode root = new TreeNode(
         new Pair(parser.getPartialAssignments().get(0).getSlot(), parser.getPartialAssignments().get(0).getUnit()), 0);
     System.out.println("Made Root without penalty");
@@ -83,8 +84,7 @@ public class Main {
 
     makeBrothers(allCourses);
     makePotentialsBros(allCourses);
-    // addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR
-    // PLS
+    // addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR PLS
 
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     total_num_of_units = unitsToProcess.size();
@@ -94,8 +94,6 @@ public class Main {
     search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), parser.getPartialAssignments().size());
     System.out.println("Generator Obj Created!!!!!!!!");
 
-    // Generator gen = new Generator();
-    // gen.createFBound(parser.getMap());
 
   }
 

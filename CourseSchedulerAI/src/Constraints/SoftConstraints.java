@@ -45,7 +45,8 @@ public class SoftConstraints {
       if (current.getAssign().getSlot() == s) {
         count++;
       }
-      current = node.getParent();
+      System.out.println(current.toString());
+      current = current.getParent();
     }
 
     if (s.getCourseMin() != 1 && s.getCourseMin() == count + 1) {
