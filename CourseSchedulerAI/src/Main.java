@@ -2,6 +2,8 @@ import parser.*;
 import schedule.*;
 import tree.*;
 import coursesULabs.*;
+import enums.LabDays;
+
 import java.util.*;
 import java.io.*;
 
@@ -40,9 +42,9 @@ public class Main {
     Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(),
         Kontrol.getWeight_min_filled());
     System.out.println(parser.getPartialAssignments());
-    System.out.println(parser.getAllSlots());
-    TreeNode root = new TreeNode(
-        new Pair(parser.getPartialAssignments().get(0).getSlot(), parser.getPartialAssignments().get(0).getUnit()), 0);
+    Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
+        parser.getPartialAssignments().get(0).getUnit());
+    TreeNode root = new TreeNode(assign, 0);
     System.out.println("Made Root without penalty");
     System.out.println(root.toString());
     root.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(0).getSlot(),
@@ -97,16 +99,27 @@ public class Main {
 
   }
 
-  private static void addConstraintsForSpecialClasses(HashMap<String, Lab> allCourses, Schedule schec) {
+  private static void addConstraintsForSpecialClasses(HashMap<String, Lab> allCourses, Parser parse) {
     boolean toremove813 = false;
     String id813 = "";
     boolean toremove913 = false;
     String id913 = "";
+    ArrayList<Slot> slots = parse.getAllSlots();
+    Slot tues1800 = null;
+    for (Slot slot : slots) {
+      if (slot.getTime() == 1800) {
+        if (slot instanceof LabSlot) {
+          if (((LabSlot) slot).getDay() == LabDays.TUETHR) {
+            tues1800 = slot;
+          }
+        }
+      }
+    }
     for (Map.Entry<String, Lab> entry : allCourses.entrySet()) {
       if (entry.getValue().getCourseNum() == 813 && entry.getValue().getCourseType().equals("CPSC")) {
         Lab cpsc813 = entry.getValue();
-        if (schec.getTuThLab().containsKey(1800)) {
-          schec.getTuThLab().get(1800).getClassAssignment().add(cpsc813);
+        if (tues1800 != null) {
+          parse.getPartialAssignments().add(new Pair(tues1800, cpsc813));
           toremove813 = true;
           id813 = cpsc813.toString();
         } else {
@@ -130,8 +143,8 @@ public class Main {
         }
       } else if (entry.getValue().getCourseNum() == 913 && entry.getValue().getCourseType().equals("CPSC")) {
         Lab cpsc913 = entry.getValue();
-        if (schec.getTuThLab().containsKey(1800)) {
-          schec.getTuThLab().get(1800).getClassAssignment().add(cpsc913);
+        if (tues1800 != null) {
+          parse.getPartialAssignments().add(new Pair(tues1800, cpsc913));
           toremove913 = true;
           id913 = cpsc913.toString();
         } else {
@@ -166,11 +179,11 @@ public class Main {
 
   /*
    * Function to order units as we want to process them
-   * 
+   *
    * @param courses: hashmap of courses indexed by string
-   * 
+   *
    * @param lab: hashmap of labs indexed by string
-   * 
+   *
    * @return: ArrayList of units in order to process
    */
   private static ArrayList<Unit> orderedUnitsForAdding(HashMap<String, Course> courses, HashMap<String, Lab> labs) {
@@ -196,7 +209,7 @@ public class Main {
 
   /**
    * takes a arraylist of units and orders them from most constrained to least
-   * 
+   *
    * @param units
    */
   public static void bubbleSort(ArrayList<Unit> units) {
