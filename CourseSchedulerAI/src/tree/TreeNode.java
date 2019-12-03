@@ -10,7 +10,7 @@ public class TreeNode implements Comparable<TreeNode> {
 
     private TreeNode parent;
     private int penaltyValue;
-    private Schedule schedule;
+
     private Pair assign;
     private ArrayList<TreeNode> children; // This could be a heap so the one with the lowest pen value is always on top
     private PriorityQueue<TreeNode> orderedChildren = new PriorityQueue<TreeNode>();
@@ -30,7 +30,7 @@ public class TreeNode implements Comparable<TreeNode> {
         this.assign = pair;
         this.children = new ArrayList<TreeNode>();
         this.parent = null;
-        this.desirability = Integer.MAX_VALUE;
+        this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(), this);
         this.orderedChildren = new PriorityQueue<TreeNode>();
         this.still_considered = true;
         this.best_bottom_tn = null;
@@ -39,7 +39,6 @@ public class TreeNode implements Comparable<TreeNode> {
 
     public TreeNode(TreeNode n) {
         this.penaltyValue = n.getPenaltyValueOfTreeNode();
-        this.schedule = new Schedule(n.getSchedule());
         this.children = n.getChildren();
         this.desirability = n.getDesirablilty();
         this.orderedChildren = n.getOrderedChildren();
@@ -48,10 +47,9 @@ public class TreeNode implements Comparable<TreeNode> {
 
     public TreeNode(Pair pair, int penaltyValue, ArrayList<TreeNode> children) {
         this.penaltyValue = penaltyValue;
-        this.schedule = new Schedule(schedule);
         this.assign = pair;
         this.parent = null;
-        this.desirability = Integer.MAX_VALUE;
+        this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(), this);
         this.still_considered = true;
     }
 
@@ -103,9 +101,6 @@ public class TreeNode implements Comparable<TreeNode> {
         return this.parent;
     }
 
-    public Schedule getSchedule() {
-        return this.schedule;
-    }
 
     public ArrayList<TreeNode> getChildren() {
         return this.children;
@@ -133,15 +128,20 @@ public class TreeNode implements Comparable<TreeNode> {
 
     @Override
     public int compareTo(TreeNode o) {
-        // return (((Integer) (this.getDesirablilty())).compareTo((Integer) o.getDesirablilty()));
-        return (
-            ((Integer) (this.getConstrainedMeasuremnet()))
-            .compareTo((Integer) o.getConstrainedMeasuremnet())
-        );
+        return (((Integer) (this.getDesirablilty())).compareTo((Integer) o.getDesirablilty()));
+        // return (
+        //     ((Integer) (this.getConstrainedMeasuremnet()))
+        //     .compareTo((Integer) o.getConstrainedMeasuremnet())
+        // );
     }
 
     public String toString() {
-        return "TreeNode: Penalty: " + this.penaltyValue + " " + this.schedule.toString();
+        String toReturn =  "TreeNode: Penalty: " + this.penaltyValue + "\n";
+        TreeNode placeHolder = this;
+        while(placeHolder.parent != null){
+            toReturn +="Unit: " + this.assign.getUnit().toString() + " in Slot" +this.assign.getSlot().toString() + "\n";
+        }
+        return toReturn;
     }
 
     public PriorityQueue<TreeNode> getOrderedChildren() {
@@ -187,34 +187,34 @@ public class TreeNode implements Comparable<TreeNode> {
      * then multiplied by a course/lab weight.
      * @return An integer expressing 
      */
-    public int getConstrainedMeasuremnet() {
+    // public int getConstrainedMeasuremnet() {
 
-        int constrainedVal = 0;
+    //     int constrainedVal = 0;
 
-        final int COURSE_WEIGHT = 1;
-        final int LAB_WEIGHT = 1;
+    //     final int COURSE_WEIGHT = 1;
+    //     final int LAB_WEIGHT = 1;
 
-        // Measure course contraints
-        for (Slot s : this.schedule.getAllCourseSlots()) {
-            int cval = 0;
-            for (Unit u : s.getClassAssignment()) {
-                cval += u.getConstrained();
-            }
-            constrainedVal += cval * COURSE_WEIGHT;
-        }
+    //     // Measure course contraints
+    //     for (Slot s : this.schedule.getAllCourseSlots()) {
+    //         int cval = 0;
+    //         for (Unit u : s.getClassAssignment()) {
+    //             cval += u.getConstrained();
+    //         }
+    //         constrainedVal += cval * COURSE_WEIGHT;
+    //     }
 
-        // Measure lab contraints
-        for (Slot s : this.schedule.getAllLabSlots()) {
-            int cval = 0;
-            for (Unit u : s.getClassAssignment()) {
-                cval += u.getConstrained();
-            }
-            constrainedVal += cval * LAB_WEIGHT;
-        }
+    //     // Measure lab contraints
+    //     for (Slot s : this.schedule.getAllLabSlots()) {
+    //         int cval = 0;
+    //         for (Unit u : s.getClassAssignment()) {
+    //             cval += u.getConstrained();
+    //         }
+    //         constrainedVal += cval * LAB_WEIGHT;
+    //     }
         
-        return constrainedVal;
+    //     return constrainedVal;
 
-    }
+    // }
 
     public Pair getAssign() {
         return assign;

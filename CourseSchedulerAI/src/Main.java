@@ -1,8 +1,6 @@
 import parser.*;
 import schedule.*;
-import tree.Generator;
-import tree.Kontrol;
-import tree.TreeNode;
+import tree.*;
 import coursesULabs.*;
 import java.util.*;
 import java.io.*;
@@ -16,23 +14,22 @@ public class Main {
   public static int prefsPen;
   public static int total_num_of_units;
 
-  public static void main(String[] args) throws FileNotFoundException{
-    //Instantiating the File class
-    
+  public static void main(String[] args) throws FileNotFoundException {
+    // Instantiating the File class
+
     File file = new File("output.txt");
-    //Instantiating the PrintStream class
+    // Instantiating the PrintStream class
     // PrintStream stream = new PrintStream(file);
-    // System.out.println("From now on "+file.getAbsolutePath()+" will be your console");
+    // System.out.println("From now on "+file.getAbsolutePath()+" will be your
+    // console");
     // System.setOut(stream);
-    
-    //Printing values to file
 
-
+    // Printing values to file
 
     filename = args[0];
     courseMinPen = Integer.parseInt(args[1]);
     prefsPen = Integer.parseInt(args[2]);
-    pairsPen = Integer.parseInt(args[3]); 
+    pairsPen = Integer.parseInt(args[3]);
     brothersPen = Integer.parseInt(args[4]);
 
     Kontrol.setWeight_min_filled(courseMinPen);
@@ -40,24 +37,29 @@ public class Main {
     Kontrol.setWeight_pref(prefsPen);
     Kontrol.setWeight_section_diff(brothersPen);
 
-
-    Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(), Kontrol.getWeight_min_filled());
-    
-    TreeNode root = new TreeNode(parser.getPartialAssignments().get(0) , Kontrol.evalAssignment(parser.getPartialAssignments().get(0).getSlot(), parser.getPartialAssignments().get(0).getUnit()));
+    Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(),
+        Kontrol.getWeight_min_filled());
+    TreeNode root = new TreeNode(
+        new Pair(parser.getPartialAssignments().get(0).getSlot(), parser.getPartialAssignments().get(0).getUnit()), 0);
+    root.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(0).getSlot(),
+        parser.getPartialAssignments().get(0).getUnit(), root));
     root.setDepth(0);
     TreeNode curr = root;
-    for (int i = 1; i< parser.getPartialAssignments().size(); i++){
-        TreeNode n = new TreeNode(parser.getPartialAssignments().get(i) , Kontrol.evalAssignment(parser.getPartialAssignments().get(i).getSlot(), parser.getPartialAssignments().get(i).getUnit()));
-        n.setDepth(curr.getDepth() +1);
-        curr.addChild(n);
-        curr = n;
+    for (int i = 1; i < parser.getPartialAssignments().size(); i++) {
+      TreeNode n = new TreeNode(
+          new Pair(parser.getPartialAssignments().get(0).getSlot(), parser.getPartialAssignments().get(0).getUnit()), 0,
+          curr);
+      n.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(0).getSlot(),
+          parser.getPartialAssignments().get(0).getUnit(), root));
+      n.setDepth(0);
+      n.setDepth(curr.getDepth() + 1);
+      curr.addChild(n);
+      curr = n;
     }
 
     int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
-    int initialPairsPenalty =  parser.getpairWeightCount() * Kontrol.getWeight_pair();
-    int initialPreferencePenalty =  parser.getprefWeight()* Kontrol.getWeight_pref();
-
-    
+    int initialPairsPenalty = parser.getpairWeightCount() * Kontrol.getWeight_pair();
+    int initialPreferencePenalty = parser.getprefWeight() * Kontrol.getWeight_pref();
 
     Schedule initialSchedule = parser.getSchedule();
     System.out.println("The Schedule:");
@@ -76,13 +78,13 @@ public class Main {
     addConstraintsForSpecialClasses(allLabs, initialSchedule);
     int initialPenalty = parser.getInitialPenalty();
     System.out.println("The initial pen is: " + initialPenalty);
-    //initialPenalty = initialPenalty + initialMinPenalty + initialPairsPenalty + initialPreferencePenalty;
+    // initialPenalty = initialPenalty + initialMinPenalty + initialPairsPenalty +
+    // initialPreferencePenalty;
     System.out.println("LOOOK HERE!!!!!!!!!!!: " + initialPenalty);
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     total_num_of_units = unitsToProcess.size();
     System.out.println("Units Made");
-    Generator search = new Generator(root, courseMinPen, pairsPen, brothersPen);
-
+    Generator search = new Generator(root);
 
     search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), parser.getPartialAssignments().size());
     System.out.println("Generator Obj Created!!!!!!!!");
@@ -91,34 +93,31 @@ public class Main {
     // gen.createFBound(parser.getMap());
 
   }
-  
-
 
   private static void addConstraintsForSpecialClasses(HashMap<String, Lab> allCourses, Schedule schec) {
     boolean toremove813 = false;
     String id813 = "";
     boolean toremove913 = false;
     String id913 = "";
-    for(Map.Entry<String, Lab> entry : allCourses.entrySet()){
-      if(entry.getValue().getCourseNum() == 813 && entry.getValue().getCourseType().equals("CPSC")){
+    for (Map.Entry<String, Lab> entry : allCourses.entrySet()) {
+      if (entry.getValue().getCourseNum() == 813 && entry.getValue().getCourseType().equals("CPSC")) {
         Lab cpsc813 = entry.getValue();
-        if (schec.getTuThLab().containsKey(1800)){
+        if (schec.getTuThLab().containsKey(1800)) {
           schec.getTuThLab().get(1800).getClassAssignment().add(cpsc813);
           toremove813 = true;
           id813 = cpsc813.toString();
-        }
-        else{
+        } else {
           System.out.println("Slot Tuesday at 1800 doesn't exist but 813/913 should be there");
           System.exit(0);
         }
-        for(Unit unit : cpsc813.getNotCompatible()){
-          if(unit.getCourseNum()== 313 && unit.getCourseType().equals("CPSC")){
-            Unit cpsc313 = unit; //purely for readability can be a lab or course
+        for (Unit unit : cpsc813.getNotCompatible()) {
+          if (unit.getCourseNum() == 313 && unit.getCourseType().equals("CPSC")) {
+            Unit cpsc313 = unit; // purely for readability can be a lab or course
             cpsc813.addToNotCompatible(cpsc313);
             cpsc313.addToNotCompatible(cpsc813);
             cpsc313.incrementNonCompatible();
             cpsc813.incrementNonCompatible();
-            for(Unit notCompatibleToadd : cpsc313.getNotCompatible()){
+            for (Unit notCompatibleToadd : cpsc313.getNotCompatible()) {
               cpsc813.addToNotCompatible(notCompatibleToadd);
               notCompatibleToadd.addToNotCompatible(cpsc813);
               notCompatibleToadd.incrementNonCompatible();
@@ -126,26 +125,24 @@ public class Main {
             }
           }
         }
-      }
-      else if(entry.getValue().getCourseNum() == 913 && entry.getValue().getCourseType().equals("CPSC")){
+      } else if (entry.getValue().getCourseNum() == 913 && entry.getValue().getCourseType().equals("CPSC")) {
         Lab cpsc913 = entry.getValue();
-        if (schec.getTuThLab().containsKey(1800)){
+        if (schec.getTuThLab().containsKey(1800)) {
           schec.getTuThLab().get(1800).getClassAssignment().add(cpsc913);
           toremove913 = true;
           id913 = cpsc913.toString();
-        }
-        else{
+        } else {
           System.out.println("Slot Tuesday at 1800 doesn't exist but 813/913 should be there");
           System.exit(0);
         }
-        for(Unit unit : cpsc913.getNotCompatible()){
-          if(unit.getCourseNum()== 413 && unit.getCourseType().equals("CPSC")){
-            Unit cpsc413 = unit; //purely for readability can be a lab or course
+        for (Unit unit : cpsc913.getNotCompatible()) {
+          if (unit.getCourseNum() == 413 && unit.getCourseType().equals("CPSC")) {
+            Unit cpsc413 = unit; // purely for readability can be a lab or course
             cpsc913.addToNotCompatible(cpsc413);
             cpsc413.addToNotCompatible(cpsc913);
             cpsc413.incrementNonCompatible();
             cpsc913.incrementNonCompatible();
-            for(Unit notCompatibleToadd : cpsc413.getNotCompatible()){
+            for (Unit notCompatibleToadd : cpsc413.getNotCompatible()) {
               cpsc913.addToNotCompatible(notCompatibleToadd);
               notCompatibleToadd.addToNotCompatible(cpsc913);
               notCompatibleToadd.incrementNonCompatible();
@@ -155,10 +152,10 @@ public class Main {
         }
       }
     }
-    if (toremove813){
+    if (toremove813) {
       allCourses.remove(id813);
     }
-    if (toremove913){
+    if (toremove913) {
       allCourses.remove(id913);
     }
 
@@ -177,78 +174,71 @@ public class Main {
     ArrayList<Unit> toReturn = new ArrayList<Unit>();
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       Course c = (Course) entry.getValue();
-      //This is where we do the fancy stuff
+      // This is where we do the fancy stuff
       toReturn.add(c);
     }
     for (Map.Entry<String, Lab> entry : labs.entrySet()) {
       Lab l = (Lab) entry.getValue();
-      //This is where we do the fancy stuff
+      // This is where we do the fancy stuff
       toReturn.add(l);
     }
     System.out.println(toReturn);
     bubbleSort(toReturn);
-    
+
     System.out.println(toReturn);
 
     return toReturn;
   }
 
-
-
   /**
    * takes a arraylist of units and orders them from most constrained to least
+   * 
    * @param units
    */
-  public static void bubbleSort(ArrayList<Unit> units) 
-  { 
-      int n = units.size();
-      for (int i = 0; i < n-1; i++){ 
-          for (int j = 0; j < n-i-1; j++){
-              if (units.get(j).getConstrained() < units.get(j+1).getConstrained()) 
-              { 
-                  Unit temp = units.get(j); 
-                  units.set(j,units.get(j+1)); 
-                  units.set(j+1, temp); 
-              } 
-          }
-      }
-  }
-
-
-  private static void makePotentialsBros(HashMap<String, Course> courses){
-    System.out.println("The size of courses is " + courses.size());
-    ArrayList<Course> checked = new ArrayList<Course>();
-    for(Map.Entry<String, Course> entry : courses.entrySet()){
-      Course courseToAddPotential = entry.getValue();
-      checked.add(courseToAddPotential);
-      System.out.println("the size of brothers is " + courseToAddPotential.getBrothers().size());
-      for(Course course : courseToAddPotential.getBrothers()){
-        System.out.println("I hate this");
-        if(!checked.contains(course)){
-          courseToAddPotential.incrementPotential( ((double)(brothersPen)) / 2 );
-          course.incrementPotential( ((double) (brothersPen)) / 2 );
-          System.out.println("The pen added is " +  brothersPen + " for brothers pen for " + course.getKey() + " and " + courseToAddPotential.getKey());
+  public static void bubbleSort(ArrayList<Unit> units) {
+    int n = units.size();
+    for (int i = 0; i < n - 1; i++) {
+      for (int j = 0; j < n - i - 1; j++) {
+        if (units.get(j).getConstrained() < units.get(j + 1).getConstrained()) {
+          Unit temp = units.get(j);
+          units.set(j, units.get(j + 1));
+          units.set(j + 1, temp);
         }
       }
     }
   }
 
+  private static void makePotentialsBros(HashMap<String, Course> courses) {
+    System.out.println("The size of courses is " + courses.size());
+    ArrayList<Course> checked = new ArrayList<Course>();
+    for (Map.Entry<String, Course> entry : courses.entrySet()) {
+      Course courseToAddPotential = entry.getValue();
+      checked.add(courseToAddPotential);
+      System.out.println("the size of brothers is " + courseToAddPotential.getBrothers().size());
+      for (Course course : courseToAddPotential.getBrothers()) {
+        System.out.println("I hate this");
+        if (!checked.contains(course)) {
+          courseToAddPotential.incrementPotential(((double) (brothersPen)) / 2);
+          course.incrementPotential(((double) (brothersPen)) / 2);
+          System.out.println("The pen added is " + brothersPen + " for brothers pen for " + course.getKey() + " and "
+              + courseToAddPotential.getKey());
+        }
+      }
+    }
+  }
 
-  private static void makeBrothers(HashMap<String, Course> courses){
-    for(Map.Entry<String, Course> entry : courses.entrySet()){
-      for(Map.Entry<String, Course> entry2 : courses.entrySet()){
-        if(entry.getValue().isBrother(entry2.getValue())){
+  private static void makeBrothers(HashMap<String, Course> courses) {
+    for (Map.Entry<String, Course> entry : courses.entrySet()) {
+      for (Map.Entry<String, Course> entry2 : courses.entrySet()) {
+        if (entry.getValue().isBrother(entry2.getValue())) {
           entry.getValue().addBrother(entry2.getValue());
         }
       }
     }
   }
 
-  public static int getNumOfUnits(){
+  public static int getNumOfUnits() {
     return total_num_of_units;
   }
-  
-  
-
 
 }

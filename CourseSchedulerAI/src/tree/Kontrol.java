@@ -10,26 +10,25 @@ public class Kontrol {
     private static int weight_pair;
     private static int weight_section_diff;
 
+    public static int evalAssignmentPairing(Slot s, Unit u, TreeNode node) {
 
-
-    public static int evalAssignment(Slot s, Unit u) {
-        // Take the value of the soft constraint functions of an assignment
-        // and apply weights to them based on whatever we decide
         int total = 0;
-
         if (s instanceof CourseSlot) {
-            total += SoftConstraints.checkCourseMin((CourseSlot) s) * weight_min_filled;
-            total += SoftConstraints.preferenceEval(s,u) * weight_pref;
-            total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s) * weight_pair;
-            total += SoftConstraints.checkSections((Course) u, (CourseSlot) s) * weight_section_diff;
-            
+          total += SoftConstraints.checkCourseMin((CourseSlot) s, node) * Kontrol.weight_min_filled;
+          total += SoftConstraints.preferenceEval(s, u)* Kontrol.weight_pref;
+          total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node)* Kontrol.weight_pair;
+          total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, node)* Kontrol.weight_section_diff;
         } else {
-            total += SoftConstraints.checkLabMin((LabSlot) s) * weight_min_filled;
-            total += SoftConstraints.preferenceEval(s,u) * weight_pref;
-            total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s) * weight_pair;
+          total += SoftConstraints.checkLabMin((LabSlot) s, node)* Kontrol.weight_min_filled;
+          total += SoftConstraints.preferenceEval(s, u)* Kontrol.weight_pref;
+          total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, node)* Kontrol.weight_pair;
+    
         }
         return total;
-    }
+    
+      }
+    
+
 
     /**
      * the desireability is based on the following
@@ -44,9 +43,9 @@ public class Kontrol {
      * @param u
      * @return desireability of assigning unit u into slot s
      */
-    public static int desireability(Slot s, Unit u) {
+    public static int desireability(Slot s, Unit u, TreeNode n) {
         int total = 0;
-        total += evalAssignment(s,u);
+        total += evalAssignmentPairing(s,u, n);
         if(u instanceof Course){
             total -= (((CourseSlot)s).getCourseMin() - s.getClassAssignment().size());
             total += (((CourseSlot)s).getCourseMax() - (((CourseSlot)s).getCourseMax() - s.getClassAssignment().size())) * 5;

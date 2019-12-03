@@ -10,57 +10,61 @@ public class Generator {
     private TreeNode starter;
 
     private int bound;
-    private int weightMin;
-    private int weightPairs;
-    private int weightBrothersSectionDiff;
+
     private TreeNode startNode;
     private TreeNode bestSchedule;
 
-    public Generator(TreeNode starter, int weight_min, int weight_pairs, int wait_section_diff) {
+    public Generator(TreeNode starter) {
 
         this.starter = starter;
-
         this.bound = Integer.MAX_VALUE;
-        this.weightMin = weight_min;
-        this.weightPairs = weight_pairs;
-        this.weightBrothersSectionDiff = wait_section_diff;
         this.bestSchedule = null;
 
     }
 
-    private void checkAndMaybeAddChild(Unit current, Slot slot, TreeNode parent, int currentBound, int allUnitsTotal) {
+    private void checkAndMaybeAddChild(Unit current, Slot slot, TreeNode parent, int currentBound, int allUnitsTotal,
+            ArrayList<Slot> emptySlots) {
         TreeNode nodeToAdd = new TreeNode(new Pair(slot, current), 0, parent);
         nodeToAdd.setDepth(parent.getDepth() + 1);
 
         // Check if we break the hard constraint
-        boolean HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriants(nodeToAdd);
+        boolean HardConstraintOk;
+        if (current instanceof Course) {
+            HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
+                    (CourseSlot) slot, nodeToAdd);
+        } else {
+            HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current, (LabSlot) slot,
+                    nodeToAdd);
+        }
         if (HardConstraintOk) {
             // Calculate the penalty value here
-            int calc = SoftConstraints.calculatePenalty(nodeToAdd);
+            int calc = Kontrol.evalAssignmentPairing(slot, current, nodeToAdd);
             if (calc < currentBound) {
                 nodeToAdd.setPenalty(calc);
                 parent.addChild(nodeToAdd);
-                if (nodeToAdd.getDepth() == allUnitsTotal - 1) {
+                if (nodeToAdd.getDepth() == allUnitsTotal - 1) { // This should change to be something else
                     // Calculate the penalty for the remaining slots
                     // Create a helper method in Generator to calculate all empty slot coursemin and
                     // preference s
-                    nodeToAdd.addToPenaltyForBaseNode(baseOfTreePenaltyCalculation(nodeToAdd)); // THIS IS GOING TO HAVE TO CHANGE
+                    nodeToAdd.addToPenaltyForBaseNode(includeEmptySlotsInPenalty(emptySlots)); // THIS IS GOING TO HAVE
+                                                                                               // TO CHANGE
 
                 }
             }
         }
     }
 
-    private void generateChildrenPairs(Unit current, TreeNode parent, ArrayList<Slot> slotsToPair, int currentBound, int allUnitsTotal) {
+    private void generateChildrenPairs(Unit current, TreeNode parent, ArrayList<Slot> slotsToPair, int currentBound,
+            int allUnitsTotal, ArrayList<Slot> emptySlots) {
         for (Slot slot : slotsToPair) {
             if (current instanceof Course) {
                 if (slot instanceof CourseSlot) {
-                    checkAndMaybeAddChild(current, slot, parent, currentBound, allUnitsTotal);
+                    checkAndMaybeAddChild(current, slot, parent, currentBound, allUnitsTotal, emptySlots);
                 }
 
             } else {
                 if (slot instanceof LabSlot) {
-                    checkAndMaybeAddChild(current, slot, parent, currentBound, allUnitsTotal);
+                    checkAndMaybeAddChild(current, slot, parent, currentBound, allUnitsTotal, emptySlots);
                 }
 
             }
@@ -68,88 +72,35 @@ public class Generator {
 
     }
 
-
-    private int baseOfTreePenaltyCalculation(TreeNode baseNode) {
-        // System.out.println("RAN THE BASE OF TREE PENALTY CALC");
-        Schedule toCheck = baseNode.getSchedule();
+    private int includeEmptySlotsInPenalty(ArrayList<Slot> emptySlots) {
         int evalToAdd = 0;
-        evalToAdd += calculatePenaltyForEmptySlotsCourses(toCheck.getMWFLec());
-        evalToAdd += calculatePenaltyForEmptySlotsCourses(toCheck.getTuThLec());
-        evalToAdd += calculatePenaltyForEmptySlotsLabs(toCheck.getMWLab());
-        evalToAdd += calculatePenaltyForEmptySlotsLabs(toCheck.getTuThLab());
-        evalToAdd += calculatePenaltyForEmptySlotsLabs(toCheck.getFLab());
-
-        return evalToAdd;
-
-    }
-
-    private int calculatePenaltyForEmptySlotsCourses(HashMap<Integer, Slot> checkMe) {
-        int evalToAdd = 0;
-        for (Map.Entry<Integer, Slot> entry : checkMe.entrySet()) {
-            if (entry.getValue().getClassAssignment().size() == 0) {
-                // CourseMin Check
-                if (((CourseSlot) entry.getValue()).getCourseMin() != 0) {
+        for (Slot slot : emptySlots) {
+            if (slot instanceof CourseSlot) {
+                if (((CourseSlot) slot).getCourseMin() != 0) {
                     evalToAdd += (1 * Kontrol.getWeight_min_filled());
                 }
                 // Preferences
-                if (entry.getValue().getPreference().size() != 0) {
-                    for (Map.Entry<Unit, Integer> entry1 : entry.getValue().getPreference().entrySet()) {
+                if (slot.getPreference().size() != 0) {
+                    for (Map.Entry<Unit, Integer> entry1 : slot.getPreference().entrySet()) {
                         evalToAdd += entry1.getValue() * Kontrol.getWeight_pref();
                     }
                 }
-            }
-        }
-        return evalToAdd;
-    }
-
-    private int calculatePenaltyForEmptySlotsLabs(HashMap<Integer, Slot> checkMe) {
-        int evalToAdd = 0;
-        for (Map.Entry<Integer, Slot> entry : checkMe.entrySet()) {
-            if (entry.getValue().getClassAssignment().size() == 0) {
-                // CourseMin Check
-                if (((LabSlot) entry.getValue()).getLabMin() != 0) {
+            } else {
+                if (((LabSlot) slot).getLabMin() != 0) {
                     evalToAdd += (1 * Kontrol.getWeight_min_filled());
                 }
                 // Preferences
-                if (entry.getValue().getPreference().size() != 0) {
-                    for (Map.Entry<Unit, Integer> entry1 : entry.getValue().getPreference().entrySet()) {
+                if (slot.getPreference().size() != 0) {
+                    for (Map.Entry<Unit, Integer> entry1 : slot.getPreference().entrySet()) {
                         evalToAdd += entry1.getValue() * Kontrol.getWeight_pref();
                     }
                 }
+
             }
         }
         return evalToAdd;
     }
 
-    private void updatePotentialLab(LabSlot labSlot, Unit current, TreeNode node) {
-        if (labSlot.getLabCount() == labSlot.getLabMin()) {
-            node.incrementPotential(weightMin);
-        }
-    }
-
-    private void updatePotentialCourse(CourseSlot courseSlot, Unit current, TreeNode node) {
-        if (courseSlot.getCourseCount() == courseSlot.getCourseMin()) {
-            node.incrementPotential(weightMin);
-        }
-    }
-
-    private HashMap<Integer, Slot> DeepCopyCourseSlotMap(HashMap<Integer, Slot> toCopy) {
-        HashMap<Integer, Slot> toReturn = new HashMap<Integer, Slot>();
-        for (Map.Entry<Integer, Slot> entry : toCopy.entrySet()) {
-            toReturn.put(entry.getKey(), new CourseSlot((CourseSlot) entry.getValue()));
-        }
-        return toReturn;
-
-    }
-
-    private HashMap<Integer, Slot> DeepCopyLabSlotMap(HashMap<Integer, Slot> toCopy) {
-        HashMap<Integer, Slot> toReturn = new HashMap<Integer, Slot>();
-        for (Map.Entry<Integer, Slot> entry : toCopy.entrySet()) {
-            toReturn.put(entry.getKey(), new LabSlot((LabSlot) entry.getValue()));
-        }
-        return toReturn;
-
-    }
 
     // Skeleton of a BNB using a stack
     // Assumes we have a bound function called calculateBound which will
@@ -168,7 +119,8 @@ public class Generator {
     // than the upper bound of the problem, it will never lead to the optimal
     // solution, and can be discarded.
     // Else, store Ni on the queue.
-    public void branchAndBoundSkeleton(TreeNode starter, ArrayList<Unit> unitsToBeScheduled, ArrayList<Slot> slotToScheduleIn, int numPartialAssignments) {
+    public void branchAndBoundSkeleton(TreeNode starter, ArrayList<Unit> unitsToBeScheduled,
+            ArrayList<Slot> slotToScheduleIn, int numPartialAssignments) {
         System.out.println("RUNNING BNB");
         Stack<TreeNode> allStackNodes = new Stack<TreeNode>();
         this.startNode = starter;
@@ -202,17 +154,38 @@ public class Generator {
 
             else {
                 // Check to see if doesn't have children made
-                Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth() - numPartialAssignments ); // This will break right now NEEDS TESTING
-
+                Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth() - numPartialAssignments); // This will
+                                                                                                          // break right
+                                                                                                          // now ->
+                                                                                                          // NEEDS
+                                                                                                          // TESTING
+                ArrayList<Slot> emptySlots = new ArrayList<Slot>();
                 if (currentNode.getChildren().size() == 0) {
+                    // Do a check up the tree to see if the slot is included along the path
+                    // Whats a more efficient way to do this??
+                    if (scheduleMe.equals(unitsToBeScheduled.get(unitsToBeScheduled.size() - 1))) { // We are reaching
+                                                                                                    // the bottom - i.e.
+                                                                                                    // the last thing is
+                                                                                                    // being scheduled
+                        TreeNode check = currentNode;
+                        ArrayList<Slot> scheduledSlots = new ArrayList<Slot>();
+                        while (check.getParent() != null) {
+                            scheduledSlots.add(check.getAssign().getSlot());
+                            check = check.getParent();
+                        }
+                        for (Slot slot : slotToScheduleIn) {
+                            if (!scheduledSlots.contains(slot)) {
+                                emptySlots.add(slot);
+                            }
+                        }
+                    }
 
-                    generateChildrenPairs(scheduleMe, currentNode, slotToScheduleIn, this.bound, unitsToBeScheduled.size());
+                    generateChildrenPairs(scheduleMe, currentNode, slotToScheduleIn, this.bound,
+                            unitsToBeScheduled.size(), emptySlots);
                     depth++;
                 }
-                // Go through all of the children and add them to the stack if the eval of the
-                // We can change this to the priority queue and order the children by their
 
-                // add the est chilren to the stack
+
                 for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
                     // allStackNodes.push(currentNode.getOrderedChildren().remove());
                     allStackNodes.push(currentNode.getChildren().get(i));
