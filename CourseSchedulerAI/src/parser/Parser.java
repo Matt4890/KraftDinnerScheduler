@@ -27,8 +27,8 @@ public class Parser {
     private int pairWeight;
     private int minWeight;
     private int prefWeight2;
-    private ArrayList<Pair> partialAssignments;
-    private ArrayList<Slot> allSlots;
+    private ArrayList<Pair> partialAssignments = new ArrayList<Pair>();
+    private ArrayList<Slot> allSlots = new ArrayList<Slot>();
     
 
     public int getminWeightCount(){

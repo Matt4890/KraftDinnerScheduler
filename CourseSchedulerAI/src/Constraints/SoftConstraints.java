@@ -16,13 +16,20 @@ public class SoftConstraints {
     int total = 0;
     if (s instanceof CourseSlot) {
       total += SoftConstraints.checkCourseMin((CourseSlot) s, node);
+      System.out.println("Calculated Course Min");
       total += SoftConstraints.preferenceEval(s, u);
+      System.out.println("Calculated Preference");
       total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node);
+      System.out.println("Calculated Pair");
       total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, node);
+      System.out.println("Calculated Section");
     } else {
       total += SoftConstraints.checkLabMin((LabSlot) s, node);
+      System.out.println("Calculated Lab Min");
       total += SoftConstraints.preferenceEval(s, u);
+      System.out.println("Calculated Lab Preference");
       total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, node);
+      System.out.println("Calculated Lab Pair");
 
     }
     return total;
@@ -34,9 +41,11 @@ public class SoftConstraints {
     int count = 0;
     TreeNode current = node;
     while (current != null) {
+      System.out.println("Stuck???");
       if (current.getAssign().getSlot() == s) {
         count++;
       }
+      current = node.getParent();
     }
 
     if (s.getCourseMin() != 1 && s.getCourseMin() == count + 1) {
@@ -112,6 +121,7 @@ public class SoftConstraints {
           }
         }
       }
+      current = current.getParent();
     }
     return total;
 
@@ -141,6 +151,7 @@ public class SoftConstraints {
           }
         }
       }
+      current = current.getParent();
     }
     return total;
   }
@@ -160,6 +171,7 @@ public class SoftConstraints {
           total++;
         }
       }
+      current = current.getParent();
     }
     return total;
   }

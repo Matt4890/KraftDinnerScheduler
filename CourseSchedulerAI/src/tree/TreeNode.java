@@ -30,7 +30,7 @@ public class TreeNode implements Comparable<TreeNode> {
         this.assign = pair;
         this.children = new ArrayList<TreeNode>();
         this.parent = null;
-        this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(), this);
+        //this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(), this);
         this.orderedChildren = new PriorityQueue<TreeNode>();
         this.still_considered = true;
         this.best_bottom_tn = null;
@@ -49,7 +49,7 @@ public class TreeNode implements Comparable<TreeNode> {
         this.penaltyValue = penaltyValue;
         this.assign = pair;
         this.parent = null;
-        this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(), this);
+        //this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(), this);
         this.still_considered = true;
     }
 
@@ -94,7 +94,7 @@ public class TreeNode implements Comparable<TreeNode> {
 
     public void addChild(TreeNode n) {
         this.children.add(n);
-        this.orderedChildren.add(n);
+       // this.orderedChildren.add(n);
     }
 
     public TreeNode getParent() {
@@ -136,11 +136,12 @@ public class TreeNode implements Comparable<TreeNode> {
     }
 
     public String toString() {
-        String toReturn =  "TreeNode: Penalty: " + this.penaltyValue + "\n";
+        String toReturn =  "TreeNode: Depth: " + this.depth+" Penalty: " + this.penaltyValue + "\n";
         TreeNode placeHolder = this;
         while(placeHolder.parent != null){
             toReturn +="Unit: " + this.assign.getUnit().toString() + " in Slot" +this.assign.getSlot().toString() + "\n";
         }
+        toReturn += "Parent " + this.parent;
         return toReturn;
     }
 

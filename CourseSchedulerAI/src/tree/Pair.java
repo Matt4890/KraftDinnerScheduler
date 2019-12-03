@@ -28,6 +28,9 @@ public class Pair {
     public void setUnit(Unit unit) {
         this.unit = unit;
     }
+    public String toString(){
+        return "Pair Course: " + unit + " with Slot: " + slot;
+    }
 
 
 

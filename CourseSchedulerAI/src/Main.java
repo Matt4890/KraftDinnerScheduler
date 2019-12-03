@@ -39,31 +39,41 @@ public class Main {
 
     Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(),
         Kontrol.getWeight_min_filled());
+    System.out.println(parser.getPartialAssignments());
     TreeNode root = new TreeNode(
         new Pair(parser.getPartialAssignments().get(0).getSlot(), parser.getPartialAssignments().get(0).getUnit()), 0);
+        System.out.println("Made Root without penalty");
+        System.out.println(root.toString());
     root.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(0).getSlot(),
         parser.getPartialAssignments().get(0).getUnit(), root));
+
+
     root.setDepth(0);
+    System.out.println("Root:");
+    System.out.println(root.toString());
     TreeNode curr = root;
-    for (int i = 1; i < parser.getPartialAssignments().size(); i++) {
+    System.out.println("The size" +parser.getPartialAssignments().size());
+    int size = parser.getPartialAssignments().size();
+    for (int i = 1; i < size; i++) {
+      System.out.println("Iteration " + i);
       TreeNode n = new TreeNode(
-          new Pair(parser.getPartialAssignments().get(0).getSlot(), parser.getPartialAssignments().get(0).getUnit()), 0,
+          new Pair(parser.getPartialAssignments().get(i).getSlot(), parser.getPartialAssignments().get(i).getUnit()), 0,
           curr);
-      n.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(0).getSlot(),
-          parser.getPartialAssignments().get(0).getUnit(), root));
-      n.setDepth(0);
+      n.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(i).getSlot(),
+          parser.getPartialAssignments().get(i).getUnit(), root));
+      n.setDepth(i);
       n.setDepth(curr.getDepth() + 1);
       curr.addChild(n);
       curr = n;
+      System.out.println(curr.toString());
+      
     }
+    System.out.println("For Loop ended woo");
+
 
     int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
     int initialPairsPenalty = parser.getpairWeightCount() * Kontrol.getWeight_pair();
     int initialPreferencePenalty = parser.getprefWeight() * Kontrol.getWeight_pref();
-
-    Schedule initialSchedule = parser.getSchedule();
-    System.out.println("The Schedule:");
-    System.out.println(initialSchedule.toString());
 
     HashMap<String, Course> allCourses = parser.getCourseMap();
     System.out.println("All courses are");
@@ -75,12 +85,8 @@ public class Main {
 
     makeBrothers(allCourses);
     makePotentialsBros(allCourses);
-    addConstraintsForSpecialClasses(allLabs, initialSchedule);
-    int initialPenalty = parser.getInitialPenalty();
-    System.out.println("The initial pen is: " + initialPenalty);
-    // initialPenalty = initialPenalty + initialMinPenalty + initialPairsPenalty +
-    // initialPreferencePenalty;
-    System.out.println("LOOOK HERE!!!!!!!!!!!: " + initialPenalty);
+    //addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR PLS
+
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     total_num_of_units = unitsToProcess.size();
     System.out.println("Units Made");
@@ -171,6 +177,7 @@ public class Main {
    * @return: ArrayList of units in order to process
    */
   private static ArrayList<Unit> orderedUnitsForAdding(HashMap<String, Course> courses, HashMap<String, Lab> labs) {
+    System.out.println("ORderING");
     ArrayList<Unit> toReturn = new ArrayList<Unit>();
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       Course c = (Course) entry.getValue();
@@ -228,6 +235,7 @@ public class Main {
   }
 
   private static void makeBrothers(HashMap<String, Course> courses) {
+    System.out.println("Start Brothers");
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       for (Map.Entry<String, Course> entry2 : courses.entrySet()) {
         if (entry.getValue().isBrother(entry2.getValue())) {
@@ -235,6 +243,7 @@ public class Main {
         }
       }
     }
+    System.out.println("Brothers Finished");
   }
 
   public static int getNumOfUnits() {
