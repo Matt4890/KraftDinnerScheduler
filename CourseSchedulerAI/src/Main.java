@@ -40,6 +40,12 @@ public class Main {
     TreeNode root = null;
     Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(),
         Kontrol.getWeight_min_filled());
+
+    int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
+    int initialPairsPenalty = parser.getpairWeightCount() * Kontrol.getWeight_pair();
+    int initialPreferencePenalty = parser.getprefWeight() * Kontrol.getWeight_pref();
+    int initialPenalty = initialMinPenalty;
+
     System.out.println(parser.getPartialAssignments());
     if (parser.getPartialAssignments().size() != 0) {
       Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
