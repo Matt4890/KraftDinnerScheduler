@@ -42,17 +42,16 @@ public class Main {
     System.out.println(parser.getPartialAssignments());
     TreeNode root = new TreeNode(
         new Pair(parser.getPartialAssignments().get(0).getSlot(), parser.getPartialAssignments().get(0).getUnit()), 0);
-        System.out.println("Made Root without penalty");
-        System.out.println(root.toString());
+    System.out.println("Made Root without penalty");
+    System.out.println(root.toString());
     root.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(0).getSlot(),
         parser.getPartialAssignments().get(0).getUnit(), root));
-
 
     root.setDepth(0);
     System.out.println("Root:");
     System.out.println(root.toString());
     TreeNode curr = root;
-    System.out.println("The size" +parser.getPartialAssignments().size());
+    System.out.println("The size" + parser.getPartialAssignments().size());
     int size = parser.getPartialAssignments().size();
     for (int i = 1; i < size; i++) {
       System.out.println("Iteration " + i);
@@ -66,10 +65,9 @@ public class Main {
       curr.addChild(n);
       curr = n;
       System.out.println(curr.toString());
-      
+
     }
     System.out.println("For Loop ended woo");
-
 
     int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
     int initialPairsPenalty = parser.getpairWeightCount() * Kontrol.getWeight_pair();
@@ -85,7 +83,8 @@ public class Main {
 
     makeBrothers(allCourses);
     makePotentialsBros(allCourses);
-    //addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR PLS
+    // addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR
+    // PLS
 
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     total_num_of_units = unitsToProcess.size();

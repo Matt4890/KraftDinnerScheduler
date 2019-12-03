@@ -3,7 +3,6 @@ package tree;
 import schedule.*;
 import java.util.*;
 
-
 import coursesULabs.Unit;
 
 public class TreeNode implements Comparable<TreeNode> {
@@ -16,13 +15,11 @@ public class TreeNode implements Comparable<TreeNode> {
     private PriorityQueue<TreeNode> orderedChildren = new PriorityQueue<TreeNode>();
     private int depth;
 
-
     private int desirability;
     private boolean still_considered;
     private boolean already_looked_at;
     private TreeNode best_bottom_tn;
     private double potential = 0;
-
 
     public TreeNode(Pair pair, int penaltyValue) {
 
@@ -30,7 +27,8 @@ public class TreeNode implements Comparable<TreeNode> {
         this.assign = pair;
         this.children = new ArrayList<TreeNode>();
         this.parent = null;
-        //this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(), this);
+        // this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(),
+        // this);
         this.orderedChildren = new PriorityQueue<TreeNode>();
         this.still_considered = true;
         this.best_bottom_tn = null;
@@ -49,7 +47,8 @@ public class TreeNode implements Comparable<TreeNode> {
         this.penaltyValue = penaltyValue;
         this.assign = pair;
         this.parent = null;
-        //this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(), this);
+        // this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(),
+        // this);
         this.still_considered = true;
     }
 
@@ -73,7 +72,8 @@ public class TreeNode implements Comparable<TreeNode> {
         this.desirability = Integer.MAX_VALUE;
         this.still_considered = true;
     }
-    public void setPenalty(int pen){
+
+    public void setPenalty(int pen) {
         this.penaltyValue = pen;
     }
 
@@ -88,19 +88,19 @@ public class TreeNode implements Comparable<TreeNode> {
     public int getPenaltyValueOfTreeNode() {
         return this.penaltyValue;
     }
-    public void addToPenaltyForBaseNode(int penaltyToAdd){
+
+    public void addToPenaltyForBaseNode(int penaltyToAdd) {
         this.penaltyValue += penaltyToAdd;
     }
 
     public void addChild(TreeNode n) {
         this.children.add(n);
-       // this.orderedChildren.add(n);
+        // this.orderedChildren.add(n);
     }
 
     public TreeNode getParent() {
         return this.parent;
     }
-
 
     public ArrayList<TreeNode> getChildren() {
         return this.children;
@@ -110,7 +110,6 @@ public class TreeNode implements Comparable<TreeNode> {
     public TreeNode getLowestPenaltyChild() {
         return this.orderedChildren.remove();
     }
-    
 
     public TreeNode getChildWithPenaltyValue(int n) {
 
@@ -130,16 +129,18 @@ public class TreeNode implements Comparable<TreeNode> {
     public int compareTo(TreeNode o) {
         return (((Integer) (this.getDesirablilty())).compareTo((Integer) o.getDesirablilty()));
         // return (
-        //     ((Integer) (this.getConstrainedMeasuremnet()))
-        //     .compareTo((Integer) o.getConstrainedMeasuremnet())
+        // ((Integer) (this.getConstrainedMeasuremnet()))
+        // .compareTo((Integer) o.getConstrainedMeasuremnet())
         // );
     }
 
     public String toString() {
-        String toReturn =  "TreeNode: Depth: " + this.depth+" Penalty: " + this.penaltyValue + "\n";
+        String toReturn = "TreeNode: Depth: " + this.depth + " Penalty: " + this.penaltyValue + "\n";
         TreeNode placeHolder = this;
-        while(placeHolder.parent != null){
-            toReturn +="Unit: " + this.assign.getUnit().toString() + " in Slot" +this.assign.getSlot().toString() + "\n";
+        while (placeHolder.getParent() != null) {
+            toReturn += "Unit: " + this.assign.getUnit().toString() + " in Slot" + this.assign.getSlot().toString()
+                    + "\n";
+            placeHolder = placeHolder.getParent();
         }
         toReturn += "Parent " + this.parent;
         return toReturn;
@@ -182,38 +183,39 @@ public class TreeNode implements Comparable<TreeNode> {
     }
 
     /**
-     * Gets a measurement of how constrained the node is.
-     * The higher the value, the more it is constrained.
-     * When calculating, each constraint should ideally be evaluated to a number between 0 and 1,
-     * then multiplied by a course/lab weight.
-     * @return An integer expressing 
+     * Gets a measurement of how constrained the node is. The higher the value, the
+     * more it is constrained. When calculating, each constraint should ideally be
+     * evaluated to a number between 0 and 1, then multiplied by a course/lab
+     * weight.
+     * 
+     * @return An integer expressing
      */
     // public int getConstrainedMeasuremnet() {
 
-    //     int constrainedVal = 0;
+    // int constrainedVal = 0;
 
-    //     final int COURSE_WEIGHT = 1;
-    //     final int LAB_WEIGHT = 1;
+    // final int COURSE_WEIGHT = 1;
+    // final int LAB_WEIGHT = 1;
 
-    //     // Measure course contraints
-    //     for (Slot s : this.schedule.getAllCourseSlots()) {
-    //         int cval = 0;
-    //         for (Unit u : s.getClassAssignment()) {
-    //             cval += u.getConstrained();
-    //         }
-    //         constrainedVal += cval * COURSE_WEIGHT;
-    //     }
+    // // Measure course contraints
+    // for (Slot s : this.schedule.getAllCourseSlots()) {
+    // int cval = 0;
+    // for (Unit u : s.getClassAssignment()) {
+    // cval += u.getConstrained();
+    // }
+    // constrainedVal += cval * COURSE_WEIGHT;
+    // }
 
-    //     // Measure lab contraints
-    //     for (Slot s : this.schedule.getAllLabSlots()) {
-    //         int cval = 0;
-    //         for (Unit u : s.getClassAssignment()) {
-    //             cval += u.getConstrained();
-    //         }
-    //         constrainedVal += cval * LAB_WEIGHT;
-    //     }
-        
-    //     return constrainedVal;
+    // // Measure lab contraints
+    // for (Slot s : this.schedule.getAllLabSlots()) {
+    // int cval = 0;
+    // for (Unit u : s.getClassAssignment()) {
+    // cval += u.getConstrained();
+    // }
+    // constrainedVal += cval * LAB_WEIGHT;
+    // }
+
+    // return constrainedVal;
 
     // }
 

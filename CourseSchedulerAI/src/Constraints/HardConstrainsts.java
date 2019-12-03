@@ -79,6 +79,7 @@ public class HardConstrainsts {
                         && current.getAssign().getUnit().getCourseNum() < 600) {
                     return false;
                 }
+                current = current.getParent();
             }
         }
         return true;
@@ -124,6 +125,7 @@ public class HardConstrainsts {
                     }
                 }
             }
+            current = current.getParent();
         }
         return true;
     }
@@ -206,6 +208,7 @@ public class HardConstrainsts {
                     }
                 }
             }
+            current = current.getParent();
         }
         return true;
     }
@@ -231,6 +234,7 @@ public class HardConstrainsts {
                     }
                 }
             }
+            current = current.getParent();
         }
         return true;
     }

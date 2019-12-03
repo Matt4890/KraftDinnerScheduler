@@ -66,6 +66,7 @@ public class SoftConstraints {
       if (current.getAssign().getSlot() == s) {
         count++;
       }
+      current = current.getParent();
     }
 
     if (s.getLabMin() != 1 && s.getLabMin() == count + 1) {
