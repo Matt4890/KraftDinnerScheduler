@@ -40,6 +40,7 @@ public class SoftConstraints {
     // decrement if the course min is met and coursemin != 1
     int count = 0;
     TreeNode current = node;
+
     while (current != null) {
       System.out.println("Stuck???");
       if (current.getAssign().getSlot() == s) {
@@ -47,14 +48,11 @@ public class SoftConstraints {
       }
       current = node.getParent();
     }
-
-    if (s.getCourseMin() != 1 && s.getCourseMin() == count + 1) {
-      return -1;
-    }
-    if (s.getCourseMin() > count + 1) {
-      return 1;
+    if(s.getCourseMin() > count){
+      return s.getCourseMin() - count;
     }
     return 0;
+
   }
 
   public static int checkLabMin(LabSlot s, TreeNode node) {
@@ -68,12 +66,8 @@ public class SoftConstraints {
       }
       current = current.getParent();
     }
-
-    if (s.getLabMin() != 1 && s.getLabMin() == count + 1) {
-      return -1;
-    }
-    if (s.getLabMin() > count + 1) {
-      return 1;
+    if(s.getLabMin() > count){
+      return s.getLabMin() - count;
     }
     return 0;
   }
