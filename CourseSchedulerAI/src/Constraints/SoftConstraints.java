@@ -1,6 +1,8 @@
 package Constraints;
 
 import schedule.*;
+import tree.Tree;
+import tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,43 +11,58 @@ import java.util.Map;
 import coursesULabs.*;
 
 public class SoftConstraints {
-  public static int calculatePenalty(Slot s, Unit u) {
+  public static int calculatePenalty(Slot s, Unit u, TreeNode node) {
 
     int total = 0;
     if (s instanceof CourseSlot) {
-      total += SoftConstraints.checkCourseMin((CourseSlot) s);
+      total += SoftConstraints.checkCourseMin((CourseSlot) s, node);
       total += SoftConstraints.preferenceEval(s, u);
-      total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s);
+      total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node);
       total += SoftConstraints.checkSections((Course) u, (CourseSlot) s);
     } else {
-      total += SoftConstraints.checkLabMin((LabSlot) s);
+      total += SoftConstraints.checkLabMin((LabSlot) s, node);
       total += SoftConstraints.preferenceEval(s, u);
-      total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s);
+      total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, node);
 
     }
     return total;
 
   }
 
-  public static int checkCourseMin(CourseSlot s) {
-    // decrement if the course min is met and coursemin != 1 
-    if (s.getCourseMin()!=1 && s.getCourseMin() == s.getCourseCount() + 1) {
+  public static int checkCourseMin(CourseSlot s, TreeNode node) {
+    // decrement if the course min is met and coursemin != 1
+    int count = 0;
+    TreeNode current = node;
+    while (current != null) {
+      if (current.getAssign().getSlot() == s) {
+        count++;
+      }
+    }
+
+    if (s.getCourseMin() != 1 && s.getCourseMin() == count + 1) {
       return -1;
     }
-    if (s.getCourseMin() > s.getCourseCount()+1) {
+    if (s.getCourseMin() > count + 1) {
       return 1;
     }
     return 0;
   }
 
-  public static int checkLabMin(LabSlot s) {
+  public static int checkLabMin(LabSlot s, TreeNode node) {
     // int labMin = s.getLabMin();
     // int labCount = s.getLabCount();
+    int count = 0;
+    TreeNode current = node;
+    while (current != null) {
+      if (current.getAssign().getSlot() == s) {
+        count++;
+      }
+    }
 
-    if (s.getLabMin()!=1 && s.getLabMin() == s.getLabCount() + 1) {
+    if (s.getLabMin() != 1 && s.getLabMin() == count + 1) {
       return -1;
     }
-    if (s.getLabMin() > s.getLabCount()+1) {
+    if (s.getLabMin() > count + 1) {
       return 1;
     }
     return 0;
@@ -53,21 +70,14 @@ public class SoftConstraints {
 
   public static int preferenceEval(Slot slot, Unit u) {
     HashMap<Slot, Integer> pref = u.getPreferences();
-    // slot.isSameSlot(slot);
-
     int total = 0;
-    if (slot.getClassAssignment().size() != 0) { 
+    if (!pref.isEmpty()) {
       for (Map.Entry<Slot, Integer> entry : pref.entrySet()) {
-        System.out.println("The slot: " + slot.toString() + " compared with " + entry.getKey().toString()
-            + " checked to be the same is:" + entry.getKey().isSameSlot(slot));
-        if (entry.getKey().isSameSlot(slot)) {
-
-          total = total - entry.getValue();
-          break;
+        if (entry.getKey() != slot) {
+          total += entry.getValue();
         }
       }
     }
-    // WHERE DO WE EVER ADD THE PREFERENCE IF ITS NOT THERE???
 
     return total;
     /*
@@ -78,73 +88,80 @@ public class SoftConstraints {
      */
   }
 
-  public static int notPairedCourse(Course b, CourseSlot s) {
+  /**
+   * might be a problem with this one
+   * 
+   * @param b
+   * @param s
+   * @param node
+   * @return
+   */
+  public static int notPairedCourse(Course b, CourseSlot s, TreeNode node) {
     ArrayList<Unit> pairs = b.getPairs();
-
     if (pairs.size() == 0) {
       return 0;
     }
-
-    ArrayList<Course> lookup = s.getAssignedCourses();
-    boolean matched = false;
-
-    for (Unit pair : pairs) {
-      for (int i = 0; i < lookup.size(); i++) {
-        Unit lookupunit = lookup.get(i);
-        if (lookupunit == pair) {
-          matched = true;
-          break;
+    int total = pairs.size();
+    TreeNode current = node;
+    while (current != null) {
+      Slot ancestorSlot = current.getAssign().getSlot();
+      for (Slot overlap : s.getOverlaps()) {
+        if (ancestorSlot == overlap) {
+          if (b.getPairs().contains(current.getAssign().getUnit())) {
+            total--;
+          }
         }
       }
     }
-    if (matched) {
-      return -1;
-    } else {
-      return 1; // Shouldn't this be adding the penalty??
-    }
+    return total;
 
   }
 
-  public static int notPairedLab(Lab b, LabSlot s) {
+  /**
+   * might be a problem with this one
+   * 
+   * @param b
+   * @param s
+   * @param node
+   * @return
+   */
+  public static int notPairedLab(Lab b, LabSlot s, TreeNode node) {
     ArrayList<Unit> pairs = b.getPairs();
-
     if (pairs.size() == 0) {
       return 0;
     }
-
-    ArrayList<Lab> lookup = s.getAssignedLabs();
-    boolean matched = false;
-
-    for (Unit pair : pairs) {
-      for (int i = 0; i < lookup.size(); i++) {
-        Unit lookupunit = lookup.get(i);
-        if (lookupunit == pair) {
-          matched = true;
-          break;
+    int total = pairs.size();
+    TreeNode current = node;
+    while (current != null) {
+      Slot ancestorSlot = current.getAssign().getSlot();
+      for (Slot overlap : s.getOverlaps()) {
+        if (ancestorSlot == overlap) {
+          if (b.getPairs().contains(current.getAssign().getUnit())) {
+            total--;
+          }
         }
       }
     }
-    if (matched) {
-      return -1;
-    } else {
-      return 1;
-    }
-
+    return total;
   }
 
-  public static int checkSections(Course course, CourseSlot s) {
-    int curr_pen = 0;
-    ArrayList<Course> lookup = s.getAssignedCourses();
-
-    for (int i = 0; i < lookup.size(); i++) {
-      int lookupNum = lookup.get(i).getCourseNum();
-      int courseNum = course.getCourseNum();
-      String lookupType = lookup.get(i).getCourseType();
-      String courseType = course.getCourseType();
-      if (lookupNum == courseNum && lookupType.equals(courseType)) {
-        curr_pen = curr_pen + 1;
+  /**
+   * 
+   * @param course
+   * @param s
+   * @return
+   */
+  public static int checkSections(Course course, CourseSlot s, TreeNode node) {
+    TreeNode current = node;
+    int total = 0;
+    while (current != null) {
+      if (s == current.getAssign().getSlot()) {
+        if (course.getBrothers().contains(current.getAssign().getUnit())) {
+          total++;
+        }
       }
     }
-    return curr_pen;
+    return total;
   }
+
 }

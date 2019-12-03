@@ -219,4 +219,12 @@ public class TreeNode implements Comparable<TreeNode> {
 
     }
 
+    public Pair getAssign() {
+        return assign;
+    }
+
+    public void setAssign(Pair assign) {
+        this.assign = assign;
+    }
+
 }
