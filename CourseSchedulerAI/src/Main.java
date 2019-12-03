@@ -38,16 +38,23 @@ public class Main {
     Kontrol.setWeight_pref(prefsPen);
     Kontrol.setWeight_section_diff(brothersPen);
 
+    
+
     Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(),
         Kontrol.getWeight_min_filled());
+
+    int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
+    int initialPairsPenalty = parser.getpairWeightCount() * Kontrol.getWeight_pair();
+    int initialPreferencePenalty = parser.getprefWeight() * Kontrol.getWeight_pref();
+    int initialPenalty = initialMinPenalty;
+
     System.out.println(parser.getPartialAssignments());
     Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
         parser.getPartialAssignments().get(0).getUnit());
     TreeNode root = new TreeNode(assign, 0);
     System.out.println("Made Root without penalty");
     System.out.println(root.toString());
-    root.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(0).getSlot(),
-        parser.getPartialAssignments().get(0).getUnit(), root));
+    root.setPenalty(initialPenalty);
 
     root.setDepth(0);
     System.out.println("Root:");
@@ -71,9 +78,7 @@ public class Main {
     }
     System.out.println("For Loop ended woo");
 
-    int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
-    int initialPairsPenalty = parser.getpairWeightCount() * Kontrol.getWeight_pair();
-    int initialPreferencePenalty = parser.getprefWeight() * Kontrol.getWeight_pref();
+    
 
     HashMap<String, Course> allCourses = parser.getCourseMap();
     System.out.println("All courses are");
