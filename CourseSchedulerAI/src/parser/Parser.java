@@ -115,7 +115,7 @@ public class Parser {
                 partialAssign_s = partialAssign_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "=CS" + count + "=");
                 count++;
                 if(cs.getCourseMin() > 0){
-                    minWeightCount++;
+                    minWeightCount = minWeightCount+ cs.getCourseMin();
                     System.out.println("CourseSlotsMinWeight:" + minWeightCount);
                     cs.incrementPotential(-minWeight);
                     System.out.println("added " + minWeight + " for slotmin for " + cs.toString()  );
@@ -151,7 +151,7 @@ public class Parser {
                 partialAssign_s = partialAssign_s.replaceAll(replaceStr, "=LS" + count + "=");
                 count++;
                 if(ls.getLabMin() > 0){
-                    minWeightCount++;
+                    minWeightCount = minWeightCount+ ls.getLabMin();
                     System.out.println("LabSlotMinWeight:" + minWeightCount);
                     ls.incrementPotential(-minWeight);
                     System.out.println("added " + minWeight + " for slotmin for " + ls.toString()  );

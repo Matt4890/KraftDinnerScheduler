@@ -43,32 +43,32 @@ public class SoftConstraints {
 
     while (current != null) {
       //System.out.println("Stuck???");
-      if (current.getAssign().getSlot() == s) {
+      
+      if (current.getAssign().getSlot().isSameSlot(s)) {
         count++;
       }
       //System.out.println(current.toString());
       current = current.getParent();
     }
-    if(s.getCourseMin() > count){
-      return s.getCourseMin() - count;
+    if(s.getCourseMin() >= count){
+      return -1;
     }
     return 0;
 
   }
 
   public static int checkLabMin(LabSlot s, TreeNode node) {
-    // int labMin = s.getLabMin();
-    // int labCount = s.getLabCount();
+
     int count = 0;
     TreeNode current = node;
     while (current != null) {
-      if (current.getAssign().getSlot() == s) {
+      if (current.getAssign().getSlot().isSameSlot(s)) {
         count++;
       }
       current = current.getParent();
     }
-    if(s.getLabMin() > count){
-      return s.getLabMin() - count;
+    if(s.getLabMin() >= count){
+      return -1;
     }
     return 0;
   }

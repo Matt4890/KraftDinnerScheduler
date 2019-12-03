@@ -50,13 +50,13 @@ public class Main {
     if (parser.getPartialAssignments().size() != 0) {
       Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
           parser.getPartialAssignments().get(0).getUnit());
-      root = new TreeNode(assign, 0);
-      System.out.println("Made Root without penalty");
-      System.out.println(root.toString());
-      root.setPenalty(initialPenalty);
+      //root = new TreeNode(assign,initialPenalty); //(initialPenalty);  
+      root = new TreeNode(assign, Kontrol.evalAssignmentPairing(assign.getSlot(),
+      assign.getUnit(), null) + initialPenalty);
 
       root.setDepth(0);
       System.out.println("Root:");
+
       System.out.println(root.toString());
       TreeNode curr = root;
       System.out.println("The size" + parser.getPartialAssignments().size());
