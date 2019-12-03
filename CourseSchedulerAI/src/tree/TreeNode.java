@@ -24,10 +24,10 @@ public class TreeNode implements Comparable<TreeNode> {
     private double potential = 0;
 
 
-    public TreeNode(Schedule schedule, int penaltyValue) {
+    public TreeNode(Pair pair, int penaltyValue) {
 
         this.penaltyValue = penaltyValue;
-        this.schedule = new Schedule(schedule);
+        this.assign = pair;
         this.children = new ArrayList<TreeNode>();
         this.parent = null;
         this.desirability = Integer.MAX_VALUE;
@@ -46,13 +46,10 @@ public class TreeNode implements Comparable<TreeNode> {
         this.still_considered = n.still_considered;
     }
 
-    public TreeNode(Schedule schedule, int penaltyValue, ArrayList<TreeNode> children) {
+    public TreeNode(Pair pair, int penaltyValue, ArrayList<TreeNode> children) {
         this.penaltyValue = penaltyValue;
         this.schedule = new Schedule(schedule);
-        for (int i = 0; i < children.size(); i++) {
-            this.children.add(children.get(i));
-            this.orderedChildren.add(children.get(i));
-        }
+        this.assign = pair;
         this.parent = null;
         this.desirability = Integer.MAX_VALUE;
         this.still_considered = true;

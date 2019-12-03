@@ -2,6 +2,7 @@ import parser.*;
 import schedule.*;
 import tree.Generator;
 import tree.Kontrol;
+import tree.TreeNode;
 import coursesULabs.*;
 import java.util.*;
 import java.io.*;
@@ -41,8 +42,16 @@ public class Main {
 
 
     Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(), Kontrol.getWeight_min_filled());
- 
-
+    
+    TreeNode root = new TreeNode(parser.getPartialAssignments().get(0) , Kontrol.evalAssignment(parser.getPartialAssignments().get(0).getSlot(), parser.getPartialAssignments().get(0).getUnit()));
+    root.setDepth(0);
+    TreeNode curr = root;
+    for (int i = 1; i< parser.getPartialAssignments().size(); i++){
+        TreeNode n = new TreeNode(parser.getPartialAssignments().get(i) , Kontrol.evalAssignment(parser.getPartialAssignments().get(i).getSlot(), parser.getPartialAssignments().get(i).getUnit()));
+        n.setDepth(curr.getDepth() +1);
+        curr.addChild(n);
+        curr = n;
+    }
 
     int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
     int initialPairsPenalty =  parser.getpairWeightCount() * Kontrol.getWeight_pair();
@@ -72,17 +81,18 @@ public class Main {
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     total_num_of_units = unitsToProcess.size();
     System.out.println("Units Made");
+    Generator search = new Generator(root, courseMinPen, pairsPen, brothersPen);
 
-    Generator search = new Generator(initialSchedule, initialPenalty, courseMinPen, pairsPen, brothersPen);
-    //search.generateFBoundBIG(unitsToProcess);
 
-    search.branchAndBoundSkeleton(unitsToProcess);
+    search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), parser.getPartialAssignments().size());
     System.out.println("Generator Obj Created!!!!!!!!");
 
     // Generator gen = new Generator();
     // gen.createFBound(parser.getMap());
 
   }
+  
+
 
   private static void addConstraintsForSpecialClasses(HashMap<String, Lab> allCourses, Schedule schec) {
     boolean toremove813 = false;
