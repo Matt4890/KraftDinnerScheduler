@@ -173,4 +173,38 @@ public class TreeNode implements Comparable<TreeNode> {
         this.depth = depth;
     }
 
+    /**
+     * Gets a measurement of how constrained the node is.
+     * The higher the value, the more it is constrained.
+     * When calculating, each constraint should ideally be evaluated to a number between 0 and 1,
+     * then multiplied by a course/lab weight.
+     * @return An integer expressing how constrained the node is.
+     */
+    public double getConstrainedMeasuremnet() {
+
+        double constrainedVal = 0;
+
+        final int COURSE_WEIGHT = 10;
+        final int LAB_WEIGHT = 10;
+
+        // Measure course contraints
+        for (CourseSlot s : this.schedule.getAllCourseSlots()) {
+            double c = 0;
+            c += s.getClassAssignment().size() / s.getCourseMax();
+            c += s.getCourseMin() / Math.max(s.getClassAssignment().size(), 1);
+            constrainedVal += c * COURSE_WEIGHT;
+        }
+
+        // Measure lab contraints
+        for (LabSlot s : this.schedule.getAllLabSlots()) {
+            double c = 0;
+            c += s.getClassAssignment().size() / s.getLabMax();
+            c += s.getLabMin() / Math.max(s.getClassAssignment().size(), 1);
+            constrainedVal += c * LAB_WEIGHT;
+        }
+        
+        return constrainedVal;
+
+    }
+
 }
