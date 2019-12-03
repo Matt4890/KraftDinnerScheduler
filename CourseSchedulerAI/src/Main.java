@@ -86,8 +86,7 @@ public class Main {
 
     makeBrothers(allCourses);
     makePotentialsBros(allCourses);
-    // addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR
-    // PLS
+    // addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR PLS
 
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     total_num_of_units = unitsToProcess.size();
@@ -97,8 +96,6 @@ public class Main {
     search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), parser.getPartialAssignments().size());
     System.out.println("Generator Obj Created!!!!!!!!");
 
-    // Generator gen = new Generator();
-    // gen.createFBound(parser.getMap());
 
   }
 
@@ -182,11 +179,11 @@ public class Main {
 
   /*
    * Function to order units as we want to process them
-   * 
+   *
    * @param courses: hashmap of courses indexed by string
-   * 
+   *
    * @param lab: hashmap of labs indexed by string
-   * 
+   *
    * @return: ArrayList of units in order to process
    */
   private static ArrayList<Unit> orderedUnitsForAdding(HashMap<String, Course> courses, HashMap<String, Lab> labs) {
@@ -212,7 +209,7 @@ public class Main {
 
   /**
    * takes a arraylist of units and orders them from most constrained to least
-   * 
+   *
    * @param units
    */
   public static void bubbleSort(ArrayList<Unit> units) {

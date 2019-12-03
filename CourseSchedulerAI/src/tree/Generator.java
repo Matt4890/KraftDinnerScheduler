@@ -26,15 +26,17 @@ public class Generator {
             ArrayList<Slot> emptySlots) {
         TreeNode nodeToAdd = new TreeNode(new Pair(slot, current), 0, parent);
         nodeToAdd.setDepth(parent.getDepth() + 1);
-
+            
         // Check if we break the hard constraint
         boolean HardConstraintOk;
         if (current instanceof Course) {
             HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
-                    (CourseSlot) slot, nodeToAdd);
+                    (CourseSlot) slot, parent);
+            System.out.println("The Hard constraint check for:  Slot:" + slot + " Course: " + current +"is: " + HardConstraintOk);
         } else {
             HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current, (LabSlot) slot,
-                    nodeToAdd);
+                    parent);
+            System.out.println("The Hard constraint check for:  Slot:" + slot + " Lab: " + current +"is: " + HardConstraintOk);
         }
         if (HardConstraintOk) {
             // Calculate the penalty value here
@@ -56,6 +58,7 @@ public class Generator {
 
     private void generateChildrenPairs(Unit current, TreeNode parent, ArrayList<Slot> slotsToPair, int currentBound,
             int allUnitsTotal, ArrayList<Slot> emptySlots) {
+        System.out.println("Running Generate Children ");
         for (Slot slot : slotsToPair) {
             if (current instanceof Course) {
                 if (slot instanceof CourseSlot) {
@@ -101,7 +104,6 @@ public class Generator {
         return evalToAdd;
     }
 
-
     // Skeleton of a BNB using a stack
     // Assumes we have a bound function called calculateBound which will
     // Using a heuristic, find a solution xh to the optimization problem. Store its
@@ -124,7 +126,17 @@ public class Generator {
         System.out.println("RUNNING BNB");
         Stack<TreeNode> allStackNodes = new Stack<TreeNode>();
         this.startNode = starter;
-        allStackNodes.add(this.startNode);
+       
+        TreeNode nodeToAdd  = this.startNode;
+        while (nodeToAdd.getChildren().size() != 0){
+            nodeToAdd = nodeToAdd.getChildren().get(0);
+            
+
+        }
+        System.out.println(nodeToAdd);
+        System.out.println("Node Depth: " + nodeToAdd.getDepth());
+
+        allStackNodes.add(nodeToAdd);
         // this.bound = Integer.MAX_VALUE;
         int numUnitsToSchedule = unitsToBeScheduled.size();
         int depth = 0;
@@ -154,15 +166,14 @@ public class Generator {
 
             else {
                 // Check to see if doesn't have children made
-                Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth() - numPartialAssignments); // This will
-                                                                                                          // break right
-                                                                                                          // now ->
-                                                                                                          // NEEDS
-                                                                                                          // TESTING
+
                 ArrayList<Slot> emptySlots = new ArrayList<Slot>();
                 if (currentNode.getChildren().size() == 0) {
                     // Do a check up the tree to see if the slot is included along the path
                     // Whats a more efficient way to do this??
+                    System.out.println("Integer: " + (currentNode.getDepth() - (numPartialAssignments-1)));
+                    Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth() - (numPartialAssignments-1) ); // TEST ME 
+
                     if (scheduleMe.equals(unitsToBeScheduled.get(unitsToBeScheduled.size() - 1))) { // We are reaching
                                                                                                     // the bottom - i.e.
                                                                                                     // the last thing is
@@ -184,7 +195,6 @@ public class Generator {
                             unitsToBeScheduled.size(), emptySlots);
                     depth++;
                 }
-
 
                 for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
                     // allStackNodes.push(currentNode.getOrderedChildren().remove());
