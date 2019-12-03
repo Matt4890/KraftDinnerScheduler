@@ -124,6 +124,10 @@ public class TreeNode implements Comparable<TreeNode> {
         return this.desirability;
     }
 
+    public void incrementDesire(int num) {
+        this.desirability += num;
+    }
+
     @Override
     public int compareTo(TreeNode o) {
         return (((Integer) (this.getDesirablilty())).compareTo((Integer) o.getDesirablilty()));
@@ -136,11 +140,12 @@ public class TreeNode implements Comparable<TreeNode> {
 
     public String toString() {
         String toReturn = "TreeNode: Depth: " + this.depth + " Penalty: " + this.penaltyValue + "\n";
-        
-        if (this.assign.getUnit() != null){
-        toReturn += "Unit: " + this.assign.getUnit().toString() + " in Slot" + this.assign.getSlot().toString()+ "\n";
+        TreeNode placeHolder = this;
+        if (this.assign.getUnit() != null) {
+            toReturn += "Unit: " + this.assign.getUnit().toString() + " in Slot" + this.assign.getSlot().toString()
+                    + "\n";
         }
-        
+
         toReturn += "Parent " + this.parent;
         return toReturn;
     }
@@ -186,7 +191,7 @@ public class TreeNode implements Comparable<TreeNode> {
      * more it is constrained. When calculating, each constraint should ideally be
      * evaluated to a number between 0 and 1, then multiplied by a course/lab
      * weight.
-     * 
+     *
      * @return An integer expressing
      */
     // public int getConstrainedMeasuremnet() {
