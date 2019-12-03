@@ -81,17 +81,18 @@ public class Main {
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     total_num_of_units = unitsToProcess.size();
     System.out.println("Units Made");
+    Generator search = new Generator(root, courseMinPen, pairsPen, brothersPen);
 
-    Generator search = new Generator(initialSchedule, initialPenalty, courseMinPen, pairsPen, brothersPen);
-    //search.generateFBoundBIG(unitsToProcess);
 
-    search.branchAndBoundSkeleton(unitsToProcess);
+    search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), parser.getPartialAssignments().size());
     System.out.println("Generator Obj Created!!!!!!!!");
 
     // Generator gen = new Generator();
     // gen.createFBound(parser.getMap());
 
   }
+  
+
 
   private static void addConstraintsForSpecialClasses(HashMap<String, Lab> allCourses, Schedule schec) {
     boolean toremove813 = false;

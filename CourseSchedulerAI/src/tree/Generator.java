@@ -8,7 +8,7 @@ import java.util.*;
 public class Generator {
 
     private TreeNode starter;
-    private int initialPenalty;
+
     private int bound;
     private int weightMin;
     private int weightPairs;
@@ -16,11 +16,10 @@ public class Generator {
     private TreeNode startNode;
     private TreeNode bestSchedule;
 
-    public Generator(TreeNode starter, int penalty, int weight_min, int weight_pairs, int wait_section_diff) {
+    public Generator(TreeNode starter, int weight_min, int weight_pairs, int wait_section_diff) {
 
-        // this.tree.addRoot(new TreeNode(this.starter, this.initialPenalty));
         this.starter = starter;
-        this.initialPenalty = penalty;
+
         this.bound = Integer.MAX_VALUE;
         this.weightMin = weight_min;
         this.weightPairs = weight_pairs;

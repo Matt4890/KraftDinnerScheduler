@@ -28,6 +28,7 @@ public class Parser {
     private int minWeight;
     private int prefWeight2;
     private ArrayList<Pair> partialAssignments;
+    private ArrayList<Slot> allSlots;
     
 
     public int getminWeightCount(){
@@ -38,6 +39,9 @@ public class Parser {
     }
     public int getprefWeight(){
         return sum_of_pref;
+    }
+    public ArrayList<Slot> getAllSlots(){
+        return this.allSlots;
     }
 
     
@@ -104,6 +108,7 @@ public class Parser {
                     new HashMap<Unit, Integer>()
                 );
                 courseSlots.add(cs);
+                this.allSlots.add(cs);
                 String replaceStr = cs.toString();
                 unwanted_s = unwanted_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "=CS" + count + "=");
                 preferences_s = preferences_s.replaceAll(replaceStr + "(?!.*(?:TUT|LAB))", "=CS" + count + "=");
@@ -139,6 +144,7 @@ public class Parser {
                 );
 
                 labSlots.add(ls);
+                this.allSlots.add(ls);
                 String replaceStr = ls.toString();
                 unwanted_s = unwanted_s.replaceAll(replaceStr, "=LS" + count + "=");
                 preferences_s = preferences_s.replaceAll(replaceStr, "=LS" + count + "=");
