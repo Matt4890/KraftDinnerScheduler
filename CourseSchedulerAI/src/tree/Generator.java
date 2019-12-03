@@ -31,11 +31,11 @@ public class Generator {
         boolean HardConstraintOk;
         if (current instanceof Course) {
             HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
-                    (CourseSlot) slot, parent);
+                    (CourseSlot) slot, nodeToAdd);
             System.out.println("The Hard constraint check for:  Slot:" + slot + " Course: " + current +"is: " + HardConstraintOk);
         } else {
             HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current, (LabSlot) slot,
-                    parent);
+            nodeToAdd);
             System.out.println("The Hard constraint check for:  Slot:" + slot + " Lab: " + current +"is: " + HardConstraintOk);
         }
         if (HardConstraintOk) {
@@ -136,8 +136,6 @@ public class Generator {
         TreeNode nodeToAdd  = this.startNode;
         while (nodeToAdd.getChildren().size() != 0){
             nodeToAdd = nodeToAdd.getChildren().get(0);
-            
-
         }
         //System.out.println(nodeToAdd);
         //System.out.println("Node Depth: " + nodeToAdd.getDepth());
@@ -205,9 +203,9 @@ public class Generator {
 
                 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
-                for (int i = 0; i < currentNode.getChildren().size(); i++) {
-                    // allStackNodes.push(currentNode.getOrderedChildren().remove());
-                    allStackNodes.push(currentNode.getChildren().get(i));
+                for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
+                    allStackNodes.push(currentNode.getOrderedChildren().remove());
+                    //allStackNodes.push(currentNode.getChildren().get(i));
                 }
 
             }
