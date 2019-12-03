@@ -106,7 +106,12 @@ public class Unit {
         return this.preferences;
     }
     public void addToPreferences(Slot s, int score){
-        this.preferences.put(s, score);
+        if(this.preferences.containsKey(s)){
+            this.preferences.put(s, this.preferences.get(s) + score);
+        }
+        else{
+            this.preferences.put(s, score);
+        }
     }
 
     public ArrayList<Unit> getPairs() {

@@ -44,9 +44,9 @@ public class Main {
  
 
 
-    int initialMinPenalty = parser.getminWeightCount();
-    int initialPairsPenalty =  parser.getpairWeightCount();
-    int initialPreferencePenalty =  parser.getprefWeight();
+    int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
+    int initialPairsPenalty =  parser.getpairWeightCount() * Kontrol.getWeight_pair();
+    int initialPreferencePenalty =  parser.getprefWeight()* Kontrol.getWeight_pref();
 
     
 
