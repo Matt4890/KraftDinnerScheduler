@@ -223,4 +223,19 @@ public class Schedule {
         }
     }
 
+    public ArrayList<Slot> getAllCourseSlots() {
+        ArrayList<Slot> slots = new ArrayList<Slot>();
+        slots.addAll(this.MWFLec.values());
+        slots.addAll(this.TuThLec.values());
+        return slots;
+    }
+
+    public ArrayList<Slot> getAllLabSlots() {
+        ArrayList<Slot> slots = new ArrayList<Slot>();
+        slots.addAll(this.MWLab.values());
+        slots.addAll(this.TuThLab.values());
+        slots.addAll(this.FLab.values());
+        return slots;
+    }
+
 }

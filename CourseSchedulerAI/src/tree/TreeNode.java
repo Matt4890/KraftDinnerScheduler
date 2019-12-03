@@ -3,6 +3,8 @@ package tree;
 import schedule.*;
 import java.util.*;
 
+import coursesULabs.Unit;
+
 public class TreeNode implements Comparable<TreeNode> {
 
     private TreeNode parent;
@@ -130,7 +132,11 @@ public class TreeNode implements Comparable<TreeNode> {
 
     @Override
     public int compareTo(TreeNode o) {
-        return (((Integer) (this.getDesirablilty())).compareTo((Integer) o.getDesirablilty()));
+        // return (((Integer) (this.getDesirablilty())).compareTo((Integer) o.getDesirablilty()));
+        return (
+            ((Integer) (this.getConstrainedMeasuremnet()))
+            .compareTo((Integer) o.getConstrainedMeasuremnet())
+        );
     }
 
     public String toString() {
@@ -171,6 +177,42 @@ public class TreeNode implements Comparable<TreeNode> {
 
     public void setDepth(int depth) {
         this.depth = depth;
+    }
+
+    /**
+     * Gets a measurement of how constrained the node is.
+     * The higher the value, the more it is constrained.
+     * When calculating, each constraint should ideally be evaluated to a number between 0 and 1,
+     * then multiplied by a course/lab weight.
+     * @return An integer expressing 
+     */
+    public int getConstrainedMeasuremnet() {
+
+        int constrainedVal = 0;
+
+        final int COURSE_WEIGHT = 1;
+        final int LAB_WEIGHT = 1;
+
+        // Measure course contraints
+        for (Slot s : this.schedule.getAllCourseSlots()) {
+            int cval = 0;
+            for (Unit u : s.getClassAssignment()) {
+                cval += u.getConstrained();
+            }
+            constrainedVal += cval * COURSE_WEIGHT;
+        }
+
+        // Measure lab contraints
+        for (Slot s : this.schedule.getAllLabSlots()) {
+            int cval = 0;
+            for (Unit u : s.getClassAssignment()) {
+                cval += u.getConstrained();
+            }
+            constrainedVal += cval * LAB_WEIGHT;
+        }
+        
+        return constrainedVal;
+
     }
 
 }
