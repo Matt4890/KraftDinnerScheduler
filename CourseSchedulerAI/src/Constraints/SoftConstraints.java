@@ -42,11 +42,11 @@ public class SoftConstraints {
     TreeNode current = node;
 
     while (current != null) {
-      System.out.println("Stuck???");
+      //System.out.println("Stuck???");
       if (current.getAssign().getSlot() == s) {
         count++;
       }
-      System.out.println(current.toString());
+      //System.out.println(current.toString());
       current = current.getParent();
     }
     if(s.getCourseMin() > count){

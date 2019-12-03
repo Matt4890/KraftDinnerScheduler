@@ -15,20 +15,16 @@ public class Kontrol {
         int total = 0;
         if (s instanceof CourseSlot) {
           total += SoftConstraints.checkCourseMin((CourseSlot) s, node) * Kontrol.weight_min_filled;
-          System.out.println("Calculated Course Min");
           total += SoftConstraints.preferenceEval(s, u)* Kontrol.weight_pref;
-          System.out.println("Calculated Course Preference");
           total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node)* Kontrol.weight_pair;
-          System.out.println("Calculated Course Pair");
           total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, node)* Kontrol.weight_section_diff;
-          System.out.println("Calculated Course Section Dif");
         } else {
           total += SoftConstraints.checkLabMin((LabSlot) s, node)* Kontrol.weight_min_filled;
-          System.out.println("Calculated Lab Min");
+
           total += SoftConstraints.preferenceEval(s, u)* Kontrol.weight_pref;
-          System.out.println("Calculated Lab preference");
+
           total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, node)* Kontrol.weight_pair;
-          System.out.println("Calculated Lab pair ");
+
     
         }
         return total;

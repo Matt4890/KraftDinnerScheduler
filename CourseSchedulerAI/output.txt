@@ -28,1130 +28,2102 @@ added pen for pair of 100 for SENG311LEC01
 PairsWeightCount:1
 TotalWeightCount:1
 Done!
-The Schedule:
-Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-
+[Pair Course: SENG311LEC01 with Slot: MO,8:00, Pair Course: SENG311LEC01TUT01 with Slot: FR,10:00]
+Made Root without penalty
+TreeNode: Depth: 0 Penalty: 0
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+Root:
+TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+The size2
+Iteration 1
+TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+For Loop ended woo
 All courses are
-{CPSC433LEC01=CPSC433LEC01, CPSC433LEC02=CPSC433LEC02, CPSC567LEC01=CPSC567LEC01}
+{SENG311LEC01=SENG311LEC01, CPSC433LEC01=CPSC433LEC01, CPSC433LEC02=CPSC433LEC02, CPSC567LEC01=CPSC567LEC01}
 All labs are
-{CPSC567TUT01=CPSC567TUT01, CPSC433LEC01TUT01=CPSC433LEC01TUT01, CPSC433LEC02TUT02=CPSC433LEC02TUT02}
-The size of courses is 3
+{SENG311LEC01TUT01=SENG311LEC01TUT01, CPSC567TUT01=CPSC567TUT01, CPSC433LEC01TUT01=CPSC433LEC01TUT01, CPSC433LEC02TUT02=CPSC433LEC02TUT02}
+Start Brothers
+Brothers Finished
+The size of courses is 4
+the size of brothers is 0
 the size of brothers is 1
 I hate this
 The pen added is 1000 for brothers pen for null and null
 the size of brothers is 1
 I hate this
 the size of brothers is 0
-The initial pen is: 101
-LOOOK HERE!!!!!!!!!!!: 101
-[CPSC433LEC01, CPSC433LEC02, CPSC567LEC01, CPSC567TUT01, CPSC433LEC01TUT01, CPSC433LEC02TUT02]
-[CPSC567LEC01, CPSC433LEC01, CPSC433LEC02, CPSC567TUT01, CPSC433LEC01TUT01, CPSC433LEC02TUT02]
+ORderING
+[SENG311LEC01, CPSC433LEC01, CPSC433LEC02, CPSC567LEC01, SENG311LEC01TUT01, CPSC567TUT01, CPSC433LEC01TUT01, CPSC433LEC02TUT02]
+[CPSC567LEC01, CPSC433LEC01, CPSC433LEC02, CPSC567TUT01, CPSC433LEC01TUT01, CPSC433LEC02TUT02, SENG311LEC01, SENG311LEC01TUT01]
 Units Made
 RUNNING BNB
-[TreeNode: Penalty: 101 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
 While looooop ran
-[TreeNode: Penalty: 101 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Penalty of Pairing: -101
-Penalty of Pairing: 101
-Penalty of Pairing: 100
-The value we get is: 0
-The value we get is: 201
-The value we get is: 202
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Course: CPSC567LEC01is: true
+######################################
+TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:MO,9:00 Course: CPSC567LEC01is: true
+######################################
+TreeNode: Depth: 2 Penalty: 204
+Unit: CPSC567LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: CPSC567LEC01is: true
+######################################
+TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 202 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Problem is unwanted
-Problem is Notcompatible
-Penalty of Pairing: 0
-The value we get is: 202
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Course: CPSC433LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: CPSC433LEC01is: true
+######################################
+TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: CPSC433LEC01is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 202 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-The slot: MO,8:00 compared with TU,9:30 checked to be the same is:false
-Penalty of Pairing: -1
-Problem is Notcompatible
-The slot: TU,9:30 compared with TU,9:30 checked to be the same is:true
-Penalty of Pairing: 900
-The value we get is: 201
-The value we get is: 1102
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Course: CPSC433LEC02is: true
+######################################
+TreeNode: Depth: 4 Penalty: 406
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:MO,9:00 Course: CPSC433LEC02is: true
+######################################
+TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: CPSC433LEC02is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 1102 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Penalty of Pairing: 1
-Problem is Notcompatible
-Penalty of Pairing: 0
-The value we get is: 1102
-The value we get is: 1103
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 1102 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-, TreeNode: Penalty: 1103 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot: CPSC567TUT01  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-The slot: MO,8:00 compared with MO,8:00 checked to be the same is:true
-Penalty of Pairing: -31
-RAN THE BASE OF TREE PENALTY CALC
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC567TUT01is: true
+######################################
+TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
 Problem is conflicting lab
-The slot: FR,10:00 compared with MO,8:00 checked to be the same is:false
-The slot: FR,10:00 compared with TU,10:00 checked to be the same is:false
-Penalty of Pairing: 0
-RAN THE BASE OF TREE PENALTY CALC
-The value we get is: 1073
-The value we get is: 1104
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC567TUT01is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC567TUT01is: true
+######################################
+TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 1102 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-, TreeNode: Penalty: 1073 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot: CPSC567TUT01, CPSC433LEC01TUT01  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 1104 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot: CPSC567TUT01  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC433LEC01TUT01  
-
-
-
-]
-The slot: MO,8:00 compared with MO,8:00 checked to be the same is:true
-Penalty of Pairing: -81
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC01TUT01is: true
+######################################
+TreeNode: Depth: 6 Penalty: 1458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC01TUT01is: true
+######################################
+TreeNode: Depth: 6 Penalty: 1437
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC01TUT01is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 1439
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1437
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC02TUT02is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC02TUT02is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
 Problem is conflicting lab
-The value we get is: 1023
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1539
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1439
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1437
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1339
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1439
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1437
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 1102 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-, TreeNode: Penalty: 1073 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot: CPSC567TUT01, CPSC433LEC01TUT01  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 1023 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot: CPSC567TUT01, CPSC433LEC02TUT02  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC433LEC01TUT01  
-
-
-
-]
 WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Bound is: 1023
+Bound is: 1339
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-TreeNode: Penalty: 1023 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot: CPSC567TUT01, CPSC433LEC02TUT02  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC433LEC01TUT01  
-
-
-
-
+TreeNode: Depth: 8 Penalty: 1339
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1439
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1437
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 So Bound got replaced
 While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 1102 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-, TreeNode: Penalty: 1073 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot: CPSC567TUT01, CPSC433LEC01TUT01  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Problem is Notcompatible
-Problem is conflicting lab
-The slot: FR,10:00 compared with MO,8:00 checked to be the same is:false
-Penalty of Pairing: 0
-The value we get is: 1073
--------------------------It Broke the bound so I didn't add it --------------------------------
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 1102 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01, CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-]
-Penalty of Pairing: 1
-RAN THE BASE OF TREE PENALTY CALC
-Problem is conflicting lab
-The value we get is: 1104
--------------------------It Broke the bound so I didn't add it --------------------------------
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Problem is Notcompatible
-Problem is Notcompatible
-Penalty of Pairing: 0
-The value we get is: 201
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-]
-Penalty of Pairing: 1
-RAN THE BASE OF TREE PENALTY CALC
-Problem is conflicting lab
-The value we get is: 203
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 203 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-]
-Problem is Notcompatible
-Penalty of Pairing: 0
-The value we get is: 203
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 203 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
-TU,10:00 Labs Assigned To Slot: CPSC433LEC02TUT02  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-]
 WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Bound is: 203
+Bound is: 1539
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-TreeNode: Penalty: 203 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC567LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
-TU,10:00 Labs Assigned To Slot: CPSC433LEC02TUT02  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-
+TreeNode: Depth: 8 Penalty: 1539
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1439
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1437
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC02TUT02is: false
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 1539
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC02TUT02is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1639
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1539
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1439
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1539
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1439
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1439
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1539
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1639
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1639
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1539
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC01TUT01is: true
+######################################
+TreeNode: Depth: 6 Penalty: 1459
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC01TUT01is: true
+######################################
+TreeNode: Depth: 6 Penalty: 1439
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC01TUT01is: true
+######################################
+TreeNode: Depth: 6 Penalty: 1488
+Unit: CPSC433LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 1489
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1488
+Unit: CPSC433LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 1569
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1488
+Unit: CPSC433LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC02TUT02is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1669
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1569
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1488
+Unit: CPSC433LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1469
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1569
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1488
+Unit: CPSC433LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1469
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1469
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1569
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1488
+Unit: CPSC433LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1669
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1669
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1569
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1488
+Unit: CPSC433LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1589
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1489
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1488
+Unit: CPSC433LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1389
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1489
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1488
+Unit: CPSC433LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1389
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1389
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1489
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1488
+Unit: CPSC433LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1589
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1589
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1489
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1488
+Unit: CPSC433LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 1440
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1439
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC02TUT02is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 1519
+Unit: CPSC433LEC02TUT02 in SlotFR,10:00
+Parent TreeNode: Depth: 6 Penalty: 1439
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1619
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1519
+Unit: CPSC433LEC02TUT02 in SlotFR,10:00
+Parent TreeNode: Depth: 6 Penalty: 1439
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1419
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1519
+Unit: CPSC433LEC02TUT02 in SlotFR,10:00
+Parent TreeNode: Depth: 6 Penalty: 1439
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1419
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1419
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1519
+Unit: CPSC433LEC02TUT02 in SlotFR,10:00
+Parent TreeNode: Depth: 6 Penalty: 1439
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1619
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1619
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1519
+Unit: CPSC433LEC02TUT02 in SlotFR,10:00
+Parent TreeNode: Depth: 6 Penalty: 1439
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1540
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1440
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1439
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1340
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1440
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1439
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1340
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1340
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1440
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1439
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1540
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1540
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1440
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 1439
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC02TUT02is: false
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 1540
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1459
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 1539
+Unit: CPSC433LEC02TUT02 in SlotFR,10:00
+Parent TreeNode: Depth: 6 Penalty: 1459
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1639
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1539
+Unit: CPSC433LEC02TUT02 in SlotFR,10:00
+Parent TreeNode: Depth: 6 Penalty: 1459
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1439
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1539
+Unit: CPSC433LEC02TUT02 in SlotFR,10:00
+Parent TreeNode: Depth: 6 Penalty: 1459
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1439
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1439
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1539
+Unit: CPSC433LEC02TUT02 in SlotFR,10:00
+Parent TreeNode: Depth: 6 Penalty: 1459
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1639
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1639
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1539
+Unit: CPSC433LEC02TUT02 in SlotFR,10:00
+Parent TreeNode: Depth: 6 Penalty: 1459
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1640
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1540
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1459
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 1440
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1540
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1459
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1440
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1440
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 1540
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1459
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 1640
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 1640
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 1540
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 1459
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 1408
+Unit: CPSC567TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 4 Penalty: 1406
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC567TUT01is: false
+Problem is conflicting lab
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC567TUT01is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC567TUT01is: true
+######################################
+TreeNode: Depth: 5 Penalty: 406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 406
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC01TUT01is: true
+######################################
+TreeNode: Depth: 6 Penalty: 458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 406
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC01TUT01is: true
+######################################
+TreeNode: Depth: 6 Penalty: 437
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 406
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC01TUT01is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC02TUT02is: false
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC02TUT02is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC02TUT02is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC02TUT02is: false
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 539
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 406
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC02TUT02is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 640
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 539
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 406
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 439
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 539
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 406
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 439
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 439
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 539
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 406
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 So Bound got replaced
 While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Problem is unwanted
-Penalty of Pairing: 1
-Problem is Notcompatible
-The value we get is: 202
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 202 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-The slot: MO,8:00 compared with TU,9:30 checked to be the same is:false
-Penalty of Pairing: -1
-The slot: MO,9:00 compared with TU,9:30 checked to be the same is:false
-Penalty of Pairing: 999
-Problem is Notcompatible
-The value we get is: 201
-The value we get is: 1201
--------------------------It Broke the bound so I didn't add it --------------------------------
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Problem is Notcompatible
-Problem is conflicting lab
-Penalty of Pairing: 0
-The value we get is: 201
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 201 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-]
-Penalty of Pairing: 1
-RAN THE BASE OF TREE PENALTY CALC
-Penalty of Pairing: 0
-RAN THE BASE OF TREE PENALTY CALC
-The value we get is: 202
-The value we get is: 203
--------------------------It Broke the bound so I didn't add it --------------------------------
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 202 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC433LEC02  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC567LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-]
-Problem is conflicting lab
-Problem is Notcompatible
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Problem is unwanted
-Penalty of Pairing: 1
-Penalty of Pairing: 0
-The value we get is: 0
-The value we get is: 1
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 1 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot:  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Problem is Notcompatible
-The slot: MO,9:00 compared with TU,9:30 checked to be the same is:false
-Penalty of Pairing: 999
-Penalty of Pairing: 0
-The value we get is: 1
-The value we get is: 1000
--------------------------It Broke the bound so I didn't add it --------------------------------
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 1 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Problem is conflicting lab
-Problem is Notcompatible
-Penalty of Pairing: 0
-The value we get is: 1
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 1 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-]
-Penalty of Pairing: 1
-RAN THE BASE OF TREE PENALTY CALC
-Penalty of Pairing: 0
-RAN THE BASE OF TREE PENALTY CALC
-The value we get is: 2
-The value we get is: 3
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 2 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-, TreeNode: Penalty: 3 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-]
-Problem is Notcompatible
-Problem is conflicting lab
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 2 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-]
-Penalty of Pairing: 1
-Problem is Notcompatible
-The value we get is: 3
-While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-, TreeNode: Penalty: 3 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot: CPSC433LEC02TUT02  
-TU,10:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-]
 WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Bound is: 3
+Bound is: 640
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-TreeNode: Penalty: 3 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot: CPSC433LEC02TUT02  
-TU,10:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-
+TreeNode: Depth: 8 Penalty: 640
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 539
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 458
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 406
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 406
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 305
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 203
+Unit: CPSC567LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Course: CPSC433LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: CPSC433LEC01is: false
+The Hard constraint check for:  Slot:TU,9:30 Course: CPSC433LEC01is: true
+######################################
+TreeNode: Depth: 3 Penalty: 205
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 204
+Unit: CPSC567LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Course: CPSC433LEC02is: true
+######################################
+TreeNode: Depth: 4 Penalty: 306
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 205
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 204
+Unit: CPSC567LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:MO,9:00 Course: CPSC433LEC02is: false
+The Hard constraint check for:  Slot:TU,9:30 Course: CPSC433LEC02is: true
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC567TUT01is: false
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC567TUT01is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC567TUT01is: true
+######################################
+TreeNode: Depth: 5 Penalty: 306
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 306
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 205
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 204
+Unit: CPSC567LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC01TUT01is: true
+######################################
+TreeNode: Depth: 6 Penalty: 358
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 306
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 306
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 205
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 204
+Unit: CPSC567LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+Problem is conflicting lab
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC01TUT01is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC01TUT01is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC02TUT02is: false
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 439
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 358
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 306
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 306
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 205
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 204
+Unit: CPSC567LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC02TUT02is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 340
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 439
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 358
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 306
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 306
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 205
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 204
+Unit: CPSC567LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 539
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 439
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 358
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 306
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 306
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 205
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 204
+Unit: CPSC567LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 539
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 539
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 439
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 358
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 306
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 306
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 205
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 204
+Unit: CPSC567LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 340
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 340
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 439
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 358
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 306
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 306
+Unit: CPSC433LEC02 in SlotMO,8:00
+Parent TreeNode: Depth: 3 Penalty: 205
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 204
+Unit: CPSC567LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 So Bound got replaced
 While looooop ran
-[TreeNode: Penalty: 0 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot:  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Problem is Notcompatible
-Penalty of Pairing: 1
-The slot: TU,9:30 compared with TU,9:30 checked to be the same is:true
-Penalty of Pairing: 900
-The value we get is: 1
-The value we get is: 900
--------------------------It Broke the bound so I didn't add it --------------------------------
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Course: CPSC433LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: CPSC433LEC01is: true
+######################################
+TreeNode: Depth: 3 Penalty: 105
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: CPSC433LEC01is: true
+######################################
+TreeNode: Depth: 3 Penalty: 4
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While looooop ran
-[TreeNode: Penalty: 1 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC02  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01  
-
-
-
-]
-Problem is conflicting lab
-Problem is Notcompatible
-Penalty of Pairing: 0
-The value we get is: 1
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Course: CPSC433LEC02is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: CPSC433LEC02is: true
+######################################
+TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 4
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: CPSC433LEC02is: true
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While looooop ran
-[TreeNode: Penalty: 1 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC02  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC01  
-MO,8:00 Labs Assigned To Slot:  
-TU,10:00 Labs Assigned To Slot:  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-]
-Penalty of Pairing: 1
-RAN THE BASE OF TREE PENALTY CALC
+Running Generate Children 
 Problem is conflicting lab
-The value we get is: 3
--------------------------It Broke the bound so I didn't add it --------------------------------
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC567TUT01is: false
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC567TUT01is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC567TUT01is: true
+######################################
+TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 4
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC01TUT01is: true
+######################################
+TreeNode: Depth: 6 Penalty: 158
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 4
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+Problem is conflicting lab
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC01TUT01is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC01TUT01is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC02TUT02is: false
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 239
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 158
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 4
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC02TUT02is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 340
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 239
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 158
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 4
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 339
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 239
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 158
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 4
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 339
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 339
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 239
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 158
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 4
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+So Bound got replaced
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 340
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 340
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 239
+Unit: CPSC433LEC02TUT02 in SlotTU,10:00
+Parent TreeNode: Depth: 6 Penalty: 158
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 4
+Unit: CPSC433LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Course: CPSC433LEC02is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: CPSC433LEC02is: true
+The Hard constraint check for:  Slot:TU,9:30 Course: CPSC433LEC02is: true
+######################################
+TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotTU,9:30
+Parent TreeNode: Depth: 3 Penalty: 105
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC567TUT01is: false
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC567TUT01is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC567TUT01is: true
+######################################
+TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotTU,9:30
+Parent TreeNode: Depth: 3 Penalty: 105
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC01TUT01is: true
+######################################
+TreeNode: Depth: 6 Penalty: 158
+Unit: CPSC433LEC01TUT01 in SlotMO,8:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotTU,9:30
+Parent TreeNode: Depth: 3 Penalty: 105
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC01TUT01is: true
+######################################
+TreeNode: Depth: 6 Penalty: 137
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotTU,9:30
+Parent TreeNode: Depth: 3 Penalty: 105
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC01TUT01is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC02TUT02is: true
+######################################
+TreeNode: Depth: 7 Penalty: 139
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 137
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotTU,9:30
+Parent TreeNode: Depth: 3 Penalty: 105
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC02TUT02is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC02TUT02is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+Running Generate Children 
+Problem is conflicting lab
+The Hard constraint check for:  Slot:MO,8:00 Course: SENG311LEC01is: false
+The Hard constraint check for:  Slot:MO,9:00 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 240
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 139
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 137
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotTU,9:30
+Parent TreeNode: Depth: 3 Penalty: 105
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+The Hard constraint check for:  Slot:TU,9:30 Course: SENG311LEC01is: true
+######################################
+TreeNode: Depth: 8 Penalty: 239
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 139
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 137
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotTU,9:30
+Parent TreeNode: Depth: 3 Penalty: 105
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+######################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 239
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 239
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 139
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 137
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotTU,9:30
+Parent TreeNode: Depth: 3 Penalty: 105
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+So Bound got replaced
+While looooop ran
+WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Bound is: 240
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+TreeNode: Depth: 8 Penalty: 240
+Unit: SENG311LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 7 Penalty: 139
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 137
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotTU,9:30
+Parent TreeNode: Depth: 3 Penalty: 105
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+While looooop ran
+Running Generate Children 
+The Hard constraint check for:  Slot:MO,8:00 Lab: CPSC433LEC02TUT02is: false
+Problem is conflicting lab
+The Hard constraint check for:  Slot:TU,10:00 Lab: CPSC433LEC02TUT02is: false
+The Hard constraint check for:  Slot:FR,10:00 Lab: CPSC433LEC02TUT02is: false
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We are out of things to add...
 The Best:
-TreeNode: Penalty: 3 Schedule: 
-MWF Lecture Slots: 
-MO,8:00 Courses Assigned To Slot: SENG311LEC01, CPSC567LEC01  
-MO,9:00 Courses Assigned To Slot: CPSC433LEC01  
-TU,9:30 Courses Assigned To Slot: CPSC433LEC02  
-MO,8:00 Labs Assigned To Slot: CPSC433LEC02TUT02  
-TU,10:00 Labs Assigned To Slot: CPSC433LEC01TUT01  
-FR,10:00 Labs Assigned To Slot: SENG311LEC01TUT01, CPSC567TUT01  
-
-
-
-
-3
+TreeNode: Depth: 8 Penalty: 239
+Unit: SENG311LEC01 in SlotTU,9:30
+Parent TreeNode: Depth: 7 Penalty: 139
+Unit: CPSC433LEC02TUT02 in SlotMO,8:00
+Parent TreeNode: Depth: 6 Penalty: 137
+Unit: CPSC433LEC01TUT01 in SlotTU,10:00
+Parent TreeNode: Depth: 5 Penalty: 106
+Unit: CPSC567TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 4 Penalty: 106
+Unit: CPSC433LEC02 in SlotTU,9:30
+Parent TreeNode: Depth: 3 Penalty: 105
+Unit: CPSC433LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 2 Penalty: 3
+Unit: CPSC567LEC01 in SlotMO,8:00
+Parent TreeNode: Depth: 1 Penalty: 102
+Unit: SENG311LEC01TUT01 in SlotFR,10:00
+Parent TreeNode: Depth: 0 Penalty: 101
+Unit: SENG311LEC01 in SlotMO,8:00
+Parent null
+239
 Generator Obj Created!!!!!!!!

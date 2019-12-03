@@ -40,10 +40,14 @@ public class Generator {
         }
         if (HardConstraintOk) {
             // Calculate the penalty value here
-            int calc = Kontrol.evalAssignmentPairing(slot, current, nodeToAdd);
+            int calc = Kontrol.evalAssignmentPairing(slot, current, parent);
             if (calc < currentBound) {
-                nodeToAdd.setPenalty(calc);
+                nodeToAdd.setPenalty(calc + parent.getPenaltyValueOfTreeNode());
                 parent.addChild(nodeToAdd);
+                System.out.println("######################################");
+                System.out.println(nodeToAdd);
+                System.out.println("######################################");
+
                 if (nodeToAdd.getDepth() == allUnitsTotal - 1) { // This should change to be something else
                     // Calculate the penalty for the remaining slots
                     // Create a helper method in Generator to calculate all empty slot coursemin and
@@ -126,6 +130,7 @@ public class Generator {
         System.out.println("RUNNING BNB");
         Stack<TreeNode> allStackNodes = new Stack<TreeNode>();
         this.startNode = starter;
+        this.bound = Integer.MAX_VALUE;
        
         TreeNode nodeToAdd  = this.startNode;
         while (nodeToAdd.getChildren().size() != 0){
@@ -133,8 +138,8 @@ public class Generator {
             
 
         }
-        System.out.println(nodeToAdd);
-        System.out.println("Node Depth: " + nodeToAdd.getDepth());
+        //System.out.println(nodeToAdd);
+        //System.out.println("Node Depth: " + nodeToAdd.getDepth());
 
         allStackNodes.add(nodeToAdd);
         // this.bound = Integer.MAX_VALUE;
@@ -171,7 +176,6 @@ public class Generator {
                 if (currentNode.getChildren().size() == 0) {
                     // Do a check up the tree to see if the slot is included along the path
                     // Whats a more efficient way to do this??
-                    System.out.println("Integer: " + (currentNode.getDepth() - (numPartialAssignments-1)));
                     Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth() - (numPartialAssignments-1) ); // TEST ME 
 
                     if (scheduleMe.equals(unitsToBeScheduled.get(unitsToBeScheduled.size() - 1))) { // We are reaching
@@ -195,8 +199,11 @@ public class Generator {
                             unitsToBeScheduled.size(), emptySlots);
                     depth++;
                 }
+                System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
-                for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
+                System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+                for (int i = 0; i < currentNode.getChildren().size(); i++) {
                     // allStackNodes.push(currentNode.getOrderedChildren().remove());
                     allStackNodes.push(currentNode.getChildren().get(i));
                 }

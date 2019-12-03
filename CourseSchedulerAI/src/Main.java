@@ -21,10 +21,9 @@ public class Main {
 
     File file = new File("output.txt");
     // Instantiating the PrintStream class
-    // PrintStream stream = new PrintStream(file);
-    // System.out.println("From now on "+file.getAbsolutePath()+" will be your
-    // console");
-    // System.setOut(stream);
+    PrintStream stream = new PrintStream(file);
+    System.out.println("From now on " + file.getAbsolutePath() + " will be your console");
+    System.setOut(stream);
 
     // Printing values to file
 
@@ -62,7 +61,7 @@ public class Main {
           new Pair(parser.getPartialAssignments().get(i).getSlot(), parser.getPartialAssignments().get(i).getUnit()), 0,
           curr);
       n.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(i).getSlot(),
-          parser.getPartialAssignments().get(i).getUnit(), root));
+          parser.getPartialAssignments().get(i).getUnit(), n.getParent()) + n.getParent().getPenaltyValueOfTreeNode());
       n.setDepth(i);
       n.setDepth(curr.getDepth() + 1);
       curr.addChild(n);
@@ -86,7 +85,8 @@ public class Main {
 
     makeBrothers(allCourses);
     makePotentialsBros(allCourses);
-    // addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR PLS
+    // addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR
+    // PLS
 
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     total_num_of_units = unitsToProcess.size();
@@ -95,7 +95,6 @@ public class Main {
 
     search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), parser.getPartialAssignments().size());
     System.out.println("Generator Obj Created!!!!!!!!");
-
 
   }
 

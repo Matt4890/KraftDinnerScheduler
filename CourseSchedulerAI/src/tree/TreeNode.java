@@ -137,11 +137,10 @@ public class TreeNode implements Comparable<TreeNode> {
     public String toString() {
         String toReturn = "TreeNode: Depth: " + this.depth + " Penalty: " + this.penaltyValue + "\n";
         TreeNode placeHolder = this;
-        while (placeHolder.getParent() != null) {
-            toReturn += "Unit: " + this.assign.getUnit().toString() + " in Slot" + this.assign.getSlot().toString()
-                    + "\n";
-            placeHolder = placeHolder.getParent();
-        }
+        
+        toReturn += "Unit: " + this.assign.getUnit().toString() + " in Slot" + this.assign.getSlot().toString()+ "\n";
+
+        
         toReturn += "Parent " + this.parent;
         return toReturn;
     }
