@@ -50,31 +50,33 @@ public class Main {
     Kontrol.setWeight_min_filled(courseMinWeight);
     Kontrol.setWeight_pair(pairsWeight);
     Kontrol.setWeight_pref(prefsWeight);
-    
+
     Unit.setBrotherIncrease(brothersPen);
     Unit.setPairsIncrease(pairsPen);
     Unit.setPreferencesIncrease(labMinPen);
-    
+
     Kontrol.setWeight_pair(pairsWeight);
     Kontrol.setWeight_pref(prefsWeight);
     Kontrol.setWeight_section_diff(brothersWeight);
+
     TreeNode root = null;
     Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(),
         Kontrol.getWeight_min_filled());
 
+    Kontrol.setAllSlots(parser.getAllSlots());
     int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
     int initialPairsPenalty = parser.getpairWeightCount() * Kontrol.getWeight_pair();
     int initialPreferencePenalty = parser.getprefWeight() * Kontrol.getWeight_pref();
-    int initialPenalty = initialMinPenalty;
+    // int initialPenalty = initialMinPenalty;
 
     // System.out.println(parser.getPartialAssignments());
     if (parser.getPartialAssignments().size() != 0) {
       Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
           parser.getPartialAssignments().get(0).getUnit());
       // root = new TreeNode(assign,initialPenalty); //(initialPenalty);
-      root = new TreeNode(assign, initialPenalty);
+      root = new TreeNode(assign, 0);
 
-      root.setPenalty(Kontrol.evalAssignmentPairing(assign.getSlot(), assign.getUnit(), root) + initialPenalty);
+      root.setPenalty(Kontrol.evalAssignmentPairing(assign.getSlot(), assign.getUnit(), root));
 
       root.setDepth(0);
       // System.out.println("Root:");
@@ -102,7 +104,7 @@ public class Main {
     }
 
     if (root == null) {
-      root = new TreeNode(new Pair(null, null), initialPenalty);
+      root = new TreeNode(new Pair(null, null), 0);
     }
 
     HashMap<String, Course> allCourses = parser.getCourseMap();
@@ -115,7 +117,7 @@ public class Main {
 
     makeBrothers(allCourses);
     makePotentialsBros(allCourses);
-    addConstraintsForSpecialClasses(allLabs, parser); 
+    addConstraintsForSpecialClasses(allLabs, parser);
 
     // Get list of units to ignore (partial assignments)
     ArrayList<Unit> partialAssignedUnits = new ArrayList<Unit>();
@@ -124,16 +126,17 @@ public class Main {
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs, partialAssignedUnits);
     total_num_of_units = unitsToProcess.size();
     // System.out.println("Units Made");
-    for(Unit unit : unitsToProcess){
-      // System.out.println(unit.toString() + " is constrained " + unit.getConstrained() + " and its preference is " + unit.getSoftPref() );
+    for (Unit unit : unitsToProcess) {
+      // System.out.println(unit.toString() + " is constrained " +
+      // unit.getConstrained() + " and its preference is " + unit.getSoftPref() );
     }
     Generator search = new Generator(root);
     int numberNodesBefore = parser.getPartialAssignments().size() != 0 ? parser.getPartialAssignments().size() : 0;
-    
+
     setupOverlaps(parser.getAllSlots());
 
     search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), numberNodesBefore);
-    
+
     // System.out.println("Generator Obj Created!!!!!!!!");
 
   }
@@ -227,7 +230,7 @@ public class Main {
    */
   private static ArrayList<Unit> orderedUnitsForAdding(HashMap<String, Course> courses, HashMap<String, Lab> labs,
       ArrayList<Unit> ignored) {
-    //System.out.println("ORderING");
+    // System.out.println("ORderING");
     ArrayList<Unit> toReturn = new ArrayList<Unit>();
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       Course c = (Course) entry.getValue();
@@ -244,10 +247,10 @@ public class Main {
       toReturn.remove(u);
     }
 
-   // System.out.println(toReturn);
+    // System.out.println(toReturn);
     bubbleSort(toReturn);
 
-    //System.out.println(toReturn);
+    // System.out.println(toReturn);
 
     return toReturn;
   }
@@ -261,14 +264,13 @@ public class Main {
     int n = units.size();
     for (int i = 0; i < n - 1; i++) {
       for (int j = 0; j < n - i - 1; j++) {
-        if(units.get(j).getConstrained() == units.get(j + 1).getConstrained()){
-          if(units.get(j).getSoftPref() < units.get(j + 1).getSoftPref() ){
+        if (units.get(j).getConstrained() == units.get(j + 1).getConstrained()) {
+          if (units.get(j).getSoftPref() < units.get(j + 1).getSoftPref()) {
             Unit temp = units.get(j);
             units.set(j, units.get(j + 1));
             units.set(j + 1, temp);
           }
-        }
-        else if (units.get(j).getConstrained() < units.get(j + 1).getConstrained()) {
+        } else if (units.get(j).getConstrained() < units.get(j + 1).getConstrained()) {
           Unit temp = units.get(j);
           units.set(j, units.get(j + 1));
           units.set(j + 1, temp);
@@ -278,26 +280,28 @@ public class Main {
   }
 
   private static void makePotentialsBros(HashMap<String, Course> courses) {
-    //System.out.println("The size of courses is " + courses.size());
+    // System.out.println("The size of courses is " + courses.size());
     ArrayList<Course> checked = new ArrayList<Course>();
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       Course courseToAddPotential = entry.getValue();
       checked.add(courseToAddPotential);
-      //System.out.println("the size of brothers is " + courseToAddPotential.getBrothers().size());
+      // System.out.println("the size of brothers is " +
+      // courseToAddPotential.getBrothers().size());
       for (Course course : courseToAddPotential.getBrothers()) {
-        //System.out.println("I hate this");
+        // System.out.println("I hate this");
         if (!checked.contains(course)) {
           courseToAddPotential.incrementPotential(((double) (brothersPen)) / 2);
           course.incrementPotential(((double) (brothersPen)) / 2);
-          //System.out.println("The pen added is " + brothersPen + " for brothers pen for " + course.getKey() + " and "
-          //    + courseToAddPotential.getKey());
+          // System.out.println("The pen added is " + brothersPen + " for brothers pen for
+          // " + course.getKey() + " and "
+          // + courseToAddPotential.getKey());
         }
       }
     }
   }
 
   private static void makeBrothers(HashMap<String, Course> courses) {
-    //System.out.println("Start Brothers");
+    // System.out.println("Start Brothers");
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       for (Map.Entry<String, Course> entry2 : courses.entrySet()) {
         if (entry.getValue().isBrother(entry2.getValue())) {
@@ -306,95 +310,92 @@ public class Main {
         }
       }
     }
-    //System.out.println("Brothers Finished");
+    // System.out.println("Brothers Finished");
   }
 
   public static int getNumOfUnits() {
     return total_num_of_units;
   }
 
-  public static void setupOverlaps(ArrayList<Slot> slots){
-    for(Slot slot : slots){
-      //slot.addOverlaps(slot);
-      
-        for(Slot slot2 : slots){
-          if(slot instanceof CourseSlot){
-            if(slot2 instanceof CourseSlot){
-              if(slot.getTime() == slot2.getTime()){
-      
-                if( ((CourseSlot)slot).getDay() == ((CourseSlot)slot2).getDay()){
-                  if (slot != slot2){
-                    slot.addOverlaps(slot2);
-                  }
+  public static void setupOverlaps(ArrayList<Slot> slots) {
+    for (Slot slot : slots) {
+      // slot.addOverlaps(slot);
+
+      for (Slot slot2 : slots) {
+        if (slot instanceof CourseSlot) {
+          if (slot2 instanceof CourseSlot) {
+            if (slot.getTime() == slot2.getTime()) {
+
+              if (((CourseSlot) slot).getDay() == ((CourseSlot) slot2).getDay()) {
+                if (slot != slot2) {
+                  slot.addOverlaps(slot2);
                 }
               }
-            }
-
-            //slot 2 is a lab
-            else{
-              if(((CourseSlot)slot).getDay() == CourseDays.MONWEDFRI ){
-                if(((LabSlot)slot2).getDay() == LabDays.MONWED){
-                  if(slot.getTime() == slot2.getTime()){
-                    if(!slot.getOverlaps().contains(slot2))
-                      slot.addOverlaps(slot2);
-                    }
-                }
-                else if(((LabSlot)slot2).getDay() == LabDays.FRI){
-                  if(slot.getTime()== slot2.getTime() || slot.getTime() == slot2.getTime()+100){
-                    if(!slot.getOverlaps().contains(slot2))
-                      slot.addOverlaps(slot2);
-                  }
-                }
-              } 
             }
           }
-        
-        else{
-          if(slot2 instanceof CourseSlot){
-            if(((LabSlot)slot).getDay() == LabDays.FRI){
-              if(((CourseSlot)slot2).getDay() == CourseDays.MONWEDFRI){
-                if(slot.getTime() == slot2.getTime() || slot.getTime() == slot2.getTime() - 100){
-                  if(!slot.getOverlaps().contains(slot2))
-                  slot.addOverlaps(slot2);
+
+          // slot 2 is a lab
+          else {
+            if (((CourseSlot) slot).getDay() == CourseDays.MONWEDFRI) {
+              if (((LabSlot) slot2).getDay() == LabDays.MONWED) {
+                if (slot.getTime() == slot2.getTime()) {
+                  if (!slot.getOverlaps().contains(slot2))
+                    slot.addOverlaps(slot2);
+                }
+              } else if (((LabSlot) slot2).getDay() == LabDays.FRI) {
+                if (slot.getTime() == slot2.getTime() || slot.getTime() == slot2.getTime() + 100) {
+                  if (!slot.getOverlaps().contains(slot2))
+                    slot.addOverlaps(slot2);
                 }
               }
             }
-            else if(((LabSlot)slot).getDay() == LabDays.MONWED){
-              if(((CourseSlot)slot2).getDay() == CourseDays.MONWEDFRI){
-                if(slot.getTime() == slot2.getTime()){
-                  if(!slot.getOverlaps().contains(slot2))
-                  slot.addOverlaps(slot2);
+          }
+        }
+
+        else {
+          if (slot2 instanceof CourseSlot) {
+            if (((LabSlot) slot).getDay() == LabDays.FRI) {
+              if (((CourseSlot) slot2).getDay() == CourseDays.MONWEDFRI) {
+                if (slot.getTime() == slot2.getTime() || slot.getTime() == slot2.getTime() - 100) {
+                  if (!slot.getOverlaps().contains(slot2))
+                    slot.addOverlaps(slot2);
                 }
-              }              
-            }
-            else{
-              if(((CourseSlot)slot2).getDay() == CourseDays.TUETHR){
+              }
+            } else if (((LabSlot) slot).getDay() == LabDays.MONWED) {
+              if (((CourseSlot) slot2).getDay() == CourseDays.MONWEDFRI) {
+                if (slot.getTime() == slot2.getTime()) {
+                  if (!slot.getOverlaps().contains(slot2))
+                    slot.addOverlaps(slot2);
+                }
+              }
+            } else {
+              if (((CourseSlot) slot2).getDay() == CourseDays.TUETHR) {
                 if (slot.getTime() % 100 == 0) {
                   if (slot2.getTime() == slot.getTime()) {
-                    if(!slot.getOverlaps().contains(slot2))
+                    if (!slot.getOverlaps().contains(slot2))
                       slot.addOverlaps(slot2);
                   } else if (slot.getTime() == slot2.getTime() - 100) {
-                    if(!slot.getOverlaps().contains(slot2))
+                    if (!slot.getOverlaps().contains(slot2))
                       slot.addOverlaps(slot2);
                   }
-              } else {
+                } else {
                   if (slot.getTime() == slot2.getTime() + 30) {
-                    if(!slot.getOverlaps().contains(slot2))
+                    if (!slot.getOverlaps().contains(slot2))
                       slot.addOverlaps(slot2);
                   } else if (slot.getTime() == slot2.getTime() - 70) {
-                    if(!slot.getOverlaps().contains(slot2))
+                    if (!slot.getOverlaps().contains(slot2))
                       slot.addOverlaps(slot2);
                   }
-              }
+                }
               }
             }
           }
         }
       }
-      
-      //System.out.println("For the slot " + slot.toString() );
-      //System.out.println(slot.getOverlaps());
-      
+
+      // System.out.println("For the slot " + slot.toString() );
+      // System.out.println(slot.getOverlaps());
+
     }
 
   }
