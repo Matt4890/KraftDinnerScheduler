@@ -26,7 +26,7 @@ public class Generator {
             ArrayList<Slot> emptySlots) {
         TreeNode nodeToAdd = new TreeNode(new Pair(slot, current), 0, parent);
         nodeToAdd.setDepth(parent.getDepth() + 1);
-            
+
         // Check if we break the hard constraint
         boolean HardConstraintOk;
         if (current instanceof Course) {
@@ -134,11 +134,11 @@ public class Generator {
         Stack<TreeNode> allStackNodes = new Stack<TreeNode>();
         this.startNode = starter;
         this.bound = Integer.MAX_VALUE;
-       
+
         TreeNode nodeToAdd  = this.startNode;
         while (nodeToAdd.getChildren().size() != 0){
             nodeToAdd = nodeToAdd.getChildren().get(0);
-            
+
 
         }
         //System.out.println(nodeToAdd);
@@ -179,13 +179,13 @@ public class Generator {
                 if (currentNode.getOrderedChildren().size() == 0) {
                     // Do a check up the tree to see if the slot is included along the path
                     // Whats a more efficient way to do this??
-                    Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth() - (numPartialAssignments-1) ); // TEST ME 
+                    Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth() - (numPartialAssignments-1) ); // TEST ME
 
                     if (scheduleMe.equals(unitsToBeScheduled.get(unitsToBeScheduled.size() - 1))) { // We are reaching
                                                                                                     // the bottom - i.e.
                                                                                                     // the last thing is
                                                                                                     // being scheduled
-                        
+
                         TreeNode check = currentNode;
                         ArrayList<Slot> scheduledSlots = new ArrayList<Slot>();
                         while (check.getParent() != null) {
@@ -208,8 +208,8 @@ public class Generator {
                 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
                 for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
-                    //allStackNodes.push(currentNode.getOrderedChildren().remove());
-                    allStackNodes.push(currentNode.getChildren().get(i));
+                    allStackNodes.push(currentNode.getOrderedChildren().remove());
+                    // allStackNodes.push(currentNode.getChildren().get(i));
                 }
 
             }

@@ -25,7 +25,7 @@ public class HardConstrainsts {
 
     public static boolean checkCourseMax(Course c, CourseSlot s, TreeNode node) {
         int count = 0;
-        TreeNode current = node.getParent();
+        TreeNode current = node;
         while (current != null) {
             if (current.getAssign().getSlot() == s) {
                 count++;

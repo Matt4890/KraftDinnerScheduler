@@ -44,7 +44,7 @@ public class SoftConstraints {
 
     TreeNode current = node.getParent();
 
-    while (current != null) {
+    while (current != null && current.getAssign().getUnit() != null) {
       //System.out.println("Stuck???");
       
       if (current.getAssign().getSlot().isSameSlot(s)) {
