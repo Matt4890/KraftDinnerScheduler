@@ -97,6 +97,7 @@ public class Parser {
         ArrayList<CourseSlot> courseSlots = new ArrayList<CourseSlot>();
         count = 0;
         for (String slotStr : courseSlots_s) {
+            if (slotStr.equals("")) break;
             Matcher m = slotRegex.matcher(slotStr);
             if (m.find()) {
                 CourseSlot cs = new CourseSlot(
@@ -132,6 +133,7 @@ public class Parser {
         ArrayList<LabSlot> labSlots = new ArrayList<LabSlot>();
         count = 0;
         for (String slotStr : labSlots_s) {
+            if (slotStr.equals("")) break;
             Matcher m = slotRegex.matcher(slotStr);
             if (m.find()) {
                 LabSlot ls = new LabSlot(
@@ -168,6 +170,7 @@ public class Parser {
         ArrayList<Lab> labs = new ArrayList<Lab>();
         count = 0;
         for (String labStr : labs_s) {
+            if (labStr.equals("")) break;
             Matcher m1 = labLecRegex.matcher(labStr);
             Matcher m2 = labRegex.matcher(labStr);
             if (m1.find()) {
@@ -213,6 +216,7 @@ public class Parser {
         ArrayList<Course> courses = new ArrayList<Course>();
         count = 0;
         for (String courseStr : courses_s) {
+            if (courseStr.equals("")) break;
             Matcher m = courseRegex.matcher(courseStr);
             if (m.find()) {
                 Course c = new Course(
