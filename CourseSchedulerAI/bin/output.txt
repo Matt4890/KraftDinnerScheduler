@@ -1,0 +1,38 @@
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+We are out of things to add...
+The Best:
+TreeNode: Depth: 5 Penalty: 100
+Unit: CPSC 103 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 4 Penalty: 100
+Unit: CPSC 102 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 3 Penalty: 80
+Unit: CPSC 104 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 2 Penalty: 90
+Unit: CPSC 106 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 1 Penalty: 80
+Unit: CPSC 105 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 0 Penalty: 50
+Unit: CPSC 101 LEC 01 in Slot: MO,  8:00
+Parent null
+100
+Eval-value: 100
+CPSC106LEC01:MO,10:00
+CPSC105LEC01:MO,10:00
+CPSC104LEC01:MO,10:00
+CPSC103LEC01:MO,9:00
+CPSC102LEC01:MO,9:00
+CPSC101LEC01:MO,8:00

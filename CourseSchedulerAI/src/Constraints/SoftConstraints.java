@@ -67,7 +67,7 @@ public class SoftConstraints {
 
   public static int checkLabMin(LabSlot s, TreeNode node) {
 
-    int count = 0;
+    int count = 1;
     TreeNode current = node.getParent();
     while (current != null) {
       if (current.getAssign().getSlot() == s) {

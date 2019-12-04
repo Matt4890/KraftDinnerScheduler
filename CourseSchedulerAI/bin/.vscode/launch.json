@@ -9,8 +9,15 @@
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
             "mainClass": "Main",
+            "projectName": "src_909a6376"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main",
             "projectName": "CourseSchedulerAI",
-            "args": "./inputs/DealWithSENGCourses.txt 1 10 100 1000",
+            "args": "./inputs/t14.txt 2 7 10 6"
         },
         {
             "type": "java",

@@ -454,7 +454,7 @@ public class Parser {
             evening = (eveCourses / slotsavailable) / 2;
         }
         if(eveCourses > slotsavailable){
-            System.out.println("Evening courses but no evening slots or not enough");
+            System.out.println("No valid Solutions");
             System.exit(0);
         }
         Unit.setEveningIncrease(evening);

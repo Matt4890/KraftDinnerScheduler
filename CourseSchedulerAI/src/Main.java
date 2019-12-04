@@ -149,7 +149,7 @@ public class Main {
           toremove813 = true;
           id813 = cpsc813.toString();
         } else {
-          System.out.println("Slot Tuesday at 1800 doesn't exist but 813/913 should be there");
+          System.out.println("No valid Solution");
           System.exit(0);
         }
         for (Unit unit : cpsc813.getNotCompatible()) {
@@ -174,7 +174,7 @@ public class Main {
           toremove913 = true;
           id913 = cpsc913.toString();
         } else {
-          System.out.println("Slot Tuesday at 1800 doesn't exist but 813/913 should be there");
+          System.out.println("No valid Solution");
           System.exit(0);
         }
         for (Unit unit : cpsc913.getNotCompatible()) {
