@@ -63,7 +63,7 @@ public class SoftConstraints {
       // Kontrol.getWeight_min_filled());
     }
 
-    return -pen * count;
+    return pen * count;
   }
 
   public static int checkLabMin(Slot s, TreeNode node, int pen, ArrayList<Slot> allSlots) {
@@ -93,7 +93,7 @@ public class SoftConstraints {
       // Kontrol.getWeight_min_filled());
     }
 
-    return -pen * count;
+    return pen * count;
 
   }
 
