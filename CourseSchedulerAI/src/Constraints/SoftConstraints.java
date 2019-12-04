@@ -1,6 +1,7 @@
 package Constraints;
 
 import schedule.*;
+import tree.Kontrol;
 import tree.Tree;
 import tree.TreeNode;
 
@@ -17,7 +18,7 @@ public class SoftConstraints {
     if (s instanceof CourseSlot) {
       total += SoftConstraints.checkCourseMin((CourseSlot) s, node);
       System.out.println("Calculated Course Min");
-      total += SoftConstraints.preferenceEval(s, u);
+      total += SoftConstraints.preferenceEval(s, u, node);
       System.out.println("Calculated Preference");
       total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node);
       System.out.println("Calculated Pair");
@@ -26,7 +27,7 @@ public class SoftConstraints {
     } else {
       total += SoftConstraints.checkLabMin((LabSlot) s, node);
       System.out.println("Calculated Lab Min");
-      total += SoftConstraints.preferenceEval(s, u);
+      total += SoftConstraints.preferenceEval(s, u, node);
       System.out.println("Calculated Lab Preference");
       total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, node);
       System.out.println("Calculated Lab Pair");
@@ -39,50 +40,59 @@ public class SoftConstraints {
   public static int checkCourseMin(CourseSlot s, TreeNode node) {
     // decrement if the course min is met and coursemin != 1
     int count = 0;
-    TreeNode current = node;
+    
+
+    TreeNode current = node.getParent();
 
     while (current != null) {
       //System.out.println("Stuck???");
-      if (current.getAssign().getSlot() == s) {
+      
+      if (current.getAssign().getSlot().isSameSlot(s)) {
         count++;
       }
-      //System.out.println(current.toString());
+      // System.out.println(current.toString());
       current = current.getParent();
+      node.incrementDesire((s.getCourseMin() - count) * Kontrol.getWeight_min_filled());
+
     }
-    if(s.getCourseMin() > count){
-      return s.getCourseMin() - count;
+    if(s.getCourseMin() >= count){
+      return -1;
     }
     return 0;
 
   }
 
   public static int checkLabMin(LabSlot s, TreeNode node) {
-    // int labMin = s.getLabMin();
-    // int labCount = s.getLabCount();
+
     int count = 0;
-    TreeNode current = node;
+    TreeNode current = node.getParent();
     while (current != null) {
-      if (current.getAssign().getSlot() == s) {
+      if (current.getAssign().getSlot().isSameSlot(s)) {
         count++;
       }
       current = current.getParent();
+      node.incrementDesire((s.getLabMin() - count) * Kontrol.getWeight_min_filled());
     }
-    if(s.getLabMin() > count){
-      return s.getLabMin() - count;
+    if(s.getLabMin() >= count){
+      return -1;
     }
     return 0;
   }
 
-  public static int preferenceEval(Slot slot, Unit u) {
+  public static int preferenceEval(Slot slot, Unit u, TreeNode node) {
     HashMap<Slot, Integer> pref = u.getPreferences();
     int total = 0;
+    int num = 0;
     if (!pref.isEmpty()) {
       for (Map.Entry<Slot, Integer> entry : pref.entrySet()) {
         if (entry.getKey() != slot) {
           total += entry.getValue();
+        } else {
+          num = entry.getValue();
         }
       }
     }
+    node.incrementDesire(num * Kontrol.getWeight_pref());
 
     return total;
     /*
@@ -103,22 +113,51 @@ public class SoftConstraints {
    */
   public static int notPairedCourse(Course b, CourseSlot s, TreeNode node) {
     ArrayList<Unit> pairs = b.getPairs();
+    int numOfCourses = 0;
     if (pairs.size() == 0) {
       return 0;
     }
+    int pairsNotAssigned = 0;
+    ArrayList<Unit> pairsAssignedInSameSlot = new ArrayList<Unit>();
+    ArrayList<Unit> pairsAssignedNotInSameSlot = new ArrayList<Unit>();
     int total = pairs.size();
-    TreeNode current = node;
+    TreeNode current = node.getParent();
     while (current != null) {
       Slot ancestorSlot = current.getAssign().getSlot();
+      if (s == ancestorSlot) {
+        numOfCourses++;
+      }
       for (Slot overlap : s.getOverlaps()) {
         if (ancestorSlot == overlap) {
           if (b.getPairs().contains(current.getAssign().getUnit())) {
             total = total - 2;
+            pairsAssignedInSameSlot.add(current.getAssign().getUnit());
+          }
+        } else {
+          if (b.getPairs().contains(current.getAssign().getUnit())) {
+            pairsAssignedNotInSameSlot.add(current.getAssign().getUnit());
           }
         }
       }
       current = current.getParent();
     }
+
+    for (Unit pair : pairs) {
+      if (!pairsAssignedInSameSlot.contains(pair) && !pairsAssignedNotInSameSlot.contains(pair)) {
+        pairsNotAssigned++;
+      }
+    }
+
+    if (pairsNotAssigned <= s.getCourseMax() - numOfCourses) {
+      node.incrementDesire(pairsNotAssigned * Kontrol.getWeight_pair());
+    } else {
+      int num = pairsNotAssigned - (s.getCourseMax() - numOfCourses);
+      node.incrementDesire(-num * Kontrol.getWeight_pair());
+    }
+
+    node.incrementDesire(-pairsAssignedNotInSameSlot.size() * Kontrol.getWeight_pref());
+    node.incrementDesire(pairsAssignedInSameSlot.size() * Kontrol.getWeight_pref());
+
     return total;
 
   }
@@ -133,22 +172,46 @@ public class SoftConstraints {
    */
   public static int notPairedLab(Lab b, LabSlot s, TreeNode node) {
     ArrayList<Unit> pairs = b.getPairs();
+    int numOfCourses = 0;
     if (pairs.size() == 0) {
       return 0;
     }
+
+    int pairsNotAssigned = 0;
+    ArrayList<Unit> pairsAssignedInSameSlot = new ArrayList<Unit>();
+    ArrayList<Unit> pairsAssignedNotInSameSlot = new ArrayList<Unit>();
     int total = pairs.size();
-    TreeNode current = node;
+    TreeNode current = node.getParent();
     while (current != null) {
       Slot ancestorSlot = current.getAssign().getSlot();
+      if (s == ancestorSlot) {
+        numOfCourses++;
+      }
       for (Slot overlap : s.getOverlaps()) {
         if (ancestorSlot == overlap) {
           if (b.getPairs().contains(current.getAssign().getUnit())) {
             total = total - 2;
+            pairsAssignedInSameSlot.add(current.getAssign().getUnit());
+          }
+        } else {
+          if (b.getPairs().contains(current.getAssign().getUnit())) {
+            pairsAssignedNotInSameSlot.add(current.getAssign().getUnit());
           }
         }
       }
       current = current.getParent();
     }
+
+    if (pairsNotAssigned <= s.getLabMax() - numOfCourses) {
+      node.incrementDesire(pairsNotAssigned * Kontrol.getWeight_pair());
+    } else {
+      int num = pairsNotAssigned - (s.getLabMax() - numOfCourses);
+      node.incrementDesire(-num * Kontrol.getWeight_pair());
+    }
+
+    node.incrementDesire(-pairsAssignedNotInSameSlot.size() * Kontrol.getWeight_pref());
+    node.incrementDesire(pairsAssignedInSameSlot.size() * Kontrol.getWeight_pref());
+
     return total;
   }
 
@@ -159,15 +222,18 @@ public class SoftConstraints {
    * @return
    */
   public static int checkSections(Course course, CourseSlot s, TreeNode node) {
-    TreeNode current = node;
+    TreeNode current = node.getParent();
     int total = 0;
-    while (current != null) {
-      if (s == current.getAssign().getSlot()) {
-        if (course.getBrothers().contains(current.getAssign().getUnit())) {
-          total++;
+    if (!course.getBrothers().isEmpty()) {
+      while (current != null) {
+        if (s == current.getAssign().getSlot()) {
+          if (course.getBrothers().contains(current.getAssign().getUnit())) {
+            total++;
+            node.incrementDesire(-Kontrol.getWeight_section_diff());
+          }
         }
+        current = current.getParent();
       }
-      current = current.getParent();
     }
     return total;
   }
