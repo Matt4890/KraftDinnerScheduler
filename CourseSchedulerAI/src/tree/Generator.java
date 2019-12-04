@@ -1,9 +1,16 @@
 package tree;
 
-import Constraints.*;
-import schedule.*;
-import coursesULabs.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Stack;
+
+import Constraints.HardConstrainsts;
+import coursesULabs.Course;
+import coursesULabs.Lab;
+import coursesULabs.Unit;
+import schedule.CourseSlot;
+import schedule.LabSlot;
+import schedule.Slot;
 
 public class Generator {
 
@@ -254,16 +261,7 @@ public class Generator {
                                 current.getAssign().getSlot().toPrettyString()));
             current = current.getParent();
         }
-        for (int i = 0; i < orderedStrings.size(); i++) {
-            for (int j = 0; j < orderedStrings.size(); j++) {
-                if (orderedStrings.get(i).compareTo(orderedStrings.get(j)) > 0) {
-                    String temp = orderedStrings.get(i);
-                    orderedStrings.set(i, orderedStrings.get(j));
-                    orderedStrings.set(j, temp);
-
-                }
-            }
-        }
+        orderedStrings.sort(String::compareToIgnoreCase);
         for (String s : orderedStrings) {
             System.out.print(s);
         }
