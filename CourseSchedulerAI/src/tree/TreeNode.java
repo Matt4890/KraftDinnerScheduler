@@ -95,7 +95,7 @@ public class TreeNode implements Comparable<TreeNode> {
 
     public void addChild(TreeNode n) {
         this.children.add(n);
-        // this.orderedChildren.add(n);
+        this.orderedChildren.add(n);
     }
 
     public TreeNode getParent() {
@@ -131,7 +131,7 @@ public class TreeNode implements Comparable<TreeNode> {
 
     @Override
     public int compareTo(TreeNode o) {
-        return (((Integer) (this.getDesirablilty())).compareTo((Integer) o.getDesirablilty()));
+        return (((Integer) (o.getDesirablilty())).compareTo((Integer) this.getDesirablilty()));
         // return (
         // ((Integer) (this.getConstrainedMeasuremnet()))
         // .compareTo((Integer) o.getConstrainedMeasuremnet())

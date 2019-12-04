@@ -142,6 +142,8 @@ public class SoftConstraints {
       current = current.getParent();
     }
 
+    
+
     for (Unit pair : pairs) {
       if (!pairsAssignedInSameSlot.contains(pair) && !pairsAssignedNotInSameSlot.contains(pair)) {
         pairsNotAssigned++;

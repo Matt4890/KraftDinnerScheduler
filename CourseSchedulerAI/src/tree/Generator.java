@@ -31,16 +31,16 @@ public class Generator {
         boolean HardConstraintOk;
         if (current instanceof Course) {
             HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
-                    (CourseSlot) slot, parent);
+                    (CourseSlot) slot, nodeToAdd);
             System.out.println("The Hard constraint check for:  Slot:" + slot + " Course: " + current +"is: " + HardConstraintOk);
         } else {
             HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current, (LabSlot) slot,
-                    parent);
+                    nodeToAdd);
             System.out.println("The Hard constraint check for:  Slot:" + slot + " Lab: " + current +"is: " + HardConstraintOk);
         }
         if (HardConstraintOk) {
             // Calculate the penalty value here
-            int calc = Kontrol.evalAssignmentPairing(slot, current, parent);
+            int calc = Kontrol.evalAssignmentPairing(slot, current, nodeToAdd);
             if (calc < currentBound) {
                 nodeToAdd.setPenalty(calc + parent.getPenaltyValueOfTreeNode());
                 parent.addChild(nodeToAdd);
@@ -56,6 +56,8 @@ public class Generator {
                                                                                                // TO CHANGE
 
                 }
+            } else {
+                System.out.println("It Broke the bound so I didn't add it");
             }
         }
     }
@@ -174,7 +176,7 @@ public class Generator {
                 // Check to see if doesn't have children made
 
                 ArrayList<Slot> emptySlots = new ArrayList<Slot>();
-                if (currentNode.getChildren().size() == 0) {
+                if (currentNode.getOrderedChildren().size() == 0) {
                     // Do a check up the tree to see if the slot is included along the path
                     // Whats a more efficient way to do this??
                     Unit scheduleMe = unitsToBeScheduled.get(currentNode.getDepth() - (numPartialAssignments-1) ); // TEST ME 
@@ -205,8 +207,8 @@ public class Generator {
 
                 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
-                for (int i = 0; i < currentNode.getChildren().size(); i++) {
-                    // allStackNodes.push(currentNode.getOrderedChildren().remove());
+                for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
+                    //allStackNodes.push(currentNode.getOrderedChildren().remove());
                     allStackNodes.push(currentNode.getChildren().get(i));
                 }
 

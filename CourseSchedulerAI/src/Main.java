@@ -2,6 +2,7 @@ import parser.*;
 import schedule.*;
 import tree.*;
 import coursesULabs.*;
+import enums.CourseDays;
 import enums.LabDays;
 
 import java.util.*;
@@ -50,11 +51,10 @@ public class Main {
     if (parser.getPartialAssignments().size() != 0) {
       Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
           parser.getPartialAssignments().get(0).getUnit());
-      //root = new TreeNode(assign,initialPenalty); //(initialPenalty);  
-      root = new TreeNode(assign,initialPenalty);
+      // root = new TreeNode(assign,initialPenalty); //(initialPenalty);
+      root = new TreeNode(assign, initialPenalty);
 
-      root.setPenalty(Kontrol.evalAssignmentPairing(assign.getSlot(),
-      assign.getUnit(), root) + initialPenalty);
+      root.setPenalty(Kontrol.evalAssignmentPairing(assign.getSlot(), assign.getUnit(), root) + initialPenalty);
 
       root.setDepth(0);
       System.out.println("Root:");
@@ -81,7 +81,7 @@ public class Main {
       System.out.println("For Loop ended woo");
     }
 
-    if (root  == null){
+    if (root == null) {
       root = new TreeNode(new Pair(null, null), initialMinPenalty);
     }
 
@@ -100,15 +100,18 @@ public class Main {
 
     // Get list of units to ignore (partial assignments)
     ArrayList<Unit> partialAssignedUnits = new ArrayList<Unit>();
-    parser.getPartialAssignments().forEach( p -> partialAssignedUnits.add(p.getUnit()));
+    parser.getPartialAssignments().forEach(p -> partialAssignedUnits.add(p.getUnit()));
 
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs, partialAssignedUnits);
     total_num_of_units = unitsToProcess.size();
     System.out.println("Units Made");
     Generator search = new Generator(root);
-    int numberNodesBefore = parser.getPartialAssignments().size() != 0 ?  parser.getPartialAssignments().size() : 1;
+    int numberNodesBefore = parser.getPartialAssignments().size() != 0 ? parser.getPartialAssignments().size() : 1;
+    
+    setupOverlaps(parser.getAllSlots());
 
     search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), numberNodesBefore);
+    
     System.out.println("Generator Obj Created!!!!!!!!");
 
   }
@@ -200,7 +203,8 @@ public class Main {
    *
    * @return: ArrayList of units in order to process
    */
-  private static ArrayList<Unit> orderedUnitsForAdding(HashMap<String, Course> courses, HashMap<String, Lab> labs, ArrayList<Unit> ignored) {
+  private static ArrayList<Unit> orderedUnitsForAdding(HashMap<String, Course> courses, HashMap<String, Lab> labs,
+      ArrayList<Unit> ignored) {
     System.out.println("ORderING");
     ArrayList<Unit> toReturn = new ArrayList<Unit>();
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
@@ -277,6 +281,92 @@ public class Main {
 
   public static int getNumOfUnits() {
     return total_num_of_units;
+  }
+
+  public static void setupOverlaps(ArrayList<Slot> slots){
+    for(Slot slot : slots){
+      //slot.addOverlaps(slot);
+      
+        for(Slot slot2 : slots){
+          if(slot instanceof CourseSlot){
+            if(slot2 instanceof CourseSlot){
+              if(slot.getTime() == slot2.getTime()){
+      
+                if( ((CourseSlot)slot).getDay() == ((CourseSlot)slot2).getDay()){
+                  if (slot != slot2){
+                    slot.addOverlaps(slot2);
+                  }
+                }
+              }
+            }
+
+            //slot 2 is a lab
+            else{
+              if(((CourseSlot)slot).getDay() == CourseDays.MONWEDFRI ){
+                if(((LabSlot)slot2).getDay() == LabDays.MONWED){
+                  if(slot.getTime() == slot2.getTime()){
+                    if(!slot.getOverlaps().contains(slot2))
+                      slot.addOverlaps(slot2);
+                    }
+                }
+                else if(((LabSlot)slot2).getDay() == LabDays.FRI){
+                  if(slot.getTime()== slot2.getTime() || slot.getTime() == slot2.getTime()+100){
+                    if(!slot.getOverlaps().contains(slot2))
+                      slot.addOverlaps(slot2);
+                  }
+                }
+              } 
+            }
+          }
+        
+        else{
+          if(slot2 instanceof CourseSlot){
+            if(((LabSlot)slot).getDay() == LabDays.FRI){
+              if(((CourseSlot)slot2).getDay() == CourseDays.MONWEDFRI){
+                if(slot.getTime() == slot2.getTime() || slot.getTime() == slot2.getTime() - 100){
+                  if(!slot.getOverlaps().contains(slot2))
+                  slot.addOverlaps(slot2);
+                }
+              }
+            }
+            else if(((LabSlot)slot).getDay() == LabDays.MONWED){
+              if(((CourseSlot)slot2).getDay() == CourseDays.MONWEDFRI){
+                if(slot.getTime() == slot2.getTime()){
+                  if(!slot.getOverlaps().contains(slot2))
+                  slot.addOverlaps(slot2);
+                }
+              }              
+            }
+            else{
+              if(((CourseSlot)slot2).getDay() == CourseDays.TUETHR){
+                if (slot.getTime() % 100 == 0) {
+                  if (slot2.getTime() == slot.getTime()) {
+                    if(!slot.getOverlaps().contains(slot2))
+                      slot.addOverlaps(slot2);
+                  } else if (slot.getTime() == slot2.getTime() - 100) {
+                    if(!slot.getOverlaps().contains(slot2))
+                      slot.addOverlaps(slot2);
+                  }
+              } else {
+                  if (slot.getTime() == slot2.getTime() + 30) {
+                    if(!slot.getOverlaps().contains(slot2))
+                      slot.addOverlaps(slot2);
+                  } else if (slot.getTime() == slot2.getTime() - 70) {
+                    if(!slot.getOverlaps().contains(slot2))
+                      slot.addOverlaps(slot2);
+                  }
+              }
+              }
+            }
+          }
+        }
+      }
+      
+      System.out.println("For the slot " + slot.toString() );
+      System.out.println(slot.getOverlaps());
+      
+    }
+
   }
 
 }

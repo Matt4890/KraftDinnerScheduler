@@ -33,6 +33,7 @@ public class HardConstrainsts {
             current = current.getParent();
         }
         if (count >= s.getCourseMax()) {
+            System.out.println("Max failed");
             return false;
         }
         return true;
@@ -77,6 +78,8 @@ public class HardConstrainsts {
             while (current != null) {
                 if (s == current.getAssign().getSlot() && current.getAssign().getUnit().getCourseNum() >= 500
                         && current.getAssign().getUnit().getCourseNum() < 600) {
+                            System.out.println("500 failed");
+
                     return false;
                 }
                 current = current.getParent();
@@ -115,6 +118,8 @@ public class HardConstrainsts {
                         if (unit.getCourseType().equals(c.getCourseType())) {
                             if (unit.getLectureNum() == 0) {
                                 System.out.println("Problem is conflicting lab");
+            System.out.println("lab course failed");
+                                
                                 return false;
                             } else if (unit.getLectureNum() == c.getLectureNum()) {
                                 System.out.println("Problem is conflicting lab");
@@ -147,6 +152,8 @@ public class HardConstrainsts {
             current = current.getParent();
         }
         if (count >= s.getLabMax()) {
+            System.out.println("Max failed");
+
             return false;
         }
         return true;
@@ -177,6 +184,8 @@ public class HardConstrainsts {
      */
     public static boolean checkUnwanted(Unit course, Slot slotToAdd) {
         if (course.getUnwanted().contains(slotToAdd)) {
+            System.out.println("unwanted failed");
+
             return false;
         } else if (course instanceof Course) {
             if (((CourseSlot) slotToAdd).getDay().equals(CourseDays.TUETHR)) {
@@ -204,7 +213,9 @@ public class HardConstrainsts {
             for (Slot overlap : slotToAddTo.getOverlaps()) {
                 if (ancestorSlot == overlap) {
                     if (course.getNotCompatible().contains(current.getAssign().getUnit())) {
-                        return false;
+                        
+            System.out.println("not compatible failed");
+            return false;
                     }
                 }
             }
@@ -224,6 +235,8 @@ public class HardConstrainsts {
                         if (unit.getCourseType().equals(c.getCourseType())) {
                             if (c.getLectureNum() == 0) {
                                 System.out.println("Problem is conflicting lab");
+                                
+                                
                                 return false;
                             } else if (unit.getLectureNum() == c.getLectureNum()) {
                                 System.out.println("Problem is conflicting lab");

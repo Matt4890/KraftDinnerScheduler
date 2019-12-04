@@ -100,7 +100,7 @@ public class CourseSlot extends Slot {
     }
 
     public String toString() {
-        return day.toString() + "," + Integer.toString(time).replaceAll("(\\d{2})$", ":$1");
+        return  day.toString() + "," + Integer.toString(time).replaceAll("(\\d{2})$", ":$1");
     }
 
 }
