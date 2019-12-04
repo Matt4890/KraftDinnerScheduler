@@ -51,8 +51,10 @@ public class Main {
       Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
           parser.getPartialAssignments().get(0).getUnit());
       //root = new TreeNode(assign,initialPenalty); //(initialPenalty);  
-      root = new TreeNode(assign, Kontrol.evalAssignmentPairing(assign.getSlot(),
-      assign.getUnit(), null) + initialPenalty);
+      root = new TreeNode(assign,initialPenalty);
+
+      root.setPenalty(Kontrol.evalAssignmentPairing(assign.getSlot(),
+      assign.getUnit(), root) + initialPenalty);
 
       root.setDepth(0);
       System.out.println("Root:");
