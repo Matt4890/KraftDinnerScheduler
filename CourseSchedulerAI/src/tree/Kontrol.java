@@ -2,6 +2,9 @@ package tree;
 
 import schedule.*;
 import coursesULabs.*;
+
+import java.util.ArrayList;
+
 import Constraints.*;
 
 public class Kontrol {
@@ -13,17 +16,21 @@ public class Kontrol {
     private static int pen_labmin_filled;
     private static int pen_pair;
     private static int pen_section_diff;
+    private static ArrayList<Slot> allSlots;
 
     public static int evalAssignmentPairing(Slot s, Unit u, TreeNode node) {
 
         int total = 0;
         if (s instanceof CourseSlot) {
-           // total += SoftConstraints.checkCourseMin((CourseSlot) s, node, pen_min_filled) * Kontrol.weight_min_filled;
+            // total += SoftConstraints.checkCourseMin((CourseSlot) s, node, pen_min_filled)
+            // * Kontrol.weight_min_filled;
             total += SoftConstraints.preferenceEval(s, u, node) * Kontrol.weight_pref;
             total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node, pen_pair) * Kontrol.weight_pair;
-            total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, node, pen_section_diff) * Kontrol.weight_section_diff;
+            total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, node, pen_section_diff)
+                    * Kontrol.weight_section_diff;
         } else {
-            //total += SoftConstraints.checkLabMin((LabSlot) s, node, pen_labmin_filled) * Kontrol.weight_min_filled;
+            // total += SoftConstraints.checkLabMin((LabSlot) s, node, pen_labmin_filled) *
+            // Kontrol.weight_min_filled;
 
             total += SoftConstraints.preferenceEval(s, u, node) * Kontrol.weight_pref;
 
@@ -34,9 +41,10 @@ public class Kontrol {
 
     }
 
-    public static int calculateMin(TreeNode node, Slot s, Unit u){
-        SoftConstraints.checkCourseMin(s, node, pen_min_filled, true, )
-
+    public static int calculateMin(TreeNode node, Slot s, Unit u) {
+        int total = SoftConstraints.checkCourseMin(s, node, pen_min_filled, allSlots);
+        total += SoftConstraints.checkLabMin(s, node, pen_labmin_filled, allSlots);
+        return total;
     }
 
     /**
@@ -128,6 +136,14 @@ public class Kontrol {
 
     public static void setPen_labmin_filled(int pen_labmin_filled) {
         Kontrol.pen_labmin_filled = pen_labmin_filled;
+    }
+
+    public static ArrayList<Slot> getAllSlots() {
+        return allSlots;
+    }
+
+    public static void setAllSlots(ArrayList<Slot> allSlots) {
+        Kontrol.allSlots = allSlots;
     }
 
     // TODO: Create a method that uses the bound control which will be different

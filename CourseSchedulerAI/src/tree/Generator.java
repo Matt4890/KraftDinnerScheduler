@@ -32,11 +32,13 @@ public class Generator {
         if (current instanceof Course) {
             HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
                     (CourseSlot) slot, nodeToAdd);
-            //System.out.println("The Hard constraint check for:  Slot:" + slot + " Course: " + current +"is: " + HardConstraintOk);
+            // System.out.println("The Hard constraint check for: Slot:" + slot + " Course:
+            // " + current +"is: " + HardConstraintOk);
         } else {
             HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current, (LabSlot) slot,
                     nodeToAdd);
-            //System.out.println("The Hard constraint check for:  Slot:" + slot + " Lab: " + current +"is: " + HardConstraintOk);
+            // System.out.println("The Hard constraint check for: Slot:" + slot + " Lab: " +
+            // current +"is: " + HardConstraintOk);
         }
         if (HardConstraintOk) {
             // Calculate the penalty value here
@@ -52,20 +54,23 @@ public class Generator {
                     // Calculate the penalty for the remaining slots
                     // Create a helper method in Generator to calculate all empty slot coursemin and
                     // preference s
-                    //nodeToAdd.addToPenaltyForBaseNode(includeEmptySlotsInPenalty(emptySlots)); // THIS IS GOING TO HAVE
-                                                                                               // TO CHANGE
-                    nodeToAdd.setPenalty(nodeToAdd.getPenaltyValueOfTreeNode() + Kontrol.calculateMin());
+                    // nodeToAdd.addToPenaltyForBaseNode(includeEmptySlotsInPenalty(emptySlots)); //
+                    // THIS IS GOING TO HAVE
+                    // TO CHANGE
+                    nodeToAdd.setPenalty(
+                            nodeToAdd.getPenaltyValueOfTreeNode() + Kontrol.calculateMin(nodeToAdd, slot, current));
 
                 }
             } else {
-                //System.out.println("It Broke the bound so I didn't add it at depth " + nodeToAdd.getDepth());
+                // System.out.println("It Broke the bound so I didn't add it at depth " +
+                // nodeToAdd.getDepth());
             }
         }
     }
 
     private void generateChildrenPairs(Unit current, TreeNode parent, ArrayList<Slot> slotsToPair, int currentBound,
             int allUnitsTotal, ArrayList<Slot> emptySlots) {
-        //System.out.println("Running Generate Children ");
+        // System.out.println("Running Generate Children ");
         for (Slot slot : slotsToPair) {
             if (current instanceof Course) {
                 if (slot instanceof CourseSlot) {
@@ -131,19 +136,18 @@ public class Generator {
     public void branchAndBoundSkeleton(TreeNode starter, ArrayList<Unit> unitsToBeScheduled,
             ArrayList<Slot> slotToScheduleIn, int numPartialAssignments) {
 
-        //System.out.println("RUNNING BNB");
+        // System.out.println("RUNNING BNB");
         Stack<TreeNode> allStackNodes = new Stack<TreeNode>();
         this.startNode = starter;
         this.bound = Integer.MAX_VALUE;
 
-        TreeNode nodeToAdd  = this.startNode;
-        while (nodeToAdd.getChildren().size() != 0){
+        TreeNode nodeToAdd = this.startNode;
+        while (nodeToAdd.getChildren().size() != 0) {
             nodeToAdd = nodeToAdd.getChildren().get(0);
 
-
         }
-        //System.out.println(nodeToAdd);
-        //System.out.println("Node Depth: " + nodeToAdd.getDepth());
+        // System.out.println(nodeToAdd);
+        // System.out.println("Node Depth: " + nodeToAdd.getDepth());
 
         allStackNodes.add(nodeToAdd);
         // this.bound = Integer.MAX_VALUE;
@@ -153,23 +157,26 @@ public class Generator {
 
         // System.out.println(allStackNodes);
         while (!allStackNodes.isEmpty()) {
-            //System.out.println("While looooop ran");
+            // System.out.println("While looooop ran");
             // System.out.println(allStackNodes);
             TreeNode currentNode = allStackNodes.pop();
 
-            if (currentNode.getDepth() == unitsToBeScheduled.size() + Math.max(numPartialAssignments - 1, 0)) { // TheScheduleInsideRepresents a Full
-                                                                       // Solution
+            if (currentNode.getDepth() == unitsToBeScheduled.size() + Math.max(numPartialAssignments - 1, 0)) { // TheScheduleInsideRepresents
+                                                                                                                // a
+                                                                                                                // Full
+                // Solution
                 // System.out.println(
-                //         "WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                // "WE GOT TO THE
+                // BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                 // System.out.println("Bound is: " + currentNode.getPenaltyValueOfTreeNode());
                 // System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                 // System.out.println(currentNode.toString());
                 // System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
                 if (currentNode.getPenaltyValueOfTreeNode() < this.bound) {
-                  
+
                     this.bound = currentNode.getPenaltyValueOfTreeNode();
                     this.bestSchedule = currentNode;
-                    //System.out.println("So Bound got replaced with" + this.bound);
+                    // System.out.println("So Bound got replaced with" + this.bound);
 
                 }
             }
@@ -182,12 +189,12 @@ public class Generator {
                     // Do a check up the tree to see if the slot is included along the path
                     // Whats a more efficient way to do this??
                     Unit scheduleMe = null;
-                    if(currentNode.getDepth() == 0){
-                        scheduleMe = unitsToBeScheduled.get(currentNode.getDepth()  );
-                    }
-                    else{
-                        scheduleMe = unitsToBeScheduled.get(currentNode.getDepth() - Math.max(numPartialAssignments - 1, 0) ); 
-                    }// TEST ME
+                    if (currentNode.getDepth() == 0) {
+                        scheduleMe = unitsToBeScheduled.get(currentNode.getDepth());
+                    } else {
+                        scheduleMe = unitsToBeScheduled
+                                .get(currentNode.getDepth() - Math.max(numPartialAssignments - 1, 0));
+                    } // TEST ME
 
                     if (scheduleMe.equals(unitsToBeScheduled.get(unitsToBeScheduled.size() - 1))) { // We are reaching
                                                                                                     // the bottom - i.e.
@@ -211,13 +218,13 @@ public class Generator {
                             unitsToBeScheduled.size(), emptySlots);
                     depth++;
                 }
-                //System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+                // System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
-                //System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+                // System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
                 for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
-                    //allStackNodes.push(currentNode.getOrderedChildren().remove());
-                    allStackNodes.push(currentNode.getChildren().get(i));
+                    allStackNodes.push(currentNode.getOrderedChildren().remove());
+                    // allStackNodes.push(currentNode.getChildren().get(i));
                 }
 
             }
@@ -236,24 +243,20 @@ public class Generator {
         }
     }
 
-    private void formatOutput(){
-        TreeNode current  = this.bestSchedule;
+    private void formatOutput() {
+        TreeNode current = this.bestSchedule;
         ArrayList<String> orderedStrings = new ArrayList<String>();
         System.out.println("Eval-value: " + this.bestSchedule.getPenaltyValueOfTreeNode());
-        while (current != null){
-            if (current.getAssign().getUnit() !=  null)
-                orderedStrings.add(
-                    String.format(
-                        "%-30.30s : %-30.30s%n",
-                        current.getAssign().getUnit().toPrettyString(),
-                        current.getAssign().getSlot().toPrettyString()
-                    )
-                );
+        while (current != null) {
+            if (current.getAssign().getUnit() != null)
+                orderedStrings
+                        .add(String.format("%-30.30s : %-30.30s%n", current.getAssign().getUnit().toPrettyString(),
+                                current.getAssign().getSlot().toPrettyString()));
             current = current.getParent();
         }
-        for (int i = 0; i< orderedStrings.size(); i++){
-            for (int j = 0; j<orderedStrings.size(); j++){
-                if (orderedStrings.get(i).compareTo(orderedStrings.get(j)) >0 ){
+        for (int i = 0; i < orderedStrings.size(); i++) {
+            for (int j = 0; j < orderedStrings.size(); j++) {
+                if (orderedStrings.get(i).compareTo(orderedStrings.get(j)) > 0) {
                     String temp = orderedStrings.get(i);
                     orderedStrings.set(i, orderedStrings.get(j));
                     orderedStrings.set(j, temp);
@@ -261,11 +264,10 @@ public class Generator {
                 }
             }
         }
-        for (String s : orderedStrings){
+        for (String s : orderedStrings) {
             System.out.print(s);
         }
 
     }
-
 
 }

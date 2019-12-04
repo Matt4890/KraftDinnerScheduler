@@ -10,7 +10,7 @@
             "request": "launch",
             "mainClass": "Main",
             "projectName": "CourseSchedulerAI",
-            "args": "./inputs/DealWithSENGCourses.txt 1 10 100 1000",
+            "args": "./inputs/prefexamp.txt 100 100 0 100 0 1 1 0 ",
         },
         {
             "type": "java",
