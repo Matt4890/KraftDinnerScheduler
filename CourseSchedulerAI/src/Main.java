@@ -44,7 +44,7 @@ public class Main {
 
     Kontrol.setPen_min_filled(courseMinPen);
     Kontrol.setPen_pair(pairsPen);
-    Kontrol.setPen_pref(labMinPen);
+    Kontrol.setPen_labmin_filled(labMinPen);
     Kontrol.setPen_section_diff(brothersPen);
 
     Kontrol.setWeight_min_filled(courseMinWeight);
