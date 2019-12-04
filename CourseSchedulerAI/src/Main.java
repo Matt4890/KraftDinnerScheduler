@@ -14,7 +14,7 @@ public class Main {
   public static int courseMinPen;
   public static int pairsPen;
   public static int brothersPen;
-  public static int prefsPen;
+  public static int labMinPen;
   public static int courseMinWeight;
   public static int pairsWeight;
   public static int brothersWeight;
@@ -34,7 +34,7 @@ public class Main {
 
     filename = args[0];
     courseMinPen = Integer.parseInt(args[1]);
-    prefsPen = Integer.parseInt(args[2]);
+    labMinPen = Integer.parseInt(args[2]);
     pairsPen = Integer.parseInt(args[3]);
     brothersPen = Integer.parseInt(args[4]);
     courseMinWeight = Integer.parseInt(args[5]);
@@ -44,7 +44,7 @@ public class Main {
 
     Kontrol.setPen_min_filled(courseMinPen);
     Kontrol.setPen_pair(pairsPen);
-    Kontrol.setPen_pref(prefsPen);
+    Kontrol.setPen_pref(labMinPen);
     Kontrol.setPen_section_diff(brothersPen);
 
     Kontrol.setWeight_min_filled(courseMinWeight);
@@ -53,7 +53,7 @@ public class Main {
     
     Unit.setBrotherIncrease(brothersPen);
     Unit.setPairsIncrease(pairsPen);
-    Unit.setPreferencesIncrease(prefsPen);
+    Unit.setPreferencesIncrease(labMinPen);
     
     Kontrol.setWeight_pair(pairsWeight);
     Kontrol.setWeight_pref(prefsWeight);
