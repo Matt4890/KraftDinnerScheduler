@@ -17,6 +17,7 @@ import schedule.*;
 import tree.*;
 
 public class Parser {
+
     private HashMap<String, Course> courseMap = new HashMap<String, Course>();
     private HashMap<String, Lab>    labMap    = new HashMap<String, Lab>();
     private Schedule schedule; 
@@ -30,22 +31,15 @@ public class Parser {
     private ArrayList<Pair> partialAssignments = new ArrayList<Pair>();
     private ArrayList<Slot> allSlots = new ArrayList<Slot>();
     
-
-    public int getminWeightCount(){
-        return minWeightCount;
-    }
-    public int getpairWeightCount(){
-        return pairWeightCount;
-    }
-    public int getprefWeight(){
-        return sum_of_pref;
-    }
-    public ArrayList<Slot> getAllSlots(){
-        return this.allSlots;
-    }
-
-    
-    public  Parser (String filename, int prefWeight, int pairWeight, int minWeight) {
+    /**
+     * Creates a new parser object to read in a problem from a file.
+     * 
+     * @param filename      The name of the file containing the problem.
+     * @param prefWeight    The weight to multiply preference values by.
+     * @param pairWeight    The weight to multiply pair values by.
+     * @param minWeight     The weight to multiply course/lab min values by.
+     */
+    public Parser (String filename, int prefWeight, int pairWeight, int minWeight) {
 
         this.prefWeight2 = prefWeight;
         this.pairWeight = pairWeight;
@@ -454,7 +448,7 @@ public class Parser {
             evening = (eveCourses / slotsavailable) / 2;
         }
         if(eveCourses > slotsavailable){
-            System.out.println("No valid Solutions");
+            System.out.println("No valid Solution");
             System.exit(0);
         }
         Unit.setEveningIncrease(evening);
@@ -470,27 +464,97 @@ public class Parser {
         //System.out.println("Done!");
 
     }
+
+    /**
+     * Gets the initial penalty generated.
+     * @return The initial penalty generated.
+     */
     public int getInitialPenalty(){
         return this.initialPenalty;
     }
+
+    /**
+     * Gets the schedule generated.
+     * @return The schedule generated.
+     */
     public Schedule getSchedule(){
         return this.schedule;
     }
+
+    /**
+     * Gets the course map generated.
+     * @return The course map generated.
+     */
     public HashMap<String, Course> getCourseMap(){
         return this.courseMap;
     }
+
+    /**
+     * Gets the lab map generated.
+     * @return The lab map generated.
+     */
     public HashMap<String, Lab> getLabMap(){
         return this.labMap;
     }
-    
+
+    /**
+     * Gets the partial assignments generated.
+     * @return The partial assignments generated.
+     */
+    public ArrayList<Pair> getPartialAssignments(){
+        return this.partialAssignments;
+    }
+
+    /**
+     * Gets the minWeight count generated.
+     * @return The minWeight count generated.
+     */
+    public int getminWeightCount(){
+        return minWeightCount;
+    }
+
+    /**
+     * Gets the pairWeight count generated.
+     * @return The pairWeight count generated.
+     */
+    public int getpairWeightCount(){
+        return pairWeightCount;
+    }
+
+    /**
+     * Gets the prefWeight generated.
+     * @return The prefWeight generated.
+     */
+    public int getprefWeight(){
+        return sum_of_pref;
+    }
+
+    /**
+     * Gets an array list of all slots generated.
+     * @return An array list of all slots generated.
+     */
+    public ArrayList<Slot> getAllSlots(){
+        return this.allSlots;
+    }
+
+    /**
+     * Gets a section of the input file, split by newline characters.
+     * 
+     * @param label     The label of the section to grab.
+     * @param fileStr   The string containing the complete file contents.
+     * @return          An array list of lines from the section.
+     */
     private static String[] getSectionLines(String label, String fileStr) {
         return getSection(label, fileStr).split("\n");
     }
-    public ArrayList<Pair> getPartialAssignments(){
-        return this.partialAssignments;
 
-    }
-
+    /**
+     * Gets a section of the input file.
+     * 
+     * @param label     The label of the section to grab.
+     * @param fileStr   The string containing the complete file contents.
+     * @return          A string containing the contents from the section.
+     */
     private static String getSection(String label, String fileStr) {
 
         Pattern regex = Pattern.compile(label + "\\s*:(.*?)(?:\n\n|$)", Pattern.DOTALL);
