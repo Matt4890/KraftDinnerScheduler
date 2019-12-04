@@ -205,9 +205,9 @@ public class Generator {
 
                 System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
-                for (int i = 0; i < currentNode.getChildren().size(); i++) {
-                    // allStackNodes.push(currentNode.getOrderedChildren().remove());
-                    allStackNodes.push(currentNode.getChildren().get(i));
+                for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
+                    allStackNodes.push(currentNode.getOrderedChildren().remove());
+                    // allStackNodes.push(currentNode.getChildren().get(i));
                 }
 
             }

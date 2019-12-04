@@ -95,7 +95,7 @@ public class TreeNode implements Comparable<TreeNode> {
 
     public void addChild(TreeNode n) {
         this.children.add(n);
-        // this.orderedChildren.add(n);
+        this.orderedChildren.add(n);
     }
 
     public TreeNode getParent() {
