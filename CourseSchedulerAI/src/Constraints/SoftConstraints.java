@@ -47,7 +47,7 @@ public class SoftConstraints {
     while (current != null && current.getAssign().getUnit() != null) {
       //System.out.println("Stuck???");
       
-      if (current.getAssign().getSlot().isSameSlot(s)) {
+      if (current.getAssign().getSlot() == s) {
         count++;
       }
       // System.out.println(current.toString());
