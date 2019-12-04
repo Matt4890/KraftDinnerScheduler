@@ -37,22 +37,27 @@ public class Main {
     prefsPen = Integer.parseInt(args[2]);
     pairsPen = Integer.parseInt(args[3]);
     brothersPen = Integer.parseInt(args[4]);
-    courseMinWeight = Integer.parseInt(args[1]);
-    prefsWeight = Integer.parseInt(args[2]);
-    pairsWeight = Integer.parseInt(args[3]);
-    brothersWeight = Integer.parseInt(args[4]);
+    courseMinWeight = Integer.parseInt(args[5]);
+    prefsWeight = Integer.parseInt(args[6]);
+    pairsWeight = Integer.parseInt(args[7]);
+    brothersWeight = Integer.parseInt(args[8]);
 
-    Kontrol.setWeight_min_filled(courseMinPen);
-    Kontrol.setWeight_pair(pairsPen);
-    Kontrol.setWeight_pref(prefsPen);
+    Kontrol.setPen_min_filled(courseMinPen);
+    Kontrol.setPen_pair(pairsPen);
+    Kontrol.setPen_pref(prefsPen);
+    Kontrol.setPen_section_diff(brothersPen);
+
+    Kontrol.setWeight_min_filled(courseMinWeight);
+    Kontrol.setWeight_pair(pairsWeight);
+    Kontrol.setWeight_pref(prefsWeight);
     
     Unit.setBrotherIncrease(brothersPen);
     Unit.setPairsIncrease(pairsPen);
     Unit.setPreferencesIncrease(prefsPen);
     
-    Kontrol.setWeight_pair(pairsPen);
-    Kontrol.setWeight_pref(prefsPen);
-    Kontrol.setWeight_section_diff(brothersPen);
+    Kontrol.setWeight_pair(pairsWeight);
+    Kontrol.setWeight_pref(prefsWeight);
+    Kontrol.setWeight_section_diff(brothersWeight);
     TreeNode root = null;
     Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(),
         Kontrol.getWeight_min_filled());
