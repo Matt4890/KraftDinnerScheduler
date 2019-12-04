@@ -1,0 +1,19 @@
+./COMPILE
+
+./RUN.sh examples/gehtnicht1.txt 1 2 3 4
+./RUN.sh examples/gehtnicht2.txt 1 2 3 4
+./RUN.sh examples/gehtnicht3.txt 1 2 3 4
+./RUN.sh examples/gehtnicht4.txt 1 2 3 4
+./RUN.sh examples/gehtnicht5.txt 1 2 3 4
+./RUN.sh examples/gehtnicht6.txt 1 2 3 4
+./RUN.sh examples/gehtnicht7.txt 1 2 3 4  # Failed first time, then passed
+./RUN.sh examples/gehtnicht8.txt 1 2 3 4
+./RUN.sh examples/gehtnicht9.txt 1 2 3 4
+./RUN.sh examples/gehtnicht10.txt 1 2 3 4 # Failed first time, then passed
+./RUN.sh examples/gehtnicht11.txt 1 2 3 4
+./RUN.sh examples/gehtnicht12.txt 1 2 3 4
+
+./RUN.sh examples/minnumber.txt 100 100 1 10 1 0 1 0  # Failed
+./RUN.sh examples/parallelpen.txt 1 1 1 5 0 0 0 1     # Passed
+./RUN.sh examples/prefexamp.txt 100 100 0 100 0 1 1 0 # Failed
+./RUN.sh examples/pairing.txt 1 1 11 1 0 0 1 0        # Right assignment, wrong eval (doubled)
