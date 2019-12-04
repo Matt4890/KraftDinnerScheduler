@@ -73,24 +73,24 @@ public class Parser {
         // Setup regular expressions
         Pattern slotRegex   = Pattern.compile("(MO|TU|FR),(\\d{1,2}:\\d{2}),(\\d+),(\\d+)");
         Pattern courseRegex = Pattern.compile("([A-Z]{4})(\\d{3})LEC(\\d{2})");
-        Pattern labRegex    = Pattern.compile("([A-Z]{4})(\\d{3})TUT(\\d{2})");
-        Pattern labLecRegex = Pattern.compile("([A-Z]{4})(\\d{3})LEC(\\d{2})TUT(\\d{2})");
+        Pattern labRegex    = Pattern.compile("([A-Z]{4})(\\d{3})(TUT|LAB)(\\d{2})");
+        Pattern labLecRegex = Pattern.compile("([A-Z]{4})(\\d{3})LEC(\\d{2})(TUT|LAB)(\\d{2})");
         Pattern csIdRegex   = Pattern.compile("=CS(\\d+)=");
         Pattern lsIdRegex   = Pattern.compile("=LS(\\d+)=");
         Pattern cIdRegex    = Pattern.compile("=C(\\d+)=");
         Pattern lIdRegex    = Pattern.compile("=L(\\d+)=");
 
         // Get sections from input file
-        String   fileStr            = String.join("\n", fileLines).toUpperCase().replaceAll("\\bLAB\\b", "TUT").replaceAll(" |\t", "");
+        String   fileStr            = String.join("\n", fileLines).toUpperCase().replaceAll(" |\t", "");
         String[] courseSlots_s      = getSectionLines("COURSESLOTS", fileStr);
-        String[] labSlots_s         = getSectionLines("TUTSLOTS", fileStr);
+        String[] labSlots_s         = getSectionLines("LABSLOTS", fileStr);
         String[] courses_s          = getSectionLines("COURSES", fileStr);
         String[] labs_s             = getSectionLines("LABS", fileStr);
-        String   notCompat_s        = getSection("NOTCOMPATIBLE", fileStr);
-        String   unwanted_s         = getSection("UNWANTED", fileStr);
-        String   preferences_s      = getSection("PREFERENCES", fileStr);
-        String   pairs_s            = getSection("PAIR", fileStr);
-        String   partialAssign_s    = getSection("PARTIALASSIGNMENTS", fileStr);
+        String   notCompat_s        = getSection("NOTCOMPATIBLE", fileStr).replaceAll("LAB", "TUT");
+        String   unwanted_s         = getSection("UNWANTED", fileStr).replaceAll("LAB", "TUT");
+        String   preferences_s      = getSection("PREFERENCES", fileStr).replaceAll("LAB", "TUT");
+        String   pairs_s            = getSection("PAIR", fileStr).replaceAll("LAB", "TUT");
+        String   partialAssign_s    = getSection("PARTIALASSIGNMENTS", fileStr).replaceAll("LAB", "TUT");
 
 
         // Parse course slots
@@ -179,7 +179,8 @@ public class Parser {
                     Integer.parseInt(m1.group(3)),
                     m1.group(1),
                     Integer.parseInt(m1.group(2)),
-                    Integer.parseInt(m1.group(4))
+                    Integer.parseInt(m1.group(5)),
+                    m1.group(4)
                 );
                 labs.add(l);
                 String replaceStr = l.toString();
@@ -194,7 +195,8 @@ public class Parser {
                     count,
                     m2.group(1),
                     Integer.parseInt(m2.group(2)),
-                    Integer.parseInt(m2.group(3))
+                    Integer.parseInt(m2.group(4)),
+                    m2.group(3)
                 );
                 labs.add(l);
                 String replaceStr = l.toString();
@@ -400,9 +402,7 @@ public class Parser {
             Unit u = null;
             Slot s = null;
             int i = -1;
-            boolean isCourse = false;
             if (cm.find()) {
-                isCourse = true;
                 i = Integer.parseInt(cm.group(1));
                 u = courses.get(i);
             } else if (lm.find()) {

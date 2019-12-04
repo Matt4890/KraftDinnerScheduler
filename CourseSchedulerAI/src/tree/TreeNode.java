@@ -142,7 +142,7 @@ public class TreeNode implements Comparable<TreeNode> {
         String toReturn = "TreeNode: Depth: " + this.depth + " Penalty: " + this.penaltyValue + "\n";
         TreeNode placeHolder = this;
         if (this.assign.getUnit() != null) {
-            toReturn += "Unit: " + this.assign.getUnit().toString() + " in Slot" + this.assign.getSlot().toString()
+            toReturn += "Unit: " + this.assign.getUnit().toPrettyString() + " in Slot: " + this.assign.getSlot().toPrettyString()
                     + "\n";
         }
 

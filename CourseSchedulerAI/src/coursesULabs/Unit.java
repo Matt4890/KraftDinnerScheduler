@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import schedule.Slot;
 
-public class Unit {
+public abstract class Unit {
 
     protected int lectureNum;
     protected String courseType;
@@ -27,6 +27,7 @@ public class Unit {
     protected static int pairsIncrease;
     protected static int preferencesIncrease;
     
+    public abstract String toPrettyString();
 
     protected void setId(int i){
         this.id = i;
