@@ -47,6 +47,11 @@ public class Course extends Unit{
         return courseType + courseNum + "LEC" + String.format("%02d", lectureNum);
     }
 
+    public String toPrettyString(){
+        //CPSC433LEC01
+        return courseType + " " + courseNum + " LEC " + String.format("%02d", lectureNum);
+    }
+
     public Course (int id, int lectureNum, String courseType, int courseNum, Slot slot) {
         this.lectureNum = lectureNum;
         this.courseType = courseType;

@@ -12,6 +12,8 @@ public abstract class Slot {
     protected ArrayList<Slot> overlaps = new ArrayList<Slot>();
     protected double potential = 0;
     public static double totalPotential;
+    
+    public abstract String toPrettyString();
 
     public Slot(int id, int time, SlotType type, HashMap<Unit, Integer> hashMap) {
         this.type = type;

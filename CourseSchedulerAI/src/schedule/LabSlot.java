@@ -81,6 +81,8 @@ public class LabSlot extends Slot{
         return day.toString() + "," + Integer.toString(time).replaceAll("(\\d{2})$", ":$1");
     }
 
-
+    public String toPrettyString() {
+        return  day.toString() + ", " + (time >= 1000 ? "" : " ") + Integer.toString(time).replaceAll("(\\d{2})$", ":$1");
+    }
 
 }
