@@ -9,21 +9,25 @@ public class Kontrol {
     private static int weight_pref;
     private static int weight_pair;
     private static int weight_section_diff;
+    private static int pen_min_filled;
+    private static int pen_pref;
+    private static int pen_pair;
+    private static int pen_section_diff;
 
     public static int evalAssignmentPairing(Slot s, Unit u, TreeNode node) {
 
         int total = 0;
         if (s instanceof CourseSlot) {
-            total += SoftConstraints.checkCourseMin((CourseSlot) s, node) * Kontrol.weight_min_filled;
+            total += SoftConstraints.checkCourseMin((CourseSlot) s, node, pen_min_filled) * Kontrol.weight_min_filled;
             total += SoftConstraints.preferenceEval(s, u, node) * Kontrol.weight_pref;
-            total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node) * Kontrol.weight_pair;
-            total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, node) * Kontrol.weight_section_diff;
+            total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node, pen_pair) * Kontrol.weight_pair;
+            total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, node, pen_section_diff) * Kontrol.weight_section_diff;
         } else {
-            total += SoftConstraints.checkLabMin((LabSlot) s, node) * Kontrol.weight_min_filled;
+            total += SoftConstraints.checkLabMin((LabSlot) s, node, pen_min_filled) * Kontrol.weight_min_filled;
 
             total += SoftConstraints.preferenceEval(s, u, node) * Kontrol.weight_pref;
 
-            total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, node) * Kontrol.weight_pair;
+            total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, node, pen_pair) * Kontrol.weight_pair;
 
         }
         return total;
@@ -87,6 +91,38 @@ public class Kontrol {
 
     public static void setWeight_section_diff(int weight_section_diff) {
         Kontrol.weight_section_diff = weight_section_diff;
+    }
+
+    public static int getPen_min_filled() {
+        return pen_min_filled;
+    }
+
+    public static void setPen_min_filled(int pen_min_filled) {
+        Kontrol.pen_min_filled = pen_min_filled;
+    }
+
+    public static int getPen_pref() {
+        return pen_pref;
+    }
+
+    public static void setPen_pref(int pen_pref) {
+        Kontrol.pen_pref = pen_pref;
+    }
+
+    public static int getPen_pair() {
+        return pen_pair;
+    }
+
+    public static void setPen_pair(int pen_pair) {
+        Kontrol.pen_pair = pen_pair;
+    }
+
+    public static int getPen_section_diff() {
+        return pen_section_diff;
+    }
+
+    public static void setPen_section_diff(int pen_section_diff) {
+        Kontrol.pen_section_diff = pen_section_diff;
     }
 
     // TODO: Create a method that uses the bound control which will be different

@@ -12,11 +12,12 @@ import java.util.Map;
 import coursesULabs.*;
 
 public class SoftConstraints {
-  public static int calculatePenalty(Slot s, Unit u, TreeNode node) {
+  /*
+  public static int calculatePenalty(Slot s, Unit u, TreeNode node, int pen) {
 
     int total = 0;
     if (s instanceof CourseSlot) {
-      total += SoftConstraints.checkCourseMin((CourseSlot) s, node);
+      total += SoftConstraints.checkCourseMin((CourseSlot) s, node, pen);
       System.out.println("Calculated Course Min");
       total += SoftConstraints.preferenceEval(s, u, node);
       System.out.println("Calculated Preference");
@@ -36,8 +37,9 @@ public class SoftConstraints {
     return total;
 
   }
+  */
 
-  public static int checkCourseMin(CourseSlot s, TreeNode node) {
+  public static int checkCourseMin(CourseSlot s, TreeNode node, int pen) {
     // decrement if the course min is met and coursemin != 1
     int count = 1;
     
@@ -57,7 +59,7 @@ public class SoftConstraints {
     }
     if(s.getCourseMin() >= count){
       System.out.println("DECREMENTED");
-      return -1;
+      return -pen;
       
     }
     System.out.println("INCREMENTED");
@@ -65,7 +67,7 @@ public class SoftConstraints {
 
   }
 
-  public static int checkLabMin(LabSlot s, TreeNode node) {
+  public static int checkLabMin(LabSlot s, TreeNode node, int pen) {
 
     int count = 1;
     TreeNode current = node.getParent();
@@ -78,7 +80,7 @@ public class SoftConstraints {
     }
     if(s.getLabMin() >= count){
       System.out.println("DECREMENTED");
-      return -1;
+      return -pen;
       
     }
     System.out.println("INCREMENTED");
@@ -118,7 +120,7 @@ public class SoftConstraints {
    * @param node
    * @return
    */
-  public static int notPairedCourse(Course b, CourseSlot s, TreeNode node) {
+  public static int notPairedCourse(Course b, CourseSlot s, TreeNode node, int pen) {
     ArrayList<Unit> pairs = b.getPairs();
     int numOfCourses = 0;
     if (pairs.size() == 0) {
@@ -167,7 +169,7 @@ public class SoftConstraints {
     node.incrementDesire(-pairsAssignedNotInSameSlot.size() * Kontrol.getWeight_pref());
     node.incrementDesire(pairsAssignedInSameSlot.size() * Kontrol.getWeight_pref());
 
-    return total;
+    return total * pen;
 
   }
 
@@ -179,7 +181,7 @@ public class SoftConstraints {
    * @param node
    * @return
    */
-  public static int notPairedLab(Lab b, LabSlot s, TreeNode node) {
+  public static int notPairedLab(Lab b, LabSlot s, TreeNode node, int pen) {
     ArrayList<Unit> pairs = b.getPairs();
     int numOfCourses = 0;
     if (pairs.size() == 0) {
@@ -221,7 +223,7 @@ public class SoftConstraints {
     node.incrementDesire(-pairsAssignedNotInSameSlot.size() * Kontrol.getWeight_pref());
     node.incrementDesire(pairsAssignedInSameSlot.size() * Kontrol.getWeight_pref());
 
-    return total;
+    return total * pen;
   }
 
   /**
@@ -230,7 +232,7 @@ public class SoftConstraints {
    * @param s
    * @return
    */
-  public static int checkSections(Course course, CourseSlot s, TreeNode node) {
+  public static int checkSections(Course course, CourseSlot s, TreeNode node, int pen) {
     TreeNode current = node.getParent();
     int total = 0;
     if (!course.getBrothers().isEmpty()) {
@@ -244,7 +246,7 @@ public class SoftConstraints {
         current = current.getParent();
       }
     }
-    return total;
+    return total * pen;
   }
 
 }
