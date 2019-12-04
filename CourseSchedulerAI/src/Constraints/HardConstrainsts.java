@@ -32,7 +32,7 @@ public class HardConstrainsts {
             }
             current = current.getParent();
         }
-        if (count >= s.getCourseMax()) {
+        if (count > s.getCourseMax()) {
             return false;
         }
         return true;
