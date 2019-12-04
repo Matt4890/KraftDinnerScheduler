@@ -1,2 +1,38 @@
-Failed to parse string '' as a LabSlot!
-Exiting...
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+INCREMENTED
+We are out of things to add...
+The Best:
+TreeNode: Depth: 5 Penalty: 100
+Unit: CPSC103LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 4 Penalty: 100
+Unit: CPSC102LEC01 in SlotMO,9:00
+Parent TreeNode: Depth: 3 Penalty: 80
+Unit: CPSC104LEC01 in SlotMO,10:00
+Parent TreeNode: Depth: 2 Penalty: 90
+Unit: CPSC106LEC01 in SlotMO,10:00
+Parent TreeNode: Depth: 1 Penalty: 80
+Unit: CPSC105LEC01 in SlotMO,10:00
+Parent TreeNode: Depth: 0 Penalty: 50
+Unit: CPSC101LEC01 in SlotMO,8:00
+Parent null
+100
+Eval-value: 100
+CPSC106LEC01:MO,10:00
+CPSC105LEC01:MO,10:00
+CPSC104LEC01:MO,10:00
+CPSC103LEC01:MO,9:00
+CPSC102LEC01:MO,9:00
+CPSC101LEC01:MO,8:00

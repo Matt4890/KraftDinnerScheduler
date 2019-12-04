@@ -78,7 +78,7 @@ public class CourseSlot extends Slot {
             // System.out.println("Course: " + co.toString() + " Successfully Added to: " +
             // this.toString());
         } else {
-            System.out.println("Hard Constraint CourseMax Broken");
+            //System.out.println("Hard Constraint CourseMax Broken");
         }
 
     }

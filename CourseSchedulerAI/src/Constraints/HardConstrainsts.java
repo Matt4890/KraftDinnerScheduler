@@ -117,12 +117,12 @@ public class HardConstrainsts {
                     if (unit.getCourseNum() == c.getCourseNum()) {
                         if (unit.getCourseType().equals(c.getCourseType())) {
                             if (unit.getLectureNum() == 0) {
-                                System.out.println("Problem is conflicting lab");
-            System.out.println("lab course failed");
+                                // System.out.println("Problem is conflicting lab");
+            // System.out.println("lab course failed");
                                 
                                 return false;
                             } else if (unit.getLectureNum() == c.getLectureNum()) {
-                                System.out.println("Problem is conflicting lab");
+                                // System.out.println("Problem is conflicting lab");
                                 return false;
                             }
 
@@ -235,8 +235,6 @@ public class HardConstrainsts {
                         if (unit.getCourseType().equals(c.getCourseType())) {
                             if (c.getLectureNum() == 0) {
                                 //System.out.println("Problem is conflicting lab");
-                                
-                                
                                 return false;
                             } else if (unit.getLectureNum() == c.getLectureNum()) {
                                 //System.out.println("Problem is conflicting lab");

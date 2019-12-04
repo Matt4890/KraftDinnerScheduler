@@ -57,7 +57,7 @@ public class Generator {
 
                 }
             } else {
-                System.out.println("It Broke the bound so I didn't add it at depth " + nodeToAdd.getDepth());
+                //System.out.println("It Broke the bound so I didn't add it at depth " + nodeToAdd.getDepth());
             }
         }
     }
@@ -168,7 +168,7 @@ public class Generator {
                   
                     this.bound = currentNode.getPenaltyValueOfTreeNode();
                     this.bestSchedule = currentNode;
-                    System.out.println("So Bound got replaced with" + this.bound);
+                    //System.out.println("So Bound got replaced with" + this.bound);
 
                 }
             }
@@ -215,8 +215,8 @@ public class Generator {
                 //System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
                 for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
-                    allStackNodes.push(currentNode.getOrderedChildren().remove());
-                    //allStackNodes.push(currentNode.getChildren().get(i));
+                    //allStackNodes.push(currentNode.getOrderedChildren().remove());
+                    allStackNodes.push(currentNode.getChildren().get(i));
                 }
 
             }
@@ -229,7 +229,36 @@ public class Generator {
             System.out.println("The Best:");
             System.out.println(this.bestSchedule.toString());
             System.out.println(this.bestSchedule.getPenaltyValueOfTreeNode());
+
+            formatOutput();
+
         }
     }
+
+    private void formatOutput(){
+        TreeNode current  = this.bestSchedule;
+        ArrayList<String> orderedStrings = new ArrayList<String>();
+        System.out.println("Eval-value: " + this.bestSchedule.getPenaltyValueOfTreeNode());
+        while (current != null){
+            if (current.getAssign().getUnit() !=  null)
+                orderedStrings.add(current.getAssign().getUnit().toString() + ":" + current.getAssign().getSlot().toString() + "\n");
+            current = current.getParent();
+        }
+        for (int i = 0; i< orderedStrings.size(); i++){
+            for (int j = 0; j<orderedStrings.size(); j++){
+                if (orderedStrings.get(i).compareTo(orderedStrings.get(j)) >0 ){
+                    String temp = orderedStrings.get(i);
+                    orderedStrings.set(i, orderedStrings.get(j));
+                    orderedStrings.set(j, temp);
+
+                }
+            }
+        }
+        for (String s : orderedStrings){
+            System.out.print(s);
+        }
+
+    }
+
 
 }

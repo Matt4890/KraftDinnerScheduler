@@ -39,7 +39,7 @@ public class SoftConstraints {
 
   public static int checkCourseMin(CourseSlot s, TreeNode node) {
     // decrement if the course min is met and coursemin != 1
-    int count = 0;
+    int count = 1;
     
 
     TreeNode current = node.getParent();
@@ -56,8 +56,11 @@ public class SoftConstraints {
 
     }
     if(s.getCourseMin() >= count){
+      System.out.println("DECREMENTED");
       return -1;
+      
     }
+    System.out.println("INCREMENTED");
     return 0;
 
   }
@@ -74,9 +77,13 @@ public class SoftConstraints {
       node.incrementDesire((s.getLabMin() - count) * Kontrol.getWeight_min_filled());
     }
     if(s.getLabMin() >= count){
+      System.out.println("DECREMENTED");
       return -1;
+      
     }
+    System.out.println("INCREMENTED");
     return 0;
+    
   }
 
   public static int preferenceEval(Slot slot, Unit u, TreeNode node) {
