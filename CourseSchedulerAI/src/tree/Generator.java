@@ -154,7 +154,7 @@ public class Generator {
             // System.out.println(allStackNodes);
             TreeNode currentNode = allStackNodes.pop();
 
-            if (currentNode.getDepth() == unitsToBeScheduled.size() + 1) { // TheScheduleInsideRepresents a Full
+            if (currentNode.getDepth() == unitsToBeScheduled.size() + (numPartialAssignments - 1)) { // TheScheduleInsideRepresents a Full
                                                                        // Solution
                 System.out.println(
                         "WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
