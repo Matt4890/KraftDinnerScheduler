@@ -15,6 +15,10 @@ public class Main {
   public static int pairsPen;
   public static int brothersPen;
   public static int prefsPen;
+  public static int courseMinWeight;
+  public static int pairsWeight;
+  public static int brothersWeight;
+  public static int prefsWeight;
   public static int total_num_of_units;
 
   public static void main(String[] args) throws FileNotFoundException {
@@ -33,6 +37,10 @@ public class Main {
     prefsPen = Integer.parseInt(args[2]);
     pairsPen = Integer.parseInt(args[3]);
     brothersPen = Integer.parseInt(args[4]);
+    courseMinWeight = Integer.parseInt(args[1]);
+    prefsWeight = Integer.parseInt(args[2]);
+    pairsWeight = Integer.parseInt(args[3]);
+    brothersWeight = Integer.parseInt(args[4]);
 
     Kontrol.setWeight_min_filled(courseMinPen);
     Kontrol.setWeight_pair(pairsPen);
