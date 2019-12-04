@@ -241,7 +241,13 @@ public class Generator {
         System.out.println("Eval-value: " + this.bestSchedule.getPenaltyValueOfTreeNode());
         while (current != null){
             if (current.getAssign().getUnit() !=  null)
-                orderedStrings.add(current.getAssign().getUnit().toString() + ":" + current.getAssign().getSlot().toString() + "\n");
+                orderedStrings.add(
+                    String.format(
+                        "%-30.30s : %-30.30s%n",
+                        current.getAssign().getUnit().toPrettyString(),
+                        current.getAssign().getSlot().toPrettyString()
+                    )
+                );
             current = current.getParent();
         }
         for (int i = 0; i< orderedStrings.size(); i++){
