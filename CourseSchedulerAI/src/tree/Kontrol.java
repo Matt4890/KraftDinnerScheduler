@@ -18,12 +18,12 @@ public class Kontrol {
 
         int total = 0;
         if (s instanceof CourseSlot) {
-            total += SoftConstraints.checkCourseMin((CourseSlot) s, node, pen_min_filled) * Kontrol.weight_min_filled;
+           // total += SoftConstraints.checkCourseMin((CourseSlot) s, node, pen_min_filled) * Kontrol.weight_min_filled;
             total += SoftConstraints.preferenceEval(s, u, node) * Kontrol.weight_pref;
             total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node, pen_pair) * Kontrol.weight_pair;
             total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, node, pen_section_diff) * Kontrol.weight_section_diff;
         } else {
-            total += SoftConstraints.checkLabMin((LabSlot) s, node, pen_labmin_filled) * Kontrol.weight_min_filled;
+            //total += SoftConstraints.checkLabMin((LabSlot) s, node, pen_labmin_filled) * Kontrol.weight_min_filled;
 
             total += SoftConstraints.preferenceEval(s, u, node) * Kontrol.weight_pref;
 
@@ -31,6 +31,11 @@ public class Kontrol {
 
         }
         return total;
+
+    }
+
+    public static int calculateMin(TreeNode node, Slot s, Unit u){
+        SoftConstraints.checkCourseMin(s, node, pen_min_filled, true, )
 
     }
 

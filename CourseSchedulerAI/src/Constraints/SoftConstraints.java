@@ -39,52 +39,65 @@ public class SoftConstraints {
   }
   */
 
-  public static int checkCourseMin(CourseSlot s, TreeNode node, int pen) {
+  public static int checkCourseMin(CourseSlot s, TreeNode node, int pen, boolean depth, ArrayList<Slot> allSlots) {
     // decrement if the course min is met and coursemin != 1
-    int count = 1;
-    
-
+    int count = 0;
     TreeNode current = node.getParent();
 
+    int[] counts = new int[allSlots.size()];
     while (current != null && current.getAssign().getUnit() != null) {
-      //System.out.println("Stuck???");
-      
-      if (current.getAssign().getSlot() == s) {
-        count++;
+      for(int i = 0; i < allSlots.size(); i++){
+         if(allSlots.get(i) == current.getAssign().getSlot()){
+          counts[i] ++;
+        }
       }
+
+      for(int i = 0; i < allSlots.size(); i++){
+        if(allSlots.get(i) instanceof CourseSlot){
+          if(((CourseSlot)allSlots.get(i)).getCourseMin() < counts[i]){
+            count += ( ((CourseSlot)allSlots.get(i)).getCourseMin() - counts[i]);
+          }
+        }
+      }
+
       // System.out.println(current.toString());
       current = current.getParent();
-      node.incrementDesire((s.getCourseMin() - count) * Kontrol.getWeight_min_filled());
-
+      //node.incrementDesire((s.getCourseMin() - count) * Kontrol.getWeight_min_filled());
     }
-    if(s.getCourseMin() >= count){
-      System.out.println("DECREMENTED");
-      return -pen;
-      
-    }
-    System.out.println("INCREMENTED");
-    return 0;
-
+  
+     return -pen * count;
   }
-
-  public static int checkLabMin(LabSlot s, TreeNode node, int pen) {
-
-    int count = 1;
-    TreeNode current = node.getParent();
-    while (current != null) {
-      if (current.getAssign().getSlot() == s) {
-        count++;
-      }
-      current = current.getParent();
-      node.incrementDesire((s.getLabMin() - count) * Kontrol.getWeight_min_filled());
-    }
-    if(s.getLabMin() >= count){
-      System.out.println("DECREMENTED");
-      return -pen;
       
+    
+
+
+  public static int checkLabMin(LabSlot s, TreeNode node, int pen, boolean depth, ArrayList<Slot> allSlots) {
+    // decrement if the course min is met and coursemin != 1
+    int count = 0;
+    TreeNode current = node.getParent();
+
+    int[] counts = new int[allSlots.size()];
+    while (current != null && current.getAssign().getUnit() != null) {
+      for(int i = 0; i < allSlots.size(); i++){
+         if(allSlots.get(i) == current.getAssign().getSlot()){
+          counts[i] ++;
+        }
+      }
+
+      for(int i = 0; i < allSlots.size(); i++){
+        if(allSlots.get(i) instanceof LabSlot){
+          if(((LabSlot)allSlots.get(i)).getLabMin() < counts[i]){
+            count += ( ((LabSlot)allSlots.get(i)).getLabMin() - counts[i]);
+          }
+        }
+      }
+
+      // System.out.println(current.toString());
+      current = current.getParent();
+      //node.incrementDesire((s.getCourseMin() - count) * Kontrol.getWeight_min_filled());
     }
-    System.out.println("INCREMENTED");
-    return 0;
+  
+     return -pen * count;
     
   }
 

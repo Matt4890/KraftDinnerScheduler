@@ -54,6 +54,7 @@ public class Generator {
                     // preference s
                     //nodeToAdd.addToPenaltyForBaseNode(includeEmptySlotsInPenalty(emptySlots)); // THIS IS GOING TO HAVE
                                                                                                // TO CHANGE
+                    nodeToAdd.setPenalty(nodeToAdd.getPenaltyValueOfTreeNode() + Kontrol.calculateMin());
 
                 }
             } else {
