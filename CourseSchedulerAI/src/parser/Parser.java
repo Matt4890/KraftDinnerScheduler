@@ -341,6 +341,7 @@ public class Parser {
                 sum_of_pref += Integer.parseInt(line.split(",")[2]); 
                 System.out.println("Sum_of_pref:" + sum_of_pref);
                 u.incrementPotential(- prefWeight2  * Integer.parseInt(line.split(",")[2]) );
+                u.increasePrefPreferences();
                 System.out.println("added pen for pref of " + prefWeight2 + " for " + u.toString() );
             }
         }
@@ -376,6 +377,8 @@ public class Parser {
                 u2.addToPairs(u1);
                 u1.incrementPotential(- (((double)pairWeight) / 2));
                 u2.incrementPotential(- (((double)pairWeight) / 2));
+                u1.increasePrefPairs();
+                u2.increasePrefPairs();
                 System.out.println("added pen for pair of " + pairWeight + " for " + u1.toString() );
                 pairWeightCount ++;
                 System.out.println("PairsWeightCount:" + pairWeightCount);

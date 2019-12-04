@@ -67,7 +67,7 @@ public class SoftConstraints {
     int count = 0;
     TreeNode current = node.getParent();
     while (current != null) {
-      if (current.getAssign().getSlot().isSameSlot(s)) {
+      if (current.getAssign().getSlot() == s) {
         count++;
       }
       current = current.getParent();
@@ -142,7 +142,7 @@ public class SoftConstraints {
       current = current.getParent();
     }
 
-    
+
 
     for (Unit pair : pairs) {
       if (!pairsAssignedInSameSlot.contains(pair) && !pairsAssignedNotInSameSlot.contains(pair)) {

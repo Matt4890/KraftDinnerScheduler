@@ -32,8 +32,8 @@ public class HardConstrainsts {
             }
             current = current.getParent();
         }
-        if (count >= s.getCourseMax()) {
-            System.out.println("Max failed");
+        if (count > s.getCourseMax()) {
+            //System.out.println("Max failed");
             return false;
         }
         return true;
@@ -78,7 +78,7 @@ public class HardConstrainsts {
             while (current != null) {
                 if (s == current.getAssign().getSlot() && current.getAssign().getUnit().getCourseNum() >= 500
                         && current.getAssign().getUnit().getCourseNum() < 600) {
-                            System.out.println("500 failed");
+                            //System.out.println("500 failed");
 
                     return false;
                 }
@@ -152,7 +152,7 @@ public class HardConstrainsts {
             current = current.getParent();
         }
         if (count >= s.getLabMax()) {
-            System.out.println("Max failed");
+            //System.out.println("Max failed");
 
             return false;
         }
@@ -184,13 +184,13 @@ public class HardConstrainsts {
      */
     public static boolean checkUnwanted(Unit course, Slot slotToAdd) {
         if (course.getUnwanted().contains(slotToAdd)) {
-            System.out.println("unwanted failed");
+            //System.out.println("unwanted failed");
 
             return false;
         } else if (course instanceof Course) {
             if (((CourseSlot) slotToAdd).getDay().equals(CourseDays.TUETHR)) {
                 if (slotToAdd.getTime() == 1100) {
-                    System.out.println("Problem is 1100");
+                    //System.out.println("Problem is 1100");
                     return false;
                 }
             }
@@ -214,7 +214,7 @@ public class HardConstrainsts {
                 if (ancestorSlot == overlap) {
                     if (course.getNotCompatible().contains(current.getAssign().getUnit())) {
                         
-            System.out.println("not compatible failed");
+            //System.out.println("not compatible failed");
             return false;
                     }
                 }
@@ -234,12 +234,12 @@ public class HardConstrainsts {
                     if (unit.getCourseNum() == c.getCourseNum()) {
                         if (unit.getCourseType().equals(c.getCourseType())) {
                             if (c.getLectureNum() == 0) {
-                                System.out.println("Problem is conflicting lab");
+                                //System.out.println("Problem is conflicting lab");
                                 
                                 
                                 return false;
                             } else if (unit.getLectureNum() == c.getLectureNum()) {
-                                System.out.println("Problem is conflicting lab");
+                                //System.out.println("Problem is conflicting lab");
                                 return false;
                             }
 

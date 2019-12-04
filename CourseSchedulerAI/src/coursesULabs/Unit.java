@@ -22,6 +22,10 @@ public class Unit {
     protected static int eveningIncrease = 100;
     protected static int increase500 = 50;
     protected double potential = 0;
+    protected  int softPref = 0;
+    protected static int brotherIncrease;
+    protected static int pairsIncrease;
+    protected static int preferencesIncrease;
     
 
     protected void setId(int i){
@@ -154,6 +158,44 @@ public class Unit {
             total += unit.getPotential();
         }
         return total;
+    }
+
+    public int getSoftPref() {
+        return softPref;
+    }
+
+    public void increasePrefBrothers() {
+        this.softPref += brotherIncrease;
+    }
+    public void increasePrefPairs() {
+        this.softPref += pairsIncrease;
+    }
+    public void increasePrefPreferences() {
+        this.softPref = preferencesIncrease;
+    }
+
+    public static int getBrotherIncrease() {
+        return brotherIncrease;
+    }
+
+    public static void setBrotherIncrease(int num) {
+         brotherIncrease = num;
+    }
+
+    public static int getPairsIncrease() {
+        return pairsIncrease;
+    }
+
+    public static void setPairsIncrease(int num) {
+        pairsIncrease = num;
+    }
+
+    public static int getPreferencesIncrease() {
+        return preferencesIncrease;
+    }
+
+    public static void setPreferencesIncrease(int num) {
+        preferencesIncrease = num;
     }
 
 }

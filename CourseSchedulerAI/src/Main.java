@@ -37,6 +37,13 @@ public class Main {
     Kontrol.setWeight_min_filled(courseMinPen);
     Kontrol.setWeight_pair(pairsPen);
     Kontrol.setWeight_pref(prefsPen);
+    
+    Unit.setBrotherIncrease(brothersPen);
+    Unit.setPairsIncrease(pairsPen);
+    Unit.setPreferencesIncrease(prefsPen);
+    
+    Kontrol.setWeight_pair(pairsPen);
+    Kontrol.setWeight_pref(prefsPen);
     Kontrol.setWeight_section_diff(brothersPen);
     TreeNode root = null;
     Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(),
@@ -95,8 +102,7 @@ public class Main {
 
     makeBrothers(allCourses);
     makePotentialsBros(allCourses);
-    // addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR
-    // PLS
+    addConstraintsForSpecialClasses(allLabs, parser); 
 
     // Get list of units to ignore (partial assignments)
     ArrayList<Unit> partialAssignedUnits = new ArrayList<Unit>();
@@ -105,8 +111,11 @@ public class Main {
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs, partialAssignedUnits);
     total_num_of_units = unitsToProcess.size();
     System.out.println("Units Made");
+    for(Unit unit : unitsToProcess){
+      System.out.println(unit.toString() + " is constrained " + unit.getConstrained() + " and its preference is " + unit.getSoftPref() );
+    }
     Generator search = new Generator(root);
-    int numberNodesBefore = parser.getPartialAssignments().size() != 0 ? parser.getPartialAssignments().size() : 1;
+    int numberNodesBefore = parser.getPartialAssignments().size() != 0 ? parser.getPartialAssignments().size() : 0;
     
     setupOverlaps(parser.getAllSlots());
 
@@ -239,7 +248,14 @@ public class Main {
     int n = units.size();
     for (int i = 0; i < n - 1; i++) {
       for (int j = 0; j < n - i - 1; j++) {
-        if (units.get(j).getConstrained() < units.get(j + 1).getConstrained()) {
+        if(units.get(j).getConstrained() == units.get(j + 1).getConstrained()){
+          if(units.get(j).getSoftPref() < units.get(j + 1).getSoftPref() ){
+            Unit temp = units.get(j);
+            units.set(j, units.get(j + 1));
+            units.set(j + 1, temp);
+          }
+        }
+        else if (units.get(j).getConstrained() < units.get(j + 1).getConstrained()) {
           Unit temp = units.get(j);
           units.set(j, units.get(j + 1));
           units.set(j + 1, temp);
@@ -273,6 +289,7 @@ public class Main {
       for (Map.Entry<String, Course> entry2 : courses.entrySet()) {
         if (entry.getValue().isBrother(entry2.getValue())) {
           entry.getValue().addBrother(entry2.getValue());
+          entry.getValue().increasePrefBrothers();
         }
       }
     }
