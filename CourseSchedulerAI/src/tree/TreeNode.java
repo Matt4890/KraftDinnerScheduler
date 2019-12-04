@@ -86,10 +86,15 @@ public class TreeNode implements Comparable<TreeNode> {
     }
 
     public void addChild(TreeNode n) {
+<<<<<<< Updated upstream
         this.children.add(n);
 
         this.orderedChildren.add(n);
         // System.out.println(Arrays.toString(this.orderedChildren.toArray()));
+=======
+        // this.children.add(n);
+        this.orderedChildren.add(n);
+>>>>>>> Stashed changes
     }
 
     public TreeNode getParent() {

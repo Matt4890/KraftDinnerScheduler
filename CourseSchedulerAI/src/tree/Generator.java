@@ -26,6 +26,7 @@ public class Generator {
 
     }
 
+<<<<<<< Updated upstream
     private void addPotentialsCourseSlot(TreeNode lastTreeNode, Unit current, HashMap<Integer, Slot> slotsToAddFrom) {
         for (Map.Entry<Integer, Slot> entry : slotsToAddFrom.entrySet()) {
             // Calculate the penalty of the course slot pairing
@@ -47,6 +48,42 @@ public class Generator {
 
             }
         }
+=======
+    private void checkAndMaybeAddChild(Unit current, Slot slot, TreeNode parent, int currentBound, int allUnitsTotal,
+            ArrayList<Slot> emptySlots) {
+        // currentBound /= 100;
+        TreeNode nodeToAdd = new TreeNode(new Pair(slot, current), 0, parent);
+        nodeToAdd.setDepth(parent.getDepth() + 1);
+            
+        // Check if we break the hard constraint
+        boolean HardConstraintOk;
+        if (current instanceof Course) {
+            HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsCourse((Course) current,
+                    (CourseSlot) slot, parent);
+            // System.out.println("The Hard constraint check for:  Slot:" + slot + " Course: " + current +"is: " + HardConstraintOk);
+        } else {
+            HardConstraintOk = HardConstrainsts.checkAssignmentHardConstriantsLab((Lab) current, (LabSlot) slot,
+                    parent);
+            // System.out.println("The Hard constraint check for:  Slot:" + slot + " Lab: " + current +"is: " + HardConstraintOk);
+        }
+        if (HardConstraintOk) {
+            // Calculate the penalty value here
+            int calc = Kontrol.evalAssignmentPairing(slot, current, parent);
+            // System.out.println("-- ANCHOR -- " + currentBound);
+            if (calc < currentBound / 20) {
+                nodeToAdd.setPenalty(calc + parent.getPenaltyValueOfTreeNode());
+                parent.addChild(nodeToAdd);
+                // System.out.println("######################################");
+                // System.out.println(nodeToAdd);
+                // System.out.println("######################################");
+
+                if (nodeToAdd.getDepth() == allUnitsTotal - 1) { // This should change to be something else
+                    // Calculate the penalty for the remaining slots
+                    // Create a helper method in Generator to calculate all empty slot coursemin and
+                    // preference s
+                    nodeToAdd.addToPenaltyForBaseNode(includeEmptySlotsInPenalty(emptySlots)); // THIS IS GOING TO HAVE
+                                                                                               // TO CHANGE
+>>>>>>> Stashed changes
 
     }
 
@@ -78,9 +115,20 @@ public class Generator {
 
     }
 
+<<<<<<< Updated upstream
     public void generateFBound(ArrayList<Unit> toBeAdded) {
         TreeNode lastTreeNode = new TreeNode(this.starter, this.initialPenalty);
         for (int i = 0; i < toBeAdded.size(); i++) {
+=======
+    private void generateChildrenPairs(Unit current, TreeNode parent, ArrayList<Slot> slotsToPair, int currentBound,
+            int allUnitsTotal, ArrayList<Slot> emptySlots) {
+        // System.out.println("Running Generate Children ");
+        for (Slot slot : slotsToPair) {
+            if (current instanceof Course) {
+                if (slot instanceof CourseSlot) {
+                    checkAndMaybeAddChild(current, slot, parent, currentBound, allUnitsTotal, emptySlots);
+                }
+>>>>>>> Stashed changes
 
             // for (int i = toBeAdded.size() -1; i >=0; i--) {
             Unit current = toBeAdded.get(i);
@@ -217,6 +265,7 @@ public class Generator {
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
 
+<<<<<<< Updated upstream
                         }
                     }
 
@@ -258,6 +307,66 @@ public class Generator {
                                     lastTreeNode, desire); // Note we need to calculate the total penatly differently
                             System.out.println("Schedule in Node: " + n.toString());
                             lastTreeNode.addChild(n);
+=======
+    // Skeleton of a BNB using a stack
+    // Assumes we have a bound function called calculateBound which will
+    // Using a heuristic, find a solution xh to the optimization problem. Store its
+    // value, B = f(xh). (If no heuristic is available, set B to infinity.) B will
+    // denote the best solution found so far, and will be used as an upper bound on
+    // candidate solutions.
+    // Initialize a queue to hold a partial solution with none of the variables of
+    // the problem assigned.
+    // Loop until the queue is empty:
+    // Take a node N off the queue.
+    // If N represents a single candidate solution x and f(x) < B, then x is the
+    // best solution so far. Record it and set B ← f(x).
+    // Else, branch on N to produce new nodes Ni. For each of these:
+    // If bound(Ni) > B, do nothing; since the lower bound on this node is greater
+    // than the upper bound of the problem, it will never lead to the optimal
+    // solution, and can be discarded.
+    // Else, store Ni on the queue.
+    public void branchAndBoundSkeleton(TreeNode starter, ArrayList<Unit> unitsToBeScheduled,
+            ArrayList<Slot> slotToScheduleIn, int numPartialAssignments) {
+
+        // System.out.println("RUNNING BNB");
+        Stack<TreeNode> allStackNodes = new Stack<TreeNode>();
+        this.startNode = starter;
+        this.bound = Integer.MAX_VALUE;
+       
+        TreeNode nodeToAdd  = this.startNode;
+        while (nodeToAdd.getChildren().size() != 0){
+            nodeToAdd = nodeToAdd.getChildren().get(0);
+            
+
+        }
+        //// System.out.println(nodeToAdd);
+        //// System.out.println("Node Depth: " + nodeToAdd.getDepth());
+
+        allStackNodes.add(nodeToAdd);
+        // this.bound = Integer.MAX_VALUE;
+        int numUnitsToSchedule = unitsToBeScheduled.size();
+        int depth = 0;
+        // this.bestSchedule = null;
+
+        // // System.out.println(allStackNodes);
+        while (!allStackNodes.isEmpty()) {
+            // System.out.println("While looooop ran");
+            // // System.out.println(allStackNodes);
+            TreeNode currentNode = allStackNodes.pop();
+
+            if (currentNode.getDepth() == unitsToBeScheduled.size() + (numPartialAssignments - 1)) { // TheScheduleInsideRepresents a Full
+                                                                       // Solution
+                // System.out.println(
+                        // "WE GOT TO THE BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                // System.out.println("Bound is: " + currentNode.getPenaltyValueOfTreeNode());
+                // System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                // System.out.println(currentNode.toString());
+                // System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+                if (currentNode.getPenaltyValueOfTreeNode() < this.bound) {
+                    // System.out.println("So Bound got replaced");
+                    this.bound = currentNode.getPenaltyValueOfTreeNode();
+                    this.bestSchedule = currentNode;
+>>>>>>> Stashed changes
 
                         }
                     }
@@ -367,6 +476,7 @@ public class Generator {
                 } else {
                     lastTreeNode = lastTreeNode.getLowestPenaltyChild();
                 }
+<<<<<<< Updated upstream
             }
             // lastTreeNode = lastTreeNode.getChildren().get(0);
 
@@ -550,6 +660,15 @@ public class Generator {
                 if(betterSolNode.getPenaltyValueOfTreeNode() < foundBetterSol.getPenaltyValueOfTreeNode()) {
                     foundBetterSol = betterSolNode;
                     currentBestValue = betterSolNode.getPenaltyValueOfTreeNode();
+=======
+                // System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+                // System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+
+                for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
+                    // allStackNodes.push(currentNode.getOrderedChildren().remove());
+                    allStackNodes.push(currentNode.getOrderedChildren().remove());
+>>>>>>> Stashed changes
                 }
             }
         }

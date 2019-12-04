@@ -10,7 +10,7 @@ public class Tree {
         if (n.getParent() ==null){
             this.root = n;
         } else {
-            System.out.println("Failed to make Root - TreeNode has parent");
+            // System.out.println("Failed to make Root - TreeNode has parent");
         }
     }
     public TreeNode getRoot(){

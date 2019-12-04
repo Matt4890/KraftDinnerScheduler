@@ -48,12 +48,12 @@ public class Parser {
                 fileLines.add(br.readLine());
             }
         } catch (FileNotFoundException fnfe) {
-            System.out.println("File not found: " + filename);
-            System.out.println("Exiting...");
+            // System.out.println("File not found: " + filename);
+            // System.out.println("Exiting...");
             System.exit(1);
         } catch (IOException ioe) {
-            System.out.println("IO exception while reading file:" + filename);
-            System.out.println("Exiting...");
+            // System.out.println("IO exception while reading file:" + filename);
+            // System.out.println("Exiting...");
             System.exit(1);
         }
 
@@ -101,11 +101,18 @@ public class Parser {
                 partialAssign_s = partialAssign_s.replaceAll("(?<!(?:TUT|LAB).*)" + replaceStr, "=CS" + count + "=");
                 count++;
                 if(cs.getCourseMin() > 0){
+<<<<<<< Updated upstream
                     minPenCount++;
+=======
+                    minWeightCount = minWeightCount+ cs.getCourseMin();
+                    // System.out.println("CourseSlotsMinWeight:" + minWeightCount);
+                    cs.incrementPotential(-minWeight);
+                    // System.out.println("added " + minWeight + " for slotmin for " + cs.toString()  );
+>>>>>>> Stashed changes
                 }
             } else {
-                System.out.println("Failed to parse string '" + slotStr + "' as a CourseSlot!");
-                System.out.println("Exiting...");
+                // System.out.println("Failed to parse string '" + slotStr + "' as a CourseSlot!");
+                // System.out.println("Exiting...");
                 System.exit(1);
             }
             
@@ -133,16 +140,27 @@ public class Parser {
                 partialAssign_s = partialAssign_s.replaceAll(replaceStr, "=LS" + count + "=");
                 count++;
                 if(ls.getLabMin() > 0){
+<<<<<<< Updated upstream
                     minPenCount++;
+=======
+                    minWeightCount = minWeightCount+ ls.getLabMin();
+                    // System.out.println("LabSlotMinWeight:" + minWeightCount);
+                    ls.incrementPotential(-minWeight);
+                    // System.out.println("added " + minWeight + " for slotmin for " + ls.toString()  );
+>>>>>>> Stashed changes
                 }
             } else {
-                System.out.println("Failed to parse string '" + slotStr + "' as a LabSlot!");
-                System.out.println("Exiting...");
+                // System.out.println("Failed to parse string '" + slotStr + "' as a LabSlot!");
+                // System.out.println("Exiting...");
                 System.exit(1);
             }
 
         }
+<<<<<<< Updated upstream
 
+=======
+        // System.out.println("TotalMinWeight:" + minWeightCount);
+>>>>>>> Stashed changes
         // Parse labs
         ArrayList<Lab> labs = new ArrayList<Lab>();
         count = 0;
@@ -181,8 +199,8 @@ public class Parser {
                 partialAssign_s = partialAssign_s.replaceAll(replaceStr, "=L" + count + "=");
                 count++;
             } else {
-                System.out.println("Failed to parse string '" + labStr + "' as a Lab!");
-                System.out.println("Exiting...");
+                // System.out.println("Failed to parse string '" + labStr + "' as a Lab!");
+                // System.out.println("Exiting...");
                 System.exit(1);
             }
             
@@ -223,8 +241,8 @@ public class Parser {
                     labs.add(cpsc913);
                 }
             } else {
-                System.out.println("Failed to parse string '" + courseStr + "' as a Course!");
-                System.out.println("Exiting...");
+                // System.out.println("Failed to parse string '" + courseStr + "' as a Course!");
+                // System.out.println("Exiting...");
                 System.exit(1);
             }
         }
@@ -251,8 +269,8 @@ public class Parser {
                 }
             }
             if (u1 == null || u2 == null) {
-                System.out.println("Failed to parse IDs on line '" + line + "'!");
-                // System.out.println("Exiting...");
+                // System.out.println("Failed to parse IDs on line '" + line + "'!");
+                // // System.out.println("Exiting...");
                 // System.exit(1);
             } else {
                 u1.addToNotCompatible(u2);
@@ -282,8 +300,8 @@ public class Parser {
                 s = labSlots.get(Integer.parseInt(lsm.group(1)));
             }
             if (u == null || s == null) {
-                System.out.println("Failed to parse IDs on line '" + line + "'!");
-                // System.out.println("Exiting...");
+                // System.out.println("Failed to parse IDs on line '" + line + "'!");
+                // // System.out.println("Exiting...");
                 // System.exit(1);
             } else {
                 u.addToUnwanted(s);
@@ -311,14 +329,24 @@ public class Parser {
                 s = labSlots.get(Integer.parseInt(lsm.group(1)));
             }
             if (u == null || s == null) {
-                System.out.println("Failed to parse IDs on line '" + line + "'!");
-                // System.out.println("Exiting...");
+                // System.out.println("Failed to parse IDs on line '" + line + "'!");
+                // // System.out.println("Exiting...");
                 // System.exit(1);
             } else {
                 u.addToPreferences(s, Integer.parseInt(line.split(",")[2]));
+<<<<<<< Updated upstream
                 prefPen = prefPen + Integer.parseInt(line.split(",")[2]);
             }
         }
+=======
+                sum_of_pref += Integer.parseInt(line.split(",")[2]); 
+                // System.out.println("Sum_of_pref:" + sum_of_pref);
+                u.incrementPotential(- prefWeight2  * Integer.parseInt(line.split(",")[2]) );
+                // System.out.println("added pen for pref of " + prefWeight2 + " for " + u.toString() );
+            }
+        }
+        // System.out.println("Totalsum_of_pref:" + sum_of_pref);
+>>>>>>> Stashed changes
 
         // Parse Pairs
         for (String line : pairs_s.split("\n")) {
@@ -342,15 +370,26 @@ public class Parser {
                 }
             }
             if (u1 == null || u2 == null) {
-                System.out.println("Failed to parse IDs on line '" + line + "'!");
-                // System.out.println("Exiting...");
+                // System.out.println("Failed to parse IDs on line '" + line + "'!");
+                // // System.out.println("Exiting...");
                 // System.exit(1);
             } else {
                 u1.addToPairs(u2);
                 u2.addToPairs(u1);
+<<<<<<< Updated upstream
                 pairPenCount ++;
             }
         }
+=======
+                u1.incrementPotential(- (((double)pairWeight) / 2));
+                u2.incrementPotential(- (((double)pairWeight) / 2));
+                // System.out.println("added pen for pair of " + pairWeight + " for " + u1.toString() );
+                pairWeightCount ++;
+                // System.out.println("PairsWeightCount:" + pairWeightCount);
+            }
+        }
+        // System.out.println("TotalWeightCount:" + pairWeightCount);
+>>>>>>> Stashed changes
 
         // Parse Partial Assignments
         for (String line : partialAssign_s.split("\n")) {
@@ -377,8 +416,8 @@ public class Parser {
                 s = labSlots.get(Integer.parseInt(lsm.group(1)));
             }
             if (u == null || s == null) {
-                System.out.println("Failed to parse IDs on line '" + line + "'!");
-                // System.out.println("Exiting...");
+                // System.out.println("Failed to parse IDs on line '" + line + "'!");
+                // // System.out.println("Exiting...");
                 // System.exit(1);
             } else {
                 this.initialPenalty += Kontrol.evalAssignment(s, u);
@@ -414,7 +453,7 @@ public class Parser {
             evening = (eveCourses / slotsavailable) / 2;
         }
         if(eveCourses > slotsavailable){
-            System.out.println("Evening courses but no evening slots or not enough");
+            // System.out.println("Evening courses but no evening slots or not enough");
             System.exit(0);
         }
         Unit.setEveningIncrease(evening);
@@ -427,7 +466,7 @@ public class Parser {
 
         this.schedule = new Schedule(courseSlots, labSlots);
 
-        System.out.println("Done!");
+        // System.out.println("Done!");
 
     }
     public int getInitialPenalty(){

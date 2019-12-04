@@ -13,6 +13,7 @@ public class SoftConstraints {
 
     int total = 0;
     if (s instanceof CourseSlot) {
+<<<<<<< Updated upstream
       total += SoftConstraints.checkCourseMin((CourseSlot) s, pen_course_min);
       total += SoftConstraints.preferenceEval(s,u);
       total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, pen_not_paired);
@@ -21,16 +22,56 @@ public class SoftConstraints {
       total += SoftConstraints.checkLabMin((LabSlot) s, pen_course_min);
       total += SoftConstraints.preferenceEval(s,u);
       total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, pen_not_paired);
+=======
+      total += SoftConstraints.checkCourseMin((CourseSlot) s, node);
+      // System.out.println("Calculated Course Min");
+      total += SoftConstraints.preferenceEval(s, u, node);
+      // System.out.println("Calculated Preference");
+      total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node);
+      // System.out.println("Calculated Pair");
+      total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, node);
+      // System.out.println("Calculated Section");
+    } else {
+      total += SoftConstraints.checkLabMin((LabSlot) s, node);
+      // System.out.println("Calculated Lab Min");
+      total += SoftConstraints.preferenceEval(s, u, node);
+      // System.out.println("Calculated Lab Preference");
+      total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, node);
+      // System.out.println("Calculated Lab Pair");
+>>>>>>> Stashed changes
 
     }
     return total;
 
   }
 
+<<<<<<< Updated upstream
   public static int checkCourseMin(CourseSlot s, int pen_course_min) {
     //decrement if the course min is met 
     if (s.getCourseMin() > s.getCourseCount()+1) {
       return -pen_course_min;
+=======
+  public static int checkCourseMin(CourseSlot s, TreeNode node) {
+    // decrement if the course min is met and coursemin != 1
+    int count = 0;
+    
+
+    TreeNode current = node.getParent();
+
+    while (current != null) {
+      //// System.out.println("Stuck???");
+      
+      if (current.getAssign().getSlot().isSameSlot(s)) {
+        count++;
+      }
+      // // System.out.println(current.toString());
+      current = current.getParent();
+      node.incrementDesire((s.getCourseMin() - count) * Kontrol.getWeight_min_filled());
+
+    }
+    if(s.getCourseMin() >= count){
+      return -1;
+>>>>>>> Stashed changes
     }
     return 0;
   }

@@ -12,7 +12,11 @@ public class Main {
     File file = new File("output.txt");
     //Instantiating the PrintStream class
     PrintStream stream = new PrintStream(file);
+<<<<<<< Updated upstream
     System.out.println("From now on "+file.getAbsolutePath()+" will be your console");
+=======
+    // System.out.println("From now on " + file.getAbsolutePath() + " will be your console");
+>>>>>>> Stashed changes
     System.setOut(stream);
     
     //Printing values to file
@@ -27,11 +31,48 @@ public class Main {
     pairsPen = Integer.parseInt(args[2]);
     brothersPen = Integer.parseInt(args[3]); 
 
+<<<<<<< Updated upstream
     Parser parser = new Parser(filename);
 
     int initialMinPenalty = courseMinPen * parser.getMinPenCount();
     int initialPairsPenalty = pairsPen * parser.getPairPenCount();
     int initialPreferencePenalty = parser.getPrefPen();
+=======
+    // System.out.println(parser.getPartialAssignments());
+    if (parser.getPartialAssignments().size() != 0) {
+      Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
+          parser.getPartialAssignments().get(0).getUnit());
+      //root = new TreeNode(assign,initialPenalty); //(initialPenalty);  
+      root = new TreeNode(assign,initialPenalty);
+
+      root.setPenalty(Kontrol.evalAssignmentPairing(assign.getSlot(),
+      assign.getUnit(), root) + initialPenalty);
+
+      root.setDepth(0);
+      // System.out.println("Root:");
+
+      // System.out.println(root.toString());
+      TreeNode curr = root;
+      // System.out.println("The size" + parser.getPartialAssignments().size());
+      int size = parser.getPartialAssignments().size();
+      for (int i = 1; i < size; i++) {
+        // System.out.println("Iteration " + i);
+        TreeNode n = new TreeNode(
+            new Pair(parser.getPartialAssignments().get(i).getSlot(), parser.getPartialAssignments().get(i).getUnit()),
+            0, curr);
+        n.setPenalty(Kontrol.evalAssignmentPairing(parser.getPartialAssignments().get(i).getSlot(),
+            parser.getPartialAssignments().get(i).getUnit(), n.getParent())
+            + n.getParent().getPenaltyValueOfTreeNode());
+        n.setDepth(i);
+        n.setDepth(curr.getDepth() + 1);
+        curr.addChild(n);
+        curr = n;
+        // System.out.println(curr.toString());
+
+      }
+      // System.out.println("For Loop ended woo");
+    }
+>>>>>>> Stashed changes
 
     
 
@@ -39,12 +80,27 @@ public class Main {
     System.out.println("The Schedule:");
     System.out.println(initialSchedule.toString());
     HashMap<String, Course> allCourses = parser.getCourseMap();
+<<<<<<< Updated upstream
     HashMap<String, Lab> allLabs = parser.getLabMap();
     addConstraintsForSpecialClasses(allLabs, initialSchedule);
     int initialPenalty = parser.getInitialPenalty();
+=======
+    // System.out.println("All courses are");
+    // System.out.println(allCourses);
+
+    HashMap<String, Lab> allLabs = parser.getLabMap();
+    // System.out.println("All labs are");
+    // System.out.println(allLabs);
+
+    makeBrothers(allCourses);
+    makePotentialsBros(allCourses);
+    // addConstraintsForSpecialClasses(allLabs, initialSchedule); //NEED REFACTOR
+    // PLS
+>>>>>>> Stashed changes
 
     initialPenalty = initialPenalty + initialMinPenalty + initialPairsPenalty + initialPreferencePenalty;
 
+<<<<<<< Updated upstream
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs);
     System.out.println("Units Made");
 
@@ -54,6 +110,16 @@ public class Main {
 
     // Generator gen = new Generator();
     // gen.createFBound(parser.getMap());
+=======
+    ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs, partialAssignedUnits);
+    total_num_of_units = unitsToProcess.size();
+    // System.out.println("Units Made");
+    Generator search = new Generator(root);
+    int numberNodesBefore = parser.getPartialAssignments().size() != 0 ?  parser.getPartialAssignments().size() : 1;
+
+    search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), numberNodesBefore);
+    // System.out.println("Generator Obj Created!!!!!!!!");
+>>>>>>> Stashed changes
 
   }
 
@@ -69,9 +135,14 @@ public class Main {
           schec.getTuThLab().get(1800).getClassAssignment().add(cpsc813);
           toremove813 = true;
           id813 = cpsc813.toString();
+<<<<<<< Updated upstream
         }
         else{
           System.out.println("Slot Tuesday at 1800 doesn't exist but 813/913 should be there");
+=======
+        } else {
+          // System.out.println("Slot Tuesday at 1800 doesn't exist but 813/913 should be there");
+>>>>>>> Stashed changes
           System.exit(0);
         }
         for(Unit unit : cpsc813.getNotCompatible()){
@@ -96,9 +167,14 @@ public class Main {
           schec.getTuThLab().get(1800).getClassAssignment().add(cpsc913);
           toremove913 = true;
           id913 = cpsc913.toString();
+<<<<<<< Updated upstream
         }
         else{
           System.out.println("Slot Tuesday at 1800 doesn't exist but 813/913 should be there");
+=======
+        } else {
+          // System.out.println("Slot Tuesday at 1800 doesn't exist but 813/913 should be there");
+>>>>>>> Stashed changes
           System.exit(0);
         }
         for(Unit unit : cpsc913.getNotCompatible()){
@@ -136,7 +212,12 @@ public class Main {
    * 
    * @return: ArrayList of units in order to process
    */
+<<<<<<< Updated upstream
   private static ArrayList<Unit> orderedUnitsForAdding(HashMap<String, Course> courses, HashMap<String, Lab> labs) {
+=======
+  private static ArrayList<Unit> orderedUnitsForAdding(HashMap<String, Course> courses, HashMap<String, Lab> labs, ArrayList<Unit> ignored) {
+    // System.out.println("ORderING");
+>>>>>>> Stashed changes
     ArrayList<Unit> toReturn = new ArrayList<Unit>();
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       Course c = (Course) entry.getValue();
@@ -148,10 +229,22 @@ public class Main {
       //This is where we do the fancy stuff
       toReturn.add(l);
     }
+<<<<<<< Updated upstream
     System.out.println(toReturn);
     bubbleSort(toReturn);
     
     System.out.println(toReturn);
+=======
+
+    for (Unit u : ignored) {
+      toReturn.remove(u);
+    }
+
+    // System.out.println(toReturn);
+    bubbleSort(toReturn);
+
+    // System.out.println(toReturn);
+>>>>>>> Stashed changes
 
     return toReturn;
   }
@@ -162,6 +255,7 @@ public class Main {
    * takes a arraylist of units and orders them from most constrained to least
    * @param units
    */
+<<<<<<< Updated upstream
   public static void bubbleSort(ArrayList<Unit> units) 
   { 
       int n = units.size();
@@ -175,6 +269,50 @@ public class Main {
               } 
           }
       }
+=======
+  public static void bubbleSort(ArrayList<Unit> units) {
+    int n = units.size();
+    for (int i = 0; i < n - 1; i++) {
+      for (int j = 0; j < n - i - 1; j++) {
+        if (units.get(j).getConstrained() < units.get(j + 1).getConstrained()) {
+          Unit temp = units.get(j);
+          units.set(j, units.get(j + 1));
+          units.set(j + 1, temp);
+        }
+      }
+    }
+  }
+
+  private static void makePotentialsBros(HashMap<String, Course> courses) {
+    // System.out.println("The size of courses is " + courses.size());
+    ArrayList<Course> checked = new ArrayList<Course>();
+    for (Map.Entry<String, Course> entry : courses.entrySet()) {
+      Course courseToAddPotential = entry.getValue();
+      checked.add(courseToAddPotential);
+      // System.out.println("the size of brothers is " + courseToAddPotential.getBrothers().size());
+      for (Course course : courseToAddPotential.getBrothers()) {
+        // System.out.println("I hate this");
+        if (!checked.contains(course)) {
+          courseToAddPotential.incrementPotential(((double) (brothersPen)) / 2);
+          course.incrementPotential(((double) (brothersPen)) / 2);
+          // System.out.println("The pen added is " + brothersPen + " for brothers pen for " + course.getKey() + " and "
+              // + courseToAddPotential.getKey());
+        }
+      }
+    }
+  }
+
+  private static void makeBrothers(HashMap<String, Course> courses) {
+    // System.out.println("Start Brothers");
+    for (Map.Entry<String, Course> entry : courses.entrySet()) {
+      for (Map.Entry<String, Course> entry2 : courses.entrySet()) {
+        if (entry.getValue().isBrother(entry2.getValue())) {
+          entry.getValue().addBrother(entry2.getValue());
+        }
+      }
+    }
+    // System.out.println("Brothers Finished");
+>>>>>>> Stashed changes
   }
   
   

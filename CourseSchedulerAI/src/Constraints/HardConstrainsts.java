@@ -91,6 +91,7 @@ public class HardConstrainsts {
 
     }
 
+<<<<<<< Updated upstream
     
     public static boolean checkLabNotWithCourseAddingCourse(Course c, Slot s){
         for(Slot slot : s.getOverlaps()){
@@ -104,6 +105,25 @@ public class HardConstrainsts {
                         else if(unit.getLectureNum() == c.getLectureNum()){
                             System.out.println("Problem is conflicting lab");
                             return false;
+=======
+    public static boolean checkLabNotWithCourseAddingCourse(Course c, Slot s, TreeNode node) {
+        TreeNode current = node.getParent();
+        while (current != null) {
+            Slot ancestorSlot = current.getAssign().getSlot();
+            for (Slot slot : s.getOverlaps()) {
+                if (ancestorSlot == slot) {
+                    Unit unit = current.getAssign().getUnit();
+                    if (unit.getCourseNum() == c.getCourseNum()) {
+                        if (unit.getCourseType().equals(c.getCourseType())) {
+                            if (unit.getLectureNum() == 0) {
+                                // System.out.println("Problem is conflicting lab");
+                                return false;
+                            } else if (unit.getLectureNum() == c.getLectureNum()) {
+                                // System.out.println("Problem is conflicting lab");
+                                return false;
+                            }
+
+>>>>>>> Stashed changes
                         }
                     }
                 }
@@ -149,6 +169,7 @@ public class HardConstrainsts {
      * @param slotToAdd
      * @return
      */
+<<<<<<< Updated upstream
     public static boolean checkUnwanted(Unit course, Slot slotToAdd){
         ArrayList<Slot> unwanted = course.getUnwanted();
         for(Slot s : unwanted){
@@ -161,6 +182,15 @@ public class HardConstrainsts {
             if(((CourseSlot)slotToAdd).getDay().equals(CourseDays.TUETHR)){
                 if(slotToAdd.getTime() == 1100){
                     System.out.println("Problem is 1100");
+=======
+    public static boolean checkUnwanted(Unit course, Slot slotToAdd) {
+        if (course.getUnwanted().contains(slotToAdd)) {
+            return false;
+        } else if (course instanceof Course) {
+            if (((CourseSlot) slotToAdd).getDay().equals(CourseDays.TUETHR)) {
+                if (slotToAdd.getTime() == 1100) {
+                    // System.out.println("Problem is 1100");
+>>>>>>> Stashed changes
                     return false;
                 }
             }
@@ -209,6 +239,7 @@ public class HardConstrainsts {
         return true;
     }
 
+<<<<<<< Updated upstream
     public static boolean checkLabNotWithCourseAddingLab(Lab c, Slot s){
         for(Slot slot : s.getOverlaps()){
             for(Unit unit : slot.getClassAssignment()){
@@ -221,6 +252,25 @@ public class HardConstrainsts {
                         else if(unit.getLectureNum() == c.getLectureNum()){
                             System.out.println("Problem is conflicting lab");
                             return false;
+=======
+    public static boolean checkLabNotWithCourseAddingLab(Lab c, Slot s, TreeNode node) {
+        TreeNode current = node.getParent();
+        while (current != null) {
+            Slot ancestorSlot = current.getAssign().getSlot();
+            for (Slot slot : s.getOverlaps()) {
+                if (ancestorSlot == slot) {
+                    Unit unit = current.getAssign().getUnit();
+                    if (unit.getCourseNum() == c.getCourseNum()) {
+                        if (unit.getCourseType().equals(c.getCourseType())) {
+                            if (c.getLectureNum() == 0) {
+                                // System.out.println("Problem is conflicting lab");
+                                return false;
+                            } else if (unit.getLectureNum() == c.getLectureNum()) {
+                                // System.out.println("Problem is conflicting lab");
+                                return false;
+                            }
+
+>>>>>>> Stashed changes
                         }
                     }
                 }
