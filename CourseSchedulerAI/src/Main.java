@@ -139,7 +139,8 @@ public class Main {
       // System.out.println(unit.toString() + " is constrained " +
       // unit.getConstrained() + " and its preference is " + unit.getSoftPref() );
     }
-    Generator search = new Generator(root);
+    Generator search = new Generator(root, (parser.getPartialAssignments().size() + unitsToProcess.size()));
+    
     int numberNodesBefore = parser.getPartialAssignments().size() != 0 ? parser.getPartialAssignments().size() : 0;
 
     setupOverlaps(parser.getAllSlots());

@@ -20,12 +20,14 @@ public class Generator {
 
     private TreeNode startNode;
     private TreeNode bestSchedule;
+    private int totalSize;
 
-    public Generator(TreeNode starter) {
+    public Generator(TreeNode starter, int totalSize) {
 
         this.starter = starter;
         this.bound = Integer.MAX_VALUE;
         this.bestSchedule = null;
+        this.totalSize = totalSize;
 
     }
 
@@ -50,14 +52,14 @@ public class Generator {
         if (HardConstraintOk) {
             // Calculate the penalty value here
             int calc = Kontrol.evalAssignmentPairing(slot, current, nodeToAdd) + parent.getPenaltyValueOfTreeNode();
-            if (calc < currentBound / 2) {
+            //if (calc < currentBound / 2) {
                 nodeToAdd.setPenalty(calc);
                 parent.addChild(nodeToAdd);
                 // System.out.println("######################################");
                 // System.out.println(nodeToAdd);
                 // System.out.println("######################################");
 
-                if (nodeToAdd.getDepth() == allUnitsTotal - 1) { // This should change to be something else
+                if (nodeToAdd.getDepth() == totalSize) { // This should change to be something else
                     // Calculate the penalty for the remaining slots
                     // Create a helper method in Generator to calculate all empty slot coursemin and
                     // preference s
@@ -68,10 +70,10 @@ public class Generator {
                             nodeToAdd.getPenaltyValueOfTreeNode() + Kontrol.calculateMin(nodeToAdd, slot, current));
 
                 }
-            } else {
+            //} else {
                 // System.out.println("It Broke the bound so I didn't add it at depth " +
                 // nodeToAdd.getDepth());
-            }
+            //}
         }
     }
 

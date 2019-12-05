@@ -2,7 +2,7 @@ package Constraints;
 
 import schedule.*;
 import tree.Kontrol;
-import tree.Tree;
+import tree.*;
 import tree.TreeNode;
 
 import java.util.ArrayList;
@@ -51,7 +51,10 @@ public class SoftConstraints {
 
       for (int i = 0; i < allSlots.size(); i++) {
         if (allSlots.get(i) instanceof CourseSlot) {
-          if (((CourseSlot) allSlots.get(i)).getCourseMin() < counts[i]) {
+
+          int a = ((CourseSlot) allSlots.get(i)).getCourseMin();
+          int b = counts[i];
+          if (((CourseSlot) allSlots.get(i)).getCourseMin() > counts[i]) {
             count += (((CourseSlot) allSlots.get(i)).getCourseMin() - counts[i]);
           }
         }
@@ -63,7 +66,7 @@ public class SoftConstraints {
       // Kontrol.getWeight_min_filled());
     }
 
-    return -pen * count;
+    return pen * count;
   }
 
   public static int checkLabMin(Slot s, TreeNode node, int pen, ArrayList<Slot> allSlots) {
@@ -81,7 +84,7 @@ public class SoftConstraints {
 
       for (int i = 0; i < allSlots.size(); i++) {
         if (allSlots.get(i) instanceof LabSlot) {
-          if (((LabSlot) allSlots.get(i)).getLabMin() < counts[i]) {
+          if (((LabSlot) allSlots.get(i)).getLabMin() > counts[i]) {
             count += (((LabSlot) allSlots.get(i)).getLabMin() - counts[i]);
           }
         }
@@ -93,7 +96,7 @@ public class SoftConstraints {
       // Kontrol.getWeight_min_filled());
     }
 
-    return -pen * count;
+    return pen * count;
 
   }
 
@@ -121,6 +124,29 @@ public class SoftConstraints {
      */
   }
 
+  public static int notPairedCourse(Course b, CourseSlot s, TreeNode node, int pen){
+
+    int total =0;
+    TreeNode current = node.getParent();
+    ArrayList <Pair> hasBeenScheduled = new ArrayList<Pair>();
+    while (current != null) {
+      hasBeenScheduled.add(current.getAssign()); 
+      current = current.getParent();
+    }
+
+    for(Pair selectedPair : hasBeenScheduled){
+      for(Unit bsPairUnit : b.getPairs()){
+        if(selectedPair.getUnit() == bsPairUnit){
+          if(selectedPair.getSlot() != s){
+            total += pen;
+          }
+        }
+      }
+    }
+
+    return total;
+  }
+
   /**
    * might be a problem with this one
    *
@@ -129,6 +155,7 @@ public class SoftConstraints {
    * @param node
    * @return
    */
+  /*
   public static int notPairedCourse(Course b, CourseSlot s, TreeNode node, int pen) {
     ArrayList<Unit> pairs = b.getPairs();
     int numOfCourses = 0;
@@ -179,6 +206,7 @@ public class SoftConstraints {
     return total * pen;
 
   }
+  */
 
   /**
    * might be a problem with this one
