@@ -3,6 +3,7 @@ package schedule;
 import enums.SlotType;
 import java.util.*;
 import coursesULabs.*;
+
 public abstract class Slot {
     protected SlotType type;
     protected int time;
@@ -12,7 +13,7 @@ public abstract class Slot {
     protected ArrayList<Slot> overlaps = new ArrayList<Slot>();
     protected double potential = 0;
     public static double totalPotential;
-    
+
     public abstract String toPrettyString();
 
     public Slot(int id, int time, SlotType type, HashMap<Unit, Integer> hashMap) {
@@ -23,15 +24,14 @@ public abstract class Slot {
         this.prefMap = hashMap;
 
     }
-    public Slot (Slot s){
+
+    public Slot(Slot s) {
         this.type = s.type;
         this.time = s.time;
         this.id = s.id;
         this.prefMap = new HashMap<Unit, Integer>();
-        
-        
-    }
 
+    }
 
     protected void setID(int id) {
         this.id = id;
@@ -43,11 +43,12 @@ public abstract class Slot {
 
     }
 
-    protected void setType(SlotType type){
+    protected void setType(SlotType type) {
         this.type = type;
 
     }
-    public ArrayList<Unit> getClassAssignment(){
+
+    public ArrayList<Unit> getClassAssignment() {
         return this.classAssignment;
 
     }
@@ -66,7 +67,8 @@ public abstract class Slot {
         return this.time;
 
     }
-    public SlotType getType(){
+
+    public SlotType getType() {
         return this.type;
 
     }
@@ -87,24 +89,23 @@ public abstract class Slot {
         return overlaps;
     }
 
-    public void addOverlaps(Slot slot){
+    public void addOverlaps(Slot slot) {
         overlaps.add(slot);
     }
 
-    public boolean isSameSlot(Slot s){
-        if(this.getTime() == s.getTime()){
-            if(this instanceof CourseSlot){
-                if(s instanceof CourseSlot){
-                    if(((CourseSlot)this).getDay().equals(((CourseSlot)s).getDay())){
+    public boolean isSameSlot(Slot s) {
+        if (this.getTime() == s.getTime()) {
+            if (this instanceof CourseSlot) {
+                if (s instanceof CourseSlot) {
+                    if (((CourseSlot) this).getDay().equals(((CourseSlot) s).getDay())) {
                         return true;
                     }
                 }
-            }
-            else{
-                if(s instanceof LabSlot){
-                    if(((LabSlot)this).getDay().equals(((LabSlot)s).getDay())){
+            } else {
+                if (s instanceof LabSlot) {
+                    if (((LabSlot) this).getDay().equals(((LabSlot) s).getDay())) {
                         return true;
-                    }                    
+                    }
                 }
             }
         }
@@ -120,11 +121,5 @@ public abstract class Slot {
         this.potential += potential;
         totalPotential += potential;
     }
-
-	public int getCourseMin() {
-		return 0;
-	}
-
-    
 
 }

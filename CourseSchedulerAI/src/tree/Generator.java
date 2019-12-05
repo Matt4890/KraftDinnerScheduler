@@ -238,7 +238,7 @@ public class Generator {
 
                 // for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
                 // int x = 0;
-                // //allStackNodes.push(currentNode.getOrderedChildren().poll());
+                // // allStackNodes.push(currentNode.getOrderedChildren().poll());
                 // allStackNodes.push(currentNode.getChildren().get(i));
                 // }
 
