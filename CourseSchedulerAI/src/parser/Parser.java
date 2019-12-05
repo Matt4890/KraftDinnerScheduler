@@ -20,7 +20,6 @@ public class Parser {
 
     private HashMap<String, Course> courseMap = new HashMap<String, Course>();
     private HashMap<String, Lab>    labMap    = new HashMap<String, Lab>();
-    private Schedule schedule; 
     private int initialPenalty; 
     private int minWeightCount;
     private int pairWeightCount;
@@ -459,10 +458,6 @@ public class Parser {
         for (Course c : courses) this.courseMap.put(c.toString(), c);
         for (Lab l : labs)       this.labMap.put(l.toString(), l);
 
-        this.schedule = new Schedule(courseSlots, labSlots);
-
-        //System.out.println("Done!");
-
     }
 
     /**
@@ -471,14 +466,6 @@ public class Parser {
      */
     public int getInitialPenalty(){
         return this.initialPenalty;
-    }
-
-    /**
-     * Gets the schedule generated.
-     * @return The schedule generated.
-     */
-    public Schedule getSchedule(){
-        return this.schedule;
     }
 
     /**
