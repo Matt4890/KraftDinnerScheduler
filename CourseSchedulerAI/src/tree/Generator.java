@@ -52,7 +52,7 @@ public class Generator {
         if (HardConstraintOk) {
             // Calculate the penalty value here
             int calc = Kontrol.evalAssignmentPairing(slot, current, nodeToAdd) + parent.getPenaltyValueOfTreeNode();
-            //if (calc < currentBound / 2) {
+            if (calc < currentBound) {
                 nodeToAdd.setPenalty(calc);
                 parent.addChild(nodeToAdd);
                 // System.out.println("######################################");
@@ -70,10 +70,10 @@ public class Generator {
                             nodeToAdd.getPenaltyValueOfTreeNode() + Kontrol.calculateMin(nodeToAdd, slot, current));
 
                 }
-            //} else {
+            } else {
                 // System.out.println("It Broke the bound so I didn't add it at depth " +
                 // nodeToAdd.getDepth());
-            //}
+            }
         }
     }
 

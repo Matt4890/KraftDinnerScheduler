@@ -123,7 +123,7 @@ public class SoftConstraints {
      * slot.getPreference().get(u); } catch (Exception e) {}; } } return total;
      */
   }
-
+  
   public static int notPairedCourse(Course b, CourseSlot s, TreeNode node, int pen){
 
     int total =0;
