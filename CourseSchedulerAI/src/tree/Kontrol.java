@@ -42,8 +42,8 @@ public class Kontrol {
     }
 
     public static int calculateMin(TreeNode node, Slot s, Unit u) {
-        int total = SoftConstraints.checkCourseMin(s, node, pen_min_filled, allSlots);
-        total += SoftConstraints.checkLabMin(s, node, pen_labmin_filled, allSlots);
+        int total = SoftConstraints.checkCourseMin(s, node, pen_min_filled, allSlots) * Kontrol.weight_min_filled;
+        total += SoftConstraints.checkLabMin(s, node, pen_labmin_filled, allSlots)* Kontrol.weight_min_filled;
         return total;
     }
 

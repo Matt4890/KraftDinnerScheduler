@@ -38,7 +38,7 @@ public class SoftConstraints {
 
   public static int checkCourseMin(Slot s, TreeNode node, int pen, ArrayList<Slot> allSlots) {
     int total = 0;
-    TreeNode current = node.getParent();
+    TreeNode current = node;
     ArrayList<Pair> scheduled = new ArrayList<Pair>();
     while (current != null){
       scheduled.add(current.getAssign());
@@ -97,7 +97,7 @@ public class SoftConstraints {
   */
   public static int checkLabMin(Slot s, TreeNode node, int pen, ArrayList<Slot> allSlots) {
     int total = 0;
-    TreeNode current = node.getParent();
+    TreeNode current = node;
     ArrayList<Pair> scheduled = new ArrayList<Pair>();
     while (current != null){
       scheduled.add(current.getAssign());

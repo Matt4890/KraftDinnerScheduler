@@ -118,7 +118,7 @@ public class HardConstrainsts {
                         if (unit.getCourseType().equals(c.getCourseType())) {
                             if (unit.getLectureNum() == 0) {
                                 // System.out.println("Problem is conflicting lab");
-            // System.out.println("lab course failed");
+                                // System.out.println("lab course failed");
                                 
                                 return false;
                             } else if (unit.getLectureNum() == c.getLectureNum()) {
