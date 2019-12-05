@@ -55,9 +55,9 @@ public class Generator {
             if (calc < currentBound) {
                 nodeToAdd.setPenalty(calc);
                 parent.addChild(nodeToAdd);
-                //System.out.println("######################################");
-                //System.out.println(nodeToAdd);
-                //System.out.println("######################################");
+                // System.out.println("######################################");
+                // System.out.println(nodeToAdd);
+                // System.out.println("######################################");
 
                 if (nodeToAdd.getDepth() == totalSize) { // This should change to be something else
                     // Calculate the penalty for the remaining slots
@@ -73,6 +73,7 @@ public class Generator {
             } else {
                 // System.out.println("It Broke the bound so I didn't add it at depth " +
                 // nodeToAdd.getDepth());
+                // System.out.println("Calc was " + calc);
             }
         }
     }
@@ -165,8 +166,10 @@ public class Generator {
         // this.bestSchedule = null;
 
         // System.out.println(allStackNodes);
+        int count = 0;
         while (!allStackNodes.isEmpty()) {
-            // System.out.println("While looooop ran");
+            count++;
+            // System.out.println("THE STACK");
             // System.out.println(allStackNodes);
             TreeNode currentNode = allStackNodes.pop();
 
@@ -185,7 +188,9 @@ public class Generator {
 
                     this.bound = currentNode.getPenaltyValueOfTreeNode();
                     this.bestSchedule = currentNode;
-                    // System.out.println("So Bound got replaced with" + this.bound);
+                    System.out.println("So Bound got replaced with" + this.bound);
+                    System.out.println(currentNode);
+                    System.out.println("Bound was broken after " + count);
 
                 }
             }
@@ -231,9 +236,15 @@ public class Generator {
 
                 // System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
-                for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
-                    // allStackNodes.push(currentNode.getOrderedChildren().remove());
-                    allStackNodes.push(currentNode.getChildren().get(i));
+                // for (int i = 0; i < currentNode.getOrderedChildren().size(); i++) {
+                // int x = 0;
+                // //allStackNodes.push(currentNode.getOrderedChildren().poll());
+                // allStackNodes.push(currentNode.getChildren().get(i));
+                // }
+
+                while (!currentNode.getOrderedChildren().isEmpty()) {
+                    allStackNodes.push(currentNode.getOrderedChildren().remove());
+
                 }
 
             }
@@ -248,6 +259,7 @@ public class Generator {
             System.out.println(this.bestSchedule.getPenaltyValueOfTreeNode());
 
             formatOutput();
+            System.out.println("The total number of nodes checked was " + count);
 
         }
     }

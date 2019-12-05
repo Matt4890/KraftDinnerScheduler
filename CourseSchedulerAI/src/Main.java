@@ -24,10 +24,10 @@ public class Main {
   /**
    * Entry point for the scheduler AI.
    * 
-   * @param args  List of integers as strings for the weights and penalties.
-   *              In order:
-   *              CourseMinPenalty, LabMinPenalty, PairsPenalty, SectionsPenalty,
-   *              MinAssignWeight, PrefsWeight, PairsWeight, and SectionsWeight.
+   * @param args List of integers as strings for the weights and penalties. In
+   *             order: CourseMinPenalty, LabMinPenalty, PairsPenalty,
+   *             SectionsPenalty, MinAssignWeight, PrefsWeight, PairsWeight, and
+   *             SectionsWeight.
    * @throws FileNotFoundException
    */
   public static void main(String[] args) throws FileNotFoundException {
@@ -140,7 +140,7 @@ public class Main {
       // unit.getConstrained() + " and its preference is " + unit.getSoftPref() );
     }
     Generator search = new Generator(root, (parser.getPartialAssignments().size() + unitsToProcess.size()));
-    
+
     int numberNodesBefore = parser.getPartialAssignments().size() != 0 ? parser.getPartialAssignments().size() : 0;
 
     setupOverlaps(parser.getAllSlots());
