@@ -55,9 +55,9 @@ public class Generator {
             if (calc < currentBound) {
                 nodeToAdd.setPenalty(calc);
                 parent.addChild(nodeToAdd);
-                //System.out.println("######################################");
-                //System.out.println(nodeToAdd);
-                //System.out.println("######################################");
+                System.out.println("######################################");
+                System.out.println(nodeToAdd);
+                System.out.println("######################################");
 
                 if (nodeToAdd.getDepth() == totalSize) { // This should change to be something else
                     // Calculate the penalty for the remaining slots
@@ -202,7 +202,7 @@ public class Generator {
                         scheduleMe = unitsToBeScheduled.get(currentNode.getDepth());
                     } else {
                         scheduleMe = unitsToBeScheduled
-                                .get(currentNode.getDepth() - Math.max(numPartialAssignments - 1, 0));
+                                .get(currentNode.getDepth() - Math.max(numPartialAssignments-1, 0));
                     } // TEST ME
 
                     if (scheduleMe.equals(unitsToBeScheduled.get(unitsToBeScheduled.size() - 1))) { // We are reaching
