@@ -15,12 +15,21 @@ public class Main {
   public static int pairsPen;
   public static int brothersPen;
   public static int labMinPen;
-  public static int courseMinWeight;
+  public static int minAssignWeight;
   public static int pairsWeight;
   public static int brothersWeight;
   public static int prefsWeight;
   public static int total_num_of_units;
 
+  /**
+   * Entry point for the scheduler AI.
+   * 
+   * @param args  List of integers as strings for the weights and penalties.
+   *              In order:
+   *              CourseMinPenalty, LabMinPenalty, PairsPenalty, SectionsPenalty,
+   *              MinAssignWeight, PrefsWeight, PairsWeight, and SectionsWeight.
+   * @throws FileNotFoundException
+   */
   public static void main(String[] args) throws FileNotFoundException {
     // Instantiating the File class
 
@@ -37,7 +46,7 @@ public class Main {
     labMinPen = Integer.parseInt(args[2]);
     pairsPen = Integer.parseInt(args[3]);
     brothersPen = Integer.parseInt(args[4]);
-    courseMinWeight = Integer.parseInt(args[5]);
+    minAssignWeight = Integer.parseInt(args[5]);
     prefsWeight = Integer.parseInt(args[6]);
     pairsWeight = Integer.parseInt(args[7]);
     brothersWeight = Integer.parseInt(args[8]);
@@ -47,7 +56,7 @@ public class Main {
     Kontrol.setPen_labmin_filled(labMinPen);
     Kontrol.setPen_section_diff(brothersPen);
 
-    Kontrol.setWeight_min_filled(courseMinWeight);
+    Kontrol.setWeight_min_filled(minAssignWeight);
     Kontrol.setWeight_pair(pairsWeight);
     Kontrol.setWeight_pref(prefsWeight);
 
