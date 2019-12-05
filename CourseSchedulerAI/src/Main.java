@@ -91,6 +91,8 @@ public class Main {
       // System.out.println("Root:");
 
       // System.out.println(root.toString());
+      HashMap<String, Lab> allLabs = parser.getLabMap();
+      addConstraintsForSpecialClasses(allLabs, parser);
       TreeNode curr = root;
       // System.out.println("The size" + parser.getPartialAssignments().size());
       int size = parser.getPartialAssignments().size();
@@ -126,7 +128,7 @@ public class Main {
 
     makeBrothers(allCourses);
     makePotentialsBros(allCourses);
-    addConstraintsForSpecialClasses(allLabs, parser);
+    //addConstraintsForSpecialClasses(allLabs, parser);
 
     // Get list of units to ignore (partial assignments)
     ArrayList<Unit> partialAssignedUnits = new ArrayList<Unit>();
