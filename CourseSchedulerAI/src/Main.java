@@ -70,34 +70,24 @@ public class Main {
 
     TreeNode root = null;
     Parser parser = new Parser(filename, Kontrol.getWeight_pref(), Kontrol.getWeight_pair(),
-        Kontrol.getWeight_min_filled());
+    Kontrol.getWeight_min_filled());
 
     Kontrol.setAllSlots(parser.getAllSlots());
-    int initialMinPenalty = parser.getminWeightCount() * Kontrol.getWeight_min_filled();
-    int initialPairsPenalty = parser.getpairWeightCount() * Kontrol.getWeight_pair();
-    int initialPreferencePenalty = parser.getprefWeight() * Kontrol.getWeight_pref();
-    // int initialPenalty = initialMinPenalty;
 
-    // System.out.println(parser.getPartialAssignments());
     if (parser.getPartialAssignments().size() != 0) {
       Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
-          parser.getPartialAssignments().get(0).getUnit());
-      // root = new TreeNode(assign,initialPenalty); //(initialPenalty);
+      parser.getPartialAssignments().get(0).getUnit());
       root = new TreeNode(assign, 0);
 
       root.setPenalty(Kontrol.evalAssignmentPairing(assign.getSlot(), assign.getUnit(), root));
 
       root.setDepth(0);
-      // System.out.println("Root:");
 
-      // System.out.println(root.toString());
       HashMap<String, Lab> allLabs = parser.getLabMap();
       addConstraintsForSpecialClasses(allLabs, parser);
       TreeNode curr = root;
-      // System.out.println("The size" + parser.getPartialAssignments().size());
       int size = parser.getPartialAssignments().size();
       for (int i = 1; i < size; i++) {
-        // System.out.println("Iteration " + i);
         TreeNode n = new TreeNode(
             new Pair(parser.getPartialAssignments().get(i).getSlot(), parser.getPartialAssignments().get(i).getUnit()),
             0, curr);
@@ -108,10 +98,8 @@ public class Main {
         n.setDepth(curr.getDepth() + 1);
         curr.addChild(n);
         curr = n;
-        // System.out.println(curr.toString());
 
       }
-      // System.out.println("For Loop ended woo");
     }
 
     if (root == null) {
@@ -119,16 +107,11 @@ public class Main {
     }
 
     HashMap<String, Course> allCourses = parser.getCourseMap();
-    // System.out.println("All courses are");
-    // System.out.println(allCourses);
 
     HashMap<String, Lab> allLabs = parser.getLabMap();
-    // System.out.println("All labs are");
-    // System.out.println(allLabs);
 
     makeBrothers(allCourses);
     makePotentialsBros(allCourses);
-    //addConstraintsForSpecialClasses(allLabs, parser);
 
     // Get list of units to ignore (partial assignments)
     ArrayList<Unit> partialAssignedUnits = new ArrayList<Unit>();
@@ -136,11 +119,6 @@ public class Main {
 
     ArrayList<Unit> unitsToProcess = orderedUnitsForAdding(allCourses, allLabs, partialAssignedUnits);
     total_num_of_units = unitsToProcess.size();
-    // System.out.println("Units Made");
-    for (Unit unit : unitsToProcess) {
-      // System.out.println(unit.toString() + " is constrained " +
-      // unit.getConstrained() + " and its preference is " + unit.getSoftPref() );
-    }
     Generator search = new Generator(root, (parser.getPartialAssignments().size() + unitsToProcess.size()));
 
     int numberNodesBefore = parser.getPartialAssignments().size() != 0 ? parser.getPartialAssignments().size() : 0;
@@ -149,10 +127,16 @@ public class Main {
 
     search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), numberNodesBefore);
 
-    // System.out.println("Generator Obj Created!!!!!!!!");
 
   }
-
+  /*
+   * Function to add CPSC813 and CPSC913 if CPSC313 and CPSC413 exist
+   *
+   * @param allCourses: hashmap of courses indexed by string
+   *
+   * @param parse: Class Parser to add CPSC813 and CPSC913 to partial assignment
+   *
+   */
   private static void addConstraintsForSpecialClasses(HashMap<String, Lab> allCourses, Parser parse) {
     boolean toremove813 = false;
     String id813 = "";
@@ -228,7 +212,6 @@ public class Main {
     if (toremove913) {
       allCourses.remove(id913);
     }
-
   }
 
   /*
@@ -241,31 +224,26 @@ public class Main {
    * @return: ArrayList of units in order to process
    */
   private static ArrayList<Unit> orderedUnitsForAdding(HashMap<String, Course> courses, HashMap<String, Lab> labs,
-      ArrayList<Unit> ignored) {
-    // System.out.println("ORderING");
-    ArrayList<Unit> toReturn = new ArrayList<Unit>();
-    for (Map.Entry<String, Course> entry : courses.entrySet()) {
-      Course c = (Course) entry.getValue();
-      // This is where we do the fancy stuff
-      toReturn.add(c);
+    ArrayList<Unit> ignored) {
+      ArrayList<Unit> toReturn = new ArrayList<Unit>();
+      for (Map.Entry<String, Course> entry : courses.entrySet()) {
+        Course c = (Course) entry.getValue();
+        toReturn.add(c);
+      }
+      for (Map.Entry<String, Lab> entry : labs.entrySet()) {
+        Lab l = (Lab) entry.getValue();
+        toReturn.add(l);
+      }
+
+      for (Unit u : ignored) {
+        toReturn.remove(u);
+      }
+
+      bubbleSort(toReturn);
+
+
+      return toReturn;
     }
-    for (Map.Entry<String, Lab> entry : labs.entrySet()) {
-      Lab l = (Lab) entry.getValue();
-      // This is where we do the fancy stuff
-      toReturn.add(l);
-    }
-
-    for (Unit u : ignored) {
-      toReturn.remove(u);
-    }
-
-    // System.out.println(toReturn);
-    bubbleSort(toReturn);
-
-    // System.out.println(toReturn);
-
-    return toReturn;
-  }
 
   /**
    * takes a arraylist of units and orders them from most constrained to least
@@ -290,30 +268,32 @@ public class Main {
       }
     }
   }
-
+  /*
+   * Function to account for potential of a lecture to have multiple sections(brothers)
+   *
+   * @param courses: hashmap of courses indexed by string
+   *
+   */
   private static void makePotentialsBros(HashMap<String, Course> courses) {
-    // System.out.println("The size of courses is " + courses.size());
     ArrayList<Course> checked = new ArrayList<Course>();
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       Course courseToAddPotential = entry.getValue();
       checked.add(courseToAddPotential);
-      // System.out.println("the size of brothers is " +
-      // courseToAddPotential.getBrothers().size());
       for (Course course : courseToAddPotential.getBrothers()) {
-        // System.out.println("I hate this");
         if (!checked.contains(course)) {
           courseToAddPotential.incrementPotential(((double) (brothersPen)) / 2);
           course.incrementPotential(((double) (brothersPen)) / 2);
-          // System.out.println("The pen added is " + brothersPen + " for brothers pen for
-          // " + course.getKey() + " and "
-          // + courseToAddPotential.getKey());
         }
       }
     }
   }
-
+  /*
+   * Function create a list of brothers(same lecture with different section)
+   *
+   * @param courses: hashmap of courses indexed by string
+   *
+   */
   private static void makeBrothers(HashMap<String, Course> courses) {
-    // System.out.println("Start Brothers");
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       for (Map.Entry<String, Course> entry2 : courses.entrySet()) {
         if (entry.getValue().isBrother(entry2.getValue())) {
@@ -322,22 +302,23 @@ public class Main {
         }
       }
     }
-    // System.out.println("Brothers Finished");
   }
 
   public static int getNumOfUnits() {
     return total_num_of_units;
   }
-
+  /*
+   * Function to account for overlapping slots
+   *
+   * @param slots: ArrayList of all slots
+   * 
+   */
   public static void setupOverlaps(ArrayList<Slot> slots) {
     for (Slot slot : slots) {
-      // slot.addOverlaps(slot);
-
       for (Slot slot2 : slots) {
         if (slot instanceof CourseSlot) {
           if (slot2 instanceof CourseSlot) {
             if (slot.getTime() == slot2.getTime()) {
-
               if (((CourseSlot) slot).getDay() == ((CourseSlot) slot2).getDay()) {
                 if (slot != slot2) {
                   slot.addOverlaps(slot2);
@@ -404,12 +385,6 @@ public class Main {
           }
         }
       }
-
-      // System.out.println("For the slot " + slot.toString() );
-      // System.out.println(slot.getOverlaps());
-
     }
-
   }
-
 }

@@ -12,30 +12,19 @@ import java.util.Map;
 import coursesULabs.*;
 
 public class SoftConstraints {
-  /*
-   * public static int calculatePenalty(Slot s, Unit u, TreeNode node, int pen) {
-   * 
-   * int total = 0; if (s instanceof CourseSlot) { total +=
-   * SoftConstraints.checkCourseMin((CourseSlot) s, node, pen);
-   * System.out.println("Calculated Course Min"); total +=
-   * SoftConstraints.preferenceEval(s, u, node);
-   * System.out.println("Calculated Preference"); total +=
-   * SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node);
-   * System.out.println("Calculated Pair"); total +=
-   * SoftConstraints.checkSections((Course) u, (CourseSlot) s, node);
-   * System.out.println("Calculated Section"); } else { total +=
-   * SoftConstraints.checkLabMin((LabSlot) s, node);
-   * System.out.println("Calculated Lab Min"); total +=
-   * SoftConstraints.preferenceEval(s, u, node);
-   * System.out.println("Calculated Lab Preference"); total +=
-   * SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, node);
-   * System.out.println("Calculated Lab Pair");
-   * 
-   * } return total;
-   * 
-   * }
-   */
 
+  /**
+   * This method should only be called on the bottom nodes of the tree
+   * 
+   * What this does is it calculates the accumulated course min penalty of all the
+   * courses that have been assigned a slot
+   * 
+   * @param s
+   * @param node
+   * @param pen
+   * @param allSlots
+   * @return accumulated course min penalty
+   */
   public static int checkCourseMin(Slot s, TreeNode node, int pen, ArrayList<Slot> allSlots) {
     int total = 0;
     TreeNode current = node;
@@ -79,6 +68,18 @@ public class SoftConstraints {
 
   }
 
+  /**
+   * This method should only be called on the bottom nodes of the tree
+   * 
+   * What this does is it calculates the accumulated lab min penalty of all the
+   * labs that have been assigned a slot
+   * 
+   * @param s
+   * @param node
+   * @param pen
+   * @param allSlots
+   * @return accumulated lab min penalty
+   */
   public static int checkLabMin(Slot s, TreeNode node, int pen, ArrayList<Slot> allSlots) {
     int total = 0;
     TreeNode current = node;
@@ -144,6 +145,17 @@ public class SoftConstraints {
 
   }
 
+  /**
+   * Gets the nodes preference times, and adds a penalty if the slot we want to
+   * assign it to is not this nodes preference time. If this slot is a preference
+   * slot for this node we check if it has any other preferences and we return the
+   * sum of those preference penalties
+   * 
+   * @param slot
+   * @param u
+   * @param node
+   * @return preference Eval penalty
+   */
   public static int preferenceEval(Slot slot, Unit u, TreeNode node) {
     HashMap<Slot, Integer> pref = u.getPreferences();
     int total = 0;
@@ -160,14 +172,18 @@ public class SoftConstraints {
     node.incrementDesire(num * Kontrol.getWeight_pref());
 
     return total;
-    /*
-     * int total = 0; for (int i = 0; i < slot.getClassAssignment().size(); i++) {
-     * if (!slot.getPreference().containsKey(slot.getClassAssignment().get(i))) {
-     * Unit u = slot.getClassAssignment().get(i); try { total += (Integer)
-     * slot.getPreference().get(u); } catch (Exception e) {}; } } return total;
-     */
   }
 
+  /**
+   * Check if this course has any pairs. If it does check that this course is
+   * being assigned with its pair. If it isn't we apply a penalty value to it.
+   * 
+   * @param b
+   * @param s
+   * @param node
+   * @param pen
+   * @return paired penalty
+   */
   public static int notPairedCourse(Course b, CourseSlot s, TreeNode node, int pen) {
 
     int total = 0;
@@ -254,10 +270,14 @@ public class SoftConstraints {
   /**
    * might be a problem with this one
    *
+   * /** Check if this lab has any pairs. If it does check that this lab is being
+   * assigned with its pair. If it isn't we apply a penalty value to it.
+   * 
    * @param b
    * @param s
    * @param node
-   * @return
+   * @param pen
+   * @return paired penalty
    */
   public static void notPairedLabDesire(Lab b, LabSlot s, TreeNode node) {
     ArrayList<Unit> pairs = b.getPairs();
@@ -299,10 +319,14 @@ public class SoftConstraints {
   }
 
   /**
-   *
+   * Check if the slot we are assigning this course in already contains the same
+   * course but different lec
+   * 
    * @param course
    * @param s
-   * @return
+   * @param node
+   * @param pen
+   * @return section penalty
    */
   public static int checkSections(Course course, CourseSlot s, TreeNode node, int pen) {
     TreeNode current = node.getParent();
