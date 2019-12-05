@@ -129,7 +129,14 @@ public class Main {
 
 
   }
-
+  /*
+   * Function to add CPSC813 and CPSC913 if CPSC313 and CPSC413 exist
+   *
+   * @param allCourses: hashmap of courses indexed by string
+   *
+   * @param parse: Class Parser to add CPSC813 and CPSC913 to partial assignment
+   *
+   */
   private static void addConstraintsForSpecialClasses(HashMap<String, Lab> allCourses, Parser parse) {
     boolean toremove813 = false;
     String id813 = "";
@@ -261,7 +268,12 @@ public class Main {
       }
     }
   }
-
+  /*
+   * Function to account for potential of a lecture to have multiple sections(brothers)
+   *
+   * @param courses: hashmap of courses indexed by string
+   *
+   */
   private static void makePotentialsBros(HashMap<String, Course> courses) {
     ArrayList<Course> checked = new ArrayList<Course>();
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
@@ -275,7 +287,12 @@ public class Main {
       }
     }
   }
-
+  /*
+   * Function create a list of brothers(same lecture with different section)
+   *
+   * @param courses: hashmap of courses indexed by string
+   *
+   */
   private static void makeBrothers(HashMap<String, Course> courses) {
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       for (Map.Entry<String, Course> entry2 : courses.entrySet()) {
@@ -290,7 +307,12 @@ public class Main {
   public static int getNumOfUnits() {
     return total_num_of_units;
   }
-
+  /*
+   * Function to account for overlapping slots
+   *
+   * @param slots: ArrayList of all slots
+   * 
+   */
   public static void setupOverlaps(ArrayList<Slot> slots) {
     for (Slot slot : slots) {
       for (Slot slot2 : slots) {
