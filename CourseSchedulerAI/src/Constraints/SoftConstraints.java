@@ -37,6 +37,32 @@ public class SoftConstraints {
    */
 
   public static int checkCourseMin(Slot s, TreeNode node, int pen, ArrayList<Slot> allSlots) {
+    int total = 0;
+    TreeNode current = node.getParent();
+    ArrayList<Pair> scheduled = new ArrayList<Pair>();
+    while (current != null){
+      scheduled.add(current.getAssign());
+      current = current.getParent();
+    }
+
+
+    for(Slot selectedSlot : allSlots){
+      if(selectedSlot instanceof CourseSlot){
+        int counter = 0;
+        for(Pair selectPair : scheduled){
+          if(selectPair.getSlot() == selectedSlot){
+            counter++;
+          }
+        }
+        total += Math.max(0, ((CourseSlot) selectedSlot).getCourseMin() - counter) * pen;
+      }
+    }
+
+    return total;
+  }
+
+  /*
+  public static int checkCourseMin(Slot s, TreeNode node, int pen, ArrayList<Slot> allSlots) {
     // decrement if the course min is met and coursemin != 1
     int count = 0;
     TreeNode current = node.getParent();
@@ -68,7 +94,33 @@ public class SoftConstraints {
 
     return pen * count;
   }
+  */
+  public static int checkLabMin(Slot s, TreeNode node, int pen, ArrayList<Slot> allSlots) {
+    int total = 0;
+    TreeNode current = node.getParent();
+    ArrayList<Pair> scheduled = new ArrayList<Pair>();
+    while (current != null){
+      scheduled.add(current.getAssign());
+      current = current.getParent();
+    }
 
+
+    for(Slot selectedSlot : allSlots){
+      if(selectedSlot instanceof LabSlot){
+        int counter = 0;
+        for(Pair selectPair : scheduled){
+          if(selectPair.getSlot() == selectedSlot){
+            counter++;
+          }
+        }
+        total += Math.max(0, ((LabSlot) selectedSlot).getLabMin() - counter) * pen;
+      }
+    }
+
+    return total;
+  }
+
+  /*
   public static int checkLabMin(Slot s, TreeNode node, int pen, ArrayList<Slot> allSlots) {
     // decrement if the course min is met and coursemin != 1
     int count = 0;
@@ -99,7 +151,7 @@ public class SoftConstraints {
     return pen * count;
 
   }
-
+  */
   public static int preferenceEval(Slot slot, Unit u, TreeNode node) {
     HashMap<Slot, Integer> pref = u.getPreferences();
     int total = 0;

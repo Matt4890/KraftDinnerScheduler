@@ -55,9 +55,9 @@ public class Generator {
             if (calc < currentBound) {
                 nodeToAdd.setPenalty(calc);
                 parent.addChild(nodeToAdd);
-                // System.out.println("######################################");
-                // System.out.println(nodeToAdd);
-                // System.out.println("######################################");
+                System.out.println("######################################");
+                System.out.println(nodeToAdd);
+                System.out.println("######################################");
 
                 if (nodeToAdd.getDepth() == totalSize) { // This should change to be something else
                     // Calculate the penalty for the remaining slots

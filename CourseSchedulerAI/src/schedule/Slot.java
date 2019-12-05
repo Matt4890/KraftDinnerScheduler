@@ -121,6 +121,10 @@ public abstract class Slot {
         totalPotential += potential;
     }
 
+	public int getCourseMin() {
+		return 0;
+	}
+
     
 
 }
