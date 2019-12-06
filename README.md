@@ -32,5 +32,6 @@ The script takes 9 arguments. These are (in order):
 - w_pref
 - w_pair
 - w_secdiff
+
 The script will run the scheduler and print the output to your console,
 however the output will also be available in the generated `CourseSchedulerAI/output.txt` file.
