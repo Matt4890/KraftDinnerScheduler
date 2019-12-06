@@ -174,8 +174,9 @@ Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
 Parent TreeNode: Depth: 2 Penalty: 13
 Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 1 Penalty: 0
-Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Unit: CPSC 813 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent TreeNode: Depth: 0 Penalty: 0
+Unit: CPSC 913 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent null
 Bound was broken after 135
 So Bound got replaced with31
@@ -194,8 +195,9 @@ Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
 Parent TreeNode: Depth: 2 Penalty: 13
 Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 1 Penalty: 0
-Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Unit: CPSC 813 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent TreeNode: Depth: 0 Penalty: 0
+Unit: CPSC 913 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent null
 Bound was broken after 142
 So Bound got replaced with23
@@ -214,8 +216,9 @@ Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
 Parent TreeNode: Depth: 2 Penalty: 13
 Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 1 Penalty: 0
-Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Unit: CPSC 813 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent TreeNode: Depth: 0 Penalty: 0
+Unit: CPSC 913 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent null
 Bound was broken after 156
 So Bound got replaced with21
@@ -234,8 +237,9 @@ Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
 Parent TreeNode: Depth: 2 Penalty: 13
 Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 1 Penalty: 0
-Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Unit: CPSC 813 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent TreeNode: Depth: 0 Penalty: 0
+Unit: CPSC 913 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent null
 Bound was broken after 169
 So Bound got replaced with18
@@ -400,12 +404,12 @@ Parent TreeNode: Depth: 0 Penalty: 0
 Parent null
 6
 Eval-value: 6
-CPSC 433 LEC 01                : TU,  9:30                     
-CPSC 433 LEC 01 TUT 01         : TU, 10:00                     
-CPSC 433 LEC 02                : TU,  9:30                     
-CPSC 433 LEC 02 LAB 02         : MO,  8:00                     
-CPSC 567 LEC 01                : MO,  9:00                     
-CPSC 567 TUT 01                : MO,  8:00                     
-SENG 311 LEC 01                : MO,  9:00                     
-SENG 311 LEC 01 TUT 01         : FR, 10:00                     
+CPSC 433 LEC 01                : TU,  9:30
+CPSC 433 LEC 01 TUT 01         : TU, 10:00
+CPSC 433 LEC 02                : TU,  9:30
+CPSC 433 LEC 02 LAB 02         : MO,  8:00
+CPSC 567 LEC 01                : MO,  9:00
+CPSC 567 TUT 01                : MO,  8:00
+SENG 311 LEC 01                : MO,  9:00
+SENG 311 LEC 01 TUT 01         : FR, 10:00
 The total number of nodes checked was 341

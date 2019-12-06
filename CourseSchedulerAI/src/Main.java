@@ -1,4 +1,4 @@
-import parser.*;
+zimport parser.*;
 import schedule.*;
 import tree.*;
 import coursesULabs.*;
@@ -23,7 +23,7 @@ public class Main {
 
   /**
    * Entry point for the scheduler AI. Calls Parser and adds partial assignments to the TreeNode - then passes it to the branch and bound
-   * 
+   *
    * @param args List of integers as strings for the weights and penalties. In
    *             order: CourseMinPenalty, LabMinPenalty, PairsPenalty,
    *             SectionsPenalty, MinAssignWeight, PrefsWeight, PairsWeight, and
@@ -73,6 +73,8 @@ public class Main {
     Kontrol.getWeight_min_filled());
 
     Kontrol.setAllSlots(parser.getAllSlots());
+    HashMap<String, Lab> allLabs = parser.getLabMap();
+    addConstraintsForSpecialClasses(allLabs, parser);
 
     if (parser.getPartialAssignments().size() != 0) {
       Pair assign = new Pair(parser.getPartialAssignments().get(0).getSlot(),
@@ -83,8 +85,6 @@ public class Main {
 
       root.setDepth(0);
 
-      HashMap<String, Lab> allLabs = parser.getLabMap();
-      addConstraintsForSpecialClasses(allLabs, parser);
       TreeNode curr = root;
       int size = parser.getPartialAssignments().size();
       for (int i = 1; i < size; i++) {
@@ -108,10 +108,12 @@ public class Main {
 
     HashMap<String, Course> allCourses = parser.getCourseMap();
 
+
     HashMap<String, Lab> allLabs = parser.getLabMap();
 
     makeSectionDiffCandidates(allCourses);
     makePotentialSectionDiffCandidates(allCourses);
+
 
     // Get list of units to ignore (partial assignments)
     ArrayList<Unit> partialAssignedUnits = new ArrayList<Unit>();
@@ -125,11 +127,13 @@ public class Main {
 
     setupOverlaps(parser.getAllSlots());
 
+    ArrayList<Slot> s = parser.getAllSlots();
+
     search.branchAndBoundSkeleton(root, unitsToProcess, parser.getAllSlots(), numberNodesBefore);
 
 
   }
-  /** 
+  /**
    * Function to add CPSC813 and CPSC913 if CPSC313 and CPSC413 exist
    *
    * @param allCourses: hashmap of courses indexed by string
@@ -153,6 +157,7 @@ public class Main {
         }
       }
     }
+
     for (Map.Entry<String, Lab> entry : allCourses.entrySet()) {
       if (entry.getValue().getCourseNum() == 813 && entry.getValue().getCourseType().equals("CPSC")) {
         Lab cpsc813 = entry.getValue();
@@ -311,7 +316,7 @@ public class Main {
    * Function to account for overlapping slots
    *
    * @param slots: ArrayList of all slots
-   * 
+   *
    */
   public static void setupOverlaps(ArrayList<Slot> slots) {
     for (Slot slot : slots) {
@@ -320,7 +325,7 @@ public class Main {
           if (slot2 instanceof CourseSlot) {
             if (slot.getTime() == slot2.getTime()) {
               if (((CourseSlot) slot).getDay() == ((CourseSlot) slot2).getDay()) {
-                if (slot != slot2) {
+                if (slot == slot2) {
                   slot.addOverlaps(slot2);
                 }
               }
@@ -342,6 +347,31 @@ public class Main {
                 }
               }
             }
+            //slot is tuth
+            else{
+              if (((LabSlot) slot2).getDay() == LabDays.TUETHR){
+                //9:00 9:00
+                if(slot.getTime() == slot2.getTime()){
+                  if (!slot.getOverlaps().contains(slot2))
+                  slot.addOverlaps(slot2);
+                }
+                //9:00 10:00
+                else if(slot.getTime() +100 == slot2.getTime()){
+                  if (!slot.getOverlaps().contains(slot2))
+                  slot.addOverlaps(slot2);
+                }
+                //9:30 10:00
+                else if(slot.getTime() + 70 == slot2.getTime()){
+                  if (!slot.getOverlaps().contains(slot2))
+                  slot.addOverlaps(slot2);
+                }
+                //9:30 9:00
+                else if(slot.getTime() == slot2.getTime() + 30){
+                  if (!slot.getOverlaps().contains(slot2))
+                  slot.addOverlaps(slot2);
+                }
+              }
+            }
           }
         }
 
@@ -349,7 +379,7 @@ public class Main {
           if (slot2 instanceof CourseSlot) {
             if (((LabSlot) slot).getDay() == LabDays.FRI) {
               if (((CourseSlot) slot2).getDay() == CourseDays.MONWEDFRI) {
-                if (slot.getTime() == slot2.getTime() || slot.getTime() == slot2.getTime() - 100) {
+                if (slot.getTime() == slot2.getTime() || slot.getTime() == slot2.getTime() + 100) {
                   if (!slot.getOverlaps().contains(slot2))
                     slot.addOverlaps(slot2);
                 }
@@ -367,17 +397,17 @@ public class Main {
                   if (slot2.getTime() == slot.getTime()) {
                     if (!slot.getOverlaps().contains(slot2))
                       slot.addOverlaps(slot2);
-                  } else if (slot.getTime() == slot2.getTime() - 100) {
+                  } else if (slot.getTime() -100 == slot2.getTime()) {
                     if (!slot.getOverlaps().contains(slot2))
                       slot.addOverlaps(slot2);
                   }
-                } else {
-                  if (slot.getTime() == slot2.getTime() + 30) {
+                  else if (slot.getTime() == slot2.getTime() - 30){
                     if (!slot.getOverlaps().contains(slot2))
-                      slot.addOverlaps(slot2);
-                  } else if (slot.getTime() == slot2.getTime() - 70) {
+                    slot.addOverlaps(slot2);
+                  }
+                  else if(slot.getTime() == slot2.getTime() + 70){
                     if (!slot.getOverlaps().contains(slot2))
-                      slot.addOverlaps(slot2);
+                    slot.addOverlaps(slot2);
                   }
                 }
               }
