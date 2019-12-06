@@ -1,39 +1,1492 @@
-So Bound got replaced with55
-TreeNode: Depth: 5 Penalty: 55
-Unit: CPSC 103 LEC 01 in Slot: MO,  9:00
-Parent TreeNode: Depth: 4 Penalty: 44
-Unit: CPSC 102 LEC 01 in Slot: MO,  9:00
-Parent TreeNode: Depth: 3 Penalty: 33
-Unit: CPSC 104 LEC 01 in Slot: MO, 10:00
-Parent TreeNode: Depth: 2 Penalty: 22
-Unit: CPSC 106 LEC 01 in Slot: MO, 10:00
-Parent TreeNode: Depth: 1 Penalty: 11
-Unit: CPSC 105 LEC 01 in Slot: MO, 10:00
+So Bound got replaced with4557
+TreeNode: Depth: 184 Penalty: 4557
+Unit: SENG 311 TUT 02 in Slot: FR, 10:00
+Parent TreeNode: Depth: 183 Penalty: 4557
+Unit: SENG 311 TUT 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 182 Penalty: 4557
+Unit: SENG 311 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 181 Penalty: 4557
+Unit: CPSC 557 TUT 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 180 Penalty: 4557
+Unit: CPSC 421 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 179 Penalty: 4557
+Unit: CPSC 594 TUT 01 in Slot: TU, 13:00
+Parent TreeNode: Depth: 178 Penalty: 4557
+Unit: CPSC 355 LEC 01 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 177 Penalty: 4557
+Unit: CPSC 333 LEC 01 TUT 01 in Slot: TU, 11:00
+Parent TreeNode: Depth: 176 Penalty: 4557
+Unit: CPSC 335 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 175 Penalty: 4557
+Unit: CPSC 335 LEC 01 TUT 02 in Slot: TU,  9:00
+Parent TreeNode: Depth: 174 Penalty: 4557
+Unit: SENG 513 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 173 Penalty: 4557
+Unit: CPSC 525 TUT 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 172 Penalty: 4557
+Unit: CPSC 231 LEC 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 171 Penalty: 4557
+Unit: CPSC 265 LEC 01 in Slot: TU, 12:30
+Parent TreeNode: Depth: 170 Penalty: 4556
+Unit: CPSC 265 LEC 02 in Slot: TU, 12:30
+Parent TreeNode: Depth: 169 Penalty: 4556
+Unit: CPSC 233 LEC 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 168 Penalty: 4555
+Unit: CPSC 233 LEC 02 in Slot: MO, 12:00
+Parent TreeNode: Depth: 167 Penalty: 4555
+Unit: CPSC 215 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 166 Penalty: 4355
+Unit: CPSC 203 LEC 03 in Slot: TU, 17:00
+Parent TreeNode: Depth: 165 Penalty: 4355
+Unit: CPSC 203 LEC 04 in Slot: MO,  9:00
+Parent TreeNode: Depth: 164 Penalty: 4354
+Unit: CPSC 203 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 163 Penalty: 4154
+Unit: CPSC 203 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 162 Penalty: 3954
+Unit: CPSC 457 LEC 01 TUT 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 161 Penalty: 3954
+Unit: CPSC 457 LEC 01 TUT 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 160 Penalty: 3954
+Unit: CPSC 559 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 159 Penalty: 3954
+Unit: CPSC 559 TUT 02 in Slot: MO, 12:00
+Parent TreeNode: Depth: 158 Penalty: 3954
+Unit: CPSC 581 TUT 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 157 Penalty: 3954
+Unit: CPSC 581 TUT 02 in Slot: MO, 10:00
+Parent TreeNode: Depth: 156 Penalty: 3954
+Unit: CPSC 433 TUT 02 in Slot: MO, 20:00
+Parent TreeNode: Depth: 155 Penalty: 3954
+Unit: CPSC 433 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 154 Penalty: 3954
+Unit: CPSC 457 LEC 02 TUT 04 in Slot: MO, 19:00
+Parent TreeNode: Depth: 153 Penalty: 3954
+Unit: CPSC 457 LEC 02 TUT 03 in Slot: TU, 16:00
+Parent TreeNode: Depth: 152 Penalty: 3954
+Unit: CPSC 565 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 151 Penalty: 3954
+Unit: CPSC 565 TUT 02 in Slot: MO, 12:00
+Parent TreeNode: Depth: 150 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 149 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 03 in Slot: TU, 11:00
+Parent TreeNode: Depth: 148 Penalty: 3954
+Unit: CPSC 455 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 147 Penalty: 3954
+Unit: CPSC 455 TUT 02 in Slot: MO, 16:00
+Parent TreeNode: Depth: 146 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 03 in Slot: TU, 13:00
+Parent TreeNode: Depth: 145 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 02 in Slot: TU, 14:00
+Parent TreeNode: Depth: 144 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 143 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 04 in Slot: MO, 18:00
+Parent TreeNode: Depth: 142 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 04 in Slot: TU, 17:00
+Parent TreeNode: Depth: 141 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 02 in Slot: TU, 19:00
+Parent TreeNode: Depth: 140 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 03 in Slot: TU, 20:00
+Parent TreeNode: Depth: 139 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 01 in Slot: FR,  8:00
+Parent TreeNode: Depth: 138 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 04 in Slot: FR, 10:00
+Parent TreeNode: Depth: 137 Penalty: 3954
+Unit: SENG 511 TUT 02 in Slot: FR, 12:00
+Parent TreeNode: Depth: 136 Penalty: 3954
+Unit: SENG 511 TUT 01 in Slot: FR, 14:00
+Parent TreeNode: Depth: 135 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 01 in Slot: TU,  9:00
+Parent TreeNode: Depth: 134 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 03 in Slot: MO, 11:00
+Parent TreeNode: Depth: 133 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 04 in Slot: MO, 15:00
+Parent TreeNode: Depth: 132 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 06 in Slot: TU, 10:00
+Parent TreeNode: Depth: 131 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 05 in Slot: FR, 16:00
+Parent TreeNode: Depth: 130 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 08 in Slot: FR, 18:00
+Parent TreeNode: Depth: 129 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 07 in Slot: MO,  9:00
+Parent TreeNode: Depth: 128 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 03 in Slot: MO, 10:00
+Parent TreeNode: Depth: 127 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 126 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 02 in Slot: TU, 16:00
+Parent TreeNode: Depth: 125 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 124 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 123 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 04 in Slot: MO, 18:00
+Parent TreeNode: Depth: 122 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 03 in Slot: MO, 19:00
+Parent TreeNode: Depth: 121 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 02 in Slot: TU, 19:00
+Parent TreeNode: Depth: 120 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 01 in Slot: TU, 11:00
+Parent TreeNode: Depth: 119 Penalty: 3954
+Unit: CPSC 453 TUT 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 118 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 02 in Slot: MO, 17:00
+Parent TreeNode: Depth: 117 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 116 Penalty: 3954
+Unit: CPSC 453 TUT 04 in Slot: TU, 13:00
+Parent TreeNode: Depth: 115 Penalty: 3954
+Unit: CPSC 453 TUT 02 in Slot: TU, 14:00
+Parent TreeNode: Depth: 114 Penalty: 3954
+Unit: CPSC 453 TUT 03 in Slot: TU, 17:00
+Parent TreeNode: Depth: 113 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 01 in Slot: TU, 20:00
+Parent TreeNode: Depth: 112 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 02 in Slot: FR,  8:00
+Parent TreeNode: Depth: 111 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 06 in Slot: FR, 10:00
+Parent TreeNode: Depth: 110 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 05 in Slot: TU,  8:00
+Parent TreeNode: Depth: 109 Penalty: 3954
+Unit: CPSC 471 TUT 01 in Slot: MO, 20:00
+Parent TreeNode: Depth: 108 Penalty: 3954
+Unit: CPSC 471 TUT 02 in Slot: FR, 12:00
+Parent TreeNode: Depth: 107 Penalty: 3954
+Unit: CPSC 471 TUT 03 in Slot: FR, 14:00
+Parent TreeNode: Depth: 106 Penalty: 3954
+Unit: CPSC 471 TUT 04 in Slot: MO, 14:00
+Parent TreeNode: Depth: 105 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 02 in Slot: TU,  9:00
+Parent TreeNode: Depth: 104 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 01 in Slot: FR, 16:00
+Parent TreeNode: Depth: 103 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 102 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 02 in Slot: TU, 10:00
+Parent TreeNode: Depth: 101 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 03 in Slot: FR, 18:00
+Parent TreeNode: Depth: 100 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 04 in Slot: MO, 11:00
+Parent TreeNode: Depth: 99 Penalty: 3954
+Unit: CPSC 203 LEC 03 TUT 17 in Slot: MO, 10:00
+Parent TreeNode: Depth: 98 Penalty: 3954
+Unit: CPSC 203 LEC 03 TUT 18 in Slot: MO,  8:00
+Parent TreeNode: Depth: 97 Penalty: 3954
+Unit: CPSC 231 LEC 01 TUT 05 in Slot: MO,  9:00
+Parent TreeNode: Depth: 96 Penalty: 3954
+Unit: CPSC 231 LEC 01 TUT 06 in Slot: MO, 15:00
+Parent TreeNode: Depth: 95 Penalty: 3954
+Unit: CPSC 203 LEC 95 TUT 90 in Slot: MO, 12:00
+Parent TreeNode: Depth: 94 Penalty: 3954
+Unit: CPSC 203 LEC 01 TUT 06 in Slot: MO, 17:00
+Parent TreeNode: Depth: 93 Penalty: 3954
+Unit: CPSC 203 LEC 01 TUT 05 in Slot: MO, 16:00
+Parent TreeNode: Depth: 92 Penalty: 3954
+Unit: CPSC 203 LEC 02 TUT 12 in Slot: TU, 17:00
+Parent TreeNode: Depth: 91 Penalty: 3954
+Unit: CPSC 203 LEC 02 TUT 11 in Slot: MO, 13:00
+Parent TreeNode: Depth: 90 Penalty: 3954
+Unit: CPSC 203 LEC 04 TUT 24 in Slot: TU, 10:00
+Parent TreeNode: Depth: 89 Penalty: 3954
+Unit: CPSC 203 LEC 04 TUT 23 in Slot: TU, 11:00
+Parent TreeNode: Depth: 88 Penalty: 3954
+Unit: CPSC 523 TUT 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 87 Penalty: 3954
+Unit: SENG 411 TUT 02 in Slot: TU, 12:00
+Parent TreeNode: Depth: 86 Penalty: 3954
+Unit: SENG 411 TUT 03 in Slot: TU, 13:00
+Parent TreeNode: Depth: 85 Penalty: 3954
+Unit: SENG 411 TUT 04 in Slot: TU, 14:00
+Parent TreeNode: Depth: 84 Penalty: 3954
+Unit: SENG 411 TUT 05 in Slot: TU, 15:00
+Parent TreeNode: Depth: 83 Penalty: 3954
+Unit: SENG 411 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 82 Penalty: 3954
+Unit: CPSC 203 LEC 95 TUT 99 in Slot: MO,  9:00
+Parent TreeNode: Depth: 81 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 13 in Slot: TU,  8:00
+Parent TreeNode: Depth: 80 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 14 in Slot: MO, 10:00
+Parent TreeNode: Depth: 79 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 15 in Slot: MO, 14:00
+Parent TreeNode: Depth: 78 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 16 in Slot: TU,  9:00
+Parent TreeNode: Depth: 77 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 03 in Slot: MO,  8:00
+Parent TreeNode: Depth: 76 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 04 in Slot: MO,  9:00
+Parent TreeNode: Depth: 75 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 74 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 02 in Slot: MO, 16:00
+Parent TreeNode: Depth: 73 Penalty: 3704
+Unit: CPSC 519 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 72 Penalty: 3704
+Unit: CPSC 233 TUT 07 in Slot: MO, 11:00
+Parent TreeNode: Depth: 71 Penalty: 3704
+Unit: CPSC 233 TUT 06 in Slot: MO, 15:00
+Parent TreeNode: Depth: 70 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 02 in Slot: TU, 16:00
+Parent TreeNode: Depth: 69 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 03 in Slot: TU,  9:00
+Parent TreeNode: Depth: 68 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 67 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 04 in Slot: MO, 14:00
+Parent TreeNode: Depth: 66 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 10 in Slot: MO, 10:00
+Parent TreeNode: Depth: 65 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 20 in Slot: MO, 13:00
+Parent TreeNode: Depth: 64 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 22 in Slot: TU, 10:00
+Parent TreeNode: Depth: 63 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 21 in Slot: TU, 11:00
+Parent TreeNode: Depth: 62 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 09 in Slot: TU, 12:00
+Parent TreeNode: Depth: 61 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 19 in Slot: TU, 13:00
+Parent TreeNode: Depth: 60 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 08 in Slot: TU, 14:00
+Parent TreeNode: Depth: 59 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 07 in Slot: TU, 15:00
+Parent TreeNode: Depth: 58 Penalty: 3704
+Unit: CPSC 591 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 57 Penalty: 3704
+Unit: CPSC 591 TUT 02 in Slot: MO, 17:00
+Parent TreeNode: Depth: 56 Penalty: 3704
+Unit: CPSC 203 LEC 95 TUT 98 in Slot: TU, 15:00
+Parent TreeNode: Depth: 55 Penalty: 3454
+Unit: CPSC 203 LEC 95 TUT 96 in Slot: MO, 16:00
+Parent TreeNode: Depth: 54 Penalty: 3204
+Unit: CPSC 203 LEC 95 TUT 97 in Slot: MO, 11:00
+Parent TreeNode: Depth: 53 Penalty: 2954
+Unit: CPSC 203 LEC 95 TUT 95 in Slot: MO, 12:00
+Parent TreeNode: Depth: 52 Penalty: 2704
+Unit: CPSC 589 TUT 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 51 Penalty: 2704
+Unit: CPSC 589 TUT 02 in Slot: MO, 15:00
+Parent TreeNode: Depth: 50 Penalty: 2704
+Unit: CPSC 233 TUT 03 in Slot: TU,  9:00
+Parent TreeNode: Depth: 49 Penalty: 2704
+Unit: CPSC 233 TUT 02 in Slot: TU, 17:00
+Parent TreeNode: Depth: 48 Penalty: 2704
+Unit: CPSC 233 TUT 05 in Slot: MO, 14:00
+Parent TreeNode: Depth: 47 Penalty: 2704
+Unit: CPSC 233 TUT 04 in Slot: MO, 10:00
+Parent TreeNode: Depth: 46 Penalty: 2704
+Unit: CPSC 233 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 45 Penalty: 2704
+Unit: CPSC 517 TUT 01 in Slot: TU, 13:00
+Parent TreeNode: Depth: 44 Penalty: 2704
+Unit: SENG 311 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 43 Penalty: 2704
+Unit: CPSC 313 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 42 Penalty: 2703
+Unit: CPSC 511 TUT 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 41 Penalty: 2703
+Unit: CPSC 587 TUT 02 in Slot: TU, 11:00
+Parent TreeNode: Depth: 40 Penalty: 2703
+Unit: CPSC 587 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 39 Penalty: 2703
+Unit: CPSC 331 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 38 Penalty: 2703
+Unit: CPSC 333 LEC 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 37 Penalty: 2703
+Unit: CPSC 355 LEC 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 36 Penalty: 2703
+Unit: CPSC 335 LEC 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 35 Penalty: 2703
+Unit: CPSC 321 LEC 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 34 Penalty: 2703
+Unit: CPSC 349 LEC 01 in Slot: TU, 12:30
+Parent TreeNode: Depth: 33 Penalty: 2703
+Unit: CPSC 510 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 32 Penalty: 2703
+Unit: CPSC 587 LEC 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 31 Penalty: 2703
+Unit: SENG 411 LEC 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 30 Penalty: 2702
+Unit: SENG 411 LEC 02 in Slot: MO, 15:00
+Parent TreeNode: Depth: 29 Penalty: 2702
+Unit: CPSC 441 LEC 01 in Slot: MO, 14:00
+Parent TreeNode: Depth: 28 Penalty: 2701
+Unit: CPSC 441 LEC 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 27 Penalty: 2701
+Unit: CPSC 457 LEC 02 in Slot: MO, 13:00
+Parent TreeNode: Depth: 26 Penalty: 2700
+Unit: CPSC 457 LEC 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 25 Penalty: 2700
+Unit: CPSC 411 LEC 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 24 Penalty: 2700
+Unit: CPSC 481 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 23 Penalty: 2700
+Unit: CPSC 471 LEC 01 in Slot: TU,  8:00
+Parent TreeNode: Depth: 22 Penalty: 2700
+Unit: CPSC 455 LEC 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 21 Penalty: 2700
+Unit: CPSC 453 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 20 Penalty: 2700
+Unit: CPSC 421 LEC 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 19 Penalty: 2700
+Unit: CPSC 413 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 18 Penalty: 2700
+Unit: CPSC 433 LEC 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 17 Penalty: 1800
+Unit: CPSC 203 LEC 95 in Slot: MO, 20:00
+Parent TreeNode: Depth: 16 Penalty: 1800
+Unit: CPSC 559 LEC 01 in Slot: TU, 12:30
+Parent TreeNode: Depth: 15 Penalty: 1800
+Unit: CPSC 594 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 14 Penalty: 1800
+Unit: CPSC 510 LEC 01 in Slot: MO, 19:00
+Parent TreeNode: Depth: 13 Penalty: 1800
+Unit: SENG 511 LEC 01 in Slot: MO, 18:00
+Parent TreeNode: Depth: 12 Penalty: 1800
+Unit: CPSC 525 LEC 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 11 Penalty: 1800
+Unit: CPSC 581 LEC 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 10 Penalty: 1800
+Unit: CPSC 565 LEC 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 9 Penalty: 1800
+Unit: SENG 513 LEC 01 in Slot: MO, 14:00
+Parent TreeNode: Depth: 8 Penalty: 1800
+Unit: CPSC 557 LEC 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 7 Penalty: 1800
+Unit: CPSC 511 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 6 Penalty: 1200
+Unit: CPSC 589 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 5 Penalty: 1200
+Unit: CPSC 517 LEC 01 in Slot: TU, 18:30
+Parent TreeNode: Depth: 4 Penalty: 600
+Unit: CPSC 519 LEC 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 3 Penalty: 0
+Unit: CPSC 523 LEC 01 in Slot: TU,  8:00
+Parent TreeNode: Depth: 2 Penalty: 0
+Unit: CPSC 591 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 813 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent TreeNode: Depth: 0 Penalty: 0
-Unit: CPSC 101 LEC 01 in Slot: MO,  8:00
+Unit: CPSC 913 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent null
-Bound was broken after 6
-We are out of things to add...
-The Best:
-TreeNode: Depth: 5 Penalty: 55
-Unit: CPSC 103 LEC 01 in Slot: MO,  9:00
-Parent TreeNode: Depth: 4 Penalty: 44
-Unit: CPSC 102 LEC 01 in Slot: MO,  9:00
-Parent TreeNode: Depth: 3 Penalty: 33
-Unit: CPSC 104 LEC 01 in Slot: MO, 10:00
-Parent TreeNode: Depth: 2 Penalty: 22
-Unit: CPSC 106 LEC 01 in Slot: MO, 10:00
-Parent TreeNode: Depth: 1 Penalty: 11
-Unit: CPSC 105 LEC 01 in Slot: MO, 10:00
+Bound was broken after 192
+So Bound got replaced with4556
+TreeNode: Depth: 184 Penalty: 4556
+Unit: SENG 311 TUT 02 in Slot: FR, 10:00
+Parent TreeNode: Depth: 183 Penalty: 4556
+Unit: SENG 311 TUT 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 182 Penalty: 4556
+Unit: SENG 311 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 181 Penalty: 4556
+Unit: CPSC 557 TUT 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 180 Penalty: 4556
+Unit: CPSC 421 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 179 Penalty: 4556
+Unit: CPSC 594 TUT 01 in Slot: TU, 13:00
+Parent TreeNode: Depth: 178 Penalty: 4556
+Unit: CPSC 355 LEC 01 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 177 Penalty: 4556
+Unit: CPSC 333 LEC 01 TUT 01 in Slot: TU, 11:00
+Parent TreeNode: Depth: 176 Penalty: 4556
+Unit: CPSC 335 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 175 Penalty: 4556
+Unit: CPSC 335 LEC 01 TUT 02 in Slot: TU,  9:00
+Parent TreeNode: Depth: 174 Penalty: 4556
+Unit: SENG 513 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 173 Penalty: 4556
+Unit: CPSC 525 TUT 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 172 Penalty: 4556
+Unit: CPSC 231 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 171 Penalty: 4556
+Unit: CPSC 265 LEC 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 170 Penalty: 4556
+Unit: CPSC 265 LEC 02 in Slot: TU, 12:30
+Parent TreeNode: Depth: 169 Penalty: 4556
+Unit: CPSC 233 LEC 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 168 Penalty: 4555
+Unit: CPSC 233 LEC 02 in Slot: MO, 12:00
+Parent TreeNode: Depth: 167 Penalty: 4555
+Unit: CPSC 215 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 166 Penalty: 4355
+Unit: CPSC 203 LEC 03 in Slot: TU, 17:00
+Parent TreeNode: Depth: 165 Penalty: 4355
+Unit: CPSC 203 LEC 04 in Slot: MO,  9:00
+Parent TreeNode: Depth: 164 Penalty: 4354
+Unit: CPSC 203 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 163 Penalty: 4154
+Unit: CPSC 203 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 162 Penalty: 3954
+Unit: CPSC 457 LEC 01 TUT 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 161 Penalty: 3954
+Unit: CPSC 457 LEC 01 TUT 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 160 Penalty: 3954
+Unit: CPSC 559 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 159 Penalty: 3954
+Unit: CPSC 559 TUT 02 in Slot: MO, 12:00
+Parent TreeNode: Depth: 158 Penalty: 3954
+Unit: CPSC 581 TUT 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 157 Penalty: 3954
+Unit: CPSC 581 TUT 02 in Slot: MO, 10:00
+Parent TreeNode: Depth: 156 Penalty: 3954
+Unit: CPSC 433 TUT 02 in Slot: MO, 20:00
+Parent TreeNode: Depth: 155 Penalty: 3954
+Unit: CPSC 433 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 154 Penalty: 3954
+Unit: CPSC 457 LEC 02 TUT 04 in Slot: MO, 19:00
+Parent TreeNode: Depth: 153 Penalty: 3954
+Unit: CPSC 457 LEC 02 TUT 03 in Slot: TU, 16:00
+Parent TreeNode: Depth: 152 Penalty: 3954
+Unit: CPSC 565 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 151 Penalty: 3954
+Unit: CPSC 565 TUT 02 in Slot: MO, 12:00
+Parent TreeNode: Depth: 150 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 149 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 03 in Slot: TU, 11:00
+Parent TreeNode: Depth: 148 Penalty: 3954
+Unit: CPSC 455 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 147 Penalty: 3954
+Unit: CPSC 455 TUT 02 in Slot: MO, 16:00
+Parent TreeNode: Depth: 146 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 03 in Slot: TU, 13:00
+Parent TreeNode: Depth: 145 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 02 in Slot: TU, 14:00
+Parent TreeNode: Depth: 144 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 143 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 04 in Slot: MO, 18:00
+Parent TreeNode: Depth: 142 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 04 in Slot: TU, 17:00
+Parent TreeNode: Depth: 141 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 02 in Slot: TU, 19:00
+Parent TreeNode: Depth: 140 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 03 in Slot: TU, 20:00
+Parent TreeNode: Depth: 139 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 01 in Slot: FR,  8:00
+Parent TreeNode: Depth: 138 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 04 in Slot: FR, 10:00
+Parent TreeNode: Depth: 137 Penalty: 3954
+Unit: SENG 511 TUT 02 in Slot: FR, 12:00
+Parent TreeNode: Depth: 136 Penalty: 3954
+Unit: SENG 511 TUT 01 in Slot: FR, 14:00
+Parent TreeNode: Depth: 135 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 01 in Slot: TU,  9:00
+Parent TreeNode: Depth: 134 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 03 in Slot: MO, 11:00
+Parent TreeNode: Depth: 133 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 04 in Slot: MO, 15:00
+Parent TreeNode: Depth: 132 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 06 in Slot: TU, 10:00
+Parent TreeNode: Depth: 131 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 05 in Slot: FR, 16:00
+Parent TreeNode: Depth: 130 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 08 in Slot: FR, 18:00
+Parent TreeNode: Depth: 129 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 07 in Slot: MO,  9:00
+Parent TreeNode: Depth: 128 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 03 in Slot: MO, 10:00
+Parent TreeNode: Depth: 127 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 126 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 02 in Slot: TU, 16:00
+Parent TreeNode: Depth: 125 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 124 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 123 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 04 in Slot: MO, 18:00
+Parent TreeNode: Depth: 122 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 03 in Slot: MO, 19:00
+Parent TreeNode: Depth: 121 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 02 in Slot: TU, 19:00
+Parent TreeNode: Depth: 120 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 01 in Slot: TU, 11:00
+Parent TreeNode: Depth: 119 Penalty: 3954
+Unit: CPSC 453 TUT 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 118 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 02 in Slot: MO, 17:00
+Parent TreeNode: Depth: 117 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 116 Penalty: 3954
+Unit: CPSC 453 TUT 04 in Slot: TU, 13:00
+Parent TreeNode: Depth: 115 Penalty: 3954
+Unit: CPSC 453 TUT 02 in Slot: TU, 14:00
+Parent TreeNode: Depth: 114 Penalty: 3954
+Unit: CPSC 453 TUT 03 in Slot: TU, 17:00
+Parent TreeNode: Depth: 113 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 01 in Slot: TU, 20:00
+Parent TreeNode: Depth: 112 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 02 in Slot: FR,  8:00
+Parent TreeNode: Depth: 111 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 06 in Slot: FR, 10:00
+Parent TreeNode: Depth: 110 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 05 in Slot: TU,  8:00
+Parent TreeNode: Depth: 109 Penalty: 3954
+Unit: CPSC 471 TUT 01 in Slot: MO, 20:00
+Parent TreeNode: Depth: 108 Penalty: 3954
+Unit: CPSC 471 TUT 02 in Slot: FR, 12:00
+Parent TreeNode: Depth: 107 Penalty: 3954
+Unit: CPSC 471 TUT 03 in Slot: FR, 14:00
+Parent TreeNode: Depth: 106 Penalty: 3954
+Unit: CPSC 471 TUT 04 in Slot: MO, 14:00
+Parent TreeNode: Depth: 105 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 02 in Slot: TU,  9:00
+Parent TreeNode: Depth: 104 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 01 in Slot: FR, 16:00
+Parent TreeNode: Depth: 103 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 102 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 02 in Slot: TU, 10:00
+Parent TreeNode: Depth: 101 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 03 in Slot: FR, 18:00
+Parent TreeNode: Depth: 100 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 04 in Slot: MO, 11:00
+Parent TreeNode: Depth: 99 Penalty: 3954
+Unit: CPSC 203 LEC 03 TUT 17 in Slot: MO, 10:00
+Parent TreeNode: Depth: 98 Penalty: 3954
+Unit: CPSC 203 LEC 03 TUT 18 in Slot: MO,  8:00
+Parent TreeNode: Depth: 97 Penalty: 3954
+Unit: CPSC 231 LEC 01 TUT 05 in Slot: MO,  9:00
+Parent TreeNode: Depth: 96 Penalty: 3954
+Unit: CPSC 231 LEC 01 TUT 06 in Slot: MO, 15:00
+Parent TreeNode: Depth: 95 Penalty: 3954
+Unit: CPSC 203 LEC 95 TUT 90 in Slot: MO, 12:00
+Parent TreeNode: Depth: 94 Penalty: 3954
+Unit: CPSC 203 LEC 01 TUT 06 in Slot: MO, 17:00
+Parent TreeNode: Depth: 93 Penalty: 3954
+Unit: CPSC 203 LEC 01 TUT 05 in Slot: MO, 16:00
+Parent TreeNode: Depth: 92 Penalty: 3954
+Unit: CPSC 203 LEC 02 TUT 12 in Slot: TU, 17:00
+Parent TreeNode: Depth: 91 Penalty: 3954
+Unit: CPSC 203 LEC 02 TUT 11 in Slot: MO, 13:00
+Parent TreeNode: Depth: 90 Penalty: 3954
+Unit: CPSC 203 LEC 04 TUT 24 in Slot: TU, 10:00
+Parent TreeNode: Depth: 89 Penalty: 3954
+Unit: CPSC 203 LEC 04 TUT 23 in Slot: TU, 11:00
+Parent TreeNode: Depth: 88 Penalty: 3954
+Unit: CPSC 523 TUT 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 87 Penalty: 3954
+Unit: SENG 411 TUT 02 in Slot: TU, 12:00
+Parent TreeNode: Depth: 86 Penalty: 3954
+Unit: SENG 411 TUT 03 in Slot: TU, 13:00
+Parent TreeNode: Depth: 85 Penalty: 3954
+Unit: SENG 411 TUT 04 in Slot: TU, 14:00
+Parent TreeNode: Depth: 84 Penalty: 3954
+Unit: SENG 411 TUT 05 in Slot: TU, 15:00
+Parent TreeNode: Depth: 83 Penalty: 3954
+Unit: SENG 411 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 82 Penalty: 3954
+Unit: CPSC 203 LEC 95 TUT 99 in Slot: MO,  9:00
+Parent TreeNode: Depth: 81 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 13 in Slot: TU,  8:00
+Parent TreeNode: Depth: 80 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 14 in Slot: MO, 10:00
+Parent TreeNode: Depth: 79 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 15 in Slot: MO, 14:00
+Parent TreeNode: Depth: 78 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 16 in Slot: TU,  9:00
+Parent TreeNode: Depth: 77 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 03 in Slot: MO,  8:00
+Parent TreeNode: Depth: 76 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 04 in Slot: MO,  9:00
+Parent TreeNode: Depth: 75 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 74 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 02 in Slot: MO, 16:00
+Parent TreeNode: Depth: 73 Penalty: 3704
+Unit: CPSC 519 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 72 Penalty: 3704
+Unit: CPSC 233 TUT 07 in Slot: MO, 11:00
+Parent TreeNode: Depth: 71 Penalty: 3704
+Unit: CPSC 233 TUT 06 in Slot: MO, 15:00
+Parent TreeNode: Depth: 70 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 02 in Slot: TU, 16:00
+Parent TreeNode: Depth: 69 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 03 in Slot: TU,  9:00
+Parent TreeNode: Depth: 68 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 67 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 04 in Slot: MO, 14:00
+Parent TreeNode: Depth: 66 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 10 in Slot: MO, 10:00
+Parent TreeNode: Depth: 65 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 20 in Slot: MO, 13:00
+Parent TreeNode: Depth: 64 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 22 in Slot: TU, 10:00
+Parent TreeNode: Depth: 63 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 21 in Slot: TU, 11:00
+Parent TreeNode: Depth: 62 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 09 in Slot: TU, 12:00
+Parent TreeNode: Depth: 61 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 19 in Slot: TU, 13:00
+Parent TreeNode: Depth: 60 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 08 in Slot: TU, 14:00
+Parent TreeNode: Depth: 59 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 07 in Slot: TU, 15:00
+Parent TreeNode: Depth: 58 Penalty: 3704
+Unit: CPSC 591 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 57 Penalty: 3704
+Unit: CPSC 591 TUT 02 in Slot: MO, 17:00
+Parent TreeNode: Depth: 56 Penalty: 3704
+Unit: CPSC 203 LEC 95 TUT 98 in Slot: TU, 15:00
+Parent TreeNode: Depth: 55 Penalty: 3454
+Unit: CPSC 203 LEC 95 TUT 96 in Slot: MO, 16:00
+Parent TreeNode: Depth: 54 Penalty: 3204
+Unit: CPSC 203 LEC 95 TUT 97 in Slot: MO, 11:00
+Parent TreeNode: Depth: 53 Penalty: 2954
+Unit: CPSC 203 LEC 95 TUT 95 in Slot: MO, 12:00
+Parent TreeNode: Depth: 52 Penalty: 2704
+Unit: CPSC 589 TUT 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 51 Penalty: 2704
+Unit: CPSC 589 TUT 02 in Slot: MO, 15:00
+Parent TreeNode: Depth: 50 Penalty: 2704
+Unit: CPSC 233 TUT 03 in Slot: TU,  9:00
+Parent TreeNode: Depth: 49 Penalty: 2704
+Unit: CPSC 233 TUT 02 in Slot: TU, 17:00
+Parent TreeNode: Depth: 48 Penalty: 2704
+Unit: CPSC 233 TUT 05 in Slot: MO, 14:00
+Parent TreeNode: Depth: 47 Penalty: 2704
+Unit: CPSC 233 TUT 04 in Slot: MO, 10:00
+Parent TreeNode: Depth: 46 Penalty: 2704
+Unit: CPSC 233 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 45 Penalty: 2704
+Unit: CPSC 517 TUT 01 in Slot: TU, 13:00
+Parent TreeNode: Depth: 44 Penalty: 2704
+Unit: SENG 311 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 43 Penalty: 2704
+Unit: CPSC 313 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 42 Penalty: 2703
+Unit: CPSC 511 TUT 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 41 Penalty: 2703
+Unit: CPSC 587 TUT 02 in Slot: TU, 11:00
+Parent TreeNode: Depth: 40 Penalty: 2703
+Unit: CPSC 587 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 39 Penalty: 2703
+Unit: CPSC 331 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 38 Penalty: 2703
+Unit: CPSC 333 LEC 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 37 Penalty: 2703
+Unit: CPSC 355 LEC 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 36 Penalty: 2703
+Unit: CPSC 335 LEC 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 35 Penalty: 2703
+Unit: CPSC 321 LEC 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 34 Penalty: 2703
+Unit: CPSC 349 LEC 01 in Slot: TU, 12:30
+Parent TreeNode: Depth: 33 Penalty: 2703
+Unit: CPSC 510 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 32 Penalty: 2703
+Unit: CPSC 587 LEC 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 31 Penalty: 2703
+Unit: SENG 411 LEC 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 30 Penalty: 2702
+Unit: SENG 411 LEC 02 in Slot: MO, 15:00
+Parent TreeNode: Depth: 29 Penalty: 2702
+Unit: CPSC 441 LEC 01 in Slot: MO, 14:00
+Parent TreeNode: Depth: 28 Penalty: 2701
+Unit: CPSC 441 LEC 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 27 Penalty: 2701
+Unit: CPSC 457 LEC 02 in Slot: MO, 13:00
+Parent TreeNode: Depth: 26 Penalty: 2700
+Unit: CPSC 457 LEC 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 25 Penalty: 2700
+Unit: CPSC 411 LEC 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 24 Penalty: 2700
+Unit: CPSC 481 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 23 Penalty: 2700
+Unit: CPSC 471 LEC 01 in Slot: TU,  8:00
+Parent TreeNode: Depth: 22 Penalty: 2700
+Unit: CPSC 455 LEC 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 21 Penalty: 2700
+Unit: CPSC 453 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 20 Penalty: 2700
+Unit: CPSC 421 LEC 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 19 Penalty: 2700
+Unit: CPSC 413 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 18 Penalty: 2700
+Unit: CPSC 433 LEC 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 17 Penalty: 1800
+Unit: CPSC 203 LEC 95 in Slot: MO, 20:00
+Parent TreeNode: Depth: 16 Penalty: 1800
+Unit: CPSC 559 LEC 01 in Slot: TU, 12:30
+Parent TreeNode: Depth: 15 Penalty: 1800
+Unit: CPSC 594 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 14 Penalty: 1800
+Unit: CPSC 510 LEC 01 in Slot: MO, 19:00
+Parent TreeNode: Depth: 13 Penalty: 1800
+Unit: SENG 511 LEC 01 in Slot: MO, 18:00
+Parent TreeNode: Depth: 12 Penalty: 1800
+Unit: CPSC 525 LEC 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 11 Penalty: 1800
+Unit: CPSC 581 LEC 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 10 Penalty: 1800
+Unit: CPSC 565 LEC 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 9 Penalty: 1800
+Unit: SENG 513 LEC 01 in Slot: MO, 14:00
+Parent TreeNode: Depth: 8 Penalty: 1800
+Unit: CPSC 557 LEC 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 7 Penalty: 1800
+Unit: CPSC 511 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 6 Penalty: 1200
+Unit: CPSC 589 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 5 Penalty: 1200
+Unit: CPSC 517 LEC 01 in Slot: TU, 18:30
+Parent TreeNode: Depth: 4 Penalty: 600
+Unit: CPSC 519 LEC 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 3 Penalty: 0
+Unit: CPSC 523 LEC 01 in Slot: TU,  8:00
+Parent TreeNode: Depth: 2 Penalty: 0
+Unit: CPSC 591 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 813 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent TreeNode: Depth: 0 Penalty: 0
-Unit: CPSC 101 LEC 01 in Slot: MO,  8:00
+Unit: CPSC 913 LEC 01 LAB 00 in Slot: TU, 18:00
 Parent null
-55
-Eval-value: 55
-CPSC 101 LEC 01                : MO,  8:00                     
-CPSC 102 LEC 01                : MO,  9:00                     
-CPSC 103 LEC 01                : MO,  9:00                     
-CPSC 104 LEC 01                : MO, 10:00                     
-CPSC 105 LEC 01                : MO, 10:00                     
-CPSC 106 LEC 01                : MO, 10:00                     
-The total number of nodes checked was 11
+Bound was broken after 320
+So Bound got replaced with4555
+TreeNode: Depth: 184 Penalty: 4555
+Unit: SENG 311 TUT 02 in Slot: FR, 10:00
+Parent TreeNode: Depth: 183 Penalty: 4555
+Unit: SENG 311 TUT 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 182 Penalty: 4555
+Unit: SENG 311 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 181 Penalty: 4555
+Unit: CPSC 557 TUT 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 180 Penalty: 4555
+Unit: CPSC 421 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 179 Penalty: 4555
+Unit: CPSC 594 TUT 01 in Slot: TU, 13:00
+Parent TreeNode: Depth: 178 Penalty: 4555
+Unit: CPSC 355 LEC 01 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 177 Penalty: 4555
+Unit: CPSC 333 LEC 01 TUT 01 in Slot: TU, 11:00
+Parent TreeNode: Depth: 176 Penalty: 4555
+Unit: CPSC 335 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 175 Penalty: 4555
+Unit: CPSC 335 LEC 01 TUT 02 in Slot: TU,  9:00
+Parent TreeNode: Depth: 174 Penalty: 4555
+Unit: SENG 513 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 173 Penalty: 4555
+Unit: CPSC 525 TUT 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 172 Penalty: 4555
+Unit: CPSC 231 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 171 Penalty: 4555
+Unit: CPSC 265 LEC 01 in Slot: TU, 12:30
+Parent TreeNode: Depth: 170 Penalty: 4555
+Unit: CPSC 265 LEC 02 in Slot: MO, 17:00
+Parent TreeNode: Depth: 169 Penalty: 4555
+Unit: CPSC 233 LEC 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 168 Penalty: 4555
+Unit: CPSC 233 LEC 02 in Slot: MO, 12:00
+Parent TreeNode: Depth: 167 Penalty: 4555
+Unit: CPSC 215 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 166 Penalty: 4355
+Unit: CPSC 203 LEC 03 in Slot: TU, 17:00
+Parent TreeNode: Depth: 165 Penalty: 4355
+Unit: CPSC 203 LEC 04 in Slot: MO,  9:00
+Parent TreeNode: Depth: 164 Penalty: 4354
+Unit: CPSC 203 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 163 Penalty: 4154
+Unit: CPSC 203 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 162 Penalty: 3954
+Unit: CPSC 457 LEC 01 TUT 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 161 Penalty: 3954
+Unit: CPSC 457 LEC 01 TUT 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 160 Penalty: 3954
+Unit: CPSC 559 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 159 Penalty: 3954
+Unit: CPSC 559 TUT 02 in Slot: MO, 12:00
+Parent TreeNode: Depth: 158 Penalty: 3954
+Unit: CPSC 581 TUT 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 157 Penalty: 3954
+Unit: CPSC 581 TUT 02 in Slot: MO, 10:00
+Parent TreeNode: Depth: 156 Penalty: 3954
+Unit: CPSC 433 TUT 02 in Slot: MO, 20:00
+Parent TreeNode: Depth: 155 Penalty: 3954
+Unit: CPSC 433 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 154 Penalty: 3954
+Unit: CPSC 457 LEC 02 TUT 04 in Slot: MO, 19:00
+Parent TreeNode: Depth: 153 Penalty: 3954
+Unit: CPSC 457 LEC 02 TUT 03 in Slot: TU, 16:00
+Parent TreeNode: Depth: 152 Penalty: 3954
+Unit: CPSC 565 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 151 Penalty: 3954
+Unit: CPSC 565 TUT 02 in Slot: MO, 12:00
+Parent TreeNode: Depth: 150 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 149 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 03 in Slot: TU, 11:00
+Parent TreeNode: Depth: 148 Penalty: 3954
+Unit: CPSC 455 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 147 Penalty: 3954
+Unit: CPSC 455 TUT 02 in Slot: MO, 16:00
+Parent TreeNode: Depth: 146 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 03 in Slot: TU, 13:00
+Parent TreeNode: Depth: 145 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 02 in Slot: TU, 14:00
+Parent TreeNode: Depth: 144 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 143 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 04 in Slot: MO, 18:00
+Parent TreeNode: Depth: 142 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 04 in Slot: TU, 17:00
+Parent TreeNode: Depth: 141 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 02 in Slot: TU, 19:00
+Parent TreeNode: Depth: 140 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 03 in Slot: TU, 20:00
+Parent TreeNode: Depth: 139 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 01 in Slot: FR,  8:00
+Parent TreeNode: Depth: 138 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 04 in Slot: FR, 10:00
+Parent TreeNode: Depth: 137 Penalty: 3954
+Unit: SENG 511 TUT 02 in Slot: FR, 12:00
+Parent TreeNode: Depth: 136 Penalty: 3954
+Unit: SENG 511 TUT 01 in Slot: FR, 14:00
+Parent TreeNode: Depth: 135 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 01 in Slot: TU,  9:00
+Parent TreeNode: Depth: 134 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 03 in Slot: MO, 11:00
+Parent TreeNode: Depth: 133 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 04 in Slot: MO, 15:00
+Parent TreeNode: Depth: 132 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 06 in Slot: TU, 10:00
+Parent TreeNode: Depth: 131 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 05 in Slot: FR, 16:00
+Parent TreeNode: Depth: 130 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 08 in Slot: FR, 18:00
+Parent TreeNode: Depth: 129 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 07 in Slot: MO,  9:00
+Parent TreeNode: Depth: 128 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 03 in Slot: MO, 10:00
+Parent TreeNode: Depth: 127 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 126 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 02 in Slot: TU, 16:00
+Parent TreeNode: Depth: 125 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 124 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 123 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 04 in Slot: MO, 18:00
+Parent TreeNode: Depth: 122 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 03 in Slot: MO, 19:00
+Parent TreeNode: Depth: 121 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 02 in Slot: TU, 19:00
+Parent TreeNode: Depth: 120 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 01 in Slot: TU, 11:00
+Parent TreeNode: Depth: 119 Penalty: 3954
+Unit: CPSC 453 TUT 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 118 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 02 in Slot: MO, 17:00
+Parent TreeNode: Depth: 117 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 116 Penalty: 3954
+Unit: CPSC 453 TUT 04 in Slot: TU, 13:00
+Parent TreeNode: Depth: 115 Penalty: 3954
+Unit: CPSC 453 TUT 02 in Slot: TU, 14:00
+Parent TreeNode: Depth: 114 Penalty: 3954
+Unit: CPSC 453 TUT 03 in Slot: TU, 17:00
+Parent TreeNode: Depth: 113 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 01 in Slot: TU, 20:00
+Parent TreeNode: Depth: 112 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 02 in Slot: FR,  8:00
+Parent TreeNode: Depth: 111 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 06 in Slot: FR, 10:00
+Parent TreeNode: Depth: 110 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 05 in Slot: TU,  8:00
+Parent TreeNode: Depth: 109 Penalty: 3954
+Unit: CPSC 471 TUT 01 in Slot: MO, 20:00
+Parent TreeNode: Depth: 108 Penalty: 3954
+Unit: CPSC 471 TUT 02 in Slot: FR, 12:00
+Parent TreeNode: Depth: 107 Penalty: 3954
+Unit: CPSC 471 TUT 03 in Slot: FR, 14:00
+Parent TreeNode: Depth: 106 Penalty: 3954
+Unit: CPSC 471 TUT 04 in Slot: MO, 14:00
+Parent TreeNode: Depth: 105 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 02 in Slot: TU,  9:00
+Parent TreeNode: Depth: 104 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 01 in Slot: FR, 16:00
+Parent TreeNode: Depth: 103 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 102 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 02 in Slot: TU, 10:00
+Parent TreeNode: Depth: 101 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 03 in Slot: FR, 18:00
+Parent TreeNode: Depth: 100 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 04 in Slot: MO, 11:00
+Parent TreeNode: Depth: 99 Penalty: 3954
+Unit: CPSC 203 LEC 03 TUT 17 in Slot: MO, 10:00
+Parent TreeNode: Depth: 98 Penalty: 3954
+Unit: CPSC 203 LEC 03 TUT 18 in Slot: MO,  8:00
+Parent TreeNode: Depth: 97 Penalty: 3954
+Unit: CPSC 231 LEC 01 TUT 05 in Slot: MO,  9:00
+Parent TreeNode: Depth: 96 Penalty: 3954
+Unit: CPSC 231 LEC 01 TUT 06 in Slot: MO, 15:00
+Parent TreeNode: Depth: 95 Penalty: 3954
+Unit: CPSC 203 LEC 95 TUT 90 in Slot: MO, 12:00
+Parent TreeNode: Depth: 94 Penalty: 3954
+Unit: CPSC 203 LEC 01 TUT 06 in Slot: MO, 17:00
+Parent TreeNode: Depth: 93 Penalty: 3954
+Unit: CPSC 203 LEC 01 TUT 05 in Slot: MO, 16:00
+Parent TreeNode: Depth: 92 Penalty: 3954
+Unit: CPSC 203 LEC 02 TUT 12 in Slot: TU, 17:00
+Parent TreeNode: Depth: 91 Penalty: 3954
+Unit: CPSC 203 LEC 02 TUT 11 in Slot: MO, 13:00
+Parent TreeNode: Depth: 90 Penalty: 3954
+Unit: CPSC 203 LEC 04 TUT 24 in Slot: TU, 10:00
+Parent TreeNode: Depth: 89 Penalty: 3954
+Unit: CPSC 203 LEC 04 TUT 23 in Slot: TU, 11:00
+Parent TreeNode: Depth: 88 Penalty: 3954
+Unit: CPSC 523 TUT 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 87 Penalty: 3954
+Unit: SENG 411 TUT 02 in Slot: TU, 12:00
+Parent TreeNode: Depth: 86 Penalty: 3954
+Unit: SENG 411 TUT 03 in Slot: TU, 13:00
+Parent TreeNode: Depth: 85 Penalty: 3954
+Unit: SENG 411 TUT 04 in Slot: TU, 14:00
+Parent TreeNode: Depth: 84 Penalty: 3954
+Unit: SENG 411 TUT 05 in Slot: TU, 15:00
+Parent TreeNode: Depth: 83 Penalty: 3954
+Unit: SENG 411 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 82 Penalty: 3954
+Unit: CPSC 203 LEC 95 TUT 99 in Slot: MO,  9:00
+Parent TreeNode: Depth: 81 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 13 in Slot: TU,  8:00
+Parent TreeNode: Depth: 80 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 14 in Slot: MO, 10:00
+Parent TreeNode: Depth: 79 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 15 in Slot: MO, 14:00
+Parent TreeNode: Depth: 78 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 16 in Slot: TU,  9:00
+Parent TreeNode: Depth: 77 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 03 in Slot: MO,  8:00
+Parent TreeNode: Depth: 76 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 04 in Slot: MO,  9:00
+Parent TreeNode: Depth: 75 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 74 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 02 in Slot: MO, 16:00
+Parent TreeNode: Depth: 73 Penalty: 3704
+Unit: CPSC 519 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 72 Penalty: 3704
+Unit: CPSC 233 TUT 07 in Slot: MO, 11:00
+Parent TreeNode: Depth: 71 Penalty: 3704
+Unit: CPSC 233 TUT 06 in Slot: MO, 15:00
+Parent TreeNode: Depth: 70 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 02 in Slot: TU, 16:00
+Parent TreeNode: Depth: 69 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 03 in Slot: TU,  9:00
+Parent TreeNode: Depth: 68 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 67 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 04 in Slot: MO, 14:00
+Parent TreeNode: Depth: 66 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 10 in Slot: MO, 10:00
+Parent TreeNode: Depth: 65 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 20 in Slot: MO, 13:00
+Parent TreeNode: Depth: 64 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 22 in Slot: TU, 10:00
+Parent TreeNode: Depth: 63 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 21 in Slot: TU, 11:00
+Parent TreeNode: Depth: 62 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 09 in Slot: TU, 12:00
+Parent TreeNode: Depth: 61 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 19 in Slot: TU, 13:00
+Parent TreeNode: Depth: 60 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 08 in Slot: TU, 14:00
+Parent TreeNode: Depth: 59 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 07 in Slot: TU, 15:00
+Parent TreeNode: Depth: 58 Penalty: 3704
+Unit: CPSC 591 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 57 Penalty: 3704
+Unit: CPSC 591 TUT 02 in Slot: MO, 17:00
+Parent TreeNode: Depth: 56 Penalty: 3704
+Unit: CPSC 203 LEC 95 TUT 98 in Slot: TU, 15:00
+Parent TreeNode: Depth: 55 Penalty: 3454
+Unit: CPSC 203 LEC 95 TUT 96 in Slot: MO, 16:00
+Parent TreeNode: Depth: 54 Penalty: 3204
+Unit: CPSC 203 LEC 95 TUT 97 in Slot: MO, 11:00
+Parent TreeNode: Depth: 53 Penalty: 2954
+Unit: CPSC 203 LEC 95 TUT 95 in Slot: MO, 12:00
+Parent TreeNode: Depth: 52 Penalty: 2704
+Unit: CPSC 589 TUT 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 51 Penalty: 2704
+Unit: CPSC 589 TUT 02 in Slot: MO, 15:00
+Parent TreeNode: Depth: 50 Penalty: 2704
+Unit: CPSC 233 TUT 03 in Slot: TU,  9:00
+Parent TreeNode: Depth: 49 Penalty: 2704
+Unit: CPSC 233 TUT 02 in Slot: TU, 17:00
+Parent TreeNode: Depth: 48 Penalty: 2704
+Unit: CPSC 233 TUT 05 in Slot: MO, 14:00
+Parent TreeNode: Depth: 47 Penalty: 2704
+Unit: CPSC 233 TUT 04 in Slot: MO, 10:00
+Parent TreeNode: Depth: 46 Penalty: 2704
+Unit: CPSC 233 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 45 Penalty: 2704
+Unit: CPSC 517 TUT 01 in Slot: TU, 13:00
+Parent TreeNode: Depth: 44 Penalty: 2704
+Unit: SENG 311 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 43 Penalty: 2704
+Unit: CPSC 313 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 42 Penalty: 2703
+Unit: CPSC 511 TUT 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 41 Penalty: 2703
+Unit: CPSC 587 TUT 02 in Slot: TU, 11:00
+Parent TreeNode: Depth: 40 Penalty: 2703
+Unit: CPSC 587 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 39 Penalty: 2703
+Unit: CPSC 331 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 38 Penalty: 2703
+Unit: CPSC 333 LEC 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 37 Penalty: 2703
+Unit: CPSC 355 LEC 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 36 Penalty: 2703
+Unit: CPSC 335 LEC 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 35 Penalty: 2703
+Unit: CPSC 321 LEC 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 34 Penalty: 2703
+Unit: CPSC 349 LEC 01 in Slot: TU, 12:30
+Parent TreeNode: Depth: 33 Penalty: 2703
+Unit: CPSC 510 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 32 Penalty: 2703
+Unit: CPSC 587 LEC 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 31 Penalty: 2703
+Unit: SENG 411 LEC 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 30 Penalty: 2702
+Unit: SENG 411 LEC 02 in Slot: MO, 15:00
+Parent TreeNode: Depth: 29 Penalty: 2702
+Unit: CPSC 441 LEC 01 in Slot: MO, 14:00
+Parent TreeNode: Depth: 28 Penalty: 2701
+Unit: CPSC 441 LEC 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 27 Penalty: 2701
+Unit: CPSC 457 LEC 02 in Slot: MO, 13:00
+Parent TreeNode: Depth: 26 Penalty: 2700
+Unit: CPSC 457 LEC 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 25 Penalty: 2700
+Unit: CPSC 411 LEC 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 24 Penalty: 2700
+Unit: CPSC 481 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 23 Penalty: 2700
+Unit: CPSC 471 LEC 01 in Slot: TU,  8:00
+Parent TreeNode: Depth: 22 Penalty: 2700
+Unit: CPSC 455 LEC 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 21 Penalty: 2700
+Unit: CPSC 453 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 20 Penalty: 2700
+Unit: CPSC 421 LEC 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 19 Penalty: 2700
+Unit: CPSC 413 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 18 Penalty: 2700
+Unit: CPSC 433 LEC 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 17 Penalty: 1800
+Unit: CPSC 203 LEC 95 in Slot: MO, 20:00
+Parent TreeNode: Depth: 16 Penalty: 1800
+Unit: CPSC 559 LEC 01 in Slot: TU, 12:30
+Parent TreeNode: Depth: 15 Penalty: 1800
+Unit: CPSC 594 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 14 Penalty: 1800
+Unit: CPSC 510 LEC 01 in Slot: MO, 19:00
+Parent TreeNode: Depth: 13 Penalty: 1800
+Unit: SENG 511 LEC 01 in Slot: MO, 18:00
+Parent TreeNode: Depth: 12 Penalty: 1800
+Unit: CPSC 525 LEC 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 11 Penalty: 1800
+Unit: CPSC 581 LEC 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 10 Penalty: 1800
+Unit: CPSC 565 LEC 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 9 Penalty: 1800
+Unit: SENG 513 LEC 01 in Slot: MO, 14:00
+Parent TreeNode: Depth: 8 Penalty: 1800
+Unit: CPSC 557 LEC 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 7 Penalty: 1800
+Unit: CPSC 511 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 6 Penalty: 1200
+Unit: CPSC 589 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 5 Penalty: 1200
+Unit: CPSC 517 LEC 01 in Slot: TU, 18:30
+Parent TreeNode: Depth: 4 Penalty: 600
+Unit: CPSC 519 LEC 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 3 Penalty: 0
+Unit: CPSC 523 LEC 01 in Slot: TU,  8:00
+Parent TreeNode: Depth: 2 Penalty: 0
+Unit: CPSC 591 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 813 LEC 01 LAB 00 in Slot: TU, 18:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Unit: CPSC 913 LEC 01 LAB 00 in Slot: TU, 18:00
+Parent null
+Bound was broken after 468
+So Bound got replaced with4554
+TreeNode: Depth: 184 Penalty: 4554
+Unit: SENG 311 TUT 02 in Slot: FR, 10:00
+Parent TreeNode: Depth: 183 Penalty: 4554
+Unit: SENG 311 TUT 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 182 Penalty: 4554
+Unit: SENG 311 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 181 Penalty: 4554
+Unit: CPSC 557 TUT 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 180 Penalty: 4554
+Unit: CPSC 421 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 179 Penalty: 4554
+Unit: CPSC 594 TUT 01 in Slot: TU, 13:00
+Parent TreeNode: Depth: 178 Penalty: 4554
+Unit: CPSC 355 LEC 01 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 177 Penalty: 4554
+Unit: CPSC 333 LEC 01 TUT 01 in Slot: TU, 11:00
+Parent TreeNode: Depth: 176 Penalty: 4554
+Unit: CPSC 335 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 175 Penalty: 4554
+Unit: CPSC 335 LEC 01 TUT 02 in Slot: TU,  9:00
+Parent TreeNode: Depth: 174 Penalty: 4554
+Unit: SENG 513 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 173 Penalty: 4554
+Unit: CPSC 525 TUT 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 172 Penalty: 4554
+Unit: CPSC 231 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 171 Penalty: 4554
+Unit: CPSC 265 LEC 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 170 Penalty: 4554
+Unit: CPSC 265 LEC 02 in Slot: TU, 12:30
+Parent TreeNode: Depth: 169 Penalty: 4554
+Unit: CPSC 233 LEC 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 168 Penalty: 4554
+Unit: CPSC 233 LEC 02 in Slot: MO, 16:00
+Parent TreeNode: Depth: 167 Penalty: 4554
+Unit: CPSC 215 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 166 Penalty: 4354
+Unit: CPSC 203 LEC 03 in Slot: MO, 12:00
+Parent TreeNode: Depth: 165 Penalty: 4354
+Unit: CPSC 203 LEC 04 in Slot: TU, 17:00
+Parent TreeNode: Depth: 164 Penalty: 4354
+Unit: CPSC 203 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 163 Penalty: 4154
+Unit: CPSC 203 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 162 Penalty: 3954
+Unit: CPSC 457 LEC 01 TUT 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 161 Penalty: 3954
+Unit: CPSC 457 LEC 01 TUT 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 160 Penalty: 3954
+Unit: CPSC 559 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 159 Penalty: 3954
+Unit: CPSC 559 TUT 02 in Slot: MO, 12:00
+Parent TreeNode: Depth: 158 Penalty: 3954
+Unit: CPSC 581 TUT 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 157 Penalty: 3954
+Unit: CPSC 581 TUT 02 in Slot: MO, 10:00
+Parent TreeNode: Depth: 156 Penalty: 3954
+Unit: CPSC 433 TUT 02 in Slot: MO, 20:00
+Parent TreeNode: Depth: 155 Penalty: 3954
+Unit: CPSC 433 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 154 Penalty: 3954
+Unit: CPSC 457 LEC 02 TUT 04 in Slot: MO, 19:00
+Parent TreeNode: Depth: 153 Penalty: 3954
+Unit: CPSC 457 LEC 02 TUT 03 in Slot: TU, 16:00
+Parent TreeNode: Depth: 152 Penalty: 3954
+Unit: CPSC 565 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 151 Penalty: 3954
+Unit: CPSC 565 TUT 02 in Slot: MO, 12:00
+Parent TreeNode: Depth: 150 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 149 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 03 in Slot: TU, 11:00
+Parent TreeNode: Depth: 148 Penalty: 3954
+Unit: CPSC 455 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 147 Penalty: 3954
+Unit: CPSC 455 TUT 02 in Slot: MO, 16:00
+Parent TreeNode: Depth: 146 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 03 in Slot: TU, 13:00
+Parent TreeNode: Depth: 145 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 02 in Slot: TU, 14:00
+Parent TreeNode: Depth: 144 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 143 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 04 in Slot: MO, 18:00
+Parent TreeNode: Depth: 142 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 04 in Slot: TU, 17:00
+Parent TreeNode: Depth: 141 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 02 in Slot: TU, 19:00
+Parent TreeNode: Depth: 140 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 03 in Slot: TU, 20:00
+Parent TreeNode: Depth: 139 Penalty: 3954
+Unit: CPSC 441 LEC 01 TUT 01 in Slot: FR,  8:00
+Parent TreeNode: Depth: 138 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 04 in Slot: FR, 10:00
+Parent TreeNode: Depth: 137 Penalty: 3954
+Unit: SENG 511 TUT 02 in Slot: FR, 12:00
+Parent TreeNode: Depth: 136 Penalty: 3954
+Unit: SENG 511 TUT 01 in Slot: FR, 14:00
+Parent TreeNode: Depth: 135 Penalty: 3954
+Unit: CPSC 349 LEC 01 TUT 01 in Slot: TU,  9:00
+Parent TreeNode: Depth: 134 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 03 in Slot: MO, 11:00
+Parent TreeNode: Depth: 133 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 04 in Slot: MO, 15:00
+Parent TreeNode: Depth: 132 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 06 in Slot: TU, 10:00
+Parent TreeNode: Depth: 131 Penalty: 3954
+Unit: CPSC 441 LEC 02 TUT 05 in Slot: FR, 16:00
+Parent TreeNode: Depth: 130 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 08 in Slot: FR, 18:00
+Parent TreeNode: Depth: 129 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 07 in Slot: MO,  9:00
+Parent TreeNode: Depth: 128 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 03 in Slot: MO, 10:00
+Parent TreeNode: Depth: 127 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 126 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 02 in Slot: TU, 16:00
+Parent TreeNode: Depth: 125 Penalty: 3954
+Unit: CPSC 313 LEC 01 TUT 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 124 Penalty: 3954
+Unit: CPSC 413 LEC 01 TUT 03 in Slot: TU, 15:00
+Parent TreeNode: Depth: 123 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 04 in Slot: MO, 18:00
+Parent TreeNode: Depth: 122 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 03 in Slot: MO, 19:00
+Parent TreeNode: Depth: 121 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 02 in Slot: TU, 19:00
+Parent TreeNode: Depth: 120 Penalty: 3954
+Unit: CPSC 411 LEC 01 TUT 01 in Slot: TU, 11:00
+Parent TreeNode: Depth: 119 Penalty: 3954
+Unit: CPSC 453 TUT 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 118 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 02 in Slot: MO, 17:00
+Parent TreeNode: Depth: 117 Penalty: 3954
+Unit: CPSC 331 LEC 01 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 116 Penalty: 3954
+Unit: CPSC 453 TUT 04 in Slot: TU, 13:00
+Parent TreeNode: Depth: 115 Penalty: 3954
+Unit: CPSC 453 TUT 02 in Slot: TU, 14:00
+Parent TreeNode: Depth: 114 Penalty: 3954
+Unit: CPSC 453 TUT 03 in Slot: TU, 17:00
+Parent TreeNode: Depth: 113 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 01 in Slot: TU, 20:00
+Parent TreeNode: Depth: 112 Penalty: 3954
+Unit: CPSC 215 LEC 01 TUT 02 in Slot: FR,  8:00
+Parent TreeNode: Depth: 111 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 06 in Slot: FR, 10:00
+Parent TreeNode: Depth: 110 Penalty: 3954
+Unit: CPSC 265 LEC 02 TUT 05 in Slot: TU,  8:00
+Parent TreeNode: Depth: 109 Penalty: 3954
+Unit: CPSC 471 TUT 01 in Slot: MO, 20:00
+Parent TreeNode: Depth: 108 Penalty: 3954
+Unit: CPSC 471 TUT 02 in Slot: FR, 12:00
+Parent TreeNode: Depth: 107 Penalty: 3954
+Unit: CPSC 471 TUT 03 in Slot: FR, 14:00
+Parent TreeNode: Depth: 106 Penalty: 3954
+Unit: CPSC 471 TUT 04 in Slot: MO, 14:00
+Parent TreeNode: Depth: 105 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 02 in Slot: TU,  9:00
+Parent TreeNode: Depth: 104 Penalty: 3954
+Unit: CPSC 265 LEC 01 TUT 01 in Slot: FR, 16:00
+Parent TreeNode: Depth: 103 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 102 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 02 in Slot: TU, 10:00
+Parent TreeNode: Depth: 101 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 03 in Slot: FR, 18:00
+Parent TreeNode: Depth: 100 Penalty: 3954
+Unit: CPSC 481 LEC 01 TUT 04 in Slot: MO, 11:00
+Parent TreeNode: Depth: 99 Penalty: 3954
+Unit: CPSC 203 LEC 03 TUT 17 in Slot: MO, 10:00
+Parent TreeNode: Depth: 98 Penalty: 3954
+Unit: CPSC 203 LEC 03 TUT 18 in Slot: MO,  8:00
+Parent TreeNode: Depth: 97 Penalty: 3954
+Unit: CPSC 231 LEC 01 TUT 05 in Slot: MO,  9:00
+Parent TreeNode: Depth: 96 Penalty: 3954
+Unit: CPSC 231 LEC 01 TUT 06 in Slot: MO, 15:00
+Parent TreeNode: Depth: 95 Penalty: 3954
+Unit: CPSC 203 LEC 95 TUT 90 in Slot: MO, 12:00
+Parent TreeNode: Depth: 94 Penalty: 3954
+Unit: CPSC 203 LEC 01 TUT 06 in Slot: MO, 17:00
+Parent TreeNode: Depth: 93 Penalty: 3954
+Unit: CPSC 203 LEC 01 TUT 05 in Slot: MO, 16:00
+Parent TreeNode: Depth: 92 Penalty: 3954
+Unit: CPSC 203 LEC 02 TUT 12 in Slot: TU, 17:00
+Parent TreeNode: Depth: 91 Penalty: 3954
+Unit: CPSC 203 LEC 02 TUT 11 in Slot: MO, 13:00
+Parent TreeNode: Depth: 90 Penalty: 3954
+Unit: CPSC 203 LEC 04 TUT 24 in Slot: TU, 10:00
+Parent TreeNode: Depth: 89 Penalty: 3954
+Unit: CPSC 203 LEC 04 TUT 23 in Slot: TU, 11:00
+Parent TreeNode: Depth: 88 Penalty: 3954
+Unit: CPSC 523 TUT 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 87 Penalty: 3954
+Unit: SENG 411 TUT 02 in Slot: TU, 12:00
+Parent TreeNode: Depth: 86 Penalty: 3954
+Unit: SENG 411 TUT 03 in Slot: TU, 13:00
+Parent TreeNode: Depth: 85 Penalty: 3954
+Unit: SENG 411 TUT 04 in Slot: TU, 14:00
+Parent TreeNode: Depth: 84 Penalty: 3954
+Unit: SENG 411 TUT 05 in Slot: TU, 15:00
+Parent TreeNode: Depth: 83 Penalty: 3954
+Unit: SENG 411 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 82 Penalty: 3954
+Unit: CPSC 203 LEC 95 TUT 99 in Slot: MO,  9:00
+Parent TreeNode: Depth: 81 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 13 in Slot: TU,  8:00
+Parent TreeNode: Depth: 80 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 14 in Slot: MO, 10:00
+Parent TreeNode: Depth: 79 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 15 in Slot: MO, 14:00
+Parent TreeNode: Depth: 78 Penalty: 3704
+Unit: CPSC 203 LEC 03 TUT 16 in Slot: TU,  9:00
+Parent TreeNode: Depth: 77 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 03 in Slot: MO,  8:00
+Parent TreeNode: Depth: 76 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 04 in Slot: MO,  9:00
+Parent TreeNode: Depth: 75 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 74 Penalty: 3704
+Unit: CPSC 231 LEC 01 TUT 02 in Slot: MO, 16:00
+Parent TreeNode: Depth: 73 Penalty: 3704
+Unit: CPSC 519 TUT 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 72 Penalty: 3704
+Unit: CPSC 233 TUT 07 in Slot: MO, 11:00
+Parent TreeNode: Depth: 71 Penalty: 3704
+Unit: CPSC 233 TUT 06 in Slot: MO, 15:00
+Parent TreeNode: Depth: 70 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 02 in Slot: TU, 16:00
+Parent TreeNode: Depth: 69 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 03 in Slot: TU,  9:00
+Parent TreeNode: Depth: 68 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 67 Penalty: 3704
+Unit: CPSC 203 LEC 01 TUT 04 in Slot: MO, 14:00
+Parent TreeNode: Depth: 66 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 10 in Slot: MO, 10:00
+Parent TreeNode: Depth: 65 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 20 in Slot: MO, 13:00
+Parent TreeNode: Depth: 64 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 22 in Slot: TU, 10:00
+Parent TreeNode: Depth: 63 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 21 in Slot: TU, 11:00
+Parent TreeNode: Depth: 62 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 09 in Slot: TU, 12:00
+Parent TreeNode: Depth: 61 Penalty: 3704
+Unit: CPSC 203 LEC 04 TUT 19 in Slot: TU, 13:00
+Parent TreeNode: Depth: 60 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 08 in Slot: TU, 14:00
+Parent TreeNode: Depth: 59 Penalty: 3704
+Unit: CPSC 203 LEC 02 TUT 07 in Slot: TU, 15:00
+Parent TreeNode: Depth: 58 Penalty: 3704
+Unit: CPSC 591 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 57 Penalty: 3704
+Unit: CPSC 591 TUT 02 in Slot: MO, 17:00
+Parent TreeNode: Depth: 56 Penalty: 3704
+Unit: CPSC 203 LEC 95 TUT 98 in Slot: TU, 15:00
+Parent TreeNode: Depth: 55 Penalty: 3454
+Unit: CPSC 203 LEC 95 TUT 96 in Slot: MO, 16:00
+Parent TreeNode: Depth: 54 Penalty: 3204
+Unit: CPSC 203 LEC 95 TUT 97 in Slot: MO, 11:00
+Parent TreeNode: Depth: 53 Penalty: 2954
+Unit: CPSC 203 LEC 95 TUT 95 in Slot: MO, 12:00
+Parent TreeNode: Depth: 52 Penalty: 2704
+Unit: CPSC 589 TUT 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 51 Penalty: 2704
+Unit: CPSC 589 TUT 02 in Slot: MO, 15:00
+Parent TreeNode: Depth: 50 Penalty: 2704
+Unit: CPSC 233 TUT 03 in Slot: TU,  9:00
+Parent TreeNode: Depth: 49 Penalty: 2704
+Unit: CPSC 233 TUT 02 in Slot: TU, 17:00
+Parent TreeNode: Depth: 48 Penalty: 2704
+Unit: CPSC 233 TUT 05 in Slot: MO, 14:00
+Parent TreeNode: Depth: 47 Penalty: 2704
+Unit: CPSC 233 TUT 04 in Slot: MO, 10:00
+Parent TreeNode: Depth: 46 Penalty: 2704
+Unit: CPSC 233 TUT 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 45 Penalty: 2704
+Unit: CPSC 517 TUT 01 in Slot: TU, 13:00
+Parent TreeNode: Depth: 44 Penalty: 2704
+Unit: SENG 311 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 43 Penalty: 2704
+Unit: CPSC 313 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 42 Penalty: 2703
+Unit: CPSC 511 TUT 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 41 Penalty: 2703
+Unit: CPSC 587 TUT 02 in Slot: TU, 11:00
+Parent TreeNode: Depth: 40 Penalty: 2703
+Unit: CPSC 587 TUT 01 in Slot: TU, 12:00
+Parent TreeNode: Depth: 39 Penalty: 2703
+Unit: CPSC 331 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 38 Penalty: 2703
+Unit: CPSC 333 LEC 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 37 Penalty: 2703
+Unit: CPSC 355 LEC 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 36 Penalty: 2703
+Unit: CPSC 335 LEC 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 35 Penalty: 2703
+Unit: CPSC 321 LEC 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 34 Penalty: 2703
+Unit: CPSC 349 LEC 01 in Slot: TU, 12:30
+Parent TreeNode: Depth: 33 Penalty: 2703
+Unit: CPSC 510 TUT 01 in Slot: TU, 16:00
+Parent TreeNode: Depth: 32 Penalty: 2703
+Unit: CPSC 587 LEC 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 31 Penalty: 2703
+Unit: SENG 411 LEC 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 30 Penalty: 2702
+Unit: SENG 411 LEC 02 in Slot: MO, 15:00
+Parent TreeNode: Depth: 29 Penalty: 2702
+Unit: CPSC 441 LEC 01 in Slot: MO, 14:00
+Parent TreeNode: Depth: 28 Penalty: 2701
+Unit: CPSC 441 LEC 02 in Slot: MO, 14:00
+Parent TreeNode: Depth: 27 Penalty: 2701
+Unit: CPSC 457 LEC 02 in Slot: MO, 13:00
+Parent TreeNode: Depth: 26 Penalty: 2700
+Unit: CPSC 457 LEC 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 25 Penalty: 2700
+Unit: CPSC 411 LEC 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 24 Penalty: 2700
+Unit: CPSC 481 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 23 Penalty: 2700
+Unit: CPSC 471 LEC 01 in Slot: TU,  8:00
+Parent TreeNode: Depth: 22 Penalty: 2700
+Unit: CPSC 455 LEC 01 in Slot: MO, 11:00
+Parent TreeNode: Depth: 21 Penalty: 2700
+Unit: CPSC 453 LEC 01 in Slot: TU, 15:30
+Parent TreeNode: Depth: 20 Penalty: 2700
+Unit: CPSC 421 LEC 01 in Slot: TU, 14:00
+Parent TreeNode: Depth: 19 Penalty: 2700
+Unit: CPSC 413 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 18 Penalty: 2700
+Unit: CPSC 433 LEC 01 in Slot: TU, 17:00
+Parent TreeNode: Depth: 17 Penalty: 1800
+Unit: CPSC 203 LEC 95 in Slot: MO, 20:00
+Parent TreeNode: Depth: 16 Penalty: 1800
+Unit: CPSC 559 LEC 01 in Slot: TU, 12:30
+Parent TreeNode: Depth: 15 Penalty: 1800
+Unit: CPSC 594 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 14 Penalty: 1800
+Unit: CPSC 510 LEC 01 in Slot: MO, 19:00
+Parent TreeNode: Depth: 13 Penalty: 1800
+Unit: SENG 511 LEC 01 in Slot: MO, 18:00
+Parent TreeNode: Depth: 12 Penalty: 1800
+Unit: CPSC 525 LEC 01 in Slot: MO, 17:00
+Parent TreeNode: Depth: 11 Penalty: 1800
+Unit: CPSC 581 LEC 01 in Slot: MO, 16:00
+Parent TreeNode: Depth: 10 Penalty: 1800
+Unit: CPSC 565 LEC 01 in Slot: MO, 15:00
+Parent TreeNode: Depth: 9 Penalty: 1800
+Unit: SENG 513 LEC 01 in Slot: MO, 14:00
+Parent TreeNode: Depth: 8 Penalty: 1800
+Unit: CPSC 557 LEC 01 in Slot: MO, 13:00
+Parent TreeNode: Depth: 7 Penalty: 1800
+Unit: CPSC 511 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 6 Penalty: 1200
+Unit: CPSC 589 LEC 01 in Slot: MO, 10:00
+Parent TreeNode: Depth: 5 Penalty: 1200
+Unit: CPSC 517 LEC 01 in Slot: TU, 18:30
+Parent TreeNode: Depth: 4 Penalty: 600
+Unit: CPSC 519 LEC 01 in Slot: MO, 12:00
+Parent TreeNode: Depth: 3 Penalty: 0
+Unit: CPSC 523 LEC 01 in Slot: TU,  8:00
+Parent TreeNode: Depth: 2 Penalty: 0
+Unit: CPSC 591 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 813 LEC 01 LAB 00 in Slot: TU, 18:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Unit: CPSC 913 LEC 01 LAB 00 in Slot: TU, 18:00
+Parent null
+Bound was broken after 653

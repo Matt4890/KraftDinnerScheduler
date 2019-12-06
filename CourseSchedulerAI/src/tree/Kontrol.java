@@ -28,14 +28,14 @@ public class Kontrol {
             total += SoftConstraints.notPairedCourse((Course) u, (CourseSlot) s, node, pen_pair) * Kontrol.weight_pair;
             total += SoftConstraints.checkSections((Course) u, (CourseSlot) s, node, pen_section_diff)
                     * Kontrol.weight_section_diff;
-            SoftConstraints.checkCourseDesire(s, node);
+            //SoftConstraints.checkCourseDesire(s, node);
         } else {
             // total += SoftConstraints.checkLabMin((LabSlot) s, node, pen_labmin_filled) *
             // Kontrol.weight_min_filled;
 
             total += SoftConstraints.preferenceEval(s, u, node) * Kontrol.weight_pref;
             total += SoftConstraints.notPairedLab((Lab) u, (LabSlot) s, node, pen_pair) * Kontrol.weight_pair;
-            SoftConstraints.checkLabDesire(s, node);
+            //SoftConstraints.checkLabDesire(s, node);
 
         }
         return total;

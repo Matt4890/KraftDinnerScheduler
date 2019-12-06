@@ -153,7 +153,7 @@ public class Generator {
                     this.bound = currentNode.getPenaltyValueOfTreeNode();
                     this.bestSchedule = currentNode;
                     System.out.println("So Bound got replaced with" + this.bound);
-                    System.out.println(currentNode);
+                    formatOutput(currentNode);
                     System.out.println("Bound was broken after " + count);
 
                 }
@@ -244,5 +244,25 @@ public class Generator {
         }
 
     }
+    private void formatOutput(TreeNode schedule) {
+        TreeNode current = schedule;
+        ArrayList<String> orderedStrings = new ArrayList<String>();
+        System.out.println("Eval-value: " + this.bestSchedule.getPenaltyValueOfTreeNode());
+        while (current != null) {
+            if (current.getAssign().getUnit() != null)
+                orderedStrings
+                        .add(String.format("%-30.30s : %-30.30s%n", current.getAssign().getUnit().toPrettyString(),
+                                current.getAssign().getSlot().toPrettyString()));
+            current = current.getParent();
+        }
+        orderedStrings.sort(String::compareToIgnoreCase);
+        for (String s : orderedStrings) {
+            System.out.print(s);
+        }
+
+    }
+
+    
+
 
 }
