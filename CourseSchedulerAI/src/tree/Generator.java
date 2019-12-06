@@ -35,7 +35,9 @@ public class Generator {
     }
 
     /**
-     * Tries to add a child to the tree.
+     *  Adds a course to every slot that does not break the hard constraints and
+     *  does not break the overall bound add it as a child to the parent node.
+     *  This will represent the schedule if we reach schedule everything  
      * 
      * @param current       The unit to try and schedule.
      * @param slot          The slot to try and schedule it in.
@@ -104,19 +106,8 @@ public class Generator {
     }
 
     /**
-     * Skeleton of a BNB using a stack Assumes we have a bound function called
-     * calculateBound which will Using a heuristic, find a solution xh to the
-     * optimization problem. Store its value, B = f(xh). (If no heuristic is
-     * available, set B to infinity.) B will denote the best solution found so far,
-     * and will be used as an upper bound on candidate solutions. Initialize a queue
-     * to hold a partial solution with none of the variables of the problem
-     * assigned. Loop until the queue is empty: Take a node N off the queue. If N
-     * represents a single candidate solution x and f(x) < B, then x is the best
-     * solution so far. Record it and set B ← f(x). Else, branch on N to produce new
-     * nodes Ni. For each of these: If bound(Ni) > B, do nothing; since the lower
-     * bound on this node is greater than the upper bound of the problem, it will
-     * never lead to the optimal solution, and can be discarded. Else, store Ni on
-     * the queue.
+     * A Branch and bound algorithm which determines the best schedule based on the 
+     * preferences and weights 
      * 
      * @param starter               The tree node to start BNB at.
      * @param unitsToBeScheduled    An ArrayList of units that need to be scheduled.
@@ -225,7 +216,7 @@ public class Generator {
     }
 
     /**
-     * Does a formatted output of the schedule.
+     * Formats output of the schedule.
      */
     private void formatOutput() {
         TreeNode current = this.bestSchedule;

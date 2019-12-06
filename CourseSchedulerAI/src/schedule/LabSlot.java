@@ -43,7 +43,6 @@ public class LabSlot extends Slot{
         return this.labCount;
     }
     public ArrayList<Lab> getAssignedLabs(){
-        // THIS SHOULD ONLY BE USED FOR LOOKUP SO ITS NOT GOING TO BE THE SAME REFERENCES
         ArrayList<Lab> displaylabs  = new ArrayList<Lab>();
         for (int i = 0; i< getClassAssignment().size(); i++){
             displaylabs.add((Lab)getClassAssignment().get(i));

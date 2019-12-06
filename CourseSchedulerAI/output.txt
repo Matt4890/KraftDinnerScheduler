@@ -1,23 +1,183 @@
-So Bound got replaced with32
-TreeNode: Depth: 8 Penalty: 32
+So Bound got replaced with46
+TreeNode: Depth: 8 Penalty: 46
 Unit: SENG 311 LEC 01 TUT 01 in Slot: TU, 10:00
-Parent TreeNode: Depth: 7 Penalty: 29
-Unit: SENG 311 LEC 01 in Slot: MO,  9:00
-Parent TreeNode: Depth: 6 Penalty: 29
+Parent TreeNode: Depth: 7 Penalty: 43
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 6 Penalty: 42
 Unit: CPSC 433 LEC 02 LAB 02 in Slot: TU, 10:00
-Parent TreeNode: Depth: 5 Penalty: 21
+Parent TreeNode: Depth: 5 Penalty: 34
 Unit: CPSC 433 LEC 01 TUT 01 in Slot: FR, 10:00
-Parent TreeNode: Depth: 4 Penalty: 13
+Parent TreeNode: Depth: 4 Penalty: 26
 Unit: CPSC 567 TUT 01 in Slot: FR, 10:00
-Parent TreeNode: Depth: 3 Penalty: 13
+Parent TreeNode: Depth: 3 Penalty: 26
 Unit: CPSC 433 LEC 02 in Slot: MO,  8:00
-Parent TreeNode: Depth: 2 Penalty: 0
-Unit: CPSC 433 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 1 Penalty: 0
 Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 0 Penalty: 0
 Parent null
 Bound was broken after 9
+So Bound got replaced with45
+TreeNode: Depth: 8 Penalty: 45
+Unit: SENG 311 LEC 01 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 7 Penalty: 43
+Unit: SENG 311 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 6 Penalty: 42
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: TU, 10:00
+Parent TreeNode: Depth: 5 Penalty: 34
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 4 Penalty: 26
+Unit: CPSC 567 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 3 Penalty: 26
+Unit: CPSC 433 LEC 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 11
+So Bound got replaced with42
+TreeNode: Depth: 8 Penalty: 42
+Unit: SENG 311 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 7 Penalty: 40
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 6 Penalty: 39
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: TU, 10:00
+Parent TreeNode: Depth: 5 Penalty: 31
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 4 Penalty: 26
+Unit: CPSC 567 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 3 Penalty: 26
+Unit: CPSC 433 LEC 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 19
+So Bound got replaced with41
+TreeNode: Depth: 8 Penalty: 41
+Unit: SENG 311 LEC 01 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 7 Penalty: 40
+Unit: SENG 311 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 6 Penalty: 39
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: TU, 10:00
+Parent TreeNode: Depth: 5 Penalty: 31
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 4 Penalty: 26
+Unit: CPSC 567 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 3 Penalty: 26
+Unit: CPSC 433 LEC 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 22
+So Bound got replaced with40
+TreeNode: Depth: 8 Penalty: 40
+Unit: SENG 311 LEC 01 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 7 Penalty: 38
+Unit: SENG 311 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 6 Penalty: 37
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: FR, 10:00
+Parent TreeNode: Depth: 5 Penalty: 29
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 4 Penalty: 26
+Unit: CPSC 567 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 3 Penalty: 26
+Unit: CPSC 433 LEC 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 43
+So Bound got replaced with38
+TreeNode: Depth: 8 Penalty: 38
+Unit: SENG 311 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 7 Penalty: 36
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 6 Penalty: 35
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 5 Penalty: 35
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 4 Penalty: 27
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 3 Penalty: 27
+Unit: CPSC 433 LEC 02 in Slot: MO,  9:00
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 84
+So Bound got replaced with36
+TreeNode: Depth: 8 Penalty: 36
+Unit: SENG 311 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 7 Penalty: 33
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 6 Penalty: 32
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 5 Penalty: 32
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 4 Penalty: 27
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 3 Penalty: 27
+Unit: CPSC 433 LEC 02 in Slot: MO,  9:00
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 93
+So Bound got replaced with33
+TreeNode: Depth: 8 Penalty: 33
+Unit: SENG 311 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 7 Penalty: 31
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 6 Penalty: 30
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 5 Penalty: 30
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 4 Penalty: 27
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 3 Penalty: 27
+Unit: CPSC 433 LEC 02 in Slot: MO,  9:00
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 102
+So Bound got replaced with32
+TreeNode: Depth: 8 Penalty: 32
+Unit: SENG 311 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 7 Penalty: 30
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 6 Penalty: 29
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: TU, 10:00
+Parent TreeNode: Depth: 5 Penalty: 21
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 4 Penalty: 13
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 3 Penalty: 13
+Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 135
 So Bound got replaced with31
 TreeNode: Depth: 8 Penalty: 31
 Unit: SENG 311 LEC 01 TUT 01 in Slot: MO,  8:00
@@ -28,67 +188,87 @@ Unit: CPSC 433 LEC 02 LAB 02 in Slot: TU, 10:00
 Parent TreeNode: Depth: 5 Penalty: 21
 Unit: CPSC 433 LEC 01 TUT 01 in Slot: FR, 10:00
 Parent TreeNode: Depth: 4 Penalty: 13
-Unit: CPSC 567 TUT 01 in Slot: FR, 10:00
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
 Parent TreeNode: Depth: 3 Penalty: 13
-Unit: CPSC 433 LEC 02 in Slot: MO,  8:00
-Parent TreeNode: Depth: 2 Penalty: 0
-Unit: CPSC 433 LEC 01 in Slot: TU,  9:30
+Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 1 Penalty: 0
 Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 0 Penalty: 0
 Parent null
-Bound was broken after 10
-So Bound got replaced with28
-TreeNode: Depth: 8 Penalty: 28
+Bound was broken after 142
+So Bound got replaced with23
+TreeNode: Depth: 8 Penalty: 23
 Unit: SENG 311 LEC 01 TUT 01 in Slot: TU, 10:00
-Parent TreeNode: Depth: 7 Penalty: 26
-Unit: SENG 311 LEC 01 in Slot: MO,  9:00
-Parent TreeNode: Depth: 6 Penalty: 26
-Unit: CPSC 433 LEC 02 LAB 02 in Slot: FR, 10:00
-Parent TreeNode: Depth: 5 Penalty: 18
-Unit: CPSC 433 LEC 01 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 7 Penalty: 22
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 6 Penalty: 21
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 5 Penalty: 21
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: FR, 10:00
 Parent TreeNode: Depth: 4 Penalty: 13
-Unit: CPSC 567 TUT 01 in Slot: FR, 10:00
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
 Parent TreeNode: Depth: 3 Penalty: 13
-Unit: CPSC 433 LEC 02 in Slot: MO,  8:00
-Parent TreeNode: Depth: 2 Penalty: 0
-Unit: CPSC 433 LEC 01 in Slot: TU,  9:30
+Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 1 Penalty: 0
 Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 0 Penalty: 0
 Parent null
-Bound was broken after 18
-So Bound got replaced with27
-TreeNode: Depth: 8 Penalty: 27
-Unit: SENG 311 LEC 01 TUT 01 in Slot: MO,  8:00
-Parent TreeNode: Depth: 7 Penalty: 26
-Unit: SENG 311 LEC 01 in Slot: MO,  9:00
-Parent TreeNode: Depth: 6 Penalty: 26
-Unit: CPSC 433 LEC 02 LAB 02 in Slot: TU, 10:00
+Bound was broken after 156
+So Bound got replaced with21
+TreeNode: Depth: 8 Penalty: 21
+Unit: SENG 311 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 7 Penalty: 19
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 6 Penalty: 18
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
 Parent TreeNode: Depth: 5 Penalty: 18
 Unit: CPSC 433 LEC 01 TUT 01 in Slot: MO,  8:00
 Parent TreeNode: Depth: 4 Penalty: 13
-Unit: CPSC 567 TUT 01 in Slot: FR, 10:00
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
 Parent TreeNode: Depth: 3 Penalty: 13
-Unit: CPSC 433 LEC 02 in Slot: MO,  8:00
-Parent TreeNode: Depth: 2 Penalty: 0
-Unit: CPSC 433 LEC 01 in Slot: TU,  9:30
+Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 1 Penalty: 0
 Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 0 Penalty: 0
 Parent null
-Bound was broken after 28
+Bound was broken after 169
+So Bound got replaced with18
+TreeNode: Depth: 8 Penalty: 18
+Unit: SENG 311 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 7 Penalty: 17
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 6 Penalty: 16
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 5 Penalty: 16
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 4 Penalty: 13
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 3 Penalty: 13
+Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 2 Penalty: 13
+Unit: CPSC 433 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 182
 So Bound got replaced with12
 TreeNode: Depth: 8 Penalty: 12
 Unit: SENG 311 LEC 01 TUT 01 in Slot: TU, 10:00
-Parent TreeNode: Depth: 7 Penalty: 9
-Unit: SENG 311 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 7 Penalty: 10
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
 Parent TreeNode: Depth: 6 Penalty: 9
 Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
 Parent TreeNode: Depth: 5 Penalty: 9
 Unit: CPSC 433 LEC 01 TUT 01 in Slot: FR, 10:00
 Parent TreeNode: Depth: 4 Penalty: 1
-Unit: CPSC 567 TUT 01 in Slot: FR, 10:00
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
 Parent TreeNode: Depth: 3 Penalty: 1
 Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
 Parent TreeNode: Depth: 2 Penalty: 0
@@ -97,7 +277,7 @@ Parent TreeNode: Depth: 1 Penalty: 0
 Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 0 Penalty: 0
 Parent null
-Bound was broken after 36
+Bound was broken after 277
 So Bound got replaced with11
 TreeNode: Depth: 8 Penalty: 11
 Unit: SENG 311 LEC 01 TUT 01 in Slot: TU, 10:00
@@ -117,17 +297,16 @@ Parent TreeNode: Depth: 1 Penalty: 0
 Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 0 Penalty: 0
 Parent null
-Bound was broken after 45
-We are out of things to add...
-The Best:
-TreeNode: Depth: 8 Penalty: 11
-Unit: SENG 311 LEC 01 TUT 01 in Slot: TU, 10:00
-Parent TreeNode: Depth: 7 Penalty: 9
-Unit: SENG 311 LEC 01 in Slot: MO,  9:00
-Parent TreeNode: Depth: 6 Penalty: 9
+Bound was broken after 280
+So Bound got replaced with10
+TreeNode: Depth: 8 Penalty: 10
+Unit: SENG 311 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 7 Penalty: 7
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 6 Penalty: 6
 Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
-Parent TreeNode: Depth: 5 Penalty: 9
-Unit: CPSC 433 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 5 Penalty: 6
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: MO,  8:00
 Parent TreeNode: Depth: 4 Penalty: 1
 Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
 Parent TreeNode: Depth: 3 Penalty: 1
@@ -138,14 +317,95 @@ Parent TreeNode: Depth: 1 Penalty: 0
 Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
 Parent TreeNode: Depth: 0 Penalty: 0
 Parent null
-11
-Eval-value: 11
+Bound was broken after 286
+So Bound got replaced with9
+TreeNode: Depth: 8 Penalty: 9
+Unit: SENG 311 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 7 Penalty: 6
+Unit: SENG 311 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 6 Penalty: 6
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 5 Penalty: 6
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 4 Penalty: 1
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 3 Penalty: 1
+Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 2 Penalty: 0
+Unit: CPSC 433 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 289
+So Bound got replaced with7
+TreeNode: Depth: 8 Penalty: 7
+Unit: SENG 311 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 7 Penalty: 5
+Unit: SENG 311 LEC 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 6 Penalty: 4
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 5 Penalty: 4
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 4 Penalty: 1
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 3 Penalty: 1
+Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 2 Penalty: 0
+Unit: CPSC 433 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 295
+So Bound got replaced with6
+TreeNode: Depth: 8 Penalty: 6
+Unit: SENG 311 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 7 Penalty: 4
+Unit: SENG 311 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 6 Penalty: 4
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 5 Penalty: 4
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 4 Penalty: 1
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 3 Penalty: 1
+Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 2 Penalty: 0
+Unit: CPSC 433 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+Bound was broken after 298
+We are out of things to add...
+The Best:
+TreeNode: Depth: 8 Penalty: 6
+Unit: SENG 311 LEC 01 TUT 01 in Slot: FR, 10:00
+Parent TreeNode: Depth: 7 Penalty: 4
+Unit: SENG 311 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 6 Penalty: 4
+Unit: CPSC 433 LEC 02 LAB 02 in Slot: MO,  8:00
+Parent TreeNode: Depth: 5 Penalty: 4
+Unit: CPSC 433 LEC 01 TUT 01 in Slot: TU, 10:00
+Parent TreeNode: Depth: 4 Penalty: 1
+Unit: CPSC 567 TUT 01 in Slot: MO,  8:00
+Parent TreeNode: Depth: 3 Penalty: 1
+Unit: CPSC 433 LEC 02 in Slot: TU,  9:30
+Parent TreeNode: Depth: 2 Penalty: 0
+Unit: CPSC 433 LEC 01 in Slot: TU,  9:30
+Parent TreeNode: Depth: 1 Penalty: 0
+Unit: CPSC 567 LEC 01 in Slot: MO,  9:00
+Parent TreeNode: Depth: 0 Penalty: 0
+Parent null
+6
+Eval-value: 6
 CPSC 433 LEC 01                : TU,  9:30                     
-CPSC 433 LEC 01 TUT 01         : FR, 10:00                     
+CPSC 433 LEC 01 TUT 01         : TU, 10:00                     
 CPSC 433 LEC 02                : TU,  9:30                     
 CPSC 433 LEC 02 LAB 02         : MO,  8:00                     
 CPSC 567 LEC 01                : MO,  9:00                     
 CPSC 567 TUT 01                : MO,  8:00                     
 SENG 311 LEC 01                : MO,  9:00                     
-SENG 311 LEC 01 TUT 01         : TU, 10:00                     
-The total number of nodes checked was 64
+SENG 311 LEC 01 TUT 01         : FR, 10:00                     
+The total number of nodes checked was 341

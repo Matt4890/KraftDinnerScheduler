@@ -22,7 +22,7 @@ public class Main {
   public static int total_num_of_units;
 
   /**
-   * Entry point for the scheduler AI.
+   * Entry point for the scheduler AI. Calls Parser and adds partial assignments to the TreeNode - then passes it to the branch and bound
    * 
    * @param args List of integers as strings for the weights and penalties. In
    *             order: CourseMinPenalty, LabMinPenalty, PairsPenalty,
@@ -110,8 +110,8 @@ public class Main {
 
     HashMap<String, Lab> allLabs = parser.getLabMap();
 
-    makeBrothers(allCourses);
-    makePotentialsBros(allCourses);
+    makeSectionDiffCandidates(allCourses);
+    makePotentialSectionDiffCandidates(allCourses);
 
     // Get list of units to ignore (partial assignments)
     ArrayList<Unit> partialAssignedUnits = new ArrayList<Unit>();
@@ -129,7 +129,7 @@ public class Main {
 
 
   }
-  /*
+  /** 
    * Function to add CPSC813 and CPSC913 if CPSC313 and CPSC413 exist
    *
    * @param allCourses: hashmap of courses indexed by string
@@ -214,7 +214,7 @@ public class Main {
     }
   }
 
-  /*
+  /**
    * Function to order units as we want to process them
    *
    * @param courses: hashmap of courses indexed by string
@@ -268,13 +268,13 @@ public class Main {
       }
     }
   }
-  /*
+  /**
    * Function to account for potential of a lecture to have multiple sections(brothers)
    *
    * @param courses: hashmap of courses indexed by string
    *
    */
-  private static void makePotentialsBros(HashMap<String, Course> courses) {
+  private static void makePotentialSectionDiffCandidates(HashMap<String, Course> courses) {
     ArrayList<Course> checked = new ArrayList<Course>();
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       Course courseToAddPotential = entry.getValue();
@@ -293,7 +293,7 @@ public class Main {
    * @param courses: hashmap of courses indexed by string
    *
    */
-  private static void makeBrothers(HashMap<String, Course> courses) {
+  private static void makeSectionDiffCandidates(HashMap<String, Course> courses) {
     for (Map.Entry<String, Course> entry : courses.entrySet()) {
       for (Map.Entry<String, Course> entry2 : courses.entrySet()) {
         if (entry.getValue().isBrother(entry2.getValue())) {
@@ -307,7 +307,7 @@ public class Main {
   public static int getNumOfUnits() {
     return total_num_of_units;
   }
-  /*
+  /**
    * Function to account for overlapping slots
    *
    * @param slots: ArrayList of all slots

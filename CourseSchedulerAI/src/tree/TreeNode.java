@@ -16,42 +16,44 @@ public class TreeNode implements Comparable<TreeNode> {
     private int depth;
 
     private int desirability;
-    private boolean still_considered;
+
     private boolean already_looked_at;
     private TreeNode best_bottom_tn;
     private double potential = 0;
-
+    /**
+     * creates a root node with a pair and a penalty value 
+     * @param pair
+     * @param penaltyValue
+     */
     public TreeNode(Pair pair, int penaltyValue) {
 
         this.penaltyValue = penaltyValue;
         this.assign = pair;
         this.children = new ArrayList<TreeNode>();
         this.parent = null;
-        // this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(),
-        // this);
         this.orderedChildren = new PriorityQueue<TreeNode>();
-        this.still_considered = true;
+
         this.best_bottom_tn = null;
 
     }
-
+    /**
+     * Deepcopy of TreeNode
+     * @param n
+     */
     public TreeNode(TreeNode n) {
         this.penaltyValue = n.getPenaltyValueOfTreeNode();
         this.children = n.getChildren();
         this.desirability = n.getDesirablilty();
         this.orderedChildren = n.getOrderedChildren();
-        this.still_considered = n.still_considered;
+
     }
 
-    public TreeNode(Pair pair, int penaltyValue, ArrayList<TreeNode> children) {
-        this.penaltyValue = penaltyValue;
-        this.assign = pair;
-        this.parent = null;
-        // this.desirability = Kontrol.desireability(pair.getSlot(), pair.getUnit(),
-        // this);
-        this.still_considered = true;
-    }
-
+    /**
+     * Creates tree node 
+     * @param assignment: the slot unit pair
+     * @param penaltyValue: the penalty value
+     * @param parent: parent 
+     */
     public TreeNode(Pair assignment, int penaltyValue, TreeNode parent) {
 
         this.penaltyValue = penaltyValue;
@@ -61,38 +63,34 @@ public class TreeNode implements Comparable<TreeNode> {
         this.parent = parent;
     }
 
-    public TreeNode(Pair assign, int penaltyValue, ArrayList<TreeNode> children, TreeNode parent) {
-        this.penaltyValue = penaltyValue;
-        this.assign = assign;
-        for (int i = 0; i < children.size(); i++) {
-            this.children.add(children.get(i));
-            this.orderedChildren.add(children.get(i));
-        }
-        this.parent = parent;
-        this.desirability = Integer.MAX_VALUE;
-        this.still_considered = true;
-    }
-
+    /**
+     * Set the penalty value of the node 
+     * @param pen
+     */
     public void setPenalty(int pen) {
         this.penaltyValue = pen;
     }
 
-    public boolean getConsideration() {
-        return this.still_considered;
-    }
-
-    public void noLongerConsidered() {
-        this.still_considered = false;
-    }
-
+    /**
+     * gets the eval of Node
+     * @return eval
+     */
     public int getPenaltyValueOfTreeNode() {
         return this.penaltyValue;
     }
 
+    /**
+     * Add to penalty for base node
+     * @param penaltyToAdd
+     */
     public void addToPenaltyForBaseNode(int penaltyToAdd) {
         this.penaltyValue += penaltyToAdd;
     }
-
+    /**
+     * Add Child node n to list of children
+     * 
+     * @param n
+     */
     public void addChild(TreeNode n) {
         this.children.add(n);
         this.orderedChildren.add(n);
@@ -107,40 +105,33 @@ public class TreeNode implements Comparable<TreeNode> {
 
     }
 
-    public TreeNode getLowestPenaltyChild() {
-        return this.orderedChildren.remove();
-    }
 
-    public TreeNode getChildWithPenaltyValue(int n) {
-
-        for (int i = 0; i < this.children.size(); i++) {
-            if (n == this.children.get(i).getPenaltyValueOfTreeNode()) {
-                return this.children.get(i);
-            }
-        }
-        return null;
-    }
-
+    /**
+     * 
+     * @return desireability of node
+     */
     public int getDesirablilty() {
         return this.desirability;
     }
-
+    /**
+     * Increment desireablility of node by num
+     * @param num
+     */
     public void incrementDesire(int num) {
         this.desirability += num;
     }
-
+    
     @Override
+    /**
+     * Compares nodes based on desirability function defined in Kontrol
+     */
     public int compareTo(TreeNode o) {
         return (((Integer) (o.getDesirablilty())).compareTo((Integer) this.getDesirablilty()));
-        // return (
-        // ((Integer) (this.getConstrainedMeasuremnet()))
-        // .compareTo((Integer) o.getConstrainedMeasuremnet())
-        // );
+
     }
 
     public String toString() {
         String toReturn = "TreeNode: Depth: " + this.depth + " Penalty: " + this.penaltyValue + "\n";
-        TreeNode placeHolder = this;
         if (this.assign.getUnit() != null) {
             toReturn += "Unit: " + this.assign.getUnit().toPrettyString() + " in Slot: " + this.assign.getSlot().toPrettyString()
                     + "\n";
@@ -185,43 +176,6 @@ public class TreeNode implements Comparable<TreeNode> {
     public void setDepth(int depth) {
         this.depth = depth;
     }
-
-    /**
-     * Gets a measurement of how constrained the node is. The higher the value, the
-     * more it is constrained. When calculating, each constraint should ideally be
-     * evaluated to a number between 0 and 1, then multiplied by a course/lab
-     * weight.
-     * 
-     * @return An integer expressing
-     */
-    // public int getConstrainedMeasuremnet() {
-
-    // int constrainedVal = 0;
-
-    // final int COURSE_WEIGHT = 1;
-    // final int LAB_WEIGHT = 1;
-
-    // // Measure course contraints
-    // for (Slot s : this.schedule.getAllCourseSlots()) {
-    // int cval = 0;
-    // for (Unit u : s.getClassAssignment()) {
-    // cval += u.getConstrained();
-    // }
-    // constrainedVal += cval * COURSE_WEIGHT;
-    // }
-
-    // // Measure lab contraints
-    // for (Slot s : this.schedule.getAllLabSlots()) {
-    // int cval = 0;
-    // for (Unit u : s.getClassAssignment()) {
-    // cval += u.getConstrained();
-    // }
-    // constrainedVal += cval * LAB_WEIGHT;
-    // }
-
-    // return constrainedVal;
-
-    // }
 
     public Pair getAssign() {
         return assign;
